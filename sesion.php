@@ -1,6 +1,6 @@
 <?php
 
-require 'conexion.php';
+require 'conec/conexion.php';
 
 session_start();
 
@@ -30,10 +30,10 @@ if($cantidad>0){
     }else if($rol == "Supervisor"){
         $_SESSION['nombre_usuario']=$usuario;
     header('Location:admin.php');
+    }else if($rol == "Cliente"){
+        $_SESSION['nombre_usuario']=$usuario;
+    header('Location:index.php');
     }
-
-   /*  $_SESSION['nombre_usuario']=$usuario;
-    header('Location:index.php'); */
 
 }else{
     echo "No posees una Cuenta Administrativa como: $rol";

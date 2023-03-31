@@ -111,6 +111,10 @@ nav{
     left: calc(50% - 50px); 
 }
 
+.a2{
+    margin-top: 10px;
+}
+
 .a:hover{
     color:rgb(57, 90, 92) ;
 }
@@ -141,6 +145,10 @@ footer{
     cursor: pointer;
     border-radius: 50px;
     border: 2px solid rgb(57, 90, 92);
+}
+
+.ocultar{
+    display: none;
 }
 
 /* fin login */
