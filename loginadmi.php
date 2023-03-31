@@ -13,7 +13,6 @@
 </head>
 <body>
 
-
     <nav>
         <img src="img/logo.jpeg" alt="" class="logoimg">
     </nav>
@@ -22,8 +21,14 @@
     <img class="logoimg" src="img/logo.jpeg" alt="">
     <h1>Bienvenido</h1>
     <h2>Inicio de sesion administrativo</h2>
+   
 
     <form class="form" action="sesion.php" method="POST">
+
+    
+    <?php
+    include("php/vali.php");
+    ?>
         <input name="user" type="text" class="inputtext" id="inputnombre" placeholder="Nombre de Usuario">
 
         <input name="pass" type="password" class="inputtext" id="inputcontra" placeholder="Contraseña">
@@ -36,7 +41,7 @@
             <option value="Supervisor">Supervisor</option>
         </select>
 
-        <input type="submit" value="Continuar" id="btncontinuar" class="btncontinuar">
+        <input type="submit" name="submit" value="Continuar" id="btncontinuar" class="btncontinuar">
         
         
 
@@ -49,7 +54,7 @@
    <footer>
     <label for="">Copyright © 2023</label>
 
-    <a href="login.php"><img class="icon" src="img/salida.png" alt=""></a>
+    <a href="login.html"><img class="icon" src="img/salida.png" alt=""></a>
    </footer>
     
 </body>
