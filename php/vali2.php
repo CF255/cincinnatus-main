@@ -1,3 +1,6 @@
 <?php
-echo"<p class='error'>*hola</p>"
+if(empty($usuario)){
+    echo"<p class='error'> *hola </p>";
+
+}
 ?>
