@@ -8,8 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/login.css">
-<LINK REL="stylesheet" HREF="css/login.css" TYPE="text/css">
+<link rel="stylesheet" href="css/usuario.css">
+<LINK REL="stylesheet" HREF="css/usuario.css" TYPE="text/css">
 </head>
 <body>
 
@@ -20,15 +20,23 @@
 
    <div class="login-box">
     <img class="logoimg" src="img/logo.jpeg" alt="">
-    <h1>Hola</h1>
-    <h2>Iniciar sesion</h2>
+    <h2>Crear Cuenta</h2>
 
     <form class="form" action="sesion.php" method="POST">
-        <input name="user" type="text" class="inputtext" id="inputnombre" placeholder="Nombre de Usuario">
+
+        <input name="user" type="text" class="inputtext" id="inputusuario" placeholder="Usuario">
+
+        <input name="nombre" type="text" class="inputtext" id="inputnombre" placeholder="Nombre">
+
+        <input name="lastname" type="text" class="inputtext" id="inputlastname" placeholder="Apellido">
+
+        <input name="correo" type="text" class="inputtext" id="inputcorreo" placeholder="Correo Electronico">
+
+        <input name="fecha" type="date" class="inputfecha" id="inputfecha" placeholder="Nombre de Usuario">
 
         <input name="pass" type="password" class="inputtext" id="inputcontra" placeholder="Contraseña">
 
-        <input type="submit" value="Continuar" id="btncontinuar" class="btncontinuar">
+        <input type="submit" value="Crear Cuenta" id="btncontinuar" class="btncontinuar">
 
         <select autocomplete="off" name="rol" class="ocultar" tabindex="9" id="slStatus">
             <option value="Cliente">Cliente</option>
@@ -37,7 +45,9 @@
 
         <div class="box"></div>
 
-        <a href="creacionusuario.html" class="a" >Crear Cuenta</a>
+
+        <label class="lbl" for="">¿Tienes una cuenta?</label>
+        <a href="#" class="a" >Iniciar sesion</a>
     </form>
    </div>
 
