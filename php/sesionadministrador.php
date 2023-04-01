@@ -1,6 +1,6 @@
 <?php
 
-require 'conec/conexion.php';
+require '../conec/conexion.php';
 
 session_start();
 
@@ -18,30 +18,25 @@ $cantidad=pg_num_rows($consulta);
 
 if(isset($_POST['submit'])){
     if(empty($usuario)){
-        include("php/vali.php");
+        echo "hola";
 
     }else if($cantidad>0){
 if($rol == "Administrador"){
         $_SESSION['nombre_usuario']=$usuario;
-    header('Location:admin.php');
+        header('Location: ../admin.php');
     
     }else if($rol == "Editor"){
         $_SESSION['nombre_usuario']=$usuario;
-    header('Location:admin.php');
+    header('Location: ../admin.php');
 
     }else if($rol == "Administrador_Inventario"){
         $_SESSION['nombre_usuario']=$usuario;
-    header('Location:admin.php');
+    header('Location: ../admin.php');
 
     }else if($rol == "Supervisor"){
         $_SESSION['nombre_usuario']=$usuario;
-    header('Location:admin.php');
-
-    }else if($rol == "Cliente"){
-        $_SESSION['nombre_usuario']=$usuario;
-    header('Location:index.php');
+    header('Location: ../admin.php');
     }
-
 }else{
     echo "No posees una Cuenta Administrativa como: $rol";
 }

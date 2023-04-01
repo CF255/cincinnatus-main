@@ -7,5 +7,4 @@ $conexion = pg_connect("host=localhost dbname=miniproyect user=postgres password
 }else{
    echo "no";
 } */
-
 ?>
