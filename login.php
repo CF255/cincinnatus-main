@@ -12,8 +12,6 @@
 <LINK REL="stylesheet" HREF="css/login.css" TYPE="text/css">
 </head>
 <body>
-
-
     <nav>
         <img src="img/logo.jpeg" alt="" class="logoimg">
     </nav>
@@ -23,17 +21,19 @@
     <h1>Hola</h1>
     <h2>Iniciar sesion</h2>
 
-    <form class="form" action="sesion.php" method="POST">
-        <input name="user" type="text" class="inputtext" id="inputnombre" placeholder="Nombre de Usuario">
+    <form class="form" action="php/sesioncliente.php" method="POST">
+        
 
-        <input name="pass" type="password" class="inputtext" id="inputcontra" placeholder="Contraseña">
+    <input name="user" type="text" class="inputtext" id="inputnombre" placeholder="Nombre de Usuario">
 
-        <input type="submit" value="Continuar" id="btncontinuar" class="btncontinuar">
+<input name="pass" type="password" class="inputtext" id="inputcontra" placeholder="Contraseña">
 
+        <input type="submit" name="submit" value="Continuar" id="btncontinuar" class="btncontinuar">
+    
         <select autocomplete="off" name="rol" class="ocultar" tabindex="9" id="slStatus">
             <option value="Cliente">Cliente</option>
-            <option value="Administrador">Administrador</option>
         </select>
+
 
         <div class="box"></div>
 

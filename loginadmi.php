@@ -23,12 +23,8 @@
     <h2>Inicio de sesion administrativo</h2>
    
 
-    <form class="form" action="sesion.php" method="POST">
+    <form class="form" action="php/sesionadministrador.php" method="POST">
 
-    
-    <?php
-    include("php/vali.php");
-    ?>
         <input name="user" type="text" class="inputtext" id="inputnombre" placeholder="Nombre de Usuario">
 
         <input name="pass" type="password" class="inputtext" id="inputcontra" placeholder="Contraseña">
@@ -45,16 +41,16 @@
         
         
 
-        <div class="box"></div>
+        <!-- <div class="box"></div>
 
-        <a href="#" class="a a2" >Crear Cuenta</a>
+        <a href="#" class="a a2" >Crear Cuenta</a> -->
     </form>
    </div>
 
    <footer>
     <label for="">Copyright © 2023</label>
 
-    <a href="login.html"><img class="icon" src="img/salida.png" alt=""></a>
+    <a href="login.php"><img class="icon" src="img/salida.png" alt=""></a>
    </footer>
     
 </body>

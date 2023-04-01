@@ -19,35 +19,42 @@
     </nav>
 
    <div class="login-box">
-    <img class="logoimg" src="img/logo.jpeg" alt="">
+   
     <h2>Crear Cuenta</h2>
+    <label for="" class="lblfoto">Foto de perfil</label>
+    <img class="logoimg" src="img/logo.jpeg" alt="">
+    <a href="#"><img class="agregarimg" src="img/agregarfoto.png" alt=""></a>
 
-    <form class="form" action="sesion.php" method="POST">
+    <form class="form" action="conec/conexionCuenta.php" method="POST">
 
-        <input name="user" type="text" class="inputtext" id="inputusuario" placeholder="Usuario">
+        <input name="usuario" type="text" class="inputtext" id="inputusuario" placeholder="Usuario">
 
         <input name="nombre" type="text" class="inputtext" id="inputnombre" placeholder="Nombre">
 
-        <input name="lastname" type="text" class="inputtext" id="inputlastname" placeholder="Apellido">
+        <input name="apellido" type="text" class="inputtext" id="inputlastname" placeholder="Apellido">
+        
+        <label class="lblfecha" for="">Fecha de nacimiento</label>
+        <input name="fecha" type="date" class="inputtext ipfecha" id="inputfecha" placeholder="Nombre de Usuario">
 
-        <input name="correo" type="text" class="inputtext" id="inputcorreo" placeholder="Correo Electronico">
-
-        <input name="fecha" type="date" class="inputfecha" id="inputfecha" placeholder="Nombre de Usuario">
+        <input name="email" type="text" class="inputtext" id="inputcorreo" placeholder="Correo Electronico">
 
         <input name="pass" type="password" class="inputtext" id="inputcontra" placeholder="Contraseña">
 
-        <input type="submit" value="Crear Cuenta" id="btncontinuar" class="btncontinuar">
-
         <select autocomplete="off" name="rol" class="ocultar" tabindex="9" id="slStatus">
             <option value="Cliente">Cliente</option>
-            <option value="Administrador">Administrador</option>
         </select>
+        
+        <input name="cPass" type="password" class="inputtext" id="inputcontra" placeholder="Confirmar contraseña">
+
+        <input type="submit" value="Crear Cuenta" id="btncontinuar" class="btncontinuar">
+
+    
 
         <div class="box"></div>
 
 
-        <label class="lbl" for="">¿Tienes una cuenta?</label>
-        <a href="#" class="a" >Iniciar sesion</a>
+        <label class="lbl" for="">¿Ya tienes una cuenta?</label>
+        <a href="login.php" class="a" >Iniciar sesion</a>
     </form>
    </div>
 
