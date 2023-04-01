@@ -50,9 +50,9 @@
 
     .login-box .agregarimg{
         width: 35px;
-        border: 2px solid rgb(122, 184, 189);
+        border: 2px solid rgb(57, 90, 92);
         border-radius: 50px;
-        background-color: rgb(57, 90, 92);
+        background-color: cadetblue;
         position: absolute;
         left: calc(50% - 145px); 
         top: 202px;
