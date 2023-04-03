@@ -35,3 +35,6 @@ check.addEventListener('click',(e)=>{
     father.classList.add('fatherclose');
 
 }); 
+
+
+
