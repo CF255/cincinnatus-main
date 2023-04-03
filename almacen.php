@@ -42,7 +42,7 @@
         <!-- profile -->
         <div id="profile">
             <div id="photo"><img src="img/logo.jpeg" alt="">
-                <div id="name"><span>nombre</span></div>
+                <div id="name"><span id="spannombre"></span> <?php session_start(); $user=$_SESSION['nombre_usuario']; echo "<h3> $user </h3>"; ?></div>
             </div>
         </div>
 
