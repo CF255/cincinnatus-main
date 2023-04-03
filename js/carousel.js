@@ -2,6 +2,7 @@ const father = document.querySelector('.father')
 const point = document.querySelectorAll('.point')
 
 
+
 // recorriendo cada punto
 point.forEach ((allpoint, i)=>{
 
@@ -25,3 +26,12 @@ point.forEach ((allpoint, i)=>{
         point[i].classList.add('activo')
     })
 })
+
+const check = document.getElementById('check')
+
+check.addEventListener('click',(e)=>{
+
+    e.preventDefault();
+    father.classList.add('fatherclose');
+
+}); 

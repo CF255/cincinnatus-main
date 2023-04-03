@@ -131,6 +131,7 @@ li a.active, li a:hover{
         color: rgb(0, 0, 0);
         border: 3px solid cadetblue;
     } 
+    
     #check:checked ~ ul{
         left: 0;
     }   
@@ -160,6 +161,12 @@ li a.active, li a:hover{
     transition: all .5s ease;
     transform: translateX(0%);
 }
+
+.fatherclose{
+    opacity: 0;
+    pointer-events: none;
+}
+
 .carrousel .img{
     width: calc(100%/2 - 2em);
     background-color: rgb(30, 255, 0);

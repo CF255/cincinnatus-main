@@ -4,7 +4,7 @@ padding: 0;}
 body{
     font-family: 'Paytone One', sans-serif;
     overflow: hidden;
-    background-color: aqua;
+   
 }
 
 nav{
@@ -125,6 +125,7 @@ nav{
 }
 
 footer{
+    
     background-color: #efefefef;
     position: absolute;
     bottom: 0;
@@ -132,6 +133,8 @@ footer{
     padding: 25px;
     border-top: 2px solid rgb(57, 90, 92) ;
 }
+
+
 
 
 .nom{
