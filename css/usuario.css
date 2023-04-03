@@ -30,7 +30,8 @@
         height: 720px;
         width: 450px;
         border-radius: 20px;
-        margin-bottom: 20px;   
+    
+        
     }
     
     /* ajustando la imagen */
@@ -165,7 +166,7 @@
     footer{
         background-color: #efefefef;
         position: absolute;
-        
+        bottom: 0;
         width: 100%;
         padding: 15px;
         border-top: 2px solid rgb(57, 90, 92) ;

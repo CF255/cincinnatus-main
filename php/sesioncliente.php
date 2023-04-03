@@ -23,7 +23,7 @@ if($usuario != ""){
         $cantidad=pg_num_rows($consulta);
 
         $_SESSION['nombre_usuario']=$usuario;
-        header('Location: ../index.php');
+        header('Location: ../index.html');
         session_start();
     }
     
