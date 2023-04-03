@@ -4,15 +4,11 @@
     body{
         font-family: 'Paytone One', sans-serif;
         overflow-x:hidden;
-
     }
     
     nav{
         width: 100%;
         height: 80px;
-        margin-bottom: 30px;
-    
-       
     }
     
     .logoimg{
@@ -44,7 +40,7 @@
         height: 100px;
         border-radius: 50%;
         position: absolute;
-        top: 140px;
+        top: 100px;
         left: calc(50% - 210px);  
         
     }
@@ -56,7 +52,7 @@
         background-color: cadetblue;
         position: absolute;
         left: calc(50% - 145px); 
-        top: 202px;
+        top: 157px;
     }
     
     .login-box h1{
@@ -84,8 +80,8 @@
         font-weight: normal;
 
         position: absolute;
-        left: calc(50% - 100px); 
-        top: 215px;
+        left: calc(50% - 99px); 
+        top: 145px;
     }
     
     .inputtext{
@@ -134,7 +130,7 @@
         text-decoration: none;
         color: rgb(57, 90, 92) ;
         margin: 0 auto;
-        margin-top: 20px;
+        margin-top: -10px;
         display: flex;
         border-radius: 50%;
         position: absolute;
@@ -144,7 +140,7 @@
     .lbl{
         text-decoration: none;
         color: black;
-        margin-top: 20px;
+        margin-top: -10px;
         display: flex;
         border-radius: 50%;
         position: absolute;
@@ -170,7 +166,7 @@
     footer{
         background-color: #efefefef;
         position: absolute;
-        bottom: 0;
+        
         width: 100%;
         padding: 15px;
         border-top: 2px solid rgb(57, 90, 92) ;
@@ -195,5 +191,18 @@
         display: none;
     }
     
+    .form-control-file{
+       
+
+        margin-bottom: 15px;
+        font-size: 15px;
+        padding: 0 0 5px;
+        font-weight: normal;
+
+        position: absolute;
+        left: calc(50% - 100px); 
+        top: 170px;
+
+    }
     
     /* fin login */

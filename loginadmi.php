@@ -50,7 +50,7 @@
    <footer>
     <label for="">Copyright © 2023</label>
 
-    <a href="login.php"><img class="icon" src="img/salida.png" alt=""></a>
+    <a href="login.html"><img class="icon" src="img/salida.png" alt=""></a>
    </footer>
     
 </body>
