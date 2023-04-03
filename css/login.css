@@ -4,6 +4,7 @@ padding: 0;}
 body{
     font-family: 'Paytone One', sans-serif;
     overflow: hidden;
+    background-color: aqua;
 }
 
 nav{
@@ -150,5 +151,80 @@ footer{
 .ocultar{
     display: none;
 }
+/* 
+modal inicio */
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: #111111bd;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+
+}
+
+
+.modalcontainer{
+margin: auto;
+width: 90%;
+max-width: 600px;
+max-height: 90%;
+border-radius: 6px;
+padding: 3em .5em;
+display: grid;
+gap: 1em;
+place-items: center;
+grid-auto-columns: 100%;
+background-color: #fff;
+}
+
+.modaltitle{
+    font-size: 2.5rem;
+}
+
+.modalparrafo{
+    margin-bottom: 10px;
+}
+
+
+.modalclose{
+    text-decoration: none;
+    color: #fff;
+    background-color: cadetblue;
+    border: 2px solid rgb(41, 84, 86) ;
+    padding: 1em 3em;
+    border-radius: 6px;
+    display: inline-block;
+    font-weight: 300;
+    transition: background-color .3s;
+}
+
+.modalclose:hover{
+    color: cadetblue;
+    background-color: #fff;
+}
+
+.modalshow{
+opacity: 1;
+pointer-events: unset;
+}
+
+
+.lblvali{
+color: red;
+opacity: 0;
+pointer-events: none;
+}
+
+.lblshow{
+opacity: 1;
+pointer-events: unset;
+}
+
+/* modal final */
 
 /* fin login */

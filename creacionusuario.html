@@ -23,9 +23,17 @@
     <h2>Crear Cuenta</h2>
     <label for="" class="lblfoto">Foto de perfil</label>
     <img class="logoimg" src="img/logo.jpeg" alt="">
+
+
+
     <a href="#"><img class="agregarimg" src="img/agregarfoto.png" alt=""></a>
 
-    <form class="form" action="conec/conexionCuenta.php" method="POST">
+     
+
+
+    <form class="form" action="conec/conexionCuenta.php" method="POST" enctype="multipart/form-data">
+
+    <input type="file" class="form-control-file" name="foto" id="" placeholder="foto" aria-describedby="fileHelpId">
 
         <input name="usuario" type="text" class="inputtext" id="inputusuario" placeholder="Usuario">
 
@@ -46,7 +54,7 @@
         
         <input name="cPass" type="password" class="inputtext" id="inputcontra" placeholder="Confirmar contraseña">
 
-        <input type="submit" value="Crear Cuenta" id="btncontinuar" class="btncontinuar">
+        <input type="submit" name="guardar" value="Crear Cuenta" id="btncontinuar" class="btncontinuar">
 
     
 
@@ -54,7 +62,7 @@
 
 
         <label class="lbl" for="">¿Ya tienes una cuenta?</label>
-        <a href="login.php" class="a" >Iniciar sesion</a>
+        <a href="login.html" class="a" >Iniciar sesion</a>
     </form>
    </div>
 
@@ -65,5 +73,7 @@
     <a href="loginadmi.php"><img class="icon" src="img/admin.png" alt=""></a>
    </footer>
     
+
+   <script src=""></script>
 </body>
 </html>
