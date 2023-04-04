@@ -13,3 +13,16 @@ btn.addEventListener('click', e =>{
 
 
 /* end side menu */
+
+
+const nombre = document.getElementById('inputusuario');
+const boton = document.getElementById('btncontinuar');
+const lbl = document.getElementById('spannombre');
+
+
+boton.addEventListener('click', e =>{
+    
+    lbl = "usuario" + nombre;
+    alert(nombre);
+
+});
