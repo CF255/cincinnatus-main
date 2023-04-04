@@ -12,7 +12,7 @@
 </head>
 <body>
     
-    <nav class="nav2">
+    <nav>
         <input type="checkbox" name="" id="check">
         <label for="check" class="checkbtn">
             <i class="fa-solid fa-bars"></i>
@@ -43,7 +43,7 @@
                 <li><a href="loginadmi.php"><img src="img/cerrar.png" alt="">Cerrar sesion</a></li>
 
         </ul>
-</nav>
+    </nav>
 
     <div class="menucolapse" id="sidemenu">
         <!-- header -->
@@ -117,7 +117,7 @@
     <div class="contenedorinput">
         <h1>Creacion de productos</h1>
 
-    
+        <label for="" class="lblfoto">Foto de perfil</label>
         <img class="imglogo" src="img/logo.jpeg" alt="">
         <a href="#"><img class="agregarimg" src="img/agregarfoto.png" alt=""></a>
         <input type="file" class="form-control-file " name="foto" id="" placeholder="foto" aria-describedby="fileHelpId">

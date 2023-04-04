@@ -6,7 +6,7 @@
 body{
     font-family: 'Paytone One', sans-serif;
     overflow-x: hidden;
-    background-color: #efefefef;
+    background-color: #e71d1def;
 }
 
 /* navegador  */
@@ -368,7 +368,6 @@ body{
     display: block; 
     margin-bottom: 10px; 
 }
-
 
 .textarea{
     width: 100%;
