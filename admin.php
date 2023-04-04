@@ -13,10 +13,6 @@
     
     <?php
 
-session_start();
-$user=$_SESSION['nombre_usuario'];
-echo "<h3>hola $user </h3>";
-?>
 
 <?php
 
