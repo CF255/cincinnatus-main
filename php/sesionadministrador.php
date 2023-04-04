@@ -63,7 +63,6 @@ if($usuario != ""){
     }
 }else{
    
-    
     echo'<script type="text/javascript">
     alert("debe de introducir un usuario");
     window.location.href="../loginadmi.php";
