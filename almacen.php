@@ -12,7 +12,7 @@
 </head>
 <body>
     
-    <nav>
+    <nav class="nav2">
         <input type="checkbox" name="" id="check">
         <label for="check" class="checkbtn">
             <i class="fa-solid fa-bars"></i>
@@ -149,8 +149,22 @@
     <textarea class="inputtext textarea" name="" id="" cols="40" rows="10"></textarea>
 
     </div>
-    
-    
+
+    <div class="containerright">
+
+        <nav class="navbar" id="navid">
+            <button type="button" class="toggle-collapse" id="toggle-button" >
+            <span class="toggle-icon"></span>
+            </button>
+
+            <ul> <li class="side-nav"><a href="#"><img src="img/btnbuscar.png" alt="">Buscar</a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><img src="img/btnguardar.png" alt="">Guardar</a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><img src="img/btnactualizar.png" alt="">Actualizar</a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><img src="img/btneditar.png" alt="">Editar</a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><img src="img/btneliminar.png" alt="">Eliminar</a></li>
+        </ul>
+        </nav>
+    </div>
     <script src="js/almacen.js"></script>
 
 </body>
