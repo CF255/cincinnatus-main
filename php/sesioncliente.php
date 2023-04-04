@@ -28,11 +28,16 @@ if($usuario != ""){
     }
     
     }else{
-        
-        echo"debe de llenar el campo de contrasena";
+        echo'<script type="text/javascript">
+        alert("Debe de introducir una contraseña");
+        window.location.href="../login.html";
+        </script>';
     }
 }else{
-    echo"debe de llenar el campo de usuario";
+    echo'<script type="text/javascript">
+    alert("Debe de introducir un usuario");
+    window.location.href="../login.html";
+    </script>';
 }
 
 

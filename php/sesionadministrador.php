@@ -48,24 +48,33 @@ if($usuario != ""){
                     header('Location: ../almacen.html');
                     }
                 }else{
-                    echo "No posees una Cuenta Administrativa como: $rol";
+                   
+                    echo'<script type="text/javascript">
+    alert("No posee este tipo de cuenta");
+    window.location.href="../loginadmi.php";
+    </script>';
                 }
 
 
         }else{
-            echo "debe de seleccionar un rol";
+            echo'<script type="text/javascript">
+            alert("Debe de seleccionar un Rol");
+            window.location.href="../loginadmi.php";
+            </script>';
         }
 
     }else{
-        
-        echo"debe de introducir una contrasena";
+        echo'<script type="text/javascript">
+    alert("Debe de introducir una Contraseña");
+    window.location.href="../loginadmi.php";
+    </script>';
     
     }
 }else{
    
     
     echo'<script type="text/javascript">
-    alert("debe de introducir un usuario");
+    alert("Debe de introducir un usuario");
     window.location.href="../loginadmi.php";
     </script>';
 }

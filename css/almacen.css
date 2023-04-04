@@ -6,6 +6,7 @@
 body{
     font-family: 'Paytone One', sans-serif;
     overflow: hidden;
+    background-color: #efefefef;
 }
 
 /* navegador  */
@@ -51,6 +52,11 @@ nav ul li a{
     text-decoration: none;
 }
 
+nav ul li a :active{
+    background-color: rgb(255, 255, 255);
+    color: cadetblue;
+}
+
 
 li a.active, li a:hover{
     background-color: rgb(57, 90, 92);
@@ -80,60 +86,7 @@ li a.active, li a:hover{
 
 }
 
-@media (max-width: 600px){
-    .checkbtn{
-        display: block;
-    }
 
-    nav ul{
-        display: block;
-    }
-
-    .containerlef{
-       opacity: 0;
-       pointer-events: none;
-    }
-
-    ul{
-        position: fixed;
-        width: 99%;
-        height: 100vh;
-        background:rgb(57, 90, 92);
-        top: 36px;
-        left: -100%;
-        text-align: center;
-        transition: all .5s;
-        margin-top: 8px;
-        border: 3px solid cadetblue;
-    }
-
-    nav ul li{
-        display: block;
-        margin: 20px 0;
-        line-height: 30px;
-        background: cadetblue;
-        width: 95%;
-        margin-left: 2.5%;
-        border-radius: 15px;
-        padding: 10px 0;
-    }
-
-    nav ul li a {
-        font-size: 20px;
-        padding: 14px 43%;
-        
-        
-    }
-
-    li a:hover, li a.active{
-        background-color: none;
-        color: rgb(0, 0, 0);
-        border: 3px solid cadetblue;
-    } 
-    #check:checked ~ ul{
-        left: 0;
-    }   
-}
 /* 
 fin nav */
 
@@ -146,6 +99,7 @@ fin nav */
     --bgcolor: cadetblue;
     --hovercolor: rgb(57, 90, 92);
     --width-collapsed: 60px;
+    --width-normal: 0px;
 
 }
 
@@ -200,10 +154,9 @@ body{
 
 #sidemenu #header #menu-btn{
     cursor: pointer;
-    padding: 10px;
+    padding: 20px;
     width: var(--width-collapsed);
     box-sizing: border-box;
-
 }
 
 #sidemenu #header #menu-btn:hover{
@@ -215,7 +168,7 @@ body{
     width: 100%;
     height: 2px;
     margin: 5px 0;
-
+    
 }
 
 
@@ -351,8 +304,159 @@ body{
 }
 
 
-.itemcerrar{
-}
-
 
 /* fin container */
+
+/* contenedor inputs */
+
+.contenedorinput{
+
+    width: 60%;
+    max-width: 750px;
+    margin: 0 auto;
+    margin-top: 20px;
+
+    border: 2Px solid rgb(57, 90, 92) ;
+    border-radius: 10px;
+    background-color: white;
+    padding: 10px;
+  
+}
+
+.contenedorinput h1{
+    margin-bottom: 10px;
+    
+}
+
+.inputtext{
+    max-width: 700px;
+    width: 90%;
+    height: 40px;
+    border-radius: 10px;
+    border: 2px solid rgb(57, 90, 92);
+    font-size: 15px;
+    display: block; 
+    margin-bottom: 10px; 
+}
+
+.imglogo{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    top: 100px;
+    left: calc(50% - 210px);  
+    }
+    
+.agregarimg{
+    
+    top: 200px;
+    border-radius: 50px;
+    background-color: cadetblue;
+    border: 2px solid rgb(57, 90, 92);
+    width: 35px;
+    left: calc(50% - 190px); 
+}
+
+.form-control-file{
+    max-width: 700px;
+    width: 90%;
+    height: 40px;
+   
+    font-size: 15px;
+    display: block; 
+    margin-bottom: 10px; 
+}
+
+.lblnombres{
+    
+
+    
+}
+
+.textarea{
+    width: 100%;
+    min-width: 60%;
+    min-height: 200px;
+    max-height: 200px;
+}
+
+/* fin contenedores inputs */
+
+
+/* modo celular */
+
+@media (max-width: 600px){
+
+    body{
+        margin: 0;
+    }
+
+    .menucolapse{
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .checkbtn{
+        display: block;
+    }
+
+    nav ul{
+        display: block;
+    }
+
+    .containerlef{
+       opacity: 0;
+       pointer-events: none;
+    }
+
+    ul{
+        position: fixed;
+        width: 99%;
+        height: 100vh;
+        background:rgb(57, 90, 92);
+        top: 36px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        margin-top: 8px;
+        border: 3px solid cadetblue;
+    }
+
+    nav ul li{
+        display: flex;
+        margin: 10px 0;
+        line-height: 30px;
+        background: cadetblue;
+        width: 95%;
+        margin-left: 2.5%;
+        border-radius: 15px;
+        /* padding: 10px 0; */
+    }
+
+    nav ul li a {
+        font-size: 16px;
+         padding: 20px 41%;
+        /* justify-content: space-between; */
+        margin: 0 auto;
+ 
+    }
+
+   
+
+    li a:hover, li a.active{
+        background-color: none;
+        color: rgb(0, 0, 0);
+        
+    } 
+
+    nav ul li a:active{
+        background-color: rgb(255, 255, 255);
+        color: cadetblue;
+    }
+
+    #check:checked ~ ul{
+        left: 0;
+    }   
+}
+
+/* fin modo celular */
