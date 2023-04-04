@@ -5,13 +5,13 @@
 
 body{
     font-family: 'Paytone One', sans-serif;
-    overflow: hidden;
+    overflow-x: hidden;
     background-color: #efefefef;
 }
 
 /* navegador  */
 
-nav{
+.nav2{
     background-color: cadetblue;
     width: 100%;
     height: 45px;
@@ -32,19 +32,19 @@ nav{
    margin-top: -15px;
    margin-left: -30px;
 }
-
-nav ul{
+ 
+.nav2 ul{
     float: right;
     margin-right: 20px;
 }
 
-nav ul li{
+.nav2 ul li{
     display: inline-block;
     line-height: 80px;
     margin: 0 5px;
 }
 
-nav ul li a{
+.nav2 ul li a{
     color: white;
     font-size: 18px;
     padding: 7px 13px;
@@ -52,10 +52,10 @@ nav ul li a{
     text-decoration: none;
 }
 
-nav ul li a :active{
+.nav2 ul li a :active{
     background-color: rgb(255, 255, 255);
     color: cadetblue;
-}
+} 
 
 
 li a.active, li a:hover{
@@ -80,7 +80,7 @@ li a.active, li a:hover{
 }
 
 @media(max-width: 3000px){
-    nav ul{
+    .nav2 ul{
         display: none;
     }
 
@@ -313,9 +313,9 @@ body{
 
     width: 60%;
     max-width: 750px;
-    margin: 0 auto;
+    margin: 0 auto; 
     margin-top: 20px;
-
+    position: absolute;
     border: 2Px solid rgb(57, 90, 92) ;
     border-radius: 10px;
     background-color: white;
@@ -367,11 +367,6 @@ body{
     margin-bottom: 10px; 
 }
 
-.lblnombres{
-    
-
-    
-}
 
 .textarea{
     width: 100%;
@@ -382,13 +377,56 @@ body{
 
 /* fin contenedores inputs */
 
+/* contenedor izquierdo */
+
+.navbar{
+    position: absolute;
+    right: 0px;
+    width: 260px;
+    height: 100%;
+    background-color: cadetblue;
+    text-align: center;
+    transition: 0.800s ease;
+}
+
+.navbar > .side-nav{
+    list-style-type:none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item{
+    display: flex;
+
+}
+
+.nav-item > .nav-link{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1em;
+    padding: 1em;
+    flex: 1;
+}
+
+.nav-item > .nav-link:hover{
+    background-color: #fff;
+    color: cadetblue;
+}
+
+/* fin contenedor izquierdo */
+
 
 /* modo celular */
 
 @media (max-width: 600px){
 
+    .nav2{
+        overflow: visible;
+    }
+
     body{
         margin: 0;
+        overflow: hidden;
     }
 
     .menucolapse{
@@ -396,11 +434,13 @@ body{
         pointer-events: none;
     }
 
+
+
     .checkbtn{
         display: block;
     }
 
-    nav ul{
+    .nav2 ul{
         display: block;
     }
 
@@ -409,7 +449,7 @@ body{
        pointer-events: none;
     }
 
-    ul{
+    .nav2 ul{
         position: fixed;
         width: 99%;
         height: 100vh;
@@ -422,7 +462,7 @@ body{
         border: 3px solid cadetblue;
     }
 
-    nav ul li{
+    .nav2 ul li{
         display: flex;
         margin: 10px 0;
         line-height: 30px;
@@ -433,7 +473,7 @@ body{
         /* padding: 10px 0; */
     }
 
-    nav ul li a {
+    .nav2 ul li a {
         font-size: 16px;
          padding: 20px 41%;
         /* justify-content: space-between; */
@@ -449,7 +489,7 @@ body{
         
     } 
 
-    nav ul li a:active{
+    .nav2 ul li a:active{
         background-color: rgb(255, 255, 255);
         color: cadetblue;
     }
