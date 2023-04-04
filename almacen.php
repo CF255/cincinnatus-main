@@ -12,7 +12,7 @@
 </head>
 <body>
     
-    <nav class="nav2">
+    <nav>
         <input type="checkbox" name="" id="check">
         <label for="check" class="checkbtn">
             <i class="fa-solid fa-bars"></i>
@@ -43,7 +43,7 @@
                 <li><a href="loginadmi.php"><img src="img/cerrar.png" alt="">Cerrar sesion</a></li>
 
         </ul>
-</nav>
+    </nav>
 
     <div class="menucolapse" id="sidemenu">
         <!-- header -->
@@ -117,7 +117,7 @@
     <div class="contenedorinput">
         <h1>Creacion de productos</h1>
 
-    
+        <label for="" class="lblfoto">Foto de perfil</label>
         <img class="imglogo" src="img/logo.jpeg" alt="">
         <a href="#"><img class="agregarimg" src="img/agregarfoto.png" alt=""></a>
         <input type="file" class="form-control-file " name="foto" id="" placeholder="foto" aria-describedby="fileHelpId">
@@ -148,22 +148,6 @@
     <label class="lblnombres"  for="">Descripcion</label>
     <textarea class="inputtext textarea" name="" id="" cols="40" rows="10"></textarea>
 
-    </div>
-
-    <div class="containerright">
-
-        <nav class="navbar" id="navid">
-            <button type="button" class="toggle-collapse" id="toggle-button" >
-            <span class="toggle-icon"></span>
-            </button>
-
-            <ul> <li class="side-nav"><a href="#"><img src="img/btnbuscar.png" alt="">Buscar</a></li>
-            <li class="nav-item"><a class="nav-link" href="#"><img src="img/btnguardar.png" alt="">Guardar</a></li>
-            <li class="nav-item"><a class="nav-link" href="#"><img src="img/btnactualizar.png" alt="">Actualizar</a></li>
-            <li class="nav-item"><a class="nav-link" href="#"><img src="img/btneditar.png" alt="">Editar</a></li>
-            <li class="nav-item"><a class="nav-link" href="#"><img src="img/btneliminar.png" alt="">Eliminar</a></li>
-        </ul>
-        </nav>
     </div>
     
     
