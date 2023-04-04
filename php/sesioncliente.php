@@ -10,8 +10,6 @@ $rol=$_POST['rol'];
 $lbl=$_POST['submit'];
 
 
-
-
 if($usuario != ""){
     if($contraseña != ""){
     if($rol == "Cliente"){
