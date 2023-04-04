@@ -19,6 +19,7 @@
         </label>
         <a href="#" class="linkphoto">
             <img src="img/logo.jpeg" alt="" class="logoimg">
+            
         </a>
 
         <ul>

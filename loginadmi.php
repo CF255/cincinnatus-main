@@ -25,8 +25,15 @@
 
     <form class="form" action="php/sesionadministrador.php" method="POST">
 
+    
+
+  
+
+ 
+
         <input name="user" type="text" class="inputtext" id="inputnombre" placeholder="Nombre de Usuario">
 
+    
         <input name="pass" type="password" class="inputtext" id="inputcontra" placeholder="Contraseña">
         
         <select autocomplete="off" name="rol" class="inputtext" tabindex="9" id="slStatus">
