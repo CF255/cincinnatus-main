@@ -153,7 +153,7 @@
     <div class="containerright">
 
         <nav class="navbar" id="navid">
-            <button  type="button" onclick="myFnc(this)" class="toggle-collapse " id="toggle-button" >
+            <button  type="button" onclick="myFnc(e)"  class="toggle-collapse " id="toggle-button" >
             <span class="toggle-icon"></span>
             </button>
 
@@ -168,5 +168,23 @@
     </div>
     <script src="js/almacen.js"></script>
 
+<?php
+function myFnc(e){
+    e.classList.toggle("show");
+
+    var element = document.getElementById("navid"),
+    style = window.getComputedStyle(element),
+    right = style.getPropertyValue("right");
+
+    if(right == "0px"){
+        element.style.right = "-260px";
+    }else{
+        element.style.right = "0px";
+    }
+}
+
+?>
 </body>
 </html>
+
+onclick="myFnc(this)"

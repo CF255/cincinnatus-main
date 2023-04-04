@@ -30,7 +30,8 @@ boton.addEventListener('click', e =>{
 
 /* side bar right */
 
- const btnright = document.getElementById('toggle-button');
+ const btnright = document.querySelector('#toggle-button');
+ const sidemenu = document.querySelector('#navid');
  
 
  btnright.addEventListener('click', e =>{
