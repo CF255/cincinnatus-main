@@ -12,7 +12,7 @@
 </head>
 <body>
     
-    <nav>
+    <nav class="nav2">
         <input type="checkbox" name="" id="check">
         <label for="check" class="checkbtn">
             <i class="fa-solid fa-bars"></i>
