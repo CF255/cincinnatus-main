@@ -23,10 +23,25 @@
         </a>
 
         <ul>
-            <li><a class="active" href="#">Inicio</a></li>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Inicio</a></li>
+           
+
+                <li><a class="active" href="#"><img src="img/tienda.png" alt="">tienda</a></li>
+
+            
+                <li><a href="#"><img src="img/usuarios.png" alt="">Usuarios</a></li>
+
+           
+                <li><a href="#"><img src="img/usuario.png" alt="">Creacion de usuarios</a></li>
+
+           
+                <li><a href="#"><img src="img/producto.png" alt="">Crear producto</a></li>
+
+    
+                <li><a href="#"><img src="img/almacen.png" alt="">almacen</a></li>
+
+                
+                <li><a href="loginadmi.php"><img src="img/cerrar.png" alt="">Cerrar sesion</a></li>
+
         </ul>
     </nav>
 
@@ -35,9 +50,7 @@
         <div id="header">
             <div id="title"><span>MENU</span></div>
             <div id="menu-btn">
-                <div class="btn-ham"></div>
-                <div class="btn-ham"></div>
-                <div class="btn-ham"></div>
+            <i class="fa-solid fa-bars" ></i>
             </div>
         </div>
         <!-- profile -->
@@ -98,8 +111,43 @@
     
     </div>
 
-    <div id="main">
-        hola
+  
+
+    <!-- contenedor de inputs -->
+    <div class="contenedorinput">
+        <h1>Creacion de productos</h1>
+
+    
+        <img class="imglogo" src="img/logo.jpeg" alt="">
+        <a href="#"><img class="agregarimg" src="img/agregarfoto.png" alt=""></a>
+        <input type="file" class="form-control-file " name="foto" id="" placeholder="foto" aria-describedby="fileHelpId">
+    
+    <label class="lblnombres" for="">Nombre</label>
+    <input type="text" class="inputtext" id="txtnombre" placeholder="Nombre del producto">
+
+    <label class="lblnombres" for="">Precio</label>
+    <input type="text" class="inputtext" id="txtprecio" placeholder="precio del producto">
+
+    <label class="lblnombres" for="">Proveedor</label>
+    <input type="text" class="inputtext" id="txtproeedor" placeholder="Nombre del proveedor">
+
+
+    <label class="lblnombres" for="">Categoria</label>
+    <select autocomplete="off" name="" class="inputtext" tabindex="9" id="slcategoria">
+            <option value=""></option>
+            <option value="Electronico">Administrador</option>
+            <option value="Libros">Editor</option>
+            <option value="Ropa">Administrador Inventario</option>
+            <option value="Accesorios">Supervisor</option>
+            <option value="Deportes">Administrador</option>
+            <option value="Juegos/Video juegos">Editor</option>
+            <option value="Mascotas">Administrador Inventario</option>
+            <option value="Hogar">Supervisor</option>
+        </select>
+
+    <label class="lblnombres"  for="">Descripcion</label>
+    <textarea class="inputtext textarea" name="" id="" cols="40" rows="10"></textarea>
+
     </div>
     
     
