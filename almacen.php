@@ -165,8 +165,6 @@
         </ul>
         </nav>
     </div>
-    
-    
     <script src="js/almacen.js"></script>
 
 </body>
