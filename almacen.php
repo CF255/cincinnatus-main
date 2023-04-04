@@ -153,11 +153,12 @@
     <div class="containerright">
 
         <nav class="navbar" id="navid">
-            <button type="button" class="toggle-collapse" id="toggle-button" >
+            <button  type="button" onclick="myFnc(this)" class="toggle-collapse " id="toggle-button" >
             <span class="toggle-icon"></span>
             </button>
 
-            <ul> <li class="side-nav"><a href="#"><img src="img/btnbuscar.png" alt="">Buscar</a></li>
+            <ul> 
+            <li class="nav-item"><a href="#" class="nav-link"><img src="img/btnbuscar.png" alt="">Buscar</a></li>
             <li class="nav-item"><a class="nav-link" href="#"><img src="img/btnguardar.png" alt="">Guardar</a></li>
             <li class="nav-item"><a class="nav-link" href="#"><img src="img/btnactualizar.png" alt="">Actualizar</a></li>
             <li class="nav-item"><a class="nav-link" href="#"><img src="img/btneditar.png" alt="">Editar</a></li>
