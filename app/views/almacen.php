@@ -17,29 +17,29 @@
             <i class="fa-solid fa-bars"></i>
         </label>
         <a href="#" class="linkphoto">
-            <img src="../../img/logo.jpeg" alt="" class="logoimg">
+            <img src="../../public/img/logo.jpeg" alt="" class="logoimg">
             
         </a>
 
         <ul class="navlist">
            
 
-                <li><a class="active" href="#"><img src="../../img/tienda.png" alt="">tienda</a></li>
+                <li><a class="active" href="#"><img src="../../public/img/tienda.png" alt="">tienda</a></li>
 
             
-                <li><a href="#"><img src="../../img/usuarios.png" alt="">Usuarios</a></li>
+                <li><a href="#"><img src="../../public/img/usuarios.png" alt="">Usuarios</a></li>
 
            
-                <li><a href="#"><img src="../../img/usuario.png" alt="">Creacion de usuarios</a></li>
+                <li><a href="#"><img src="../../public/img/usuario.png" alt="">Creacion de usuarios</a></li>
 
            
-                <li><a href="#"><img src="../../img/producto.png" alt="">Crear producto</a></li>
+                <li><a href="#"><img src="../../public/img/producto.png" alt="">Crear producto</a></li>
 
     
-                <li><a href="#"><img src="../../img/almacen.png" alt="">almacen</a></li>
+                <li><a href="#"><img src="../../public/img/almacen.png" alt="">almacen</a></li>
 
                 
-                <li><a href="loginadmi.php"><img src="../../img/cerrar.png" alt="">Cerrar sesion</a></li>
+                <li><a href="loginadmi.php"><img src="../../public/img/cerrar.png" alt="">Cerrar sesion</a></li>
 
         </ul>
     </nav>
@@ -54,7 +54,7 @@
         </div>
         <!-- profile -->
         <div id="profile">
-            <div id="photo"><img src="../../img/logo.jpeg" alt="">
+            <div id="photo"><img src="../../public/img/logo.jpeg" alt="">
                 <div id="name"><span id="spannombre"></span> <?php session_start(); $user=$_SESSION['nombre_usuario']; echo "<h3> $user </h3>"; ?></div>
             </div>
         </div>
@@ -63,36 +63,36 @@
         <div id="menuitem">
             <div class="item">
                 <a href="">
-                    <div class="icon"><img src="../../img/tienda.png" alt=""></div>
+                    <div class="icon"><img src="../../public/img/tienda.png" alt=""></div>
                     <div class="title"><span>Tienda</span></div>
                 </a>
             </div>
 
             <div class="item">
                 <a href="">
-                    <div class="icon"><img src="../../img/usuario.png" alt=""></div>
+                    <div class="icon"><img src="../../public/img/usuario.png" alt=""></div>
                     <div class="title"><span>Creacion de usuarios</span></div>
                 </a>
             </div>
 
             <div class="item">
                 <a href="">
-                    <div class="icon"><img src="../../img/usuarios.png" alt=""></div>
+                    <div class="icon"><img src="../../public/img/usuarios.png" alt=""></div>
                     <div class="title"><span>Usuarios</span></div>
                 </a>
             </div>
 
             <div class="item">
                 <a href="">
-                    <div class="icon"><img src="../../img/producto.png" alt=""></div>
+                    <div class="icon"><img src="../../public/img/productos.png" alt=""></div>
                     <div class="title"><span>Crear producto</span></div>
                 </a>
             </div>
 
             <div class="item">
                 <a href="">
-                    <div class="icon"><img src="../../img/almacen.png" alt=""></div>
-                    <div class="icon"><img src="../../img/almacen.png" alt=""></div>
+                    <div class="icon"><img src="../../public/img/almacen.png" alt=""></div>
+                    
                     <div class="title"><span>almacen</span></div>
                 </a>
             </div>
@@ -103,7 +103,7 @@
             
             <div class="item itemcerrar">
                 <a href="loginadmi.php">
-                    <div class="icon"><img src="../../img/cerrar.png" alt=""></div>
+                    <div class="icon"><img src="../../public/img/cerrar.png" alt=""></div>
                     <div class="title"><span>Cerrar sesion</span></div>
                 </a>
             </div>
@@ -118,8 +118,8 @@
         <h1>Creacion de productos</h1>
 
         <label for="" class="lblfoto">Foto de perfil</label>
-        <img class="imglogo" src="../../img/logo.jpeg" alt="">
-        <a href="#"><img class="agregarimg" src="../../img/agregarfoto.png" alt=""></a>
+        <img class="imglogo" src="../../public/img/logo.jpeg" alt="">
+        <a href="#"><img class="agregarimg" src="../../public/img/agregarfoto.png" alt=""></a>
         <input type="file" class="form-control-file " name="foto" id="" placeholder="foto" aria-describedby="fileHelpId">
     
     <label class="lblnombres" for="">Nombre</label>
@@ -188,24 +188,20 @@
   
         </nav>
     </div>
-    <script src="js/almacen.js"></script>
+
+    <section class="modal">
+        <div class="modalcontainer">
+            <h1 class="modaltitle">Tabla de productos</h1>
+
+
+            <a href="#" class="modalclose">Cerrar</a>
+        </div>
+    </section>
+
+    <script src="../../public/js/almacen.js"></script>
     
 <?php
 
 ?>
 </body>
 </html>
-
-         <!--  <ul> 
-            <div class="item">
-                <a href="">
-                    <div class="icon"><img src="img/usuarios.png" alt=""></div>
-                    <div class="title"><span>Usuarios</span></div>
-                </a>
-            </div>
-            <li class="nav-item"><a href="#" class="nav-link"><img src="img/btnbuscar.png" alt="">Buscar</a></li>
-            <li class="nav-item"><a class="nav-link" href="#"><img src="img/btnguardar.png" alt="">Guardar</a></li>
-            <li class="nav-item"><a class="nav-link" href="#"><img src="img/btnactualizar.png" alt="">Actualizar</a></li>
-            <li class="nav-item"><a class="nav-link" href="#"><img src="img/btneditar.png" alt="">Editar</a></li>
-            <li class="nav-item"><a class="nav-link" href="#"><img src="img/btneliminar.png" alt="">Eliminar</a></li>
-        </ul> -->

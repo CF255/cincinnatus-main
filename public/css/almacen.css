@@ -118,6 +118,7 @@ body{
 
 .body-expanded{
     margin-left: var(--width) ;
+    transition: 0.800s ease;
 }
 
 
@@ -187,12 +188,14 @@ body{
     border-bottom: solid 2px var(--hovercolor);
     padding: var(--padding) 0;
     text-align: center;
+    transition: 0.800s ease;
 }
 
 #sidemenu #profile #photo{
     box-sizing: border-box;
     padding: var(--padding);
     margin: 0 auto;
+    transition: 0.800s ease;
 }
 
 #sidemenu #profile #photo img{
@@ -264,6 +267,7 @@ body{
 .menuexpanded{
     width: var(--width);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: 0.800s ease;
 }
 
 .menuexpanded #header #title{
@@ -294,6 +298,7 @@ body{
 .menucolapse{
     border: 2px solid rgb(57, 90, 92) ;
     width: var(--width-collapsed);
+    transition: 0.700s ease;
 
 }
 
@@ -573,6 +578,8 @@ nav ul li a img{
 .mostrar{
     opacity: 1;
 }
+
+.modal{}
 
 
 /* modo celular */
