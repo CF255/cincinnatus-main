@@ -167,7 +167,6 @@
         </nav>
     </div>
     <script src="js/almacen.js"></script>
-
 <?php
 function myFnc(e){
     e.classList.toggle("show");
