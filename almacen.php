@@ -21,7 +21,7 @@
             
         </a>
 
-        <ul>
+        <ul class="navlist">
            
 
                 <li><a class="active" href="#"><img src="img/tienda.png" alt="">tienda</a></li>
@@ -113,7 +113,7 @@
   
 
     <!-- contenedor de inputs -->
-    <div class="contenedorinput">
+    <div class="contenedorinput" id="continput">
         <h1>Creacion de productos</h1>
 
         <label for="" class="lblfoto">Foto de perfil</label>
@@ -151,39 +151,60 @@
 
     <div class="containerright">
 
+
         <nav class="navbar" id="navid">
-            <button  type="button" onclick="myFnc(e)"  class="toggle-collapse " id="toggle-button" >
-            <span class="toggle-icon"></span>
+           <!--  <div id="menu-btn2" class="toggle-collapse" id="toggle-button">
+                <i class="fa-solid fa-bars" ></i>
+                </div> -->
+
+            <button  type="button"  class="toggle-collapse" id="toggle-button" >
+            <img src="img/fondo.jpg" alt=""><span class="toggle-icon"></span>
             </button>
 
-            <ul> 
-            <li class="nav-item"><a href="#" class="nav-link"><img src="img/btnbuscar.png" alt="">Buscar</a></li>
-            <li class="nav-item"><a class="nav-link" href="#"><img src="img/btnguardar.png" alt="">Guardar</a></li>
-            <li class="nav-item"><a class="nav-link" href="#"><img src="img/btnactualizar.png" alt="">Actualizar</a></li>
-            <li class="nav-item"><a class="nav-link" href="#"><img src="img/btneditar.png" alt="">Editar</a></li>
-            <li class="nav-item"><a class="nav-link" href="#"><img src="img/btneliminar.png" alt="">Eliminar</a></li>
-        </ul>
+            <ul>
+                <li><a href="#">
+                    <span class="icons"><i class="icon fa-solid fa-magnifying-glass"></i></span>
+                    <span class="item">Buscar</span>
+                </a></li>
+                <li><a href="#">
+                    <span class="icons"><i class="fa-solid fa-floppy-disk"></i></span>
+                    <span class="item">Guardar</span>
+                </a></li>
+                <li><a href="#">
+                    <span class="icons"><i class="fa-solid fa-pen-to-square"></i></span>
+                    <span class="item">Editar</span>
+                </a></li>
+                <li><a href="#">
+                    <span class="icons"><i class="fa-solid fa-rotate"></i></span>
+                    <span class="item">Actualizar</span>
+                </a></li>
+                <li><a href="#">
+                    <span class="icons"><i class="fa-solid fa-trash"></i></span>
+                    <span class="item">Eliminar</span>
+                </a></li>
+            </ul>
+
+  
         </nav>
     </div>
     <script src="js/almacen.js"></script>
     
 <?php
-function myFnc(e){
-    e.classList.toggle("show");
-
-    var element = document.getElementById("navid"),
-    style = window.getComputedStyle(element),
-    right = style.getPropertyValue("right");
-
-    if(right == "0px"){
-        element.style.right = "-260px";
-    }else{
-        element.style.right = "0px";
-    }
-}
 
 ?>
 </body>
 </html>
 
-onclick="myFnc(this)"
+         <!--  <ul> 
+            <div class="item">
+                <a href="">
+                    <div class="icon"><img src="img/usuarios.png" alt=""></div>
+                    <div class="title"><span>Usuarios</span></div>
+                </a>
+            </div>
+            <li class="nav-item"><a href="#" class="nav-link"><img src="img/btnbuscar.png" alt="">Buscar</a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><img src="img/btnguardar.png" alt="">Guardar</a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><img src="img/btnactualizar.png" alt="">Actualizar</a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><img src="img/btneditar.png" alt="">Editar</a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><img src="img/btneliminar.png" alt="">Eliminar</a></li>
+        </ul> -->

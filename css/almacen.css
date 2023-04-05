@@ -1,12 +1,15 @@
 *{
     margin: 0;
     padding: 0;
+    list-style: none;
+    text-decoration: none;
 }
 
 body{
     font-family: 'Paytone One', sans-serif;
     overflow-x: hidden;
     background-color: #efefefef;
+    
 }
 
 /* navegador  */
@@ -100,8 +103,11 @@ fin nav */
     --hovercolor: rgb(57, 90, 92);
     --width-collapsed: 60px;
     --width-normal: 0px;
-
 }
+
+
+
+
 
 body{
     padding: 0;
@@ -113,6 +119,9 @@ body{
 .body-expanded{
     margin-left: var(--width) ;
 }
+
+
+
 
 #main{
     color: red;
@@ -314,8 +323,7 @@ body{
 
     width: 60%;
     max-width: 750px;
-    margin: 0 auto; 
-    margin-top: 20px;
+    margin: 20px;
     position: absolute;
     border: 2Px solid rgb(57, 90, 92) ;
     border-radius: 10px;
@@ -380,14 +388,22 @@ body{
 
 /* contenedor izquierdo */
 
+.containerright{
+    position: relative;
+}
+
 .navbar{
     position: absolute;
     right: 0px;
-    width: 260px;
-    height: 100%;
+    width: 30%;
+    height: 500px;
     background-color: cadetblue;
     text-align: center;
     transition: 0.800s ease;
+    position: absolute;
+    top:50%;
+    margin-top: 100px;
+    border-radius: 20px 0 0 20px;
 }
 
 .navbar > .side-nav{
@@ -416,13 +432,23 @@ body{
 
 .toggle-collapse{
 float: left;
-margin-left: -3.3em;
-margin-top: .5em;
+margin-left: -6.3em;
+margin-top: 17em;
 content: "";
 outline: inherit;
 border: 0px;
 background: transparent;
 }
+
+.toggle-collapse img{
+    width: 35px;
+    float: left;
+margin-left: 3.5em;
+border-radius: 5px 15px 15px 5px;
+margin-top: -0.3em;
+}
+
+
 
 .toggle-icon,
 .toggle-icon::before,
@@ -430,44 +456,122 @@ background: transparent;
     content:"" ;
     width: 30px;
     position: relative;
-    height: 3px;
+    height: 4px;
     position: fixed;
-    background-color: black;
+    background-color: cadetblue;
     border-radius: 2em;
-    border: 1px solid black;
+    border: 1px solid rgb(57, 90, 92)  ;
     cursor: pointer;
     transition: 0.800s ease;
     margin-top: 0.8em;
 }
 
+
+
 .toggle-icon::before{
     position: absolute;
-    left: -1px;
-    margin-top: -0.8em;
+    left: -10px;
+    width: 15px;
+    margin-top: -0.6em;
+    
 }
+
+
 
 .toggle-icon::after{
     position: absolute;
-    left: -1px;
-    margin-top: 0.6em;
-    width: 20px;
-}
-
-.toggle-icon{
+    left: -10px;
+    margin-top: 0.5em;
     width: 15px;
 }
 
+
 .show .toggle-icon::after{
-    width: 30px;
+    width: 15px;
+    left: 5px;
+}
+
+
+.toggle-icon{
+    position: absolute;
+    width: 15px;
+    left: -20px;
+    
+    
 }
 
 .show .toggle-icon{
-    width: 30px;
+    width: 15px;
+    left: -25px;
+}
+
+.show.toggle-collapse img{
+    width: 40px;
+    float: left;
+margin-left: 4.2em;
+border-radius: 15px 5px 5px 15px;
+margin-top: -0.5em;
+}
+
+.show .toggle-icon::before{
+    position: absolute;
+    width: 15px;
+    left: 5px;
+    margin-top: -0.6em;
+    
 }
 
 
 
+nav ul li a img{
+    width: 40px;
+}
+
+
+.containerright .navbar ul li a{
+    display: block;
+    padding: 13px 30px;
+    border-bottom: 1px solid rgb(64, 106, 107) ;
+    color: #fff;
+    font-size: 20px;
+    position: relative;
+    text-decoration: none;
+    
+}
+
+
+
+.containerright .navbar ul li a:active{
+   color: cadetblue;
+    background-color: #fff;
+}
+
+
+
+
+.containerright .navbar ul li a span{
+    width: 60px;
+    display: inline-block;
+}
+
+
+.containerright .navbar ul li a .icons{
+    font-size: 30px;
+    display: inline-block;
+    border-radius: 50px;
+}
+
+
 /* fin contenedor izquierdo */
+
+.ocultar{
+    opacity: 0;
+    transition: .2s ease;
+}
+
+.mostrar{
+    opacity: 1;
+}
 
 
 /* modo celular */
@@ -476,12 +580,17 @@ background: transparent;
 
     .nav2{
         overflow: visible;
+    
     }
+
+    
 
     body{
         margin: 0;
         overflow: hidden;
     }
+
+
 
     .menucolapse{
         opacity: 0;
