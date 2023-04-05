@@ -11,7 +11,6 @@
 
 </head>
 <body>
-    
     <nav class="nav2">
         <input type="checkbox" name="" id="check">
         <label for="check" class="checkbtn">
