@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/almacen.css">
+    <link rel="stylesheet" href="../../public/css/almacen.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
 
@@ -17,29 +17,29 @@
             <i class="fa-solid fa-bars"></i>
         </label>
         <a href="#" class="linkphoto">
-            <img src="img/logo.jpeg" alt="" class="logoimg">
+            <img src="../../img/logo.jpeg" alt="" class="logoimg">
             
         </a>
 
         <ul class="navlist">
            
 
-                <li><a class="active" href="#"><img src="img/tienda.png" alt="">tienda</a></li>
+                <li><a class="active" href="#"><img src="../../img/tienda.png" alt="">tienda</a></li>
 
             
-                <li><a href="#"><img src="img/usuarios.png" alt="">Usuarios</a></li>
+                <li><a href="#"><img src="../../img/usuarios.png" alt="">Usuarios</a></li>
 
            
-                <li><a href="#"><img src="img/usuario.png" alt="">Creacion de usuarios</a></li>
+                <li><a href="#"><img src="../../img/usuario.png" alt="">Creacion de usuarios</a></li>
 
            
-                <li><a href="#"><img src="img/producto.png" alt="">Crear producto</a></li>
+                <li><a href="#"><img src="../../img/producto.png" alt="">Crear producto</a></li>
 
     
-                <li><a href="#"><img src="img/almacen.png" alt="">almacen</a></li>
+                <li><a href="#"><img src="../../img/almacen.png" alt="">almacen</a></li>
 
                 
-                <li><a href="loginadmi.php"><img src="img/cerrar.png" alt="">Cerrar sesion</a></li>
+                <li><a href="loginadmi.php"><img src="../../img/cerrar.png" alt="">Cerrar sesion</a></li>
 
         </ul>
     </nav>
@@ -54,7 +54,7 @@
         </div>
         <!-- profile -->
         <div id="profile">
-            <div id="photo"><img src="img/logo.jpeg" alt="">
+            <div id="photo"><img src="../../img/logo.jpeg" alt="">
                 <div id="name"><span id="spannombre"></span> <?php session_start(); $user=$_SESSION['nombre_usuario']; echo "<h3> $user </h3>"; ?></div>
             </div>
         </div>
@@ -63,35 +63,36 @@
         <div id="menuitem">
             <div class="item">
                 <a href="">
-                    <div class="icon"><img src="img/tienda.png" alt=""></div>
+                    <div class="icon"><img src="../../img/tienda.png" alt=""></div>
                     <div class="title"><span>Tienda</span></div>
                 </a>
             </div>
 
             <div class="item">
                 <a href="">
-                    <div class="icon"><img src="img/usuario.png" alt=""></div>
+                    <div class="icon"><img src="../../img/usuario.png" alt=""></div>
                     <div class="title"><span>Creacion de usuarios</span></div>
                 </a>
             </div>
 
             <div class="item">
                 <a href="">
-                    <div class="icon"><img src="img/usuarios.png" alt=""></div>
+                    <div class="icon"><img src="../../img/usuarios.png" alt=""></div>
                     <div class="title"><span>Usuarios</span></div>
                 </a>
             </div>
 
             <div class="item">
                 <a href="">
-                    <div class="icon"><img src="img/producto.png" alt=""></div>
+                    <div class="icon"><img src="../../img/producto.png" alt=""></div>
                     <div class="title"><span>Crear producto</span></div>
                 </a>
             </div>
 
             <div class="item">
                 <a href="">
-                    <div class="icon"><img src="img/almacen.png" alt=""></div>
+                    <div class="icon"><img src="../../img/almacen.png" alt=""></div>
+                    <div class="icon"><img src="../../img/almacen.png" alt=""></div>
                     <div class="title"><span>almacen</span></div>
                 </a>
             </div>
@@ -102,7 +103,7 @@
             
             <div class="item itemcerrar">
                 <a href="loginadmi.php">
-                    <div class="icon"><img src="img/cerrar.png" alt=""></div>
+                    <div class="icon"><img src="../../img/cerrar.png" alt=""></div>
                     <div class="title"><span>Cerrar sesion</span></div>
                 </a>
             </div>
@@ -117,8 +118,8 @@
         <h1>Creacion de productos</h1>
 
         <label for="" class="lblfoto">Foto de perfil</label>
-        <img class="imglogo" src="img/logo.jpeg" alt="">
-        <a href="#"><img class="agregarimg" src="img/agregarfoto.png" alt=""></a>
+        <img class="imglogo" src="../../img/logo.jpeg" alt="">
+        <a href="#"><img class="agregarimg" src="../../img/agregarfoto.png" alt=""></a>
         <input type="file" class="form-control-file " name="foto" id="" placeholder="foto" aria-describedby="fileHelpId">
     
     <label class="lblnombres" for="">Nombre</label>
@@ -158,7 +159,7 @@
                 </div> -->
 
             <button  type="button"  class="toggle-collapse" id="toggle-button" >
-            <img src="img/fondo.jpg" alt=""><span class="toggle-icon"></span>
+            <img src="../../public/img/fondo.jpg" alt=""><span class="toggle-icon"></span>
             </button>
 
             <ul>
@@ -188,6 +189,7 @@
         </nav>
     </div>
     <script src="js/almacen.js"></script>
+    
 <?php
 
 ?>

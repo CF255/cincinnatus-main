@@ -566,6 +566,7 @@ nav ul li a img{
 
 .ocultar{
     opacity: 0;
+    pointer-events: none;
     transition: .2s ease;
 }
 

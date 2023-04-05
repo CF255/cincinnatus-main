@@ -1,6 +1,6 @@
 <?php
 
-require '../conec/conexion.php';
+require 'app/config/conexion.php';
 
 session_start();
 
@@ -19,6 +19,11 @@ $consulta=pg_query($conexion,$query);
 $cantidad=pg_num_rows($consulta);
 
 
+if($conexion >0){
+    echo"si";
+}else{
+    echo"no";
+}
 
 
 /* inicio */
@@ -33,25 +38,25 @@ if($usuario != ""){
                 if($rol == "Administrador"){
                         $_SESSION['nombre_usuario']=$usuario;
                         $_SESSION['foto_perfil']=$foto;
-                        header('Location: ../almacen.php');
+                        header('Location: app/views/almacen.php');
                     
                     }else if($rol == "Editor"){
                         $_SESSION['nombre_usuario']=$usuario;
-                    header('Location: ../almacen.html');
+                    header('Location: app/views/almacen.php');
                 
                     }else if($rol == "Administrador_Inventario"){
                         $_SESSION['nombre_usuario']=$usuario;
-                    header('Location: ../almacen.html');
+                    header('Location: app/views/almacen.php');
                 
                     }else if($rol == "Supervisor"){
                         $_SESSION['nombre_usuario']=$usuario;
-                    header('Location: ../almacen.html');
+                    header('Location: app/views/almacen.php');
                     }
                 }else{
                    
                     echo'<script type="text/javascript">
     alert("No posee este tipo de cuenta");
-    window.location.href="../loginadmi.php";
+    window.location.href="app/views/loginadmi.php";
     </script>';
                 }
 
@@ -59,14 +64,14 @@ if($usuario != ""){
         }else{
             echo'<script type="text/javascript">
             alert("Debe de seleccionar un Rol");
-            window.location.href="../loginadmi.php";
+            window.location.href="app/views/loginadmi.php";
             </script>';
         }
 
     }else{
         echo'<script type="text/javascript">
     alert("Debe de introducir una Contraseña");
-    window.location.href="../loginadmi.php";
+    window.location.href="app/views/loginadmi.php";
     </script>';
     
     }
@@ -74,7 +79,7 @@ if($usuario != ""){
    
     echo'<script type="text/javascript">
     alert("Debe de introducir un usuario");
-    window.location.href="../loginadmi.php";
+    window.location.href=" app/views/loginadmi.php";
     </script>';
 }
 

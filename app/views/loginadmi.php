@@ -8,8 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/login.css">
-<LINK REL="stylesheet" HREF="css/login.css" TYPE="text/css">
+<link rel="stylesheet" href="../../public/css/login.css">
+<LINK REL="stylesheet" HREF="public/css/login.css" TYPE="text/css">
 </head>
 <body>
 
@@ -18,18 +18,12 @@
     </nav>
 
    <div class="login-box">
-    <img class="logoimg" src="img/logo.jpeg" alt="">
+    <img class="logoimg" src="../../public/img/logo.jpeg" alt="">
     <h1>Bienvenido</h1>
     <h2>Inicio de sesion administrativo</h2>
    
 
-    <form class="form" action="php/sesionadministrador.php" method="POST">
-
-    
-
-  
-
- 
+    <form class="form" action="../../sesionadministrador.php" method="POST">
 
         <input name="user" type="text" class="inputtext" id="inputnombre" placeholder="Nombre de Usuario">
 
@@ -57,7 +51,7 @@
    <footer>
     <label for="">Copyright © 2023</label>
 
-    <a href="login.html"><img class="icon" src="img/salida.png" alt=""></a>
+    <a href="login.html"><img class="icon" src="../../public/img/salida.png" alt=""></a>
    </footer>
     
 </body>

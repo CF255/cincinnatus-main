@@ -1,6 +1,6 @@
 <?php
 
-require '../conec/conexion.php';
+require 'app/config/conexion.php';
 
 
 
@@ -21,20 +21,20 @@ if($usuario != ""){
         $cantidad=pg_num_rows($consulta);
 
         $_SESSION['nombre_usuario']=$usuario;
-        header('Location: ../index.html');
+        header('Location: app/views/index.html');
         session_start();
     }
     
     }else{
         echo'<script type="text/javascript">
         alert("Debe de introducir una contraseña");
-        window.location.href="../login.html";
+        window.location.href=" login.html";
         </script>';
     }
 }else{
     echo'<script type="text/javascript">
     alert("Debe de introducir un usuario");
-    window.location.href="../login.html";
+    window.location.href=" app/views/login.html";
     </script>';
 }
 
