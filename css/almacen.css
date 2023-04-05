@@ -6,7 +6,7 @@
 body{
     font-family: 'Paytone One', sans-serif;
     overflow-x: hidden;
-    background-color: #e71d1def;
+    background-color: #efefefef;
 }
 
 /* navegador  */
@@ -413,6 +413,59 @@ body{
     background-color: #fff;
     color: cadetblue;
 }
+
+.toggle-collapse{
+float: left;
+margin-left: -3.3em;
+margin-top: .5em;
+content: "";
+outline: inherit;
+border: 0px;
+background: transparent;
+}
+
+.toggle-icon,
+.toggle-icon::before,
+.toggle-icon::after{
+    content:"" ;
+    width: 30px;
+    position: relative;
+    height: 3px;
+    position: fixed;
+    background-color: black;
+    border-radius: 2em;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: 0.800s ease;
+    margin-top: 0.8em;
+}
+
+.toggle-icon::before{
+    position: absolute;
+    left: -1px;
+    margin-top: -0.8em;
+}
+
+.toggle-icon::after{
+    position: absolute;
+    left: -1px;
+    margin-top: 0.6em;
+    width: 20px;
+}
+
+.toggle-icon{
+    width: 15px;
+}
+
+.show .toggle-icon::after{
+    width: 30px;
+}
+
+.show .toggle-icon{
+    width: 30px;
+}
+
+
 
 /* fin contenedor izquierdo */
 

@@ -152,11 +152,12 @@
     <div class="containerright">
 
         <nav class="navbar" id="navid">
-            <button type="button" class="toggle-collapse" id="toggle-button" >
+            <button  type="button" onclick="myFnc(e)"  class="toggle-collapse " id="toggle-button" >
             <span class="toggle-icon"></span>
             </button>
 
-            <ul> <li class="side-nav"><a href="#"><img src="img/btnbuscar.png" alt="">Buscar</a></li>
+            <ul> 
+            <li class="nav-item"><a href="#" class="nav-link"><img src="img/btnbuscar.png" alt="">Buscar</a></li>
             <li class="nav-item"><a class="nav-link" href="#"><img src="img/btnguardar.png" alt="">Guardar</a></li>
             <li class="nav-item"><a class="nav-link" href="#"><img src="img/btnactualizar.png" alt="">Actualizar</a></li>
             <li class="nav-item"><a class="nav-link" href="#"><img src="img/btneditar.png" alt="">Editar</a></li>
@@ -166,5 +167,23 @@
     </div>
     <script src="js/almacen.js"></script>
 
+<?php
+function myFnc(e){
+    e.classList.toggle("show");
+
+    var element = document.getElementById("navid"),
+    style = window.getComputedStyle(element),
+    right = style.getPropertyValue("right");
+
+    if(right == "0px"){
+        element.style.right = "-260px";
+    }else{
+        element.style.right = "0px";
+    }
+}
+
+?>
 </body>
 </html>
+
+onclick="myFnc(this)"

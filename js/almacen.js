@@ -26,3 +26,41 @@ boton.addEventListener('click', e =>{
     alert(nombre);
 
 });
+
+
+/* side bar right */
+
+ const btnright = document.querySelector('#toggle-button');
+ const sidemenu = document.querySelector('#navid');
+ 
+
+ btnright.addEventListener('click', e =>{
+    e.classList.toggle("show");
+
+    var element = document.getElementById("navid"),
+    style = window.getComputedStyle(element),
+    right = style.getPropertyValue("right");
+
+    if(right == "0px"){
+        element.style.right = "-260px";
+    }else{
+        element.style.right = "0px";
+    }
+});
+
+
+function myFnc(e){
+    e.classList.toggle("show");
+
+    var element = document.getElementById("navid"),
+    style = window.getComputedStyle(element),
+    right = style.getPropertyValue("right");
+
+    if(right == "0px"){
+        element.style.right = "-260px";
+    }else{
+        element.style.right = "0px";
+    }
+}
+
+/* fin */
