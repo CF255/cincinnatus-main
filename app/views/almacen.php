@@ -163,7 +163,7 @@
             </button>
 
             <ul>
-                <li><a href="#">
+                <li><a href="#" id="btnbuscar" class="btnbuscar">
                     <span class="icons"><i class="icon fa-solid fa-magnifying-glass"></i></span>
                     <span class="item">Buscar</span>
                 </a></li>

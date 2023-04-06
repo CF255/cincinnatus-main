@@ -1,4 +1,4 @@
-/* prueba */
+/* ocultar menu imputs y sidemenu rigth */
 const check = document.querySelector('#check');
 const menu3 = document.querySelector('#continput');
 
@@ -10,7 +10,7 @@ check.addEventListener('click', e =>{
 
 /* FIN */
 
-/* side menu */
+/* side menu left */
 
 const btn = document.querySelector('#menu-btn');
 const menu = document.querySelector('#sidemenu');
@@ -22,15 +22,10 @@ btn.addEventListener('click', e =>{
     document.querySelector('body').classList.toggle('body-expanded');
 
 });
-
-
 /* end side menu */
 
 
-
-
-
-/* prueba */
+/* abrir cerrar sidemenu rigth */
 const btn2 = document.querySelector('#toggle-button');
 const menu2 = document.querySelector('#navid');
 
@@ -49,8 +44,27 @@ btn2.addEventListener('click', e =>{
        
     }
 });
-
 /* fin */
+
+/* abrir modal tabla */
+
+const openmodal = document.querySelector('.btnbuscar');
+const modal = document.querySelector('.modal');
+const closemodal = document.querySelector('.modalclose');
+
+openmodal.addEventListener('click', (e)=>{
+    e.preventDefault();
+    modal.classList.add('modalshow');
+
+});
+
+closemodal.addEventListener('click', (e)=>{
+    e.preventDefault();
+    modal.classList.remove('modalshow');
+
+});
+
+/* fin modal tabla */
 
 
 
