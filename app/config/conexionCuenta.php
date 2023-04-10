@@ -53,6 +53,7 @@ $pass='1234';
                         }else{
                            echo "Las contrasenas no coinciden";
                         }
+                        
                      }else{
                         echo "Debe de confirmar la Contrasena";
                      }

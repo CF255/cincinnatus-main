@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+     <meta http-equiv="Expires" content="0">
+  <meta http-equiv="Last-Modified" content="0">
+  <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+  <meta http-equiv="Pragma" content="no-cache">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../../public/css/almacen.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../../public/css/almacen.css?v=<?php echo(rand()); ?>" />
+<script src="/js/mi_script.js?v=<?php echo(rand()); ?>"></script>
+  <!--   <link rel="stylesheet" href="../../public/css/almacen.css">
+    --> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
+   
+ 
+
 
 </head>
 <body>
@@ -114,39 +123,46 @@
   
 
     <!-- contenedor de inputs -->
+
+    <form action="javascript:void(0);" onsubmit="app.guardar()">
+   
+    <input type="hidden" id="id" />
     <div class="contenedorinput" id="continput">
         <h1>Creacion de productos</h1>
 
-        <label for="" class="lblfoto">Foto de perfil</label>
+        <label for="" class="lblfoto">Foto del producto</label>
         <img class="imglogo" src="../../public/img/logo.jpeg" alt="">
         <a href="#"><img class="agregarimg" src="../../public/img/agregarfoto.png" alt=""></a>
-        <input type="file" class="form-control-file " name="foto" id="" placeholder="foto" aria-describedby="fileHelpId">
-    
+    <!--  <input type="file" class="form-control-file " name="foto" id="fotos" placeholder="foto" aria-describedby="fileHelpId">
+     -->
     <label class="lblnombres" for="">Nombre</label>
-    <input type="text" class="inputtext" id="txtnombre" placeholder="Nombre del producto">
+    <input type="text" class="inputtext" id="nombre" placeholder="Nombre del producto">
 
     <label class="lblnombres" for="">Precio</label>
-    <input type="text" class="inputtext" id="txtprecio" placeholder="precio del producto">
+    <input type="text" class="inputtext" id="precio" placeholder="precio del producto">
 
     <label class="lblnombres" for="">Proveedor</label>
-    <input type="text" class="inputtext" id="txtproeedor" placeholder="Nombre del proveedor">
+    <input type="text" class="inputtext" id="proveedor" placeholder="Nombre del proveedor">
 
-
+<!-- 
+    <label class="lblnombres" for="">categoria</label>
+    <input type="text" class="inputtext" id="categoria" placeholder="categoria">
+ -->
     <label class="lblnombres" for="">Categoria</label>
-    <select autocomplete="off" name="" class="inputtext" tabindex="9" id="slcategoria">
+    <select autocomplete="off" name="categoria" class="inputtext" tabindex="9" id="categoria">
             <option value=""></option>
-            <option value="Electronico">Administrador</option>
-            <option value="Libros">Editor</option>
-            <option value="Ropa">Administrador Inventario</option>
-            <option value="Accesorios">Supervisor</option>
-            <option value="Deportes">Administrador</option>
-            <option value="Juegos/Video juegos">Editor</option>
+            <option value="Electronico">Electronico</option>
+            <option value="Libros">Libros</option>
+            <option value="Ropa">Ropa Inventario</option>
+            <option value="Accesorios">Accesorios</option>
+            <option value="Deportes">Deportes</option>
+            <option value="Juegos/Video juegos">Juegos/VideoJuegos</option>
             <option value="Mascotas">Administrador Inventario</option>
-            <option value="Hogar">Supervisor</option>
-        </select>
+            <option value="Hogar">Hogar</option>
+        </select> 
 
     <label class="lblnombres"  for="">Descripcion</label>
-    <textarea class="inputtext textarea" name="" id="" cols="40" rows="10"></textarea>
+    <textarea class="inputtext textarea" name="" id="descripcion" cols="40" rows="10"></textarea>
 
     </div>
 
@@ -163,45 +179,89 @@
             </button>
 
             <ul>
-                <li><a href="#" id="btnbuscar" class="btnbuscar">
+           
+                <li><a href="#" id="btnbuscar"  class="btnbuscar">
                     <span class="icons"><i class="icon fa-solid fa-magnifying-glass"></i></span>
                     <span class="item">Buscar</span>
                 </a></li>
-                <li><a href="#">
-                    <span class="icons"><i class="fa-solid fa-floppy-disk"></i></span>
-                    <span class="item">Guardar</span>
-                </a></li>
-                <li><a href="#">
-                    <span class="icons"><i class="fa-solid fa-pen-to-square"></i></span>
-                    <span class="item">Editar</span>
-                </a></li>
+                
+                <li> <button onclick="app.editar()" class="btnside" ><span class=""><i class="fa-solid fa-pen-to-square"></i></span>
+                    <span class="">Editar</span>
+                </button> </li>
+
+               
+
                 <li><a href="#">
                     <span class="icons"><i class="fa-solid fa-rotate"></i></span>
                     <span class="item">Actualizar</span>
                 </a></li>
-                <li><a href="#">
-                    <span class="icons"><i class="fa-solid fa-trash"></i></span>
-                    <span class="item">Eliminar</span>
-                </a></li>
+                
+                <li><button onclick="app.eliminar()" id="eliminar" class="btnside" ><span class=""><i class="fa-solid fa-trash"></i></span>
+                    <span class="">Eliminar</span>
+                </button> 
+                </li>
+
+
+                <li>
+                    <button class="btnside" type="submit"><span class=""><i class="fa-solid fa-floppy-disk"></i></span>
+                    <span class="">Guardar</span></button> 
+                
+
+                   <!--  <a href="#">
+                    <span class="icons"><i class="fa-solid fa-floppy-disk"></i></span>
+                    <span class="item">Guardar</span>
+                </a> --> </li>
+
+                
             </ul>
 
   
         </nav>
     </div>
+    </form>
 
     <section class="modal">
         <div class="modalcontainer">
             <h1 class="modaltitle">Tabla de productos</h1>
 
+                <table class="containertable table tablefixed">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Precio</th>
+                            <th>Proveedor</th>
+                            <th>Categoria</th>
+                            <th>Descripcion</th>
+                            <th>Foto</th>
+                            <th></th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+                       
+                    </tbody>
+                </table>
+               
 
-            <a href="#" class="modalclose">Cerrar</a>
+            <a href="#" id="cerrarmodal" class="modalclose">Cerrar</a>
         </div>
     </section>
 
-    <script src="../../public/js/almacen.js"></script>
-    
-<?php
+   
 
-?>
+    <section class="modalcorrecto" id="modalcorrecto">
+        <div class="containermodalcorrec" id="containermodalcorrec">
+            <p><i class="fa-solid fa-circle-check"></i> Accion realizada con exito</p>
+            
+               </div>
+
+    </section>
+
+    <!-- <script>
+        window.location.href="./app/views/almacen.php";
+    </script> -->
+    <script src="../assets/code.js"></script>
+    <script src="../../public/js/almacen.js"></script>
 </body>
 </html>

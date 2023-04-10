@@ -430,6 +430,7 @@ body{
 
 }
 
+
 .nav-item > .nav-link{
     text-decoration: none;
     color: #fff;
@@ -459,6 +460,8 @@ background: transparent;
 margin-left: 3.5em;
 border-radius: 5px 15px 15px 5px;
 margin-top: -0.3em;
+
+cursor: pointer;
 }
 
 
@@ -571,8 +574,31 @@ nav ul li a img{
 .containerright .navbar ul li a .icons{
     font-size: 30px;
     display: inline-block;
-    border-radius: 50px;
+    /* border-radius: 50px; */
 }
+
+
+.btnside{
+    transition: .3s ease;
+    padding: 13px 30px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 23px;
+    color: #fff;
+    display: inline-block;
+    font-family: 'Paytone One', sans-serif;
+    border: none;
+    background-color: cadetblue;
+    border-bottom: 1.5px solid rgb(72, 119, 120);
+}
+
+.btnside:hover{
+   
+    background-color: rgb(64, 106, 107);
+}
+
+
+
 
 
 /* fin contenedor izquierdo */
@@ -596,29 +622,40 @@ nav ul li a img{
     left: 0;
     bottom: 0;
     background-color: #111111bd;
-    display: flex;
+     display: flex; 
     opacity: 0;
     pointer-events: none;
     transition: opacity .6s;
     --transform: translateY(-100vh);
-    transition: ;
+    --transition: --transform .8s;
+   
+}
+
+.modalshow{
+    opacity: 1;
+    pointer-events: unset;
+    transition: opacity .6s;
+    --transform: translateY(0);
+    --transition: transform .3s .2s;
 }
 
 .modalcontainer{
     width: 90%;
     background-color: #fff;
-    margin: auto;
+     margin: auto; 
     max-width: 900px;
-    padding: 3em 2.5em;
+    padding: 1.5em 1.5em;
     border-radius: 15px;
     border: 2px solid cadetblue ;
     transform: var(--transform);
+    transition: var(--transition);
+   
+    
 
-
-    display: grid; 
+   display: grid; 
     place-items: center;
     grid-auto-columns: 100%;
-
+ 
 }
 
 .modaltitle{
@@ -642,17 +679,195 @@ nav ul li a img{
     background-color: #fff;
 }
 
-.modalshow{
-    opacity: 1;
-    pointer-events: unset;
-    transition: opacity .6s;
-}
+
 
 /* fun modañ */
+
+/* tabla inicio */
+
+.containertable{
+    
+   border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 350px;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-bottom: 2px solid rgb(57, 90, 92);
+   
+    
+} 
+
+.table{
+    width: 90%;
+    height: 95%;
+   
+
+} 
+
+.tablefixed tbody{
+    height: 600px;
+    overflow-y: auto;
+    max-height: 300px;
+   
+}
+
+ .tablefixed thead,
+.tablefixed tbody{
+    display: block;
+    overflow-x: hidden;
+    border-radius: 5px 5px 0 0;
+}
+
+/* .containertable .table thead{
+    position: sticky;
+}
+ */
+
+
+.containertable thead tr{
+background-color: cadetblue;
+color: #fff;
+text-align: left;
+font-weight: bold;
+
+}
+
+.containertable thead{
+    background-color: cadetblue;
+    }
+
+.containertable th,
+.containertable td{
+    padding: 12px 15px;
+
+}
+
+.containertable tbody tr{
+    border-bottom: 1px solid #cdccccef;
+} 
+
+.containertable tbody tr:nth-of-type(even){
+    background-color: #f3f3f3;
+}
+
+
+.containertable tbody tr.active-row{
+    font-weight: bold;
+    color: cadetblue;
+
+}
+
+.containertable tbody tr:nth-of-type(even):hover{
+    background: cadetblue;
+    color: white;
+} 
+
+/* tbody tr{
+    cursor: pointer;
+} */
+
+tbody tr:hover{
+    background: cadetblue;
+    color: white;
+}
+
+
+/* tabla fin */
+
+/* botones guardar y editar tabla */
+
+.btn{
+color:#fff;
+display: block;
+border-radius: 5px;
+padding: 5px;
+margin: 3px;
+text-align: center;
+transition: background-color .3s;
+
+}
+
+.btn-danger{
+   background-color: rgb(236, 47, 47);
+   border: 2px solid rgb(128, 13, 13);
+}
+
+.btn-danger:hover{
+    background-color: #fff;
+    color:rgb(236, 47, 47) ;
+ }
+
+ .btn-warning{
+    background-color: rgb(236, 185, 47);
+    border: 2px solid rgb(100, 82, 10);
+ }
+ 
+ .btn-warning:hover{
+     background-color: #fff;
+     color:rgb(236, 185, 47) ;
+  }
+ 
+ 
+
+
+
+/* fin */
+
+/* modal notificaciones */
+
+  .modalcorrecto{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-top: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .8s;
+    --transformc: translateY(-100vh) ;
+    --transitionc: transform .8s;
+  }
+
+  .containermodalcorrec{
+    margin: auto;
+    width: 50%;
+    max-width: 450px;
+    min-width: 300px;
+    place-items: center;
+    max-height: 300px;
+    background-color: rgb(2, 168, 113);
+    border-radius: 10px;
+    padding: 3em 2.5em;
+    color: #fff;
+    font-size: 25px;
+    border: 2px solid rgb(1, 97, 65);
+    transform: var(--transformc);
+    transition: var(--transitionc);
+  
+
+  }
+
+
+  .modalcorrectoshow{
+    opacity: 1;
+    pointer-events: unset;
+    transition: opacity .7s;
+    --transformc: translateY(0) ;
+  }
+
+
+/* fin */
 
 /* modo celular */
 
 @media (max-width: 600px){
+
+    .containermodalcorrec{
+        font-size: 20px;
+      }
+    
 
     .nav2{
         overflow: visible;
@@ -663,7 +878,8 @@ nav ul li a img{
 
     body{
         margin: 0;
-        overflow: hidden;
+        
+        overflow-x: hidden;
     }
 
 
@@ -736,6 +952,14 @@ nav ul li a img{
     #check:checked ~ ul{
         left: 0;
     }   
+
+    .modalcontainer{
+        padding: 2em 1.5em;
+    }
+
+    .modaltitle{
+        font-size: 2rem;
+    }
 }
 
 /* fin modo celular */
