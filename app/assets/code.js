@@ -11,20 +11,75 @@ const app = new (function () {
     this.modal2 = document.getElementById("modalcorrecto");
     this.containermodalcorrec = document.getElementById("containermodalcorrec");
     this.cerrarmodalcorrecto = document.getElementById("cerrarmodalcorrecto");
+    this.cerrarmodal = document.getElementById("modalclose");
+    this.modal = document.getElementById("modal");
+    this.modal3 = document.getElementById("modalwarning");
+    this.containermodalwarning = document.getElementById("containermodalwarning");
+    this.cerrarmodalwarning =document.getElementById("cerrarmodalwarning");
+    this.warning = document.getElementById("warning");
 
+    /* color campo vacio warning */
+  this.warning=()=>{
+    this.nombre.classList.add("inputerror");
+  }
+  this.warningremove=()=>{
+    this.nombre.classList.remove("inputerror");
+  }
 
+  this.warning2=()=>{
+    this.precio.classList.add("inputerror");
+  }
+  this.warningremove2=()=>{
+    this.precio.classList.remove("inputerror");
+  }
+
+  this.warning3=()=>{
+    this.proveedor.classList.add("inputerror");
+  }
+  this.warningremove3=()=>{
+    this.proveedor.classList.remove("inputerror");
+  }
+
+  this.warning4=()=>{
+    this.categoria.classList.add("inputerror");
+  }
+  this.warningremove4=()=>{
+    this.categoria.classList.remove("inputerror");
+  }
+
+  this.warning5=()=>{
+    this.descripcion.classList.add("inputerror");
+  }
+  this.warningremove5=()=>{
+    this.descripcion.classList.remove("inputerror");
+  }
+    /* FIN  */
+
+    /* modal warning */
+    this.cerrarmodalwarning=()=>{
+      this.modal3.classList.remove('modalcorrectoshow');
+    }
+    this.containermodalwarning=()=>{
+      this.modal3.classList.add('modalcorrectoshow');
+    }
+/* fin */
+
+  
+/* modal correcto */
     this.cerrarmodalcorrecto=()=>{
       this.modal2.classList.remove('modalcorrectoshow');
     }
-
-    
-
     this.containermodalcorrec=()=>{
       this.modal2.classList.add('modalcorrectoshow');
     }
+/* fin */
 
-
+/* modal tabla productos */
+    this.cerrarmodal =()=>{
+      this.modal.classList.remove('modalshow');
+    }
   
+    /* fin */
     this.listado = () => {
       fetch("../controllers/listado.php")
         .then((res) => res.json())
@@ -63,7 +118,7 @@ const app = new (function () {
       .then((data)=>{
         this.listado();
         this.containermodalcorrec();
-         setTimeout(this.cerrarmodalcorrecto,1000);
+         setTimeout(this.cerrarmodalcorrecto,1500);
       })
       .catch((error)=>console.log(error));
       
@@ -81,34 +136,83 @@ const app = new (function () {
       form.append("id", this.id.value);
       /* form.append("fotos", this.fotos.value); */
 
-      if (this.id.value === "") {
-        fetch("../controllers/guardar.php", {
-          method: "POST",
-          body: form,
-        })
-          .then((res) => res.json())
-          .then((data) => {
-            this.containermodalcorrec();
-            this.listado();
-            this.limpiar();
-            setTimeout(this.cerrarmodalcorrecto,2000);
-            
-          })
-          .catch((error) => console.log(error));
-      } else {
-        fetch("../controllers/actualizar.php", {
-          method: "POST",
-          body: form,
-        })
-          .then((res) => res.json())
-          .then((data) => {
-            this.containermodalcorrec();
-            this.listado();
-            this.limpiar();
-            etTimeout(this.cerrarmodalcorrecto,2000);
-          })
-          .catch((error) => console.log(error));
+      if(this.nombre.value != ""){
+        if(this.precio.value != ""){
+          if(this.proveedor.value !=""){
+            if(this.categoria.value !=""){
+              if(this.descripcion.value != ""){
+                if (this.id.value === "") {
+                  fetch("../controllers/guardar.php", {
+                    method: "POST",
+                    body: form,
+                  })
+                    .then((res) => res.json())
+                    .then((data) => {
+                      this.containermodalcorrec();
+                      this.listado();
+                      this.limpiar();
+                     setTimeout(this.cerrarmodalcorrecto,2000);
+                     this.warningremove();
+                     this.warningremove2();
+                     this.warningremove3();
+                     this.warningremove4();
+                     this.warningremove5();
+                      
+                      
+                    })
+                    .catch((error) => console.log(error));
+                } else {
+                  fetch("../controllers/actualizar.php", {
+                    method: "POST",
+                    body: form,
+                  })
+                    .then((res) => res.json())
+                    .then((data) => {
+                      this.containermodalcorrec();
+                      
+                      this.listado();
+                      this.limpiar();
+                      setTimeout(this.cerrarmodalcorrecto,2000);
+                      
+                    })
+                    .catch((error) => console.log(error));
+                } 
+
+
+
+              }else{
+                this.containermodalwarning();
+                setTimeout(this.cerrarmodalwarning,2000);
+                this.warning5();
+                this.descripcion.focus();
+              }
+            }else{
+              this.containermodalwarning();
+            setTimeout(this.cerrarmodalwarning,2000);
+            this.warning4();
+            this.categoria.focus();
+            }
+          }else{
+            this.containermodalwarning();
+            setTimeout(this.cerrarmodalwarning,2000);
+            this.warning3();
+            this.proveedor.focus();
+          }
+
+        }else{
+          this.containermodalwarning();
+          setTimeout(this.cerrarmodalwarning,2000);
+          this.warning2();
+          this.precio.focus();
+        }
+       
+      }else{
+        this.containermodalwarning();
+        setTimeout(this.cerrarmodalwarning,2000);
+        this.nombre.focus();
+        this.warning();
       }
+     
        
     };
 
@@ -148,3 +252,5 @@ const app = new (function () {
   })();
   app.listado();
   
+
+  /*  */

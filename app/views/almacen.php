@@ -129,6 +129,7 @@
     <input type="hidden" id="id" />
     <div class="contenedorinput" id="continput">
         <h1>Creacion de productos</h1>
+        <a href="#" id="warning" class="warning"></a>
 
         <label for="" class="lblfoto">Foto del producto</label>
         <img class="imglogo" src="../../public/img/logo.jpeg" alt="">
@@ -139,7 +140,8 @@
     <input type="text" class="inputtext" id="nombre" placeholder="Nombre del producto">
 
     <label class="lblnombres" for="">Precio</label>
-    <input type="text" class="inputtext" id="precio" placeholder="precio del producto">
+    <input type="number" class="inputtext" id="precio" placeholder="precio del producto">
+
 
     <label class="lblnombres" for="">Proveedor</label>
     <input type="text" class="inputtext" id="proveedor" placeholder="Nombre del proveedor">
@@ -220,7 +222,7 @@
     </div>
     </form>
 
-    <section class="modal">
+    <section class="modal" id="modal">
         <div class="modalcontainer">
             <h1 class="modaltitle">Tabla de productos</h1>
 
@@ -255,9 +257,21 @@
             <p><i class="fa-solid fa-circle-check"></i> Accion realizada con exito</p>
             
                </div>
-
     </section>
 
+    <section class="modalerror" id="modalerror">
+        <div class="containermodalerror" id="containermodalerror">
+            <p><i class="fa-solid fa-circle-xmark"></i> Accion realizada con exito</p>
+               </div>
+    </section>
+
+    <section class="modalwarning" id="modalwarning">
+        <div class="containermodalwarning" id="containermodalwarning">
+            <p><i class="fa-solid fa-triangle-exclamation"></i> Todos los Campos deben de ser Completados</p>
+               <a href="#" id="cerrarmodalwarning" class="cerrarmodalwarning"></a>
+        </div>
+    </section>
+    
     <!-- <script>
         window.location.href="./app/views/almacen.php";
     </script> -->
