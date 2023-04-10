@@ -8,8 +8,7 @@
 body{
     font-family: 'Paytone One', sans-serif;
     overflow-x: hidden;
-    background-color: #efefefef;
-    
+    background-color: #efefefef; 
 }
 
 /* navegador  */
@@ -61,7 +60,7 @@ body{
 } 
 
 
-li a.active, li a:hover{
+.nav2 li a.active,.nav2 li a:hover{
     background-color: rgb(57, 90, 92);
     border-radius: 10px;
     transition: .5s;
@@ -344,6 +343,7 @@ body{
     padding: 10px;
   
 }
+
 
 .contenedorinput h1{
     margin-bottom: 10px;
@@ -963,6 +963,127 @@ transition: background-color .3s;
 
   /* fin */
 
+/* fin */
+
+
+/* menu button */
+
+:root{
+    --crl: #fff:
+}
+
+.navegador{
+    width: 450px;
+    height: 70px;
+    background-color: #fff;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px solid rgb(50, 82, 83);
+    bottom: 10px;
+    margin-left: 5%;
+}
+
+.navegador ul{
+display: flex;
+/* width: 350px; */
+}
+
+.navegador ul li{
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+    margin: 15px;
+}
+
+.navegador ul li a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    
+   
+}
+
+.navegador ul li a .iconnav{
+    position: relative;
+   display: block;
+   line-height: 75px;
+   font-size: 1.5em;
+   text-align: center;
+   transition: 0.5s;
+   color: black;
+   
+}
+
+.navegador ul li.activenav a .iconnav{
+   transform: translateY(-35px);
+}
+
+.navegador ul li a .textnav{
+    position: absolute;
+    color: black;
+    font-weight: 400;
+    font-size: 0.85em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(20px);
+ }
+
+
+ .navegador ul li.activenav a .textnav{
+    opacity: 1;
+    transform: translateY(10px);
+ }
+
+ .indicadornav{
+    position: absolute;
+    top: -40%;
+    left: 10%;
+    width: 50px;
+    height: 50px;
+    background: cadetblue;
+    border-radius: 50%;
+    border: 6px solid #efefefef;
+    transition: 0.5s;
+ }
+
+ .indicadornav::before{
+    content: '';
+    position: absolute;
+    top: 40%;
+    left: -24px;
+    height: 20px;
+    width: 20px;
+    background-color: #ffffff;
+    border-top-right-radius: 20px;
+    box-shadow: 0px -10px 0 0 #efefef;
+    
+ }
+
+ .indicadornav::after{
+    content: '';
+    position: absolute;
+    top: 40%;
+    right: -24px;
+    height: 20px;
+    width: 20px;
+    background-color: #ffffff;
+    border-top-left-radius: 20px;
+    box-shadow: 0px -10px 0 0 #efefef;
+    
+ }
+ 
+
 
 /* fin */
 
@@ -1044,7 +1165,7 @@ transition: background-color .3s;
 
    
 
-    li a:hover, li a.active{
+    .nav2 li a:hover, .nav2 li a.active{
         background-color: none;
         color: rgb(0, 0, 0);
         
@@ -1067,5 +1188,6 @@ transition: background-color .3s;
         font-size: 2rem;
     }
 }
+
 
 /* fin modo celular */

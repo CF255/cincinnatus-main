@@ -294,6 +294,45 @@
         </div>
     </section>
     
+    <!-- BUTTON MENU -->
+
+    <div class="navegador">
+        <ul>
+            <li class="list activenav">
+                <a href="#">
+                    <span class="iconnav"><i class="icon fa-solid fa-magnifying-glass"></i></span>
+                    <span class="textnav">Buscar</span>
+                </a>
+            </li>
+
+            <li class="list">
+                <a href="#">
+                    <span class="iconnav"><i class="fa-solid fa-rotate"></i></span>
+                    <span class="textnav">Actualizar</span>
+                </a>
+            </li>
+
+            <li class="list">
+                <a href="#">
+                    <span class="iconnav"><i class="fa-solid fa-trash"></i></span>
+                    <span class="textnav">Eliminar</span>
+                </a>
+            </li>
+
+            <li class="list">
+                <a href="#">
+                    <span class="iconnav"><i class="fa-solid fa-floppy-disk"></i></span>
+                    <span class="textnav">Guardar</span>
+                </a>
+            </li>
+            <div class="indicadornav">
+
+            </div>
+        </ul>
+    </div>
+
+    <!-- FIN -->
+
     <!-- <script>
         window.location.href="./app/views/almacen.php";
     </script> -->

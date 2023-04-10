@@ -64,6 +64,22 @@ closemodal.addEventListener('click', (e)=>{
 
 });
 
+/* fin */
+
+
+/* menu inferior */
+
+    const list = document.querySelectorAll(".list");
+    function activelink(){
+        list-forEach((item)=>
+            item.classList.remove('activenav'));
+            this.classList.add('activenav');
+        
+    }
+
+    list.forEach((item)=>)
+
+/* fin */
 
 
 

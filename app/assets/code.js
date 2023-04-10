@@ -103,7 +103,7 @@ const app = new (function () {
     };
     
 
-
+    
     /* fin */
 
     /* color campo vacio warning */
