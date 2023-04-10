@@ -136,6 +136,7 @@ const app = new (function () {
       form.append("id", this.id.value);
       /* form.append("fotos", this.fotos.value); */
 
+      
       if(this.nombre.value != ""){
         if(this.precio.value != ""){
           if(this.proveedor.value !=""){
