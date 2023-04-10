@@ -181,24 +181,45 @@
             </button>
 
             <ul>
+                
+            
+                
+            <li>
+            <li><a href="#"  class="linea">
+                    <span class="icons"></span>
+                    <span class="item"></span>
+                </a></li>
+
+
+            <li><a href="#"  class="">
+                    <span class="icons"></span>
+                    <span class="item"></span>
+                </a></li>
+
            
                 <li><a href="#" id="btnbuscar"  class="btnbuscar">
                     <span class="icons"><i class="icon fa-solid fa-magnifying-glass"></i></span>
                     <span class="item">Buscar</span>
                 </a></li>
                 
-                <li> <button onclick="app.editar()" class="btnside" ><span class=""><i class="fa-solid fa-pen-to-square"></i></span>
+              <!--   <li> <button onclick="app.editar()" class="btnside" ><span class=""><i class="fa-solid fa-pen-to-square"></i></span>
                     <span class="">Editar</span>
                 </button> </li>
-
+ -->
                
 
-                <li><a href="#">
+                <li> <!-- <a href="#" id="btnactualizar" class="btnactualizar">
                     <span class="icons"><i class="fa-solid fa-rotate"></i></span>
-                    <span class="item">Actualizar</span>
-                </a></li>
+                    <span class="item">Actualizar</span> 
+                </a> 
+             -->
+             <button  id="btnactu" class="btnside btnactu" ><span class=""><i class="fa-solid fa-rotate"></i></span>
+                    <span class="">actualizar</span>
+                </button> 
+            </li>
+
                 
-                <li><button onclick="app.eliminar()" id="eliminar" class="btnside" ><span class=""><i class="fa-solid fa-trash"></i></span>
+                <li><button  id="btneliminar" class="btnside btneliminar" ><span class=""><i class="fa-solid fa-trash"></i></span>
                     <span class="">Eliminar</span>
                 </button> 
                 </li>
@@ -261,8 +282,9 @@
 
     <section class="modalerror" id="modalerror">
         <div class="containermodalerror" id="containermodalerror">
-            <p><i class="fa-solid fa-circle-xmark"></i> Accion realizada con exito</p>
-               </div>
+            <p><i class="fa-solid fa-circle-xmark"></i> Ha ocurrido un error fatal</p>
+            <a href="#" id="cerrarmodalerror" class="cerrarmodalerror"></a>       
+        </div>
     </section>
 
     <section class="modalwarning" id="modalwarning">

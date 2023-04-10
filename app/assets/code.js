@@ -17,6 +17,94 @@ const app = new (function () {
     this.containermodalwarning = document.getElementById("containermodalwarning");
     this.cerrarmodalwarning =document.getElementById("cerrarmodalwarning");
     this.warning = document.getElementById("warning");
+    this.modal4 = document.getElementById("modalerror");
+    this.containermodalerror=document.getElementById("containermodalerror");
+    this.cerrarmodalerror = document.getElementById("cerrarmodalerror");
+    this.btneliminar = document.getElementById("btneliminar");
+    this.btnactualizar = document.getElementById("btnactu");
+
+    /* boton actualizar */
+    this.btnactualizar = () =>{
+
+      var form = new FormData();
+      form.append("nombre", this.nombre.value);
+      form.append("descripcion", this.descripcion.value);
+      form.append("precio", this.precio.value);
+      form.append("proveedor", this.proveedor.value);
+      form.append("categoria", this.categoria.value);
+      form.append("id", this.id.value);
+      /* form.append("fotos", this.fotos.value); */
+
+      if(this.nombre.value != ""){
+        if(this.precio.value != ""){
+          if(this.proveedor.value !=""){
+            if(this.categoria.value !=""){
+              if(this.descripcion.value != ""){
+
+               
+                if (this.id.value != "") {
+                 
+
+                 fetch("../controllers/actualizar.php", {
+                  method: "POST",
+                  body: form,
+                })
+                  .then((res) => res.json())
+                  .then((data) => {
+                    this.containermodalerror();
+                    
+                    this.listado();
+                    this.limpiar();
+                    setTimeout(this.cerrarmodalcorrecto,2000);
+                    
+                  })
+                  .catch((error) => console.log(error));
+            /*       this.containermodalerror();
+                  setTimeout(this.cerrarmodalerror,2000); */
+
+                } else {
+                  alert("primero debe de crear el producto");
+                } 
+
+              }else{
+                this.containermodalwarning();
+                setTimeout(this.cerrarmodalwarning,2000);
+                this.warning5();
+                this.descripcion.focus();
+              }
+            }else{
+              this.containermodalwarning();
+            setTimeout(this.cerrarmodalwarning,2000);
+            this.warning4();
+            this.categoria.focus();
+            }
+          }else{
+            this.containermodalwarning();
+            setTimeout(this.cerrarmodalwarning,2000);
+            this.warning3();
+            this.proveedor.focus();
+          }
+
+        }else{
+          this.containermodalwarning();
+          setTimeout(this.cerrarmodalwarning,2000);
+          this.warning2();
+          this.precio.focus();
+        }
+       
+      }else{
+        this.containermodalwarning();
+        setTimeout(this.cerrarmodalwarning,2000);
+        this.nombre.focus();
+        this.warning();
+      }
+     
+       
+    };
+    
+
+
+    /* fin */
 
     /* color campo vacio warning */
   this.warning=()=>{
@@ -54,6 +142,15 @@ const app = new (function () {
     this.descripcion.classList.remove("inputerror");
   }
     /* FIN  */
+
+    /* modal error */
+    this.cerrarmodalerror=()=>{
+      this.modal4.classList.remove('modalcorrectoshow');
+    }
+    this.containermodalerror=()=>{
+      this.modal4.classList.add('modalcorrectoshow');
+    }
+    /* fin */
 
     /* modal warning */
     this.cerrarmodalwarning=()=>{
@@ -103,8 +200,25 @@ const app = new (function () {
             `;
           });
         })
-        .catch((error) => console.log(error));
+        .catch((error) => console.log(error));      
     };
+
+    this.btneliminar=(id)=>{
+      var form = new FormData();
+      form.append("id", id);
+      fetch("../controllers/eliminar.php",{
+        method: "POST",
+        body: form,
+      })
+
+      .then((res) => res.json())
+      .then((data)=>{
+        this.listado();
+        this.containermodalcorrec();
+         setTimeout(this.cerrarmodalcorrecto,1500);
+      })
+      .catch((error)=>console.log(error));
+    }
 
     this.eliminar = (id)=>{
       var form = new FormData();
@@ -161,6 +275,9 @@ const app = new (function () {
                       
                     })
                     .catch((error) => console.log(error));
+        /*             this.containermodalerror();
+                    setTimeout(this.cerrarmodalerror,2000); */
+
                 } else {
                   fetch("../controllers/actualizar.php", {
                     method: "POST",
@@ -176,6 +293,8 @@ const app = new (function () {
                       
                     })
                     .catch((error) => console.log(error));
+              /*       this.containermodalerror();
+                    setTimeout(this.cerrarmodalerror,2000); */
                 } 
 
 
@@ -252,5 +371,3 @@ const app = new (function () {
   })();
   app.listado();
   
-
-  /*  */
