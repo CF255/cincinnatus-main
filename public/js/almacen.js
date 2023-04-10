@@ -64,6 +64,9 @@ closemodal.addEventListener('click', (e)=>{
 
 });
 
+
+
+
 /* fin modal tabla */
 
 
