@@ -20,7 +20,7 @@ const app = new (function () {
     this.modal4 = document.getElementById("modalerror");
     this.containermodalerror=document.getElementById("containermodalerror");
     this.cerrarmodalerror = document.getElementById("cerrarmodalerror");
-    this.btneliminar = document.getElementById("btneliminar");
+    this.botoneliminar = document.getElementById("botoneliminar");
     this.btnactualizar = document.getElementById("btnactu");
 
     /* boton actualizar */
@@ -203,7 +203,7 @@ const app = new (function () {
         .catch((error) => console.log(error));      
     };
 
-    this.btneliminar=(id)=>{
+    this.botoneliminar=(id)=>{
       var form = new FormData();
       form.append("id", id);
       fetch("../controllers/eliminar.php",{

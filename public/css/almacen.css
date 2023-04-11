@@ -375,12 +375,16 @@ select:focus{
 }
 
 
+
 .imglogo{
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
     top: 100px;
-    left: calc(50% - 210px);  
+   /*  left: calc(50% - 210px);   */
+    margin-bottom: 20px;
+    margin-left: -140px;
+    
     }
     
 .agregarimg{
@@ -390,17 +394,18 @@ select:focus{
     background-color: cadetblue;
     border: 2px solid rgb(57, 90, 92);
     width: 35px;
-    left: calc(50% - 190px); 
+    /* left: calc(50% - 190px);  */
+    margin-left: -40px;
+    margin-bottom: 15px;
 }
 
 .form-control-file{
     max-width: 700px;
     width: 90%;
     height: 40px;
-   
     font-size: 15px;
     display: block; 
-    margin-bottom: 10px; 
+     
 }
 
 .textarea{
@@ -958,7 +963,7 @@ transition: background-color .3s;
 
   /* fin */
 
-/* fin */
+/* fin *
 
 /* menu button */
 
@@ -1009,7 +1014,34 @@ display: flex;
    
 }
 
+.navegador ul li button{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 900;
+    background: transparent;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+   
+}
+
 .navegador ul li a .iconnav{
+    position: relative;
+   display: block;
+   line-height: 75px;
+   font-size: 1.5em;
+   text-align: center;
+   transition: 0.5s;
+   color: black;
+   
+}
+
+.navegador ul li button .iconnav{
     position: relative;
    display: block;
    line-height: 75px;
@@ -1024,7 +1056,23 @@ display: flex;
    transform: translateY(-35px);
 }
 
+.navegador ul li.activenav button .iconnav{
+    transform: translateY(-35px);
+ }
+ 
+
 .navegador ul li a .textnav{
+    position: absolute;
+    color: black;
+    font-weight: 400;
+    font-size: 0.85em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(20px);
+ }
+
+ .navegador ul li button .textnav{
     position: absolute;
     color: black;
     font-weight: 400;
@@ -1037,6 +1085,11 @@ display: flex;
 
 
  .navegador ul li.activenav a .textnav{
+    opacity: 1;
+    transform: translateY(10px);
+ }
+
+ .navegador ul li.activenav button .textnav{
     opacity: 1;
     transform: translateY(10px);
  }
@@ -1083,13 +1136,13 @@ display: flex;
     transform: translateX(calc(70px * 0));
  }
  .navegador ul li:nth-child(2).activenav ~ .indicadornav{
-    transform: translateX(calc(70px * 1));
+    transform: translateX(calc(70px * 1.4));
  }
  .navegador ul li:nth-child(3).activenav ~ .indicadornav{
-    transform: translateX(calc(70px * 2));
+    transform: translateX(calc(70px * 2.85));
  }
  .navegador ul li:nth-child(4).activenav ~ .indicadornav{
-    transform: translateX(calc(70px * 3));
+    transform: translateX(calc(70px * 4.25));
  }
  .navegador ul li:nth-child(5).activenav ~ .indicadornav{
     transform: translateX(calc(70px * 4));
@@ -1107,11 +1160,11 @@ display: flex;
         display: none;
     }
 
-   /*  .navegador{
+    .navegador{
         opacity: 0;
         pointer-events: none;
-    } */ 
-
+    } 
+ 
 }
 /*  */
 
@@ -1119,15 +1172,45 @@ display: flex;
 
 @media (max-width: 600px){
 
-  /*  .navegador{
+    .navegador{
         opacity: 1;
         pointer-events: unset;
-    } */
+    } 
+ 
+    .textarea{
+        width: 100%;
+        min-width: 50%;
+        min-height: 150px;
+        max-height: 200px;
+    }
 
-   /*  .containerright{
+    .inputtext{
+        width: 100%;
+    }
+ .contenedorinput{
+
+    width: 90%;
+    max-width: 750px;
+    height: 75%;
+    margin: 20px;
+    position: absolute;
+    border: 2Px solid rgb(57, 90, 92) ;
+    border-radius: 10px;
+    background-color: white;
+    padding: 10px;
+  
+}
+ 
+.ocultar{
+    opacity: 0;
+    pointer-events: none;
+    transition: .2s ease;
+}
+
+   .containerright{
         opacity: 0;
         pointer-events: none;
-    } */
+    } 
 
     .containermodalcorrec{
         font-size: 20px;
