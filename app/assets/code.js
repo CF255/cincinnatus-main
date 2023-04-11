@@ -2,6 +2,7 @@ const app = new (function () {
     this.tbody = document.getElementById("tbody");
     this.nombre = document.getElementById("nombre");
     this.precio = document.getElementById("precio");
+    this.unidades = document.getElementById("unidades");
     this.proveedor = document.getElementById("proveedor");
     this.categoria = document.getElementById("categoria");
     this.descripcion = document.getElementById("descripcion");
@@ -30,6 +31,7 @@ const app = new (function () {
       form.append("nombre", this.nombre.value);
       form.append("descripcion", this.descripcion.value);
       form.append("precio", this.precio.value);
+      form.append("unidades",this.unidades.value);
       form.append("proveedor", this.proveedor.value);
       form.append("categoria", this.categoria.value);
       form.append("id", this.id.value);
@@ -37,53 +39,62 @@ const app = new (function () {
 
       if(this.nombre.value != ""){
         if(this.precio.value != ""){
-          if(this.proveedor.value !=""){
-            if(this.categoria.value !=""){
-              if(this.descripcion.value != ""){
-
-               
-                if (this.id.value != "") {
+          if(this.unidades.value !=""){
+            if(this.proveedor.value !=""){
+              if(this.categoria.value !=""){
+                if(this.descripcion.value != ""){
+  
                  
-
-                 fetch("../controllers/actualizar.php", {
-                  method: "POST",
-                  body: form,
-                })
-                  .then((res) => res.json())
-                  .then((data) => {
-                    this.containermodalerror();
-                    
-                    this.listado();
-                    this.limpiar();
-                    setTimeout(this.cerrarmodalcorrecto,2000);
-                    
+                  if (this.id.value != "") {
+                   
+  
+                   fetch("../controllers/actualizar.php", {
+                    method: "POST",
+                    body: form,
                   })
-                  .catch((error) => console.log(error));
-            /*       this.containermodalerror();
-                  setTimeout(this.cerrarmodalerror,2000); */
-
-                } else {
-                  alert("primero debe de crear el producto");
-                } 
-
+                    .then((res) => res.json())
+                    .then((data) => {
+                      this.containermodalerror();
+                      
+                      this.listado();
+                      this.limpiar();
+                      setTimeout(this.cerrarmodalcorrecto,2000);
+                      
+                    })
+                    .catch((error) => console.log(error));
+              /*       this.containermodalerror();
+                    setTimeout(this.cerrarmodalerror,2000); */
+  
+                  } else {
+                    alert("primero debe de crear el producto");
+                  } 
+  
+                }else{
+                  this.containermodalwarning();
+                  setTimeout(this.cerrarmodalwarning,2000);
+                  this.warning5();
+                  this.descripcion.focus();
+                }
               }else{
                 this.containermodalwarning();
-                setTimeout(this.cerrarmodalwarning,2000);
-                this.warning5();
-                this.descripcion.focus();
+              setTimeout(this.cerrarmodalwarning,2000);
+              this.warning4();
+              this.categoria.focus();
               }
             }else{
               this.containermodalwarning();
-            setTimeout(this.cerrarmodalwarning,2000);
-            this.warning4();
-            this.categoria.focus();
+              setTimeout(this.cerrarmodalwarning,2000);
+              this.warning3();
+              this.proveedor.focus();
             }
           }else{
             this.containermodalwarning();
             setTimeout(this.cerrarmodalwarning,2000);
-            this.warning3();
-            this.proveedor.focus();
+            this.warning2();
+            this.unidades.focus();
           }
+          }
+          
 
         }else{
           this.containermodalwarning();
