@@ -66,7 +66,6 @@ closemodal.addEventListener('click', (e)=>{
 
 /* fin */
 
-
 /* menu inferior */
 
     const list = document.querySelectorAll(".list");
