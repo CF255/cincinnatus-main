@@ -134,8 +134,8 @@
         <label for="" class="lblfoto">Foto del producto</label>
         <img class="imglogo" src="../../public/img/logo.jpeg" alt="">
         <a href="#"><img class="agregarimg" src="../../public/img/agregarfoto.png" alt=""></a>
-    <!--  <input type="file" class="form-control-file " name="foto" id="fotos" placeholder="foto" aria-describedby="fileHelpId">
-     -->
+    <input type="file" class="form-control-file " name="foto" id="fotos" placeholder="foto" aria-describedby="fileHelpId">
+     
     <label class="lblnombres" for="">Nombre</label>
     <input type="text" class="inputtext" id="nombre" placeholder="Nombre del producto">
 
@@ -164,10 +164,10 @@
         </select> 
 
     <label class="lblnombres"  for="">Descripcion</label>
-    <textarea class="inputtext textarea" name="" id="descripcion" cols="40" rows="10"></textarea>
+    <textarea class="inputtext textarea" name="" id="descripcion" ></textarea>
 
     </div>
-
+    </form>
     <div class="containerright">
 
 
@@ -181,9 +181,6 @@
             </button>
 
             <ul>
-                
-            
-                
             <li>
             <li><a href="#"  class="linea">
                     <span class="icons"></span>
@@ -196,6 +193,16 @@
                     <span class="item"></span>
                 </a></li>
 
+                
+                    <li>
+                    <form action="javascript:void(0);"  onsubmit="app.guardar()">
+                    <button class="btnside" type="submit"><span class=""><i class="fa-solid fa-floppy-disk"></i></span>
+                    <span class="">Guardar</span></button> 
+                    </form>
+                 </li>
+                  
+                
+         
            
                 <li><a href="#" id="btnbuscar"  class="btnbuscar">
                     <span class="icons"><i class="icon fa-solid fa-magnifying-glass"></i></span>
@@ -219,29 +226,21 @@
             </li>
 
                 
-                <li><button  id="btneliminar" class="btnside btneliminar" ><span class=""><i class="fa-solid fa-trash"></i></span>
+                <li> <button  id="btneliminar" class="btnside btneliminar" ><span class=""><i class="fa-solid fa-trash"></i></span>
                     <span class="">Eliminar</span>
                 </button> 
                 </li>
 
 
-                <li>
-                    <button class="btnside" type="submit"><span class=""><i class="fa-solid fa-floppy-disk"></i></span>
-                    <span class="">Guardar</span></button> 
-                
+             
 
-                   <!--  <a href="#">
-                    <span class="icons"><i class="fa-solid fa-floppy-disk"></i></span>
-                    <span class="item">Guardar</span>
-                </a> --> </li>
-
-                
+                 
             </ul>
-
+            
   
         </nav>
     </div>
-    </form>
+   
 
     <section class="modal" id="modal">
         <div class="modalcontainer">
@@ -295,42 +294,54 @@
     </section>
     
     <!-- BUTTON MENU -->
-    
+
+                
     <div class="navegador" id="containernavegador">
         <ul>
             <li class="list activenav">
-                <a href="#">
+               <!--  <a href="#">
+                    <span class="iconnav"><i class="icon fa-solid fa-magnifying-glass"></i></span>
+                    <span class="textnav">Buscar</span>
+                </a> -->
+
+                <a href="#" id="botoninferiormodal"  class="botoninferiormodal">
                     <span class="iconnav"><i class="icon fa-solid fa-magnifying-glass"></i></span>
                     <span class="textnav">Buscar</span>
                 </a>
             </li>
 
             <li class="list">
-                <a href="#">
-                    <span class="iconnav"><i class="fa-solid fa-rotate"></i></span>
-                    <span class="textnav">Actualizar</span>
-                </a>
+                <form action="javascript:void(0);"  onsubmit="app.guardar()"> 
+                    <button class="" type="submit"><span class="iconnav"><i class="fa-solid fa-rotate"></i></span>
+                    <span class="textnav">Actualizar</span></button> 
+                    </form>
             </li>
 
+          
             <li class="list">
-                <a href="#">
-                    <span class="iconnav"><i class="fa-solid fa-trash"></i></span>
+             
+                <button onclick="app.eliminar(${item.id})" id="botoneliminar" type="submit" ><span class="iconnav"><i class="fa-solid fa-trash"></i></span>
                     <span class="textnav">Eliminar</span>
-                </a>
+                </button> 
+
+           
             </li>
 
+            
+            
             <li class="list">
-                <a href="#">
-                    <span class="iconnav"><i class="fa-solid fa-floppy-disk"></i></span>
-                    <span class="textnav">Guardar</span>
-                </a>
+            <form action="javascript:void(0);"  onsubmit="app.guardar()"> 
+                    <button class="" type="submit"><span class="iconnav"><i class="fa-solid fa-floppy-disk"></i></span>
+                    <span class="textnav">Guardar</span></button> 
+                    </form>
             </li>
+            
+
             <div class="indicadornav">
 
             </div>
         </ul>
     </div>
-   
 
     <!-- FIN -->
 

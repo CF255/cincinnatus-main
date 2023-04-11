@@ -1,4 +1,33 @@
 
+/* ocultar menu imputs y sidemenu rigth */
+const check = document.querySelector('#check');
+const menu3 = document.querySelector('#continput');
+const menu4 = document.querySelector('#containernavegador');
+const menu2 = document.querySelector('#navid');
+
+check.addEventListener('click', e =>{
+    menu3.classList.toggle("ocultar");
+    menu2.classList.toggle("ocultar");
+    menu4.classList.toggle("ocultar");
+
+});
+
+/* FIN */
+
+/* menu inferior */
+
+const list = document.querySelectorAll('.list');
+function activeLink(){
+    list.forEach((item)=>
+        item.classList.remove('activenav'));
+        this.classList.add('activenav');
+    
+}
+
+list.forEach((item)=>
+item.addEventListener('click', activeLink));
+
+/* fin */
 /* side menu left */
 
 const btn = document.querySelector('#menu-btn');
@@ -38,10 +67,17 @@ btn2.addEventListener('click', e =>{
 /* abrir modal tabla */
 
 const openmodal = document.querySelector('.btnbuscar');
+const openmodaldos = document.querySelector('.botoninferiormodal');
 const modal = document.querySelector('.modal');
 const closemodal = document.querySelector('.modalclose');
 
 openmodal.addEventListener('click', (e)=>{
+    e.preventDefault();
+    modal.classList.add('modalshow');
+
+});
+
+openmodaldos.addEventListener('click', (e)=>{
     e.preventDefault();
     modal.classList.add('modalshow');
 
@@ -55,36 +91,9 @@ closemodal.addEventListener('click', (e)=>{
 
 /* fin */
 
-/* menu inferior */
-
-    const list = document.querySelectorAll(".list");
-    function activelink(){
-        list-forEach((item)=>
-            item.classList.remove('activenav'));
-            this.classList.add('activenav');
-        
-    }
-
-   list.forEach((item)=>
-   item.addEventListener.add('click', activelink));
-
-/* fin */
 
 
-/* ocultar menu imputs y sidemenu rigth */
-const check = document.querySelector('#check');
-const menu3 = document.querySelector('#continput');
-const menu4 = document.querySelector('#containernavegador');
-const menu2 = document.querySelector('#navid');
 
-check.addEventListener('click', e =>{
-    menu3.classList.toggle("ocultar");
-    menu2.classList.toggle("ocultar");
-    menu4.classList.toggle("ocultar");
-
-});
-
-/* FIN */
 
 /* fin modal tabla */
 
