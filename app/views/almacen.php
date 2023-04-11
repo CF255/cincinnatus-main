@@ -124,7 +124,7 @@
 
     <!-- contenedor de inputs -->
 
-    <form action="javascript:void(0);" onsubmit="app.guardar()">
+    <form action="javascript:void(0);"  onsubmit="app.guardar()">
    
     <input type="hidden" id="id" />
     <div class="contenedorinput" id="continput">
@@ -295,8 +295,8 @@
     </section>
     
     <!-- BUTTON MENU -->
-
-    <div class="navegador">
+    
+    <div class="navegador" id="containernavegador">
         <ul>
             <li class="list activenav">
                 <a href="#">
@@ -330,12 +330,10 @@
             </div>
         </ul>
     </div>
+   
 
     <!-- FIN -->
 
-    <!-- <script>
-        window.location.href="./app/views/almacen.php";
-    </script> -->
     <script src="../assets/code.js"></script>
     <script src="../../public/js/almacen.js"></script>
 </body>

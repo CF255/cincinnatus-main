@@ -1,14 +1,3 @@
-/* ocultar menu imputs y sidemenu rigth */
-const check = document.querySelector('#check');
-const menu3 = document.querySelector('#continput');
-
-check.addEventListener('click', e =>{
-    menu3.classList.toggle("ocultar");
-    menu2.classList.toggle("ocultar");
-
-});
-
-/* FIN */
 
 /* side menu left */
 
@@ -27,7 +16,7 @@ btn.addEventListener('click', e =>{
 
 /* abrir cerrar sidemenu rigth */
 const btn2 = document.querySelector('#toggle-button');
-const menu2 = document.querySelector('#navid');
+
 
 btn2.addEventListener('click', e =>{
     btn2.classList.toggle("show"); 
@@ -77,11 +66,26 @@ closemodal.addEventListener('click', (e)=>{
         
     }
 
-    list.forEach((item)=>)
+   list.forEach((item)=>
+   item.addEventListener.add('click', activelink));
 
 /* fin */
 
 
+/* ocultar menu imputs y sidemenu rigth */
+const check = document.querySelector('#check');
+const menu3 = document.querySelector('#continput');
+const menu4 = document.querySelector('#containernavegador');
+const menu2 = document.querySelector('#navid');
+
+check.addEventListener('click', e =>{
+    menu3.classList.toggle("ocultar");
+    menu2.classList.toggle("ocultar");
+    menu4.classList.toggle("ocultar");
+
+});
+
+/* FIN */
 
 /* fin modal tabla */
 
