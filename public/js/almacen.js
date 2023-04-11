@@ -91,7 +91,34 @@ closemodal.addEventListener('click', (e)=>{
 
 /* fin */
 
+/* boton limpiar */
 
+const botonborrar = document.getElementById("botonborrar");
+
+
+
+botonborrar.addEventListener('click', (e)=>{
+   document.getElementById("nombre").value="";
+   document.getElementById("precio").value="";
+   document.getElementById("unidades").value="";
+   document.getElementById("proveedor").value="";
+   document.getElementById("categoria").value="";
+   document.getElementById("descripcion").value="";
+
+});
+
+const botonborrarinferior = document.getElementById("botonborrarinferior");
+botonborrarinferior.addEventListener('click', (e)=>{
+    document.getElementById("nombre").value="";
+    document.getElementById("precio").value="";
+    document.getElementById("unidades").value="";
+    document.getElementById("proveedor").value="";
+    document.getElementById("categoria").value="";
+    document.getElementById("descripcion").value="";
+ 
+ });
+
+/* limpiar fin */
 
 
 
