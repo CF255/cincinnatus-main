@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../../public/css/almacen.css?v=<?php echo(rand()); ?>" />
-<script src="/js/mi_script.js?v=<?php echo(rand()); ?>"></script>
+<!-- <script src="/js/mi_script.js?v=<?php echo(rand()); ?>"></script> -->
   <!--   <link rel="stylesheet" href="../../public/css/almacen.css">
     --> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
@@ -128,43 +128,49 @@
    
     <input type="hidden" id="id" />
     <div class="contenedorinput" id="continput">
-        <h1>Creacion de productos</h1>
+        <h1>Creacion de Usuarios</h1>
         <a href="#" id="warning" class="warning"></a>
 
-        <label for="" class="lblfoto">Foto del producto</label>
+        <label for="" class="lblfoto">Foto de Perfil</label>
         <img class="imglogo" src="../../public/img/logo.jpeg" alt="">
         <a href="#"><img class="agregarimg" src="../../public/img/agregarfoto.png" alt=""></a>
     <input type="file" class="form-control-file " name="foto" id="fotos" placeholder="foto" aria-describedby="fileHelpId">
      
+    <label class="lblnombres" for="">Usuario</label>
+    <input type="text" class="inputtext" id="usuario" placeholder="Nombre de Usuario">
+
     <label class="lblnombres" for="">Nombre</label>
-    <input type="text" class="inputtext" id="nombre" placeholder="Nombre del producto">
+    <input type="text" class="inputtext" id="nombre" placeholder="Nombre">
 
-    <label class="lblnombres" for="">Precio</label>
-    <input type="number" class="inputtext" id="precio" placeholder="precio del producto">
+    <label class="lblnombres" for="">Apellido</label>
+    <input type="number" class="inputtext" id="apellido" placeholder="Apellido">
 
 
-    <label class="lblnombres" for="">Proveedor</label>
-    <input type="text" class="inputtext" id="proveedor" placeholder="Nombre del proveedor">
+    <label class="lblnombres" for="">fecha</label>
+    <input type="date" class="inputtext" id="fecha" placeholder="Nombre del proveedor">
 
-<!-- 
-    <label class="lblnombres" for="">categoria</label>
-    <input type="text" class="inputtext" id="categoria" placeholder="categoria">
- -->
-    <label class="lblnombres" for="">Categoria</label>
-    <select autocomplete="off" name="categoria" class="inputtext" tabindex="9" id="categoria">
+
+    <label class="lblnombres" for="">Emai</label>
+    <input type="text" class="inputtext" id="email" placeholder="Correo Electronico">
+
+
+    <label class="lblnombres"  for="">Rol</label>
+    <select autocomplete="off" name="rol" class="inputtext" tabindex="9" id="rol">
             <option value=""></option>
-            <option value="Electronico">Electronico</option>
-            <option value="Libros">Libros</option>
-            <option value="Ropa">Ropa Inventario</option>
-            <option value="Accesorios">Accesorios</option>
-            <option value="Deportes">Deportes</option>
-            <option value="Juegos/Video juegos">Juegos/VideoJuegos</option>
-            <option value="Mascotas">Administrador Inventario</option>
-            <option value="Hogar">Hogar</option>
+            <option value="Administrador">Administrador</option>
+            <option value="Editor">Editor</option>
+            <option value="Administrador de inventario">Administrador de inventario</option>
+            <option value="Supervisor">Supervisor</option>
+            <option value="Cliente">Cliente</option>
         </select> 
+    
+        <label class="lblnombres" for="">Contraseña</label>
+    <input type="text" class="inputtext" id="Contraseña" placeholder="Contraseña">
 
-    <label class="lblnombres"  for="">Descripcion</label>
-    <textarea class="inputtext textarea" name="" id="descripcion" ></textarea>
+    <label class="lblnombres" for="">Confirmar la contraseña</label>
+    <input type="text" class="inputtext" id="confi" placeholder="Confirma la Contraseña">
+
+
 
     </div>
     </form>
@@ -260,7 +266,7 @@
                             
                         </tr>
                     </thead>
-                    <tbody id="tbody">
+                    <tbody id="tbodyuser">
                        
                     </tbody>
                 </table>
@@ -345,7 +351,7 @@
 
     <!-- FIN -->
 
-    <script src="../assets/code.js"></script>
-    <script src="../../public/js/almacen.js"></script>
+    <script src="../assets/codeuser.js"></script>
+    <script src="../../public/js/creacionUadmin.js"></script>
 </body>
 </html>
