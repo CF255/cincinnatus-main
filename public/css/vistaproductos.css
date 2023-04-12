@@ -12,6 +12,11 @@
 }
 
 
+body{
+    font-family: 'Paytone One', sans-serif;
+    overflow-x: hidden;
+    background-color: #efefefef; 
+}
 
 h2{
     font-weight: 300;
