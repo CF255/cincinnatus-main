@@ -232,7 +232,36 @@
 
     <section class="modal" id="modal">
         <div class="modalcontainer">
-            <h1 class="modaltitle">Tabla de productos</h1>
+            
+  <main class="table" id="tablaproductos">
+    <section class="tableheader" >
+              
+    <h1 class="modaltitle">Tabla Productos</h1>
+            <h2 class="">Productos Registrados</h2>
+    </section>
+    <section class="tablebody">
+            <table class="containertable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Precio</th>
+                            <th>Unidades</th>
+                            <th>Proveedor</th>
+                            <th>Categoria</th>
+                            <th>Descripcion</th>
+                            <th>Foto</th>
+                            <th></th>
+                            
+                        </tr>
+                    </thead>
+                        <tbody id="tbody">
+                            
+                    </tbody>
+            </table>
+    </section>
+  </main>
+            <!-- <h1 class="modaltitle">Tabla de productos</h1>
 
                 <table class="containertable table tablefixed">
                     <thead>
@@ -252,7 +281,7 @@
                     <tbody id="tbody">
                        
                     </tbody>
-                </table>
+                </table> -->
                
 
             <a href="#" id="cerrarmodal" class="modalclose">Cerrar</a>
