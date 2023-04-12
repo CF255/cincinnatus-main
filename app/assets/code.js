@@ -24,6 +24,7 @@ const app = new (function () {
     this.btnactualizar = document.getElementById("btnactu");
     this.botonborrar = document.getElementById("botonborrar");
 
+    
     /* boton actualizar */
     this.btnactualizar = () =>{
 

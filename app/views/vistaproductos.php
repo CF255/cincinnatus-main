@@ -120,15 +120,14 @@
     
     </div>
 
-  
-
-
-    <section class="modal" id="modal">
-        <div class="modalcontainer">
-            <h1 class="modaltitle">Listado de los productos</h1>
+  <main class="table" id="tablaproductos">
+    <section class="tableheader" >
+              
+    <h1 class="modaltitle">Listado de los productos</h1>
             <h2 class="">Productos en existencia</h2>
-
-                <table class="containertable table tablefixed">
+    </section>
+    <section class="tablebody">
+            <table class="containertable">
                     <thead>
                         <tr>
                             <th>ID</th>
@@ -143,15 +142,15 @@
                             
                         </tr>
                     </thead>
-                    <tbody id="tbody">
-                       
+                        <tbody id="tbody">
+                            
                     </tbody>
-                </table>
-               
-
-            <a href="#" id="cerrarmodal" class="modalclose">Cerrar</a>
-        </div>
+            </table>
     </section>
+  </main>
+
+
+ 
 
    
 
@@ -181,6 +180,6 @@
     <!-- FIN -->
 
     <script src="../assets/code.js"></script>
-    <script src="../../public/js/almacen.js"></script>
+    <script src="../../public/js/vistaproductos.js"></script>
 </body>
 </html>
