@@ -21,8 +21,8 @@ const app = new (function () {
     this.modal4 = document.getElementById("modalerror");
     this.containermodalerror=document.getElementById("containermodalerror");
     this.cerrarmodalerror = document.getElementById("cerrarmodalerror");
-    this.botoneliminar = document.getElementById("botoneliminar");
     this.btnactualizar = document.getElementById("btnactu");
+    this.botonborrar = document.getElementById("botonborrar");
 
     
     /* boton actualizar */
@@ -40,7 +40,7 @@ const app = new (function () {
 
       if(this.nombre.value != ""){
         if(this.precio.value != ""){
-          if(this.unidades.value !=""){
+          if(this.unidades.value != ""){
             if(this.proveedor.value !=""){
               if(this.categoria.value !=""){
                 if(this.descripcion.value != ""){
@@ -91,10 +91,10 @@ const app = new (function () {
           }else{
             this.containermodalwarning();
             setTimeout(this.cerrarmodalwarning,2000);
-            this.warning2();
+            this.warning6();
             this.unidades.focus();
           }
-          }
+          
           
 
         }else{
@@ -153,6 +153,14 @@ const app = new (function () {
   this.warningremove5=()=>{
     this.descripcion.classList.remove("inputerror");
   }
+
+  
+  this.warning6=()=>{
+    this.unidades.classList.add("inputerror");
+  }
+  this.warningremove6=()=>{
+    this.unidades.classList.remove("inputerror");
+  }
     /* FIN  */
 
     /* modal error */
@@ -200,6 +208,7 @@ const app = new (function () {
                 <td>#${item.id}</td>
                 <td>${item.nombre}</td>
                 <td>$${item.precio}</td>
+                <td>${item.unidades}</td>
                 <td>${item.proveedor}</td>
                 <td>${item.categoria}</td>
                 <td>${item.descripcion}</td>
@@ -257,6 +266,7 @@ const app = new (function () {
       form.append("nombre", this.nombre.value);
       form.append("descripcion", this.descripcion.value);
       form.append("precio", this.precio.value);
+      form.append("unidades",this.unidades.value);
       form.append("proveedor", this.proveedor.value);
       form.append("categoria", this.categoria.value);
       form.append("id", this.id.value);
@@ -265,72 +275,79 @@ const app = new (function () {
       
       if(this.nombre.value != ""){
         if(this.precio.value != ""){
-          if(this.proveedor.value !=""){
-            if(this.categoria.value !=""){
-              if(this.descripcion.value != ""){
-                if (this.id.value === "") {
-                  fetch("../controllers/guardar.php", {
-                    method: "POST",
-                    body: form,
-                  })
-                    .then((res) => res.json())
-                    .then((data) => {
-                      this.containermodalcorrec();
-                      this.listado();
-                      this.limpiar();
-                     setTimeout(this.cerrarmodalcorrecto,2000);
-                     this.warningremove();
-                     this.warningremove2();
-                     this.warningremove3();
-                     this.warningremove4();
-                     this.warningremove5();
-                      
-                      
+          if(this.unidades.value != ""){
+            if(this.proveedor.value !=""){
+              if(this.categoria.value !=""){
+                if(this.descripcion.value != ""){
+                  if (this.id.value === "") {
+                    fetch("../controllers/guardar.php", {
+                      method: "POST",
+                      body: form,
                     })
-                    .catch((error) => console.log(error));
-        /*             this.containermodalerror();
-                    setTimeout(this.cerrarmodalerror,2000); */
-
-                } else {
-                  fetch("../controllers/actualizar.php", {
-                    method: "POST",
-                    body: form,
-                  })
-                    .then((res) => res.json())
-                    .then((data) => {
-                      this.containermodalcorrec();
-                      
-                      this.listado();
-                      this.limpiar();
-                      setTimeout(this.cerrarmodalcorrecto,2000);
-                      
+                      .then((res) => res.json())
+                      .then((data) => {
+                        this.containermodalcorrec();
+                        this.listado();
+                        this.limpiar();
+                       setTimeout(this.cerrarmodalcorrecto,2000);
+                       this.warningremove();
+                       this.warningremove2();
+                       this.warningremove3();
+                       this.warningremove4();
+                       this.warningremove5();
+                        
+                        
+                      })
+                      .catch((error) => console.log(error));
+          /*             this.containermodalerror();
+                      setTimeout(this.cerrarmodalerror,2000); */
+  
+                  } else {
+                    fetch("../controllers/actualizar.php", {
+                      method: "POST",
+                      body: form,
                     })
-                    .catch((error) => console.log(error));
-              /*       this.containermodalerror();
-                    setTimeout(this.cerrarmodalerror,2000); */
-                } 
-
-
-
+                      .then((res) => res.json())
+                      .then((data) => {
+                        this.containermodalcorrec();
+                        
+                        this.listado();
+                        this.limpiar();
+                        setTimeout(this.cerrarmodalcorrecto,2000);
+                        
+                      })
+                      .catch((error) => console.log(error));
+                /*       this.containermodalerror();
+                      setTimeout(this.cerrarmodalerror,2000); */
+                  } 
+  
+  
+  
+                }else{
+                  this.containermodalwarning();
+                  setTimeout(this.cerrarmodalwarning,2000);
+                  this.warning5();
+                  this.descripcion.focus();
+                }
               }else{
                 this.containermodalwarning();
-                setTimeout(this.cerrarmodalwarning,2000);
-                this.warning5();
-                this.descripcion.focus();
+              setTimeout(this.cerrarmodalwarning,2000);
+              this.warning4();
+              this.categoria.focus();
               }
             }else{
               this.containermodalwarning();
-            setTimeout(this.cerrarmodalwarning,2000);
-            this.warning4();
-            this.categoria.focus();
+              setTimeout(this.cerrarmodalwarning,2000);
+              this.warning3();
+              this.proveedor.focus();
             }
+  
           }else{
             this.containermodalwarning();
             setTimeout(this.cerrarmodalwarning,2000);
-            this.warning3();
-            this.proveedor.focus();
+            this.unidades.focus();
+            this.warning6();
           }
-
         }else{
           this.containermodalwarning();
           setTimeout(this.cerrarmodalwarning,2000);
@@ -348,11 +365,13 @@ const app = new (function () {
        
     };
 
+
     this.limpiar = () =>{
       this.id.value ="";
       this.nombre.value ="";
       this.descripcion.value ="";
       this.precio.value ="";
+      this.unidades.value ="";
       this.proveedor.value ="";
       this.categoria.value ="";
 
@@ -371,6 +390,7 @@ const app = new (function () {
         this.nombre.value =data.nombre;
         this.descripcion.value =data.descripcion;
         this.precio.value =data.precio;
+        this.unidades.value =data.unidades;
         this.proveedor.value =data.proveedor;
         this.categoria.value =data.categoria;
         this.cerrarmodal();

@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../../public/css/almacen.css?v=<?php echo(rand()); ?>" />
+    <link rel="stylesheet" href="../../public/css/vistaproductos.css?v=<?php echo(rand()); ?>" />
 <script src="/js/mi_script.js?v=<?php echo(rand()); ?>"></script>
   <!--   <link rel="stylesheet" href="../../public/css/almacen.css">
     --> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -45,7 +45,7 @@
                 <li><a class="active" href="#"><img src="../../public/img/producto.png" alt="">Crear producto</a></li>
 
     
-                <li><a href="registrousuarios.php"><img src="../../public/img/almacen.png" alt="">almacen</a></li>
+                <li><a href="registrousuarios.html"><img src="../../public/img/almacen.png" alt="">almacen</a></li>
 
                 
                 <li><a href="loginadmi.php"><img src="../../public/img/cerrar.png" alt="">Cerrar sesion</a></li>
@@ -92,14 +92,14 @@
             </div>
 
             <div class="item">
-                <a href="#" class="active">
+                <a href="almacen.php" >
                     <div class="icon"><img src="../../public/img/productos.png" alt=""></div>
                     <div class="title"><span>Crear producto</span></div>
                 </a>
             </div>
 
             <div class="item">
-                <a href="vistaproductos.php">
+                <a href="#" class="active">
                     <div class="icon"><img src="../../public/img/almacen.png" alt=""></div>
                     
                     <div class="title"><span>almacen</span></div>
@@ -122,117 +122,11 @@
 
   
 
-    <!-- contenedor de inputs -->
-
-    <form action="javascript:void(0);"  onsubmit="app.guardar()">
-   
-    <input type="hidden" id="id" />
-    <div class="contenedorinput" id="continput">
-        <h1>Creacion de productos</h1>
-        <a href="#" id="warning" class="warning"></a>
-
-        <label for="" class="lblfoto">Foto del producto</label>
-        <img class="imglogo" src="../../public/img/logo.jpeg" alt="">
-        <a href="#"><img class="agregarimg" src="../../public/img/agregarfoto.png" alt=""></a>
-    <input type="file" class="form-control-file " name="foto" id="fotos" placeholder="foto" aria-describedby="fileHelpId">
-     
-    <label class="lblnombres" for="">Nombre</label>
-    <input type="text" class="inputtext" id="nombre" placeholder="Nombre del producto">
-
-    <label class="lblnombres" for="">Precio</label>
-    <input type="number" class="inputtext" id="precio" placeholder="precio del producto">
-
-    <label class="lblnombres" for="">Unidades</label>
-    <input type="number" class="inputtext" id="unidades" placeholder="Cantidad de unidades">
-
-
-    <label class="lblnombres" for="">Proveedor</label>
-    <input type="text" class="inputtext" id="proveedor" placeholder="Nombre del proveedor">
-
-
-    <label class="lblnombres" for="">Categoria</label>
-    <select autocomplete="off" name="categoria" class="inputtext" tabindex="9" id="categoria">
-            <option value=""></option>
-            <option value="Electronico">Electronico</option>
-            <option value="Libros">Libros</option>
-            <option value="Ropa">Ropa Inventario</option>
-            <option value="Accesorios">Accesorios</option>
-            <option value="Deportes">Deportes</option>
-            <option value="Juegos/Video juegos">Juegos/VideoJuegos</option>
-            <option value="Mascotas">Administrador Inventario</option>
-            <option value="Hogar">Hogar</option>
-        </select> 
-
-    <label class="lblnombres"  for="">Descripcion</label>
-    <textarea class="inputtext textarea" name="" id="descripcion" ></textarea>
-
-    </div>
-    </form>
-
-    <!-- menu derecho -->
-    <div class="containerright">
-
-
-        <nav class="navbar" id="navid">
-
-            <button  type="button"  class="toggle-collapse" id="toggle-button" >
-            <img src="../../public/img/fondo.jpg" alt=""><span class="toggle-icon"></span>
-            </button>
-
-            <ul>
-            <li>
-            <li><a href="#"  class="linea">
-                    <span class="icons"></span>
-                    <span class="item"></span>
-                </a></li>
-
-
-            <li><a href="#"  class="">
-                    <span class="icons"></span>
-                    <span class="item"></span>
-                </a></li>
-
-           
-                <li><a href="#" id="btnbuscar"  class="btnbuscar">
-                    <span class="icons"><i class="icon fa-solid fa-magnifying-glass"></i></span>
-                    <span class="item">Buscar</span>
-                </a></li>
-                
-          
-
-                <li> 
-                <form action="javascript:void(0);"  onsubmit="app.guardar()"> 
-             <button  id="btnactu" class="btnside btnactu" ><span class=""><i class="fa-solid fa-rotate"></i></span>
-                    <span class="">Actualizar</span>
-                </button> 
-</form>
-            </li>
-
-                
-                <li> <button  id="botonborrar" class="btnside botonborrar" ><span class=""><i class="fa-solid fa-eraser"></i></span>
-                    <span class="">Borrar</span>
-                </button> 
-                </li>
-
-
-                <li>
-                    <form action="javascript:void(0);"  onsubmit="app.guardar()">
-                    <button class="btnside" type="submit"><span class=""><i class="fa-solid fa-floppy-disk"></i></span>
-                    <span class="">Guardar</span></button> 
-                    </form>
-                 </li>
-
-                 
-            </ul>
-            
-  
-        </nav>
-    </div>
-   
 
     <section class="modal" id="modal">
         <div class="modalcontainer">
-            <h1 class="modaltitle">Tabla de productos</h1>
+            <h1 class="modaltitle">Listado de los productos</h1>
+            <h2 class="">Productos en existencia</h2>
 
                 <table class="containertable table tablefixed">
                     <thead>
@@ -282,55 +176,7 @@
         </div>
     </section>
     
-    <!-- BUTTON MENU -->
-
-                
-    <div class="navegador" id="containernavegador">
-        <ul>
-            <li class="list activenav">
-               <!--  <a href="#">
-                    <span class="iconnav"><i class="icon fa-solid fa-magnifying-glass"></i></span>
-                    <span class="textnav">Buscar</span>
-                </a> -->
-
-                <a href="#" id="botoninferiormodal"  class="botoninferiormodal">
-                    <span class="iconnav"><i class="icon fa-solid fa-magnifying-glass"></i></span>
-                    <span class="textnav">Buscar</span>
-                </a>
-            </li>
-
-            <li class="list">
-                <form action="javascript:void(0);"  onsubmit="app.guardar()"> 
-                    <button class="" type="submit"><span class="iconnav"><i class="fa-solid fa-rotate"></i></span>
-                    <span class="textnav">Actualizar</span></button> 
-                    </form>
-            </li>
-
-          
-            <li class="list">
-             
-                <button id="botonborrarinferior" type="submit" ><span class="iconnav"><i class="fa-solid fa-eraser"></i></span>
-                    <span class="textnav">Borrar</span>
-                </button> 
-
-           
-            </li>
-
-            
-            
-            <li class="list">
-            <form action="javascript:void(0);"  onsubmit="app.guardar()"> 
-                    <button class="" type="submit"><span class="iconnav"><i class="fa-solid fa-floppy-disk"></i></span>
-                    <span class="textnav">Guardar</span></button> 
-                    </form>
-            </li>
-            
-
-            <div class="indicadornav">
-
-            </div>
-        </ul>
-    </div>
+   
 
     <!-- FIN -->
 
