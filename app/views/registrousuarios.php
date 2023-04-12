@@ -123,8 +123,8 @@
   <main class="table" id="tablaproductos">
     <section class="tableheader" >
               
-    <h1 class="modaltitle">Listado de los productos</h1>
-            <h2 class="">Productos en existencia</h2>
+    <h1 class="modaltitle">Listado de Usuarios</h1>
+            <h2 class="">Usuarios en existencia</h2>
     </section>
     <section class="tablebody">
             <table class="containertable">
@@ -132,11 +132,11 @@
                         <tr>
                             <th>ID</th>
                             <th>Nombre</th>
-                            <th>Precio</th>
-                            <th>Unidades</th>
-                            <th>Proveedor</th>
-                            <th>Categoria</th>
-                            <th>Descripcion</th>
+                            <th>Apellido</th>
+                            <th>fecha</th>
+                            <th>Email</th>
+                            <th>Contrasena</th>
+                            <th>Rol</th>
                             <th>Foto</th>
                             <th></th>
                             
@@ -179,7 +179,7 @@
 
     <!-- FIN -->
 
-    <script src="../assets/code.js"></script>
+    <script src="../assets/codeuser.js"></script>
     <script src="../../public/js/registrousuarios.js"></script>
 </body>
 </html>
