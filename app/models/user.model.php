@@ -20,7 +20,7 @@ class Usuario extends Connection
     
    public static function obtener($id){
         try {
-            $sql = "SELECT * FROM usuario WHERE id = :id";
+            $sql = "SELECT * FROM usuarios WHERE id = :id";
             $stmt = Connection::getConnection()->prepare($sql);
             $stmt->bindParam(':id', $id);
             $stmt->execute();
@@ -34,7 +34,7 @@ class Usuario extends Connection
      public static function guardar($data)
     {
         try{
-            $sql = "INSERT INTO usuario (usuario, nombre, apellido, fecha, email, contraseña, rol) 
+            $sql = "INSERT INTO usuarios (usuario, nombre, apellido, fecha, email, contraseña, rol) 
             VALUES (:usuario, :nombre, :apellido, :fecha, :email, :contraseña, :rol )";
             $stmt = Connection::getConnection()->prepare($sql);
             $stmt->bindParam(':usuario', $data['usuario']);
@@ -53,7 +53,7 @@ class Usuario extends Connection
  
      public static function actualizar($data){
         try{
-            $sql = "UPDATE usuario SET usuario = :usuario, nombre = :nombre, apellido = :apellido, fecha = :fecha, email = :email, contraseña = :contraseña, rol = :rol WHERE id = :id";
+            $sql = "UPDATE usuario SET usuarios = :usuario, nombre = :nombre, apellido = :apellido, fecha = :fecha, email = :email, contraseña = :contraseña, rol = :rol WHERE id = :id";
             $stmt = Connection::getConnection()->prepare($sql);
             $stmt->bindParam(':usuario', $data['usuario']);
             $stmt->bindParam(':nombre', $data['nombre']);
@@ -72,7 +72,7 @@ class Usuario extends Connection
  
      public static function eliminar($id){
         try{
-            $sql = "DELETE FROM usuario WHERE id = :id";
+            $sql = "DELETE FROM usuarios WHERE id = :id";
             $stmt = Connection::getConnection()->prepare($sql);
             $stmt->bindParam(':id', $id);
             $stmt->execute();

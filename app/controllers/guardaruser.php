@@ -7,7 +7,7 @@ $arrayName = array('nombre' => $_POST['nombre'],
 'apellido' => $_POST['apellido'],
 'fecha' => $_POST['fecha'] ,
 'email' => $_POST['email'],
-'contraseña' => $_POST['contraseña'] ,
+'contraseña' => $_POST['contraseña'],
 'rol' => $_POST['rol']);
 
 /*  'fotos' => $_FILES['fotos']); */
