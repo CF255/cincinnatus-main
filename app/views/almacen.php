@@ -259,8 +259,6 @@
         </div>
     </section>
 
-   
-
     <section class="modalcorrecto" id="modalcorrecto">
         <div class="containermodalcorrec" id="containermodalcorrec">
             <p><i class="fa-solid fa-circle-check"></i> Accion realizada con exito</p>
