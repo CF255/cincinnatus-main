@@ -143,7 +143,7 @@
     <input type="text" class="inputtext" id="nombre" placeholder="Nombre">
 
     <label class="lblnombres" for="">Apellido</label>
-    <input type="number" class="inputtext" id="apellido" placeholder="Apellido">
+    <input type="text" class="inputtext" id="apellido" placeholder="Apellido">
 
 
     <label class="lblnombres" for="">fecha</label>
@@ -165,7 +165,7 @@
         </select> 
     
         <label class="lblnombres" for="">Contraseña</label>
-    <input type="text" class="inputtext" id="Contraseña" placeholder="Contraseña">
+    <input type="text" class="inputtext" id="contraseña" placeholder="Contraseña">
 
     <label class="lblnombres" for="">Confirmar la contraseña</label>
     <input type="text" class="inputtext" id="confi" placeholder="Confirma la Contraseña">

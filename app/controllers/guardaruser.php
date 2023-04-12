@@ -8,8 +8,8 @@ $arrayName = array('nombre' => $_POST['nombre'],
 'fecha' => $_POST['fecha'] ,
 'email' => $_POST['email'],
 'contraseña' => $_POST['contraseña'] ,
-'rol' => $_POST['rol'],
-'categoria' => $_POST['categoria']);
+'rol' => $_POST['rol']);
+
 /*  'fotos' => $_FILES['fotos']); */
 
 echo json_decode(Usuario::guardar($arrayName));

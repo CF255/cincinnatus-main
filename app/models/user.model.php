@@ -17,6 +17,7 @@ class Usuario extends Connection
       }
     }
 
+    
    public static function obtener($id){
         try {
             $sql = "SELECT * FROM usuario WHERE id = :id";

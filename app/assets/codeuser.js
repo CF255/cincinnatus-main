@@ -2,12 +2,12 @@ const app = new (function () {
     this.tbody = document.getElementById("tbodyuser");
     this.usuario = document.getElementById("usuario")
     this.nombre = document.getElementById("nombre");
-    this.precio = document.getElementById("apellido");
-    this.unidades = document.getElementById("fecha");
-    this.proveedor = document.getElementById("email");
-    this.categoria = document.getElementById("foto");
-    this.descripcion = document.getElementById("contraseña");
-    this.fotos = document.getElementById("rol");
+    this.apellido = document.getElementById("apellido");
+    this.fecha = document.getElementById("fecha");
+    this.email = document.getElementById("email");
+    this.fotos = document.getElementById("fotos");
+    this.contraseña = document.getElementById("contraseña");
+    this.rol = document.getElementById("rol");
     this.id = document.getElementById("id");
     this.eliminar = document.getElementById("eliminar");
     this.modal2 = document.getElementById("modalcorrecto");
@@ -113,9 +113,8 @@ const app = new (function () {
       fetch("../controllers/listadouser.php")
         .then((res) => res.json())
         .then((data) => {
-          console.log(data);
 
-         /*  this.tbody.innerHTML = "";
+           this.tbody.innerHTML = "";
           data.forEach((item) => {
             this.tbody.innerHTML += `
               <tr>
@@ -134,12 +133,12 @@ const app = new (function () {
                 </td>
               </tr>
             `;
-          }); */
+          }); 
         })
         .catch((error) => console.log(error));      
     };
 
-/* 
+
     this.eliminar = (id)=>{
       var form = new FormData();
       form.append("id", id);
@@ -225,32 +224,32 @@ const app = new (function () {
                   this.containermodalwarning();
                   setTimeout(this.cerrarmodalwarning,2000);
                   this.warning5();
-                  this.descripcion.focus();
+                  this.contraseña.focus();
                 }
               }else{
                 this.containermodalwarning();
               setTimeout(this.cerrarmodalwarning,2000);
               this.warning4();
-              this.categoria.focus();
+              this.rol.focus();
               }
             }else{
               this.containermodalwarning();
               setTimeout(this.cerrarmodalwarning,2000);
               this.warning3();
-              this.proveedor.focus();
+              this.email.focus();
             }
   
           }else{
             this.containermodalwarning();
             setTimeout(this.cerrarmodalwarning,2000);
-            this.unidades.focus();
+            this.fecha.focus();
             this.warning6();
           }
         }else{
           this.containermodalwarning();
           setTimeout(this.cerrarmodalwarning,2000);
           this.warning2();
-          this.precio.focus();
+          this.apellido.focus();
         }
        
       }else{
@@ -266,12 +265,13 @@ const app = new (function () {
 
     this.limpiar = () =>{
       this.id.value ="";
+      this.usuario.value ="";
       this.nombre.value ="";
-      this.descripcion.value ="";
-      this.precio.value ="";
-      this.unidades.value ="";
-      this.proveedor.value ="";
-      this.categoria.value ="";
+      this.apellido.value ="";
+      this.fecha.value ="";
+      this.rol.value ="";
+      this.contraseña.value ="";
+      this.email.value ="";
 
     };
 
@@ -285,12 +285,13 @@ const app = new (function () {
       .then((res)=>res.json())
       .then((data)=>{
         this.id.value = data.id;
+        this.usuario.value = data.usuario;
         this.nombre.value =data.nombre;
-        this.descripcion.value =data.descripcion;
-        this.precio.value =data.precio;
-        this.unidades.value =data.unidades;
-        this.proveedor.value =data.proveedor;
-        this.categoria.value =data.categoria;
+        this.apellido.value =data.apellido;
+        this.fecha.value =data.fecha;
+        this.rol.value =data.rol;
+        this.contraseña.value =data.contraseña;
+        this.email.value =data.email;
         this.cerrarmodal();
       })
       .catch((error)=> console.log(error));
@@ -298,7 +299,7 @@ const app = new (function () {
 
 
 
-   */
+   
   })();
   app.listado();
   
