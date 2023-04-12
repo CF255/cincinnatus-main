@@ -36,16 +36,16 @@
                 <li><a href="index.html"><img src="../../public/img/tienda.png" alt="">tienda</a></li>
 
             
-                <li><a href="registrousuarios.html"><img src="../../public/img/usuarios.png" alt="">Usuarios</a></li>
+                <li><a href="registrousuarios.php"><img src="../../public/img/usuarios.png" alt="">Usuarios</a></li>
 
            
-                <li><a href="creacionUadmin.html"><img src="../../public/img/usuario.png" alt="">Creacion de usuarios</a></li>
+                <li><a class="active" href="creacionUadmin.html"><img src="../../public/img/usuario.png" alt="">Creacion de usuarios</a></li>
 
            
-                <li><a class="active" href="#"><img src="../../public/img/producto.png" alt="">Crear producto</a></li>
+                <li><a  href="almacen.php"><img src="../../public/img/producto.png" alt="">Crear producto</a></li>
 
     
-                <li><a href="registrousuarios.html"><img src="../../public/img/almacen.png" alt="">almacen</a></li>
+                <li><a href="registrousuarios.php"><img src="../../public/img/almacen.png" alt="">almacen</a></li>
 
                 
                 <li><a href="loginadmi.php"><img src="../../public/img/cerrar.png" alt="">Cerrar sesion</a></li>
@@ -78,28 +78,28 @@
             </div>
 
             <div class="item">
-                <a href="creacionUadmin.html">
+                <a class="active" href="#">
                     <div class="icon"><img src="../../public/img/usuario.png" alt=""></div>
                     <div class="title"><span>Creacion de usuarios</span></div>
                 </a>
             </div>
 
             <div class="item">
-                <a href="registrousuarios.html">
+                <a href="registrousuarios.php">
                     <div class="icon"><img src="../../public/img/usuarios.png" alt=""></div>
                     <div class="title"><span>Usuarios</span></div>
                 </a>
             </div>
 
             <div class="item">
-                <a href="#" class="active">
+                <a href="almacen.php" >
                     <div class="icon"><img src="../../public/img/productos.png" alt=""></div>
                     <div class="title"><span>Crear producto</span></div>
                 </a>
             </div>
 
             <div class="item">
-                <a href="vistaproductos.html">
+                <a href="vistaproductos.php">
                     <div class="icon"><img src="../../public/img/almacen.png" alt=""></div>
                     
                     <div class="title"><span>almacen</span></div>

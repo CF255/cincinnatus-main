@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../../public/css/vistaproductos.css?v=<?php echo(rand()); ?>" />
+    <link rel="stylesheet" href="../../public/css/registrousuarios.css?v=<?php echo(rand()); ?>" />
 <script src="/js/mi_script.js?v=<?php echo(rand()); ?>"></script>
   <!--   <link rel="stylesheet" href="../../public/css/almacen.css">
     --> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -36,16 +36,16 @@
                 <li><a href="index.html"><img src="../../public/img/tienda.png" alt="">tienda</a></li>
 
             
-                <li><a href="registrousuarios.php"><img src="../../public/img/usuarios.png" alt="">Usuarios</a></li>
+                <li><a class="active" href="#"><img src="../../public/img/usuarios.png" alt="">Usuarios</a></li>
 
            
                 <li><a href="creacionUadmin.php"><img src="../../public/img/usuario.png" alt="">Creacion de usuarios</a></li>
 
            
-                <li><a  href="almacen.php"><img src="../../public/img/producto.png" alt="">Crear producto</a></li>
+                <li><a href="almacen.php"><img src="../../public/img/producto.png" alt="">Crear producto</a></li>
 
     
-                <li><a class="active" href="registrousuarios.html"><img src="../../public/img/almacen.png" alt="">almacen</a></li>
+                <li><a href="vistaproductos.php"><img src="../../public/img/almacen.png" alt="">almacen</a></li>
 
                 
                 <li><a href="loginadmi.php"><img src="../../public/img/cerrar.png" alt="">Cerrar sesion</a></li>
@@ -78,14 +78,14 @@
             </div>
 
             <div class="item">
-                <a href="creacionUadmin.html">
+                <a href="creacionUadmin.php">
                     <div class="icon"><img src="../../public/img/usuario.png" alt=""></div>
                     <div class="title"><span>Creacion de usuarios</span></div>
                 </a>
             </div>
 
             <div class="item">
-                <a href="registrousuarios.html">
+                <a href="#" class="active">
                     <div class="icon"><img src="../../public/img/usuarios.png" alt=""></div>
                     <div class="title"><span>Usuarios</span></div>
                 </a>
@@ -99,7 +99,7 @@
             </div>
 
             <div class="item">
-                <a href="#" class="active">
+                <a href="vistaproductos.php" >
                     <div class="icon"><img src="../../public/img/almacen.png" alt=""></div>
                     
                     <div class="title"><span>almacen</span></div>
@@ -180,6 +180,6 @@
     <!-- FIN -->
 
     <script src="../assets/code.js"></script>
-    <script src="../../public/js/vistaproductos.js"></script>
+    <script src="../../public/js/registrousuarios.js"></script>
 </body>
 </html>

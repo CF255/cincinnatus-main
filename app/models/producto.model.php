@@ -56,7 +56,7 @@ class Producto extends Connection
             $stmt = Connection::getConnection()->prepare($sql);
             $stmt->bindParam(':nombre', $data['nombre']);
             $stmt->bindParam(':descripcion', $data['descripcion']);
-            /* $stmt->bindParam(':fotos', $data['fotos']); */
+             /* $stmt->bindParam(':fotos', $data['fotos']); */
             $stmt->bindParam(':precio', $data['precio']);
             $stmt->bindParam(':unidades', $data['unidades']);
             $stmt->bindParam(':proveedor', $data['proveedor']);

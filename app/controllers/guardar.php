@@ -8,6 +8,6 @@ $arrayName = array('nombre' => $_POST['nombre'],
 'unidades' => $_POST['unidades'] ,
 'proveedor' => $_POST['proveedor'],
 'categoria' => $_POST['categoria']);
-/* 'fotos' => $_POST['fotos'] ); */
+/*  'fotos' => $_FILES['fotos']); */
 
 echo json_decode(Producto::guardar($arrayName));
