@@ -36,16 +36,16 @@
                 <li><a href="index.html"><img src="../../public/img/tienda.png" alt="">tienda</a></li>
 
             
-                <li><a href="registrousuarios.html"><img src="../../public/img/usuarios.png" alt="">Usuarios</a></li>
+                <li><a href="registrousuarios.php"><img src="../../public/img/usuarios.png" alt="">Usuarios</a></li>
 
            
-                <li><a href="creacionUadmin.html"><img src="../../public/img/usuario.png" alt="">Creacion de usuarios</a></li>
+                <li><a href="creacionUadmin.php"><img src="../../public/img/usuario.png" alt="">Creacion de usuarios</a></li>
 
            
                 <li><a class="active" href="#"><img src="../../public/img/producto.png" alt="">Crear producto</a></li>
 
     
-                <li><a href="registrousuarios.php"><img src="../../public/img/almacen.png" alt="">almacen</a></li>
+                <li><a href="vistaproductos.php"><img src="../../public/img/almacen.png" alt="">almacen</a></li>
 
                 
                 <li><a href="loginadmi.php"><img src="../../public/img/cerrar.png" alt="">Cerrar sesion</a></li>
@@ -78,14 +78,14 @@
             </div>
 
             <div class="item">
-                <a href="creacionUadmin.html">
+                <a href="creacionUadmin.php">
                     <div class="icon"><img src="../../public/img/usuario.png" alt=""></div>
                     <div class="title"><span>Creacion de usuarios</span></div>
                 </a>
             </div>
 
             <div class="item">
-                <a href="registrousuarios.html">
+                <a href="registrousuarios.php">
                     <div class="icon"><img src="../../public/img/usuarios.png" alt=""></div>
                     <div class="title"><span>Usuarios</span></div>
                 </a>
@@ -124,17 +124,19 @@
 
     <!-- contenedor de inputs -->
 
-    <form action="javascript:void(0);"  onsubmit="app.guardar()">
+    <form action="javascript:void(0);"  onsubmit="app.guardar()" enctype="multipart/form-data" autocomplete="off">
    
     <input type="hidden" id="id" />
     <div class="contenedorinput" id="continput">
         <h1>Creacion de productos</h1>
         <a href="#" id="warning" class="warning"></a>
 
-        <label for="" class="lblfoto">Foto del producto</label>
+       <div class="formgroup">
+       <label for="foto" class="lblfoto">Foto del producto</label>
         <img class="imglogo" src="../../public/img/logo.jpeg" alt="">
-        <a href="#"><img class="agregarimg" src="../../public/img/agregarfoto.png" alt=""></a>
-    <input type="file" class="form-control-file " name="foto" id="fotos" placeholder="foto" aria-describedby="fileHelpId">
+        <!-- <a href="#"><img class="agregarimg" src="../../public/img/agregarfoto.png" alt=""></a> -->
+    <input type="file" class="form-control-file " name="fotos" id="fotos" accept="image/*" >
+       </div>
      
     <label class="lblnombres" for="">Nombre</label>
     <input type="text" class="inputtext" id="nombre" placeholder="Nombre del producto">
@@ -256,7 +258,9 @@
                         </tr>
                     </thead>
                         <tbody id="tbody">
-                            
+                            <tr>
+                                <td>fotojh</td>
+                            </tr>
                     </tbody>
             </table>
     </section>
@@ -287,8 +291,6 @@
             <a href="#" id="cerrarmodal" class="modalclose">Cerrar</a>
         </div>
     </section>
-
-   
 
     <section class="modalcorrecto" id="modalcorrecto">
         <div class="containermodalcorrec" id="containermodalcorrec">
