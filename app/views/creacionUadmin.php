@@ -171,7 +171,6 @@
     <input type="text" class="inputtext" id="confi" placeholder="Confirma la Contraseña">
 
 
-
     </div>
     </form>
     <div class="containerright">
