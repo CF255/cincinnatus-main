@@ -78,14 +78,14 @@
             </div>
 
             <div class="item">
-                <a href="creacionUadmin.html">
+                <a href="creacionUadmin.php">
                     <div class="icon"><img src="../../public/img/usuario.png" alt=""></div>
                     <div class="title"><span>Creacion de usuarios</span></div>
                 </a>
             </div>
 
             <div class="item">
-                <a href="registrousuarios.html">
+                <a href="registrousuarios.php">
                     <div class="icon"><img src="../../public/img/usuarios.png" alt=""></div>
                     <div class="title"><span>Usuarios</span></div>
                 </a>
