@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/css/usuario.css">
+</head>
+<body>
+
+
+    <nav>
+        <img src="../../img/logo.jpeg" alt="" class="logoimg">
+    </nav>
+
+   <div class="login-box">
+   
+    <h2>Crear Cuenta</h2>
+    <label for="" class="lblfoto">Foto de perfil</label>
+    <img class="logoimg" src="../../img/logo.jpeg" alt="">
+
+
+
+    <a href="#"><img class="agregarimg" src="../../img/agregarfoto.png" alt=""></a>
+
+     
+
+
+    <form class="form" action="/users/registro" method="POST" enctype="multipart/form-data">
+
+   <div>
+    <input type="file" class="form-control-file" name="foto" id="" placeholder="foto" aria-describedby="fileHelpId">
+
+    <input name="usuario" type="text" class="inputtext" id="inputusuario" placeholder="Usuario">
+
+    <input name="nombre" type="text" class="inputtext" id="inputnombre" placeholder="Nombre">
+
+    <input name="apellido" type="text" class="inputtext" id="inputlastname" placeholder="Apellido">
+    
+    <label class="lblfecha" for="">Fecha de nacimiento</label>
+    <input name="fecha" type="date" class="inputtext ipfecha" id="inputfecha" placeholder="Nombre de Usuario">
+
+    <input name="email" type="email" class="inputtext" id="inputcorreo" placeholder="Correo Electronico">
+
+    <input name="password" type="password" class="inputtext" id="password" placeholder="Contraseña">
+
+    <input name="password2" type="password" class="inputtext" id="password2 placeholder="confirmar la Contraseña">
+
+    <select autocomplete="off" name="rol" class="ocultar" tabindex="9" id="slStatus">
+        <option value="Cliente">Cliente</option>
+    </select>
+
+    <input type="submit" name="submit" value="Registrar" id="Registrar" class="btncontinuar">
+
+    <div>
+        <a href="/users/login">Tienes una Cuenta? Inicia sesion</a>
+    </div>
+
+    <div class="box"></div>
+
+
+    <label class="lbl" for="">¿Ya tienes una cuenta?</label>
+    <a href="/views/login.html" class="a" >Iniciar sesion</a>
+   </div>
+    </form>
+   </div>
+
+   <footer class="foter">
+    <label for="">Copyright © 2023</label>
+    
+    
+    <a href="loginadmi.php"><img class="icon" src="../../img/admin.png" alt=""></a>
+   </footer>
+    
+
+   <script src=""></script>
+</body>
+</html>
