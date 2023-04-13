@@ -205,6 +205,7 @@ body{
     transition: 0.800s ease;
 }
 
+
 #sidemenu #profile #photo{
     box-sizing: border-box;
     padding: var(--padding);
