@@ -12,12 +12,22 @@
 </head>
 <body>
 
+    
 
     <nav>
         <img src="../../img/logo.jpeg" alt="" class="logoimg">
     </nav>
 
    <div class="login-box">
+
+    <ul>
+        <% if(typeof errors != 'undefined'){ %>
+            <% errors.forEach(error)=>{ %>
+                <li><%= error.message %></li>
+                <% } %>
+            
+       <% } %>
+    </ul>
    
     <h2>Crear Cuenta</h2>
     <label for="" class="lblfoto">Foto de perfil</label>
@@ -30,27 +40,27 @@
      
 
 
-    <form class="form" action="/users/registro" method="POST" enctype="multipart/form-data">
+    <form class="form" action="/users/registro" method="POST">
 
    <div>
     <input type="file" class="form-control-file" name="foto" id="" placeholder="foto" aria-describedby="fileHelpId">
 
-    <input name="usuario" type="text" class="inputtext" id="inputusuario" placeholder="Usuario">
+    <input name="usuario" type="text" class="inputtext" id="usuario" placeholder="Usuario">
 
-    <input name="nombre" type="text" class="inputtext" id="inputnombre" placeholder="Nombre">
+    <input name="nombre" type="text" class="inputtext" id="nombre" placeholder="Nombre">
 
-    <input name="apellido" type="text" class="inputtext" id="inputlastname" placeholder="Apellido">
+    <input name="apellido" type="text" class="inputtext" id="apellido" placeholder="Apellido">
     
     <label class="lblfecha" for="">Fecha de nacimiento</label>
-    <input name="fecha" type="date" class="inputtext ipfecha" id="inputfecha" placeholder="Nombre de Usuario">
+    <input name="fecha" type="date" class="inputtext ipfecha" id="fecha" placeholder="Nombre de Usuario">
 
-    <input name="email" type="email" class="inputtext" id="inputcorreo" placeholder="Correo Electronico">
+    <input name="email" type="email" class="inputtext" id="email" placeholder="Correo Electronico">
 
     <input name="password" type="password" class="inputtext" id="password" placeholder="Contraseña">
 
     <input name="password2" type="password" class="inputtext" id="password2 placeholder="confirmar la Contraseña">
 
-    <select autocomplete="off" name="rol" class="ocultar" tabindex="9" id="slStatus">
+    <select autocomplete="off" name="rol" class="ocultar" tabindex="9" id="rol">
         <option value="Cliente">Cliente</option>
     </select>
 
