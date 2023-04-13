@@ -1,12 +1,12 @@
 const app = new (function () {
-    this.tbody = document.getElementById("tbodyuser");
+    this.tbodyuser = document.getElementById("tbodyuser");
     this.usuario = document.getElementById("usuario")
     this.nombre = document.getElementById("nombre");
     this.apellido = document.getElementById("apellido");
     this.fecha = document.getElementById("fecha");
     this.email = document.getElementById("email");
-    this.fotos = document.getElementById("fotos");
-    this.contraseña = document.getElementById("contraseña");
+    this.foto = document.getElementById("foto");
+    this.pass = document.getElementById("pass");
     this.rol = document.getElementById("rol");
     this.id = document.getElementById("id");
     this.eliminar = document.getElementById("eliminar");
@@ -22,13 +22,19 @@ const app = new (function () {
     this.modal4 = document.getElementById("modalerror");
     this.containermodalerror=document.getElementById("containermodalerror");
     this.cerrarmodalerror = document.getElementById("cerrarmodalerror");
-    this.btnactualizar = document.getElementById("btnactu");
     this.botonborrar = document.getElementById("botonborrar");    
 
   
     /* fin */
 
     /* color campo vacio warning */
+    this.warning0=()=>{
+      this.usuario.classList.add("inputerror");
+    }
+    this.warningremove0=()=>{
+      this.usuario.classList.remove("inputerror");
+    }
+
   this.warning=()=>{
     this.nombre.classList.add("inputerror");
   }
@@ -37,39 +43,39 @@ const app = new (function () {
   }
 
   this.warning2=()=>{
-    this.precio.classList.add("inputerror");
+    this.apellido.classList.add("inputerror");
   }
   this.warningremove2=()=>{
-    this.precio.classList.remove("inputerror");
+    this.apellido.classList.remove("inputerror");
   }
 
   this.warning3=()=>{
-    this.proveedor.classList.add("inputerror");
+    this.email.classList.add("inputerror");
   }
   this.warningremove3=()=>{
-    this.proveedor.classList.remove("inputerror");
+    this.email.classList.remove("inputerror");
   }
 
   this.warning4=()=>{
-    this.categoria.classList.add("inputerror");
+    this.fecha.classList.add("inputerror");
   }
   this.warningremove4=()=>{
-    this.categoria.classList.remove("inputerror");
+    this.fecha.classList.remove("inputerror");
   }
 
   this.warning5=()=>{
-    this.descripcion.classList.add("inputerror");
+    this.pass.classList.add("inputerror");
   }
   this.warningremove5=()=>{
-    this.descripcion.classList.remove("inputerror");
+    this.pass.classList.remove("inputerror");
   }
 
   
   this.warning6=()=>{
-    this.unidades.classList.add("inputerror");
+    this.rol.classList.add("inputerror");
   }
   this.warningremove6=()=>{
-    this.unidades.classList.remove("inputerror");
+    this.rol.classList.remove("inputerror");
   }
     /* FIN  */
 
@@ -114,17 +120,17 @@ const app = new (function () {
         .then((res) => res.json())
         .then((data) => {
 
-           this.tbody.innerHTML = "";
+           this.tbodyuser.innerHTML = "";
           data.forEach((item) => {
-            this.tbody.innerHTML += `
+            this.tbodyuser.innerHTML += `
               <tr>
                 <td>#${item.id}</td>
                 <td>${item.usuario}</td>
-                <td>$${item.nombre}</td>
+                <td>${item.nombre}</td>
                 <td>${item.apellido}</td>
                 <td>${item.fecha}</td>
                 <td>${item.email}</td>
-                <td>${item.contraseña}</td>
+                <td>${item.pass}</td>
                 <td>${item.rol}</td>
                 <td>foto</td>
                 <td>
@@ -155,7 +161,7 @@ const app = new (function () {
       })
       .catch((error)=>console.log(error));
       
-    }
+    } 
 
     
    this.guardar = () =>{
@@ -163,20 +169,19 @@ const app = new (function () {
       var form = new FormData();
       form.append("usuario", this.usuario.value);
       form.append("nombre", this.nombre.value);
-      form.append("apellido", this.apellido.value);
-      form.append("fecha", this.fecha.value);
-      form.append("email",this.email.value);
-      form.append("contraseña", this.contraseña.value);
+     form.append("apellido", this.apellido.value);
+     form.append("email",this.email.value);
+    form.append("fecha", this.fecha.value);  
+    form.append("pass", this.pass.value);  
       form.append("rol", this.rol.value);
       form.append("id", this.id.value);
 
-
-      
+if(this.usuario.value != ""){
       if(this.nombre.value != ""){
         if(this.apellido.value != ""){
           if(this.fecha.value != ""){
             if(this.email.value !=""){
-              if(this.contraseña.value !=""){
+              if(this.pass.value !=""){
                 if(this.rol.value != ""){
                   if (this.id.value === "") {
                     fetch("../controllers/guardaruser.php", {
@@ -189,18 +194,22 @@ const app = new (function () {
                         this.listado();
                         this.limpiar();
                        setTimeout(this.cerrarmodalcorrecto,2000);
+                       this.warningremove0();
                        this.warningremove();
                        this.warningremove2();
                        this.warningremove3();
                        this.warningremove4();
                        this.warningremove5();
-                        
+                       this.warningremove6();
+                      
+                       
+                         
                         
                       })
                       .catch((error) => console.log(error));
 
   
-                  } else {
+                  }  else {
                     fetch("../controllers/actualizaruser.php", {
                       method: "POST",
                       body: form,
@@ -213,24 +222,26 @@ const app = new (function () {
                         this.limpiar();
                         setTimeout(this.cerrarmodalcorrecto,2000);
                         
+          
+                        
                       })
                       .catch((error) => console.log(error));
                
-                  } 
-  
+                  }  
+
   
   
                 }else{
                   this.containermodalwarning();
                   setTimeout(this.cerrarmodalwarning,2000);
-                  this.warning5();
-                  this.contraseña.focus();
+                  this.warning6();
+                  this.rol.focus();
                 }
               }else{
                 this.containermodalwarning();
               setTimeout(this.cerrarmodalwarning,2000);
-              this.warning4();
-              this.rol.focus();
+              this.warning5();
+              this.pass.focus();
               }
             }else{
               this.containermodalwarning();
@@ -243,7 +254,7 @@ const app = new (function () {
             this.containermodalwarning();
             setTimeout(this.cerrarmodalwarning,2000);
             this.fecha.focus();
-            this.warning6();
+            this.warning4();
           }
         }else{
           this.containermodalwarning();
@@ -258,24 +269,32 @@ const app = new (function () {
         this.nombre.focus();
         this.warning();
       }
+
+}else{
+  this.containermodalwarning();
+  setTimeout(this.cerrarmodalwarning,2000);
+  this.usuario.focus();
+  this.warning0();
+
+}
      
        
     };
 
 
-    this.limpiar = () =>{
+     this.limpiar = () =>{
       this.id.value ="";
       this.usuario.value ="";
       this.nombre.value ="";
       this.apellido.value ="";
       this.fecha.value ="";
       this.rol.value ="";
-      this.contraseña.value ="";
+      this.pass.value ="";
       this.email.value ="";
 
     };
 
-    this.editar = (id)=>{
+     this.editar = (id)=>{
       var form = new FormData();
       form.append("id", id);
       fetch("../controllers/editaruser.php",{
@@ -290,7 +309,7 @@ const app = new (function () {
         this.apellido.value =data.apellido;
         this.fecha.value =data.fecha;
         this.rol.value =data.rol;
-        this.contraseña.value =data.contraseña;
+        this.pass.value =data.pass;
         this.email.value =data.email;
         this.cerrarmodal();
       })

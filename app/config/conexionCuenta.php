@@ -14,7 +14,7 @@ $pass='1234';
  $infecha=$_POST['fecha'];
  $inemail=$_POST['email'];
  $inpass=$_POST['pass'];
- $inpasscon=$_POST['cPass'];
+/*  $inpasscon=$_POST['cPass']; */
  $rol=$_POST['rol'];
  
 
@@ -26,14 +26,14 @@ $pass='1234';
             if($infecha != ''){
                if($inemail !=""){
                   if($inpass != ""){
-                     if($inpasscon !=""){
-                        if($inpass == $inpasscon){
+                    /*  if($inpasscon !=""){ */
+                        if($inpass != $inpasscon){
                            if($inusuario != $innombre){
                               if($inusuario != $inpass){
                                  if($rol == "Cliente"){
                                     
-                                    $query=("INSERT INTO usuario (usuario, nombre, apellido, fecha, email, foto, contraseña,rol)
-                                    VALUES('$_REQUEST[usuario]','$_REQUEST[nombre]', '$_REQUEST[apellido]', '$_REQUEST[fecha]', '$_REQUEST[email]', '$_REQUEST[foto]', '$_REQUEST[pass]', '$_REQUEST[rol]')");                             
+                                    $query=("INSERT INTO usuarios (usuario, nombre, apellido, fecha, email, pass,rol)
+                                    VALUES('$_REQUEST[usuario]','$_REQUEST[nombre]', '$_REQUEST[apellido]', '$_REQUEST[fecha]', '$_REQUEST[email]', '$_REQUEST[pass]', '$_REQUEST[rol]')");                             
                                     
                                     $consulta=pg_query($conexion,$query);
                                              
@@ -50,9 +50,9 @@ $pass='1234';
                            }else{
                               echo "El usuario y el nombre no pueden ser iguales";
                            }
-                        }else{
+                      /*   }else{
                            echo "Las contrasenas no coinciden";
-                        }
+                        } */
                         
                      }else{
                         echo "Debe de confirmar la Contrasena";

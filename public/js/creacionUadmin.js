@@ -104,7 +104,7 @@ botonborrar.addEventListener('click', (e)=>{
    document.getElementById("fecha").value="";
    document.getElementById("email").value="";
    document.getElementById("rol").value="";
-   document.getElementById("Contraseña").value="";
+   document.getElementById("contraseña").value="";
    document.getElementById("confi").value="";
 });
 
@@ -116,7 +116,7 @@ botonborrarinferior.addEventListener('click', (e)=>{
     document.getElementById("fecha").value="";
     document.getElementById("email").value="";
     document.getElementById("rol").value="";
-    document.getElementById("Contraseña").value="";
+    document.getElementById("contraseña").value="";
     document.getElementById("confi").value="";
  
  });
