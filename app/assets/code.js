@@ -303,7 +303,7 @@ const app = new (function () {
                       .catch((error) => console.log(error));
           /*             this.containermodalerror();
                       setTimeout(this.cerrarmodalerror,2000); */
-  
+   
                   } else {
                     fetch("../controllers/actualizar.php", {
                       method: "POST",

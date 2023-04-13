@@ -131,6 +131,7 @@
                     <thead>
                         <tr>
                             <th>ID</th>
+                            <th>Usuario</th>
                             <th>Nombre</th>
                             <th>Apellido</th>
                             <th>fecha</th>
@@ -142,7 +143,7 @@
                             
                         </tr>
                     </thead>
-                        <tbody id="tbody">
+                        <tbody id="tbodyuser">
                             
                     </tbody>
             </table>

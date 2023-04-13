@@ -34,16 +34,16 @@ class Usuario extends Connection
      public static function guardar($data)
     {
         try{
-            $sql = "INSERT INTO usuarios (usuario, nombre, apellido, fecha, email, contraseña, rol) 
-            VALUES (:usuario, :nombre, :apellido, :fecha, :email, :contraseña, :rol )";
+            $sql = "INSERT INTO usuarios (usuario , nombre, apellido, email, fecha , pass, rol) 
+            VALUES (:usuario, :nombre, :apellido, :email, :fecha, :pass, :rol)";
             $stmt = Connection::getConnection()->prepare($sql);
             $stmt->bindParam(':usuario', $data['usuario']);
             $stmt->bindParam(':nombre', $data['nombre']);
             $stmt->bindParam(':apellido', $data['apellido']);
-            $stmt->bindParam(':fecha', $data['fecha']);
             $stmt->bindParam(':email', $data['email']);
-            $stmt->bindParam(':contraseña', $data['contraseña']);
-            $stmt->bindParam(':rol', $data['rol']); 
+            $stmt->bindParam(':fecha', $data['fecha']);
+            $stmt->bindParam(':pass', $data['pass']);
+             $stmt->bindParam(':rol', $data['rol']);
            $stmt->execute();
             return true;
         }catch(PDOException $th){
@@ -51,16 +51,16 @@ class Usuario extends Connection
         }
     }
  
-     public static function actualizar($data){
+    public static function actualizar($data){
         try{
-            $sql = "UPDATE usuario SET usuarios = :usuario, nombre = :nombre, apellido = :apellido, fecha = :fecha, email = :email, contraseña = :contraseña, rol = :rol WHERE id = :id";
+            $sql = "UPDATE usuarios SET usuario = :usuario, nombre = :nombre, apellido = :apellido, email = :email, fecha = :fecha, pass = :pass, rol = :rol WHERE id = :id";
             $stmt = Connection::getConnection()->prepare($sql);
             $stmt->bindParam(':usuario', $data['usuario']);
             $stmt->bindParam(':nombre', $data['nombre']);
             $stmt->bindParam(':apellido', $data['apellido']);
-            $stmt->bindParam(':fecha', $data['fecha']); 
-             $stmt->bindParam(':email', $data['email']);
-            $stmt->bindParam(':contraseña', $data['contraseña']);
+            $stmt->bindParam(':email', $data['email']);
+            $stmt->bindParam(':fecha', $data['fecha']);
+            $stmt->bindParam(':pass', $data['pass']);
             $stmt->bindParam(':rol', $data['rol']);
             $stmt->bindParam(':id', $data['id']);
             $stmt->execute();
@@ -69,6 +69,7 @@ class Usuario extends Connection
             echo $th->getMessage();
         }
     }
+
  
      public static function eliminar($id){
         try{

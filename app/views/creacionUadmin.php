@@ -134,7 +134,7 @@
         <label for="" class="lblfoto">Foto de Perfil</label>
         <img class="imglogo" src="../../public/img/logo.jpeg" alt="">
         <a href="#"><img class="agregarimg" src="../../public/img/agregarfoto.png" alt=""></a>
-    <input type="file" class="form-control-file " name="foto" id="fotos" placeholder="foto" aria-describedby="fileHelpId">
+    <input type="file" class="form-control-file " name="foto" id="foto" placeholder="foto" aria-describedby="fileHelpId">
      
     <label class="lblnombres" for="">Usuario</label>
     <input type="text" class="inputtext" id="usuario" placeholder="Nombre de Usuario">
@@ -150,7 +150,7 @@
     <input type="date" class="inputtext" id="fecha" placeholder="Nombre del proveedor">
 
 
-    <label class="lblnombres" for="">Emai</label>
+    <label class="lblnombres" for="">Email</label>
     <input type="text" class="inputtext" id="email" placeholder="Correo Electronico">
 
 
@@ -159,13 +159,13 @@
             <option value=""></option>
             <option value="Administrador">Administrador</option>
             <option value="Editor">Editor</option>
-            <option value="Administrador de inventario">Administrador de inventario</option>
+            <option value="Administrador_de_inventario">Administrador de inventario</option>
             <option value="Supervisor">Supervisor</option>
             <option value="Cliente">Cliente</option>
         </select> 
     
         <label class="lblnombres" for="">Contraseña</label>
-    <input type="text" class="inputtext" id="contraseña" placeholder="Contraseña">
+    <input type="text" class="inputtext" id="pass" placeholder="Contraseña">
 
     <label class="lblnombres" for="">Confirmar la contraseña</label>
     <input type="text" class="inputtext" id="confi" placeholder="Confirma la Contraseña">
@@ -200,14 +200,6 @@
                 </a></li>
 
                 
-                    <li>
-                    <form action="javascript:void(0);"  onsubmit="app.guardar()">
-                    <button class="btnside" type="submit"><span class=""><i class="fa-solid fa-floppy-disk"></i></span>
-                    <span class="">Guardar</span></button> 
-                    </form>
-                 </li>
-                  
-                
          
            
                 <li><a href="#" id="btnbuscar"  class="btnbuscar">
@@ -232,13 +224,21 @@
             </li>
 
                 
-                <li> <button  id="btneliminar" class="btnside btneliminar" ><span class=""><i class="fa-solid fa-trash"></i></span>
-                    <span class="">Eliminar</span>
+                <li> <button  id="botonborrar" class="btnside btneliminar" ><span class=""><i class="fa-solid fa-eraser"></i></span>
+                    <span class="">Borrar</span>
                 </button> 
                 </li>
 
 
              
+                <li>
+                    <form action="javascript:void(0);"  onsubmit="app.guardar()">
+                    <button class="btnside" type="submit"><span class=""><i class="fa-solid fa-floppy-disk"></i></span>
+                    <span class="">Guardar</span></button> 
+                    </form>
+                 </li>
+                  
+                
 
                  
             </ul>
@@ -248,28 +248,39 @@
     </div>
    
 
+  
     <section class="modal" id="modal">
         <div class="modalcontainer">
-            <h1 class="modaltitle">Tabla de productos</h1>
-
-                <table class="containertable table tablefixed">
+            
+  <main class="table" id="tablaproductos">
+    <section class="tableheader" >
+              
+    <h1 class="modaltitle">Tabla Usuarios</h1>
+            <h2 class="">Usuarios Registrados</h2>
+    </section>
+    <section class="tablebody">
+            <table class="containertable">
                     <thead>
                         <tr>
                             <th>ID</th>
+                            <th>Usuario</th>
                             <th>Nombre</th>
-                            <th>Precio</th>
-                            <th>Proveedor</th>
-                            <th>Categoria</th>
-                            <th>Descripcion</th>
+                            <th>Apellido</th>
+                            <th>Fecha</th>
+                            <th>Email</th>
+                            <th>Contraseña</th>
+                            <th>Rol</th>
                             <th>Foto</th>
                             <th></th>
                             
                         </tr>
                     </thead>
-                    <tbody id="tbodyuser">
-                       
+                        <tbody id="tbodyuser">
+                            
                     </tbody>
-                </table>
+            </table>
+    </section>
+  </main>
                
 
             <a href="#" id="cerrarmodal" class="modalclose">Cerrar</a>
@@ -326,8 +337,8 @@
           
             <li class="list">
              
-                <button id="botoneliminar" type="submit" ><span class="iconnav"><i class="fa-solid fa-trash"></i></span>
-                    <span class="textnav">Eliminar</span>
+                <button id="botonborrarinferior" type="submit" ><span class="iconnav"><i class="fa-solid fa-eraser"></i></span>
+                    <span class="textnav">Borrar</span>
                 </button> 
 
            

@@ -8,6 +8,7 @@ $arrayName = array('usuario' => $_POST['usuario'],
 'email' => $_POST['email'],
 'fecha' => $_POST['fecha'],
 'pass' => $_POST['pass'],
-'rol' => $_POST['rol']); 
+'rol' => $_POST['rol'], 
+'id' => $_POST['id']);
 
-echo json_decode(Usuario::guardar($arrayName));
+echo json_decode(Usuario::actualizar($arrayName));

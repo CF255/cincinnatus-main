@@ -12,8 +12,8 @@ $rol=$_POST['rol'];
  
 
 
-$query=("SELECT * FROM usuario 
-WHERE usuario='$usuario' AND contraseña='$contraseña' AND rol='$rol'");
+$query=("SELECT * FROM usuarios 
+WHERE usuario='$usuario' AND pass='$contraseña' AND rol='$rol'");
 
 $consulta=pg_query($conexion,$query);
 $cantidad=pg_num_rows($consulta);
@@ -37,19 +37,23 @@ if($usuario != ""){
             if($cantidad>0){
                 if($rol == "Administrador"){
                         $_SESSION['nombre_usuario']=$usuario;
-                        $_SESSION['foto_perfil']=$foto;
+                        $_SESSION['nombre_rol']=$rol;
+
                         header('Location: app/views/almacen.php');
                     
                     }else if($rol == "Editor"){
                         $_SESSION['nombre_usuario']=$usuario;
+                        $_SESSION['nombre_rol']=$rol;
                     header('Location: app/views/almacen.php');
                 
                     }else if($rol == "Administrador_Inventario"){
                         $_SESSION['nombre_usuario']=$usuario;
+                        $_SESSION['nombre_rol']=$rol;
                     header('Location: app/views/almacen.php');
                 
                     }else if($rol == "Supervisor"){
                         $_SESSION['nombre_usuario']=$usuario;
+                        $_SESSION['nombre_rol']=$rol;
                     header('Location: app/views/almacen.php');
                     }
                 }else{

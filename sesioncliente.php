@@ -3,7 +3,6 @@
 require 'app/config/conexion.php';
 
 
-
 $usuario=$_POST['user'];
 $contraseña=$_POST['pass'];
 $rol=$_POST['rol'];
@@ -14,13 +13,14 @@ if($usuario != ""){
     if($contraseña != ""){
     if($rol == "Cliente"){
 
-        $query=("SELECT * FROM usuario 
-        WHERE usuario='$usuario' AND contraseña='$contraseña' AND rol='$rol'");
+        $query=("SELECT * FROM usuarios 
+        WHERE usuario='$usuario' AND pass='$contraseña' AND rol='$rol'");
 
         $consulta=pg_query($conexion,$query);
         $cantidad=pg_num_rows($consulta);
 
         $_SESSION['nombre_usuario']=$usuario;
+        $_SESSION['nombre_rol']=$rol;
         header('Location: app/views/index.html');
         session_start();
     }

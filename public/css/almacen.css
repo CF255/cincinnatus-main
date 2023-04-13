@@ -194,6 +194,10 @@ body{
 
 /* profile */
 
+.spanrol{
+    font-size:14px;
+}
+
 #sidemenu #profile{
     border-bottom: solid 2px var(--hovercolor);
     padding: var(--padding) 0;
@@ -214,8 +218,14 @@ body{
     transition: 0.800s ease;
 }
 
+#sidemenu #profile #name{
+    font-size: 20px;
+    padding: var(--padding) 0;
+    overflow: hidden;
+    transition: 0.800s ease;
+}
 
-#sidemenu #profile #photo, #sidemenu #profile #name{
+#sidemenu #profile #photo{
     font-size: 24px;
     padding: var(--padding) 0;
     overflow: hidden;
@@ -371,6 +381,8 @@ textarea:focus{
 select:focus{
     outline: none;
 }
+
+
 
 
 .inputtext{
