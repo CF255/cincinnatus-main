@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const {pool} = require("./dbconfig");
+const bcrypt = require("bcrypt");
 
 
 const PORT = process.env.PORT || 4000;
@@ -24,7 +25,7 @@ app.get("/users/dashboard",(req,res)=>{
         res.render("dashboard" , {usuario: "andrews"});
         });
 
-app.post("/users/registro",(req,res)=>{
+app.post("/users/registro", async(req,res)=>{
     let{usuario,nombre,apellido,fecha,email,rol,password,password2} = req.body;
     console.log({
         usuario,
@@ -54,6 +55,22 @@ app.post("/users/registro",(req,res)=>{
     if(errors.length > 0){
         res.render("registro", {errors});
         
+    }else{
+        //validasion formulario
+        let hashedpassword = await bcrypt.hash(password,10);
+        console.log(hashedpassword);
+
+         pool.query(
+            `SELECT * FROM usuarios`,
+            [usuario],
+            (err, results)=>{
+                if(err){
+                    throw err;
+                }
+                console.log("reaches here");
+                console.log(results.rows);
+            }
+        ); 
     }
 });
 

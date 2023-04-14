@@ -20,12 +20,9 @@
    <div class="login-box">
 
     <ul>
-        <% if(typeof errors != 'undefined'){ %>
-            <% errors.forEach(error)=>{ %>
+        <% if(typeof errors != 'undefined'){ %> <% errors.forEach(error=>{ %>
                 <li><%= error.message %></li>
-                <% } %>
-            
-       <% } %>
+             <% }) %> <% } %>
     </ul>
    
     <h2>Crear Cuenta</h2>
