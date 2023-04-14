@@ -30,12 +30,26 @@
 
     <!--  fin modal -->
 
+    <ul>
+        <% if(messages.success_msg) { %>
+            <li><%= messages.success_msg %></li>
+        <%}%>
+    </ul>
+
+    <ul>
+        <% if(messages.error){ %>
+            <li> <%= messages.error %></li>
+        <%}%>
+    </ul>
+
+   
+
    <div class="login-box">
     <img class="logoimg" src="../../img/logo.jpeg" alt="">
     <h1>Hola</h1>
     <h2>Iniciar sesion</h2>
 
-    <form class="form" action="../../sesioncliente.php" method="POST">
+    <form class="form"  method="POST">
         
 
         <label for="" class="lblvali">Campo vacio</label>

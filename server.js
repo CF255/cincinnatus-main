@@ -2,6 +2,13 @@ const express = require("express");
 const app = express();
 const {pool} = require("./dbconfig");
 const bcrypt = require("bcrypt");
+const session = require("express-session");
+const flash = require("express-flash");
+const passport = require("passport");
+
+const initializePassport = require("./passportconfig");
+
+initializePassport(passport);
 
 
 const PORT = process.env.PORT || 4000;
@@ -9,9 +16,23 @@ const PORT = process.env.PORT || 4000;
 app.set("view engine", "ejs");
 app.use(express.urlencoded({extended: false}));
 
+app.use(session({
+    secret:"secret",
+
+    resave: false,
+
+    saveUninitialized: false
+})
+);
+
+app.use(flash())
+
 app.get("/",(req, res)=>{
     res.render("index");
 });
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.get("/users/registro",(req,res)=>{
 res.render("registro");
@@ -22,19 +43,19 @@ app.get("/users/login",(req,res)=>{
     });
     
 app.get("/users/dashboard",(req,res)=>{
-        res.render("dashboard" , {usuario: "andrews"});
+        res.render("dashboard" , {usuario: req.user.nombre});
         });
 
 app.post("/users/registro", async(req,res)=>{
-    let{usuario,nombre,apellido,fecha,email,rol,password,password2} = req.body;
+    let{usuario,nombre,apellido,email,fecha,password,rol,password2} = req.body;
     console.log({
         usuario,
         nombre,
         apellido,
-        fecha,
         email,
-        rol,
+        fecha,
         password,
+        rol,
         password2,
     });
 
@@ -68,12 +89,40 @@ app.post("/users/registro", async(req,res)=>{
                 if(err){
                     throw err;
                 }
-                console.log("reaches here");
+                
                 console.log(results.rows);
+
+                if(results.rows.length>0){
+                    errors.push({message: "El nombre de usuario ya se encuentra registrado"});
+                    res.render("registro",{errors});
+                }else{
+                    pool.query(
+                        `INSERT INTO usuarios (usuario, nombre, apellido, email, fecha, pass, rol)
+                        VALUES($1, $2, $3, $4, $5, $6, $7)
+                        RETURNING id, pass`,[usuario, nombre, apellido, email, fecha, hashedpassword,rol],(err,results)=>{
+                            if(err){
+                                throw err
+                            }
+                            console.log(results.rows);
+                            req.flash("success_msg","Registro completado");
+                            res.redirect("/users/login");
+                        }
+
+                    )
+                }
             }
         );
     }
 });
+
+app.post(
+    "/users/login", 
+passport.authenticate("local", {
+    successRedirect: "/users/dashboard",
+    failureRedirect: "/users/login",
+    failureFlash: true
+})
+);
 
 app.listen(PORT,()=>{
     console.log(`server running on port ${PORT}`);
