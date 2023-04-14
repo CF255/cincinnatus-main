@@ -20,3 +20,7 @@ values ('andrews')
 
 
 select * from usuarios
+
+
+insert into usuarios ( usuario, nombre, apellido, email, fecha,contraseña,rol)
+values('an','andrews','fernandez','andrews@gmail.com','3/3/2003','123','admin')
