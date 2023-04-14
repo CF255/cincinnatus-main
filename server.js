@@ -61,7 +61,8 @@ app.post("/users/registro", async(req,res)=>{
         console.log(hashedpassword);
 
          pool.query(
-            `SELECT * FROM usuarios`,
+            `SELECT * FROM usuarios
+            WHERE usuario = $1`,
             [usuario],
             (err, results)=>{
                 if(err){
@@ -70,7 +71,7 @@ app.post("/users/registro", async(req,res)=>{
                 console.log("reaches here");
                 console.log(results.rows);
             }
-        ); 
+        );
     }
 });
 
