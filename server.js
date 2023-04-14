@@ -81,7 +81,6 @@ app.listen(PORT,()=>{
 });
 
 
-
 //
 app.use(express.static('public'));
 app.use(express.static('app'));
