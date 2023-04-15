@@ -2,7 +2,7 @@
 class Connection{
    public $host = 'localhost';
    public $dbname = 'miniproyect';
-   public $port = '5432';
+   public $port = '5433';
    public $user = 'postgres';
    public $password = '1234';
    public $driver = 'pgsql';

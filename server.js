@@ -47,29 +47,29 @@ app.get("/users/dashboard",(req,res)=>{
         });
 
 app.post("/users/registro", async(req,res)=>{
-    let{usuario,nombre,apellido,email,fecha,password,rol,password2} = req.body;
+    let{usuario,nombre,apellido,email,fecha,pass,rol,password2} = req.body;
     console.log({
         usuario,
         nombre,
         apellido,
         email,
         fecha,
-        password,
+        pass,
         rol,
         password2,
     });
 
     let errors = [];
 
-    if(!usuario || !nombre || !apellido || !fecha || !email || !rol || !password ||!password2){
+    if(!usuario || !nombre || !apellido || !fecha || !email || !rol || !pass ||!password2){
         errors.push({message: "Completar todos los campos"});
     }
 
-    if(password.length < 6){
+    if(pass.length < 6){
         errors.push({message: "La contraseña debe de tener al menos 6 caracteres"});
     }
 
-    if(password != password2){
+    if(pass != password2){
         errors.push({message: "Las contraseñas no coinciden"});
     }
 
@@ -78,7 +78,7 @@ app.post("/users/registro", async(req,res)=>{
         
     }else{
         //validasion formulario
-        let hashedpassword = await bcrypt.hash(password,10);
+        let hashedpassword = await bcrypt.hash(pass,10);
         console.log(hashedpassword);
 
          pool.query(
