@@ -2,6 +2,31 @@
 const btncontinuar = document.querySelector('.btncontinuar');
 const modal = document.querySelector('.modal');
 const modalclose = document.querySelector('.modalclose');
+const btnloginadmi = document.getElementById("btnloginadmi"); 
+const btnlogin = document.getElementById("btnlogin"); 
+
+
+if(btnloginadmi){
+    btnloginadmi.addEventListener('click', e =>{
+    
+ 
+        window.location.href = 'http://localhost/cincinnatus-main/app/views/loginadmi.php'
+     
+     });
+}
+
+
+
+
+if(btnlogin){
+    btnlogin.addEventListener('click', e =>{
+     
+       window.location.href = 'http://localhost:4000/users/login'
+    
+    });
+    
+}
+
 
 const lbl = document.querySelector('.lblvali');
 

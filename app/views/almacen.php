@@ -101,7 +101,7 @@
             </div>
 
             <div class="item">
-                <a href="vistaproductos.php">
+                <a id="btnloginnav">
                     <div class="icon"><img src="../../public/img/almacen.png" alt=""></div>
                     
                     <div class="title"><span>almacen</span></div>
@@ -113,7 +113,7 @@
 
             
             <div class="item itemcerrar">
-                <a href="loginadmi.php">
+                <a id="btnlogin">
                     <div class="icon"><img src="../../public/img/cerrar.png" alt=""></div>
                     <div class="title"><span>Cerrar sesion</span></div>
                 </a>
@@ -346,5 +346,6 @@
 
     <script src="../assets/code.js"></script>
     <script src="../../public/js/almacen.js"></script>
+    <script src="../../public/js/ruta.js"></script>
 </body>
 </html>

@@ -16,11 +16,14 @@
     <nav>
         <img src="../../img/logo.jpeg" alt="" class="logoimg">
     </nav>
-    <ul>
-        <% if(typeof errors != 'undefined'){ %> <% errors.forEach(error=>{ %>
-                <li><%= error.message %></li>
-             <% }) %> <% } %>
-    </ul>
+   
+    <div class="mensajes">
+        <ul>
+            <% if(typeof errors != 'undefined'){ %> <% errors.forEach(error=>{ %>
+                    <li><%= error.message %></li>
+                 <% }) %> <% } %>
+        </ul>
+    </div>
    
 
    <div class="login-box">

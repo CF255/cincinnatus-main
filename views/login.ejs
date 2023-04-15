@@ -10,12 +10,28 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
 
+
 </head>
 <body>
     <nav>
         <img src="../../img/logo.jpeg" alt="" class="logoimg">
     </nav>
 
+
+    <div class="mensajes">
+        <ul>
+            <% if(messages.success_msg) { %>
+                <li><%= messages.success_msg %></li>
+            <%}%>
+        </ul>
+    
+        <ul>
+            <% if(messages.error){ %>
+                <li> <%= messages.error %></li>
+            <%}%>
+        </ul>
+    
+    </div>
     <!-- modal -->
 <section class="modal">
     <div class="modalcontainer">
@@ -29,19 +45,6 @@
     
 
     <!--  fin modal -->
-
-    <ul>
-        <% if(messages.success_msg) { %>
-            <li><%= messages.success_msg %></li>
-        <%}%>
-    </ul>
-
-    <ul>
-        <% if(messages.error){ %>
-            <li> <%= messages.error %></li>
-        <%}%>
-    </ul>
-
    
 
    <div class="login-box">
@@ -69,13 +72,14 @@
     </form>
    </div>
 
-   
-   <footer>
+
+<footer>
     <label for="">Copyright © 2023</label>
     
     
-    <a href="/users/loginadmi"><img class="icon" src="/img/admin.png" alt=""></a>
+    <a id="btnloginadmi"><img class="icon" src="/img/admin.png" alt=""></a>
    </footer>
+
     
    <script src="/js/logincliente.js"></script>
 

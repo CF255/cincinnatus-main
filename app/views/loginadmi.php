@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../public/css/login.css">
-<LINK REL="stylesheet" HREF="public/css/login.css" TYPE="text/css">
+<LINK REL="stylesheet" HREF="/public/css/login.css" TYPE="text/css">
 </head>
 <body>
 
@@ -51,8 +51,10 @@
    <footer>
     <label for="">Copyright © 2023</label>
 
-    <a href="login.html"><img class="icon" src="../../public/img/salida.png" alt=""></a>
+    <a id="btnlogin"><img class="icon" src="../../public/img/salida.png" alt=""></a>
    </footer>
     
+
+   <script src="../../public/js/logincliente.js"></script>
 </body>
 </html>

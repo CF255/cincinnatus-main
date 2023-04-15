@@ -151,4 +151,11 @@ app.get("/users/tienda",(req,res)=>{
         
         });
 
+
+        app.get("users/logout",(req, res)=>{
+            req.logOut();
+            req.flash("Inicio de secion cerrada");
+            res.redirect("users")
+        })
+
 /*  */

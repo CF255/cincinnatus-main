@@ -204,5 +204,44 @@
         top: 170px;
 
     }
+
+
+    .mensajes{
+        position: absolute;
+        background-color: rgb(236, 185, 47);
+   
+    border-radius: 15px;
+    margin:10px;
+    width: 15%;
+    }
+
+    .mensajes ul li {
+        text-decoration: none;
+        padding: 15px;
+        
+    }
+
+    .mensajes ul{
+        list-style: inside;
+        
+    }
+
+    @media(max-width: 600px){
+        .mensajes{
+            position: absolute;
+            background-color: rgb(236, 185, 47);
+       
+        border-radius: 15px;
+        margin:10px;
+        width: 50%;
+        top: 0;
+        left: 30%;
+        }
+    
+        .mensajes ul li {
+            padding: 10px;
+            
+        }
+    }
     
     /* fin login */
