@@ -165,10 +165,10 @@
         </select> 
     
         <label class="lblnombres" for="">Contraseña</label>
-    <input type="text" class="inputtext" id="pass" placeholder="Contraseña">
+    <input type="password" class="inputtext" id="pass" placeholder="Contraseña">
 
     <label class="lblnombres" for="">Confirmar la contraseña</label>
-    <input type="text" class="inputtext" id="confi" placeholder="Confirma la Contraseña">
+    <input type="password" class="inputtext" id="confi" placeholder="Confirma la Contraseña">
 
 
     </div>
