@@ -6,7 +6,7 @@ const {pool} = require("./dbconfig");
 const bcrypt = require("bcrypt");
 
 function initialize(passport){
-    const authenticateUser = (usuario, password, done)=>{
+    const authenticateUser = (usuario, pass, done)=>{
         pool.query(
             `SELECT * FROM usuarios WHERE usuario = $1`,[usuario],(err,results)=>{
                 if(err){
@@ -16,7 +16,7 @@ function initialize(passport){
 
                 if(results.rows.length > 0 ){
                     const user = results.rows[0];
-                bcrypt.compare(password, user.password,(err, isMatch)=>{
+                bcrypt.compare(pass, user.pass,(err, isMatch)=>{
                     if(err){
                         throw err
                     }
@@ -35,7 +35,7 @@ function initialize(passport){
     };
     passport.use(new localstrategy({
         usernameField: "usuario",
-        passwordField: "password"
+        passwordField: "pass"
     }, 
     authenticateUser
     )

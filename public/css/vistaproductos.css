@@ -546,6 +546,7 @@ transition: background-color .3s;
     --transformc: translateY(-100vh) ;
     --transitionc: transform .8s;
   }
+  
 
 .containermodalwarning{
     margin: auto;
