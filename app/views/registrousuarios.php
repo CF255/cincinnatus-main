@@ -98,7 +98,7 @@
             </div>
 
             <div class="item">
-                <a id="btnlogin" >
+                <a href="vistaproductos.php" >
                     <div class="icon"><img src="../../public/img/almacen.png" alt=""></div>
                     
                     <div class="title"><span>almacen</span></div>
@@ -110,7 +110,7 @@
 
             
             <div class="item itemcerrar">
-                <a href="loginadmi.php">
+                <a id="btnlogin">
                     <div class="icon"><img src="../../public/img/cerrar.png" alt=""></div>
                     <div class="title"><span>Cerrar sesion</span></div>
                 </a>

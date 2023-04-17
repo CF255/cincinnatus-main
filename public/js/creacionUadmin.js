@@ -66,7 +66,7 @@ btn2.addEventListener('click', e =>{
 
 /* abrir modal tabla */
 
-const openmodal = document.querySelector('.btnbuscar');
+/* const openmodal = document.querySelector('.btnbuscar');
 const openmodaldos = document.querySelector('.botoninferiormodal');
 const modal = document.querySelector('.modal');
 const closemodal = document.querySelector('.modalclose');
@@ -87,7 +87,7 @@ closemodal.addEventListener('click', (e)=>{
     e.preventDefault();
     modal.classList.remove('modalshow');
 
-});
+}); */
 
 /* fin */
 
