@@ -25,6 +25,7 @@ const app = new (function () {
     this.botonborrar = document.getElementById("botonborrar");    
 
   
+    alert("si");
     /* fin */
 
     /* color campo vacio warning */

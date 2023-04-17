@@ -173,6 +173,8 @@
 
     </div>
     </form>
+
+    <!-- conatiner izquierdo -->
     <div class="containerright">
 
 
@@ -245,8 +247,10 @@
   
         </nav>
     </div>
-   
 
+    <!-- fin -->
+   
+<!-- modal container -->
   
     <section class="modal" id="modal">
         <div class="modalcontainer">
@@ -308,6 +312,8 @@
                <a href="#" id="cerrarmodalwarning" class="cerrarmodalwarning"></a>
         </div>
     </section>
+
+    <!-- modal container fin -->
     
     <!-- BUTTON MENU -->
 
