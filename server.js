@@ -227,8 +227,8 @@ app.post("/users/registroadmin", async(req,res)=>{
                                 throw err
                             }
                             console.log(results.rows);
-                            /* req.flash("success_msg","Registro completado");
-                            res.redirect("/users/login"); */
+                             req.flash("success_msg","Registro completado");
+                            res.redirect("/users/registroadmin"); 
                         }
 
                     )
@@ -239,3 +239,8 @@ app.post("/users/registroadmin", async(req,res)=>{
 });
 
 /* fin */
+
+app.get("/users/registroadmin",(req,res)=>{
+    res.render("registroadmin");
+    
+    });

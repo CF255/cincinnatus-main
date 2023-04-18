@@ -154,7 +154,7 @@
 
 
 
-  <div class="contenedorinput" id="continput">
+  <div class="contenedorinput ocultar" id="continput">
   
   <form action="javascript:void(0);"  onsubmit="app.guardar()" enctype="multipart/form-data" autocomplete="off">
    
@@ -163,7 +163,7 @@
        <h1>Edicion de productos</h1>
        <a href="#" id="warning" class="warning"></a>
 
-    
+
    <label class="lblnombres" for="">Precio</label>
    <input type="number" class="inputtext" id="precio" placeholder="precio del producto">
 
@@ -233,8 +233,8 @@
     <script src="../../public/js/vistaproductos.js?v=<?php echo(rand()); ?>"></script>
     <script src="../assets/code.js?v=<?php echo(rand()); ?>"></script>
     <script src="../../public/js/ruta.js?v=<?php echo(rand()); ?>"></script>
-    <script src="../assets/code.js"></script>
+    <!-- <script src="../assets/code.js"></script>
     <script src="../../public/js/vistaproductos.js"></script>
-    <script src="../../public/js/ruta.js"></script>
+    <script src="../../public/js/ruta.js"></script> -->
 </body>
 </html>

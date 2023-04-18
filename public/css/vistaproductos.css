@@ -674,7 +674,7 @@ transition: background-color .3s;
     padding: 10px;
     overflow:hidden;
    /*  opacity: 0;
-    pointer-events: none; */
+    pointer-events: none;  */
   /*  top: 640px;
  left: 80px;  */
  
@@ -800,6 +800,18 @@ select:focus{
         min-width: 9.1rem;
     }
 
+    .contenedorinput{
+
+        width: 90%;
+        height: 300px;
+        margin-top: 20px ;
+        border: 2Px solid rgb(57, 90, 92) ;
+        border-radius: 10px;
+        background-color: white;
+    
+    }
+     
+    
    
 }
 
