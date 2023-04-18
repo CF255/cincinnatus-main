@@ -167,7 +167,6 @@ app.get("/users/tienda",(req,res)=>{
 
 /*  */
 
-
 /* post registro admin */
 app.post("/users/registroadmin", async(req,res)=>{
     let{usuario,nombre,apellido,email,fecha,pass,rol,password2} = req.body;
