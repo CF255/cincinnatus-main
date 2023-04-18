@@ -24,7 +24,8 @@ const app = new (function () {
     this.cerrarmodalerror = document.getElementById("cerrarmodalerror");
     this.btnactualizar = document.getElementById("btnactu");
     this.botonborrar = document.getElementById("botonborrar");
-    this.modal5 = document.getElementById("contenedorinput");
+    this.modal5 = document.getElementById("continput");
+    this.btnabrir= document.getElementById("btnabrir");
     /* boton actualizar */
     this.btnactualizar = () =>{
 
@@ -200,8 +201,9 @@ const app = new (function () {
       this.contenedorinput.classList.add('mostrar')
     }
  */
-    this.abrireditor =()=>{
-      this.modal5.classList.remove('ocultar');
+    this.btnabrir =()=>{
+      alert("si")
+      this.modal5.classList.add('ocultar');
     }
 
 
@@ -398,6 +400,7 @@ const app = new (function () {
       .then((res)=>res.json())
       .then((data)=>{
         this.abrireditor();
+
         this.id.value = data.id;
         this.nombre.value =data.nombre;
         this.descripcion.value =data.descripcion;
