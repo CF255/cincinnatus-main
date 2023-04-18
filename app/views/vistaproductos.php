@@ -150,6 +150,55 @@
   </main>
 
 
+  <div class="contenedorinput" id="continput">
+  
+  <form action="javascript:void(0);"  onsubmit="app.guardar()" enctype="multipart/form-data" autocomplete="off">
+   
+   <input type="hidden" id="id" />
+   
+       <h1>Edicion de productos</h1>
+       <a href="#" id="warning" class="warning"></a>
+
+    
+   <label class="lblnombres" for="">Precio</label>
+   <input type="number" class="inputtext" id="precio" placeholder="precio del producto">
+
+   <label class="lblnombres" for="">Unidades</label>
+   <input type="number" class="inputtext" id="unidades" placeholder="Cantidad de unidades">
+
+   <button class="btnside btnguardar" type="submit"><span class=""><i class="fa-solid fa-floppy-disk"></i></span>
+                    <span class="">Guardar</span></button> 
+
+                    <button class="btnside btncancelar "  id="btncancelar" type="button"><span class=""><i class="fa-solid fa-xmark"></i></span>
+                    <span class="">Cancelar</span></button> 
+
+
+                      
+  
+    <input type="text" class="inputtext ocultar" id="nombre" placeholder="Nombre del producto">
+
+
+    <input type="text" class="inputtext ocultar" id="proveedor" placeholder="Nombre del proveedor">
+
+    <select autocomplete="off" name="categoria" class="inputtext ocultar" tabindex="9" id="categoria">
+            <option value=""></option>
+            <option value="Electronico">Electronico</option>
+            <option value="Libros">Libros</option>
+            <option value="Ropa">Ropa Inventario</option>
+            <option value="Accesorios">Accesorios</option>
+            <option value="Deportes">Deportes</option>
+            <option value="Juegos/Video juegos">Juegos/VideoJuegos</option>
+            <option value="Mascotas">Administrador Inventario</option>
+            <option value="Hogar">Hogar</option>
+        </select> 
+
+    <textarea class="inputtext textarea ocultar" name="" id="descripcion" ></textarea>
+
+  
+   </form>
+   </div>
+
+
  
 
    
