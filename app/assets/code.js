@@ -411,7 +411,6 @@ const app = new (function () {
     };
 
 
-
    
   })();
   app.listado();
