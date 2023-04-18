@@ -170,6 +170,8 @@
     <label class="lblnombres"  for="">Descripcion</label>
     <textarea class="inputtext textarea" name="" id="descripcion" ></textarea>
 
+
+    <button  id="btnactu" class="btnside btnactu" ><span class=""><i class="fa-solid fa-rotate"></i></span>
     </div>
     </form>
 
