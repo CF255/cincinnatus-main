@@ -23,8 +23,6 @@ const app = new (function () {
     this.cerrarmodalerror = document.getElementById("cerrarmodalerror");
     this.btnactualizar = document.getElementById("btnactu");
     this.botonborrar = document.getElementById("botonborrar");
-
-    
     /* boton actualizar */
     this.btnactualizar = () =>{
 
@@ -216,7 +214,7 @@ const app = new (function () {
                 <td>${item.descripcion}</td>
                 <td>foto</td>
                 <td>
-                  <a href="javascript:;" class="btn btn-warning btn-sm" onclick="app.editar(${item.id})">Editar</a>
+                  <a href="javascript:;" id="btneditar" class="btn btn-warning btn-sm" onclick="app.editar(${item.id})">Editar</a>
                   <a href="javascript:;" class="btn btn-danger btn-sm" onclick="app.eliminar(${item.id})">Eliminar</a>
                 </td>
               </tr>

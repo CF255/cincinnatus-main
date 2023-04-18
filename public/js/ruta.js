@@ -57,6 +57,7 @@ if(btnregistrousuarios){
 }
 
 
+
 const btnalmacen = document.getElementById("btnalmacen");
 
 if(btnalmacen){
@@ -98,6 +99,23 @@ if(btnbuscarnav){
      });
 }
 
+const btncreacionusuarionode = document.getElementById("btncreacionusuarionode");
+if(btncreacionusuarionode){
+    btncreacionusuarionode.addEventListener('click', e =>{
+     
+        window.location.href = 'http://localhost:4000/users/registroadmin'
+     
+     });
+}
+
+const btncreacionusuarionodenav = document.getElementById("btncreacionusuarionodenav");
+if(btncreacionusuarionodenav){
+    btncreacionusuarionodenav.addEventListener('click', e =>{
+     
+        window.location.href = 'http://localhost:4000/users/registroadmin'
+     
+     });
+}
 
 
 

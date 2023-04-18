@@ -118,6 +118,19 @@
     
     </div>
    
+   
+   
+
+   <div class="login-box">
+
+
+    <form class="form" action="/users/registroadmin" method="POST" autocomplete="off">
+        
+   <div class="contenedorinput" id="continput">
+
+    <h1>Creacion de Usuarios</h1>
+    <a href="#" id="warning" class="warning"></a>
+
     <div class="mensajes">
         <ul>
             <% if(typeof errors != 'undefined'){ %> <% errors.forEach(error=>{ %>
@@ -125,17 +138,6 @@
                  <% }) %> <% } %>
         </ul>
     </div>
-   
-
-   <div class="login-box">
-
-
-    <form class="form" action="/users/registro" method="POST" autocomplete="off">
-        
-   <div class="contenedorinput" id="continput">
-
-    <h1>Creacion de Usuarios</h1>
-    <a href="#" id="warning" class="warning"></a>
 
    <label for="" class="lblfoto">Foto de Perfil</label>
         <img class="imglogo" src="../../img/logo.jpeg" alt="">
@@ -177,34 +179,39 @@
 
   <!--   <input type="submit" name="submit" value="Registrar" id="Registrar" class="btncontinuar"> -->
 
-     </form>
+
+     <!-- </form> -->
    </div>
 
    <div class="containerright">
 
 
     <nav class="navbar" id="navid">
-       <!--  <div id="menu-btn2" class="toggle-collapse" id="toggle-button">
-            <i class="fa-solid fa-bars" ></i>
-            </div> -->
-
-        <button  type="button"  class="toggle-collapse" id="toggle-button" >
-        <img src="../../img/fondo.jpg" alt=""><span class="toggle-icon"></span>
-        </button>
+        
+            <!-- <form class="form" action="/users/registro" method="POST" autocomplete="off"> -->
+           
 
         <ul>
-        <li>
-        <li><a href="#"  class="linea">
+            <li><a href="#"  class="linea">
                 <span class="icons"></span>
                 <span class="item"></span>
             </a></li>
-
-
+    
+    
         <li><a href="#"  class="">
                 <span class="icons"></span>
                 <span class="item"></span>
             </a></li>
-
+    
+            <li>
+                <button class="btnside" type="submit" name="submit" value="Registrar" id="Registrar"><span class=""><i class="fa-solid fa-floppy-disk"></i></span>
+                    <span class="">Guardar</span></button> 
+                 </form>
+                 </li>
+        
+                <button  type="button"  class="toggle-collapse" id="toggle-button" >
+                <img src="../../img/fondo.jpg" alt=""><span class="toggle-icon"></span>
+                </button>
             
      
        
@@ -237,12 +244,7 @@
 
 
          
-            <li>
-             <form class="form" action="/users/registro" method="POST" > 
-                <button class="btnside" type="submit" name="submit" value="Registrar" id="Registrar"><span class=""><i class="fa-solid fa-floppy-disk"></i></span>
-                <span class="">Guardar</span></button> 
-             </form>
-             </li>
+           
               
             
 
@@ -356,7 +358,7 @@
         
         
         <li class="list">
-        <form class="form" action="/users/registro" method="POST"> 
+        <form class="form" action="/users/registroadmin" method="POST"> 
                 <button class="" type="submit"><span class="iconnav"><i class="fa-solid fa-floppy-disk"></i></span>
                 <span class="textnav">Guardar</span></button> 
                 </form>
@@ -370,8 +372,8 @@
 </div>
 
 <!-- FIN -->
-
-<script src="../assets/codeuser.js"></script>
+<!-- 
+<script src="../assets/codeuser.js"></script> -->
 <script src="../js/creacionUadmin.js"></script>
 <script src="../js/ruta.js"></script>
 </body>

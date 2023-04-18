@@ -135,7 +135,7 @@ const app = new (function () {
                 <td>${item.rol}</td>
                 <td>foto</td>
                 <td>
-                  <a href="javascript:;" class="btn btn-warning btn-sm" onclick="app.editar(${item.id})">Editar</a>
+                  
                   <a href="javascript:;" class="btn btn-danger btn-sm" onclick="app.eliminar(${item.id})">Eliminar</a>
                 </td>
               </tr>

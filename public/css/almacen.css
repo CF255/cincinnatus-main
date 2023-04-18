@@ -1263,6 +1263,24 @@ display: flex;
 
 /* fin */
 
+/* mensajes */
+.mensajes{
+    background-color: #CB8B07;
+    position: absolute;
+     top: 60PX;
+    right: 10px;
+    width: 200PX;
+    border-radius: 10px;
+   /*  border: 2px solid #503602; */
+}
+
+.mensajes li{
+    padding: 10px;
+}
+
+/*  */
+
+
 /* modo tablet / pc*/
 @media(max-width: 3000px){
     .nav2 ul{
@@ -1280,6 +1298,19 @@ display: flex;
 /* modo celular */
 
 @media (max-width: 600px){
+
+    .mensajes{
+        background-color: #CB8B07;
+        position: absolute;
+         top: 25PX;
+        right: 5px;
+        width: 140PX; 
+      /*  width: 25%; */
+    
+        border-radius: 10px;
+       /*  border: 2px solid #503602; */
+    }
+    
 
     /* modal */
     .modalcontainer{
@@ -1353,7 +1384,7 @@ display: flex;
  .contenedorinput{
 
     width: 90%;
-    height: 850px;
+    height: 900px;
     border: 2Px solid rgb(57, 90, 92) ;
     border-radius: 10px;
     background-color: white;

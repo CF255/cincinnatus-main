@@ -349,6 +349,10 @@ body{
     transition: .2s ease;
 }
 
+ocultarscroll{
+    overflow: hidden;
+}
+
 .mostrar{
     opacity: 1;
 }
@@ -661,16 +665,18 @@ transition: background-color .3s;
 
     width: 60%;
     max-width: 750px;
-    margin: 20px;
+    margin-top: 20px;
     height:280px;
-    position: absolute;
+    /* position: absolute; */
     border: 2Px solid rgb(57, 90, 92) ;
     border-radius: 10px;
     background-color: white;
     padding: 10px;
     overflow:hidden;
-   top: 640px;
- left: 80px; 
+   /*  opacity: 0;
+    pointer-events: none; */
+  /*  top: 640px;
+ left: 80px;  */
  
   /*  left: 310px; */
   
@@ -763,6 +769,7 @@ select:focus{
 
 /* modo tablet / pc*/
 @media(max-width: 3000px){
+    
     .nav2 ul{
         display: none;
     }
@@ -775,6 +782,19 @@ select:focus{
 }
 /*  */
 
+
+/* CONTAINERDUO */
+
+.containerduo{
+  /*   background-color: #CB8B07; */
+    width: 90%;
+    padding: 20px;
+    display: block;
+    margin-top: 5%;
+}
+
+/* FIN */
+
 @media(max-width:1000px){
     td:not(:first-of-type){
         min-width: 9.1rem;
@@ -786,6 +806,16 @@ select:focus{
 /* modo celular */
 
 @media (max-width: 600px){
+
+    .containerduo{
+        /*   background-color: #CB8B07; */
+          width: 100%;
+          padding: 10px;
+          display: block;
+          margin-top: 15%;
+          margin-left: 10%;
+      }
+      
 
     /* tabla */
 
@@ -818,12 +848,12 @@ select:focus{
  .contenedorinput{
 
     width: 90%;
-    height: 90%;
-    margin: 10px;
+    height: 290px;
+    margin-top: 20px ;
     border: 2Px solid rgb(57, 90, 92) ;
     border-radius: 10px;
     background-color: white;
-    padding: 10px;
+
 }
  
 
@@ -831,6 +861,12 @@ select:focus{
 .ocultar{
     opacity: 0;
     pointer-events: none;
+    transition: .2s ease;
+}
+
+.mostrar{
+    opacity: 1;
+    pointer-events: unset;
     transition: .2s ease;
 }
 

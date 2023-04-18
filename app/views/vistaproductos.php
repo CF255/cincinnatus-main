@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../../public/css/vistaproductos.css?v=<?php echo(rand()); ?>" />
-<script src="/js/mi_script.js?v=<?php echo(rand()); ?>"></script>
+
   <!--   <link rel="stylesheet" href="../../public/css/almacen.css">
     --> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
@@ -39,13 +39,13 @@
                 <li><a href="registrousuarios.php"><img src="../../public/img/usuarios.png" alt="">Usuarios</a></li>
 
            
-                <li><a href="creacionUadmin.php"><img src="../../public/img/usuario.png" alt="">Creacion de usuarios</a></li>
+                <li><a href="#" id="btncreacionusuarionodenav"><img src="../../public/img/usuario.png" alt="">Creacion de usuarios</a></li>
 
            
                 <li><a  href="almacen.php"><img src="../../public/img/producto.png" alt="">Crear producto</a></li>
 
     
-                <li><a class="active" href="registrousuarios.html"><img src="../../public/img/almacen.png" alt="">almacen</a></li>
+                <li><a class="active" href="#"><img src="../../public/img/almacen.png" alt="">almacen</a></li>
 
                 
                 <li><a id="btnloginnav"><img src="../../public/img/cerrar.png" alt="">Cerrar sesion</a></li>
@@ -78,7 +78,7 @@
             </div>
 
             <div class="item">
-                <a href="creacionUadmin.php">
+                <a href="#" id="btncreacionusuarionode">
                     <div class="icon"><img src="../../public/img/usuario.png" alt=""></div>
                     <div class="title"><span>Creacion de usuarios</span></div>
                 </a>
@@ -120,6 +120,9 @@
     
     </div>
 
+
+    <div class="containerduo">
+
   <main class="table" id="tablaproductos">
     <section class="tableheader" >
               
@@ -150,6 +153,7 @@
   </main>
 
 
+
   <div class="contenedorinput" id="continput">
   
   <form action="javascript:void(0);"  onsubmit="app.guardar()" enctype="multipart/form-data" autocomplete="off">
@@ -173,8 +177,6 @@
                     <span class="">Cancelar</span></button> 
 
 
-                      
-  
     <input type="text" class="inputtext ocultar" id="nombre" placeholder="Nombre del producto">
 
 
@@ -196,6 +198,7 @@
 
   
    </form>
+   </div>
    </div>
 
 
@@ -224,10 +227,12 @@
         </div>
     </section>
     
-   
+
 
     <!-- FIN -->
-
+    <script src="../../public/js/vistaproductos.js?v=<?php echo(rand()); ?>"></script>
+    <script src="../assets/code.js?v=<?php echo(rand()); ?>"></script>
+    <script src="../../public/js/ruta.js?v=<?php echo(rand()); ?>"></script>
     <script src="../assets/code.js"></script>
     <script src="../../public/js/vistaproductos.js"></script>
     <script src="../../public/js/ruta.js"></script>

@@ -44,11 +44,11 @@ app.get("/users/login",(req,res)=>{
 
    
     
-app.get("/users/dashboard",(req,res)=>{
-        res.render("dashboard" , {usuario: req.user.nombre});
+app.get("/users/registroadmin",(req,res)=>{
+        res.render("dashboard" , {usuario: req.user.nombre}); 
         });
 
-app.post("/users/registro", async(req,res)=>{
+app.post("/users/registroadmin", async(req,res)=>{
     let{usuario,nombre,apellido,email,fecha,pass,rol,password2} = req.body;
     console.log({
         usuario,
@@ -64,7 +64,7 @@ app.post("/users/registro", async(req,res)=>{
     let errors = [];
 
     if(!usuario || !nombre || !apellido || !fecha || !email || !rol || !pass ||!password2){
-        errors.push({message: "Completar todos los campos"});
+       /*  errors.push({message: "Completar todos los campos"}); */
     }
 
     if(pass.length < 6){
@@ -77,7 +77,7 @@ app.post("/users/registro", async(req,res)=>{
     }
 
     if(errors.length > 0){
-        res.render("registro", {errors});
+        res.render("registroadmin", {errors});
         
     }else{
         //validasion formulario
@@ -97,7 +97,7 @@ app.post("/users/registro", async(req,res)=>{
 
                 if(results.rows.length>0){
                     errors.push({message: "El nombre de usuario ya se encuentra registrado"});
-                    res.render("registro",{errors});
+                    res.render("registroadmin",{errors});
                 }else{
                     pool.query(
                         `INSERT INTO usuarios (usuario, nombre, apellido, email, fecha, pass, rol)
@@ -107,8 +107,8 @@ app.post("/users/registro", async(req,res)=>{
                                 throw err
                             }
                             console.log(results.rows);
-                            req.flash("success_msg","Registro completado");
-                            res.redirect("/users/login");
+                            /* req.flash("success_msg","Registro completado");*/
+                            res.redirect("/users/registroadmin"); 
                         }
 
                     )
@@ -141,6 +141,10 @@ app.use(express.static('app'));
 
 
 /* direcciones  */
+app.get("/users/registroadmin",(req,res)=>{
+    res.render("registroadmin");
+    
+    });
 
 app.get("/users/tienda",(req,res)=>{
     res.render("tienda");

@@ -38,7 +38,7 @@
                 <li><a class="active" href="#"><img src="../../public/img/usuarios.png" alt="">Usuarios</a></li>
 
            
-                <li><a href="creacionUadmin.php"><img src="../../public/img/usuario.png" alt="">Creacion de usuarios</a></li>
+                <li><a href="#" id="btncreacionusuarionodenav"><img src="../../public/img/usuario.png" alt="">Creacion de usuarios</a></li>
 
            
                 <li><a href="almacen.php"><img src="../../public/img/producto.png" alt="">Crear producto</a></li>
@@ -77,7 +77,7 @@
             </div>
 
             <div class="item">
-                <a href="creacionUadmin.php">
+                <a href="#" id="btncreacionusuarionode">
                     <div class="icon"><img src="../../public/img/usuario.png" alt=""></div>
                     <div class="title"><span>Creacion de usuarios</span></div>
                 </a>
@@ -178,9 +178,10 @@
    
 
     <!-- FIN -->
-
+    <script src="../assets/codeuser.js?v=<?php echo(rand()); ?>"></script>
     <script src="../assets/codeuser.js"></script>
     <script src="../../public/js/registrousuarios.js"></script>
     <script src="../../public/js/ruta.js"></script>
+    <script src="../../public/js/ruta.js?v=<?php echo(rand()); ?>"></script>
 </body>
 </html>

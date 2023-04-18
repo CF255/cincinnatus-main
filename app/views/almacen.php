@@ -39,7 +39,7 @@
                 <li><a href="registrousuarios.php"><img src="../../public/img/usuarios.png" alt="">Usuarios</a></li>
 
            
-                <li><a href="creacionUadmin.php"><img src="../../public/img/usuario.png" alt="">Creacion de usuarios</a></li>
+                <li><a href="#" id="btncreacionusuarionodenav"><img src="../../public/img/usuario.png" alt="">Creacion de usuarios</a></li>
 
            
                 <li><a class="active" href="#"><img src="../../public/img/producto.png" alt="">Crear producto</a></li>
@@ -80,7 +80,7 @@
 
             
             <div class="item">
-                <a href="creacionUadmin.php">
+                <a href="#" id="btncreacionusuarionode">
                     <div class="icon"><img src="../../public/img/usuario.png" alt=""></div>
                     <div class="title"><span>Creacion de usuarios</span></div>
                 </a>
@@ -101,7 +101,7 @@
             </div>
 
             <div class="item">
-                <a href="vistaproductos.php"">
+                <a href="vistaproductos.php">
                     <div class="icon"><img src="../../public/img/almacen.png" alt=""></div>
                     
                     <div class="title"><span>almacen</span></div>
@@ -171,7 +171,7 @@
     <textarea class="inputtext textarea" name="" id="descripcion" ></textarea>
 
 
-    <button  id="btnactu" class="btnside btnactu" ><span class=""><i class="fa-solid fa-rotate"></i></span>
+   
     </div>
     </form>
 
@@ -349,5 +349,6 @@
     <script src="../assets/code.js"></script>
     <script src="../../public/js/almacen.js"></script>
     <script src="../../public/js/ruta.js"></script>
+    <script src="../../public/js/ruta.js?v=<?php echo(rand()); ?>"></script>
 </body>
 </html>
