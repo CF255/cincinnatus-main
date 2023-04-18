@@ -42,7 +42,6 @@ btn.addEventListener('click', e =>{
 });
 /* end side menu */
 
-
 /* abrir cerrar sidemenu rigth */
 const btn2 = document.querySelector('#toggle-button');
 
