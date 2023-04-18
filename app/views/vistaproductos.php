@@ -32,7 +32,6 @@
 
         <ul class="navlist">
            
-
                 <li><a href="index.html"><img src="../../public/img/tienda.png" alt="">tienda</a></li>
 
             
@@ -150,11 +149,15 @@
                     </tbody>
             </table>
     </section>
+
+
+    <button class="btnside btncancelar "  id="btnabrir" type="button"><span class=""><i class="fa-solid fa-xmark"></i></span>
+                    <span class="">abrir</span></button> 
   </main>
 
 
 
-  <div class="contenedorinput ocultar" id="continput">
+  <div class="contenedorinput" id="continput">
   
   <form action="javascript:void(0);"  onsubmit="app.guardar()" enctype="multipart/form-data" autocomplete="off">
    
