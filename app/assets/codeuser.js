@@ -25,6 +25,7 @@ const app = new (function () {
     this.botonborrar = document.getElementById("botonborrar");    
 
   
+   
     /* fin */
 
     /* color campo vacio warning */
@@ -115,7 +116,7 @@ const app = new (function () {
 
   
     /* fin */
-    this.listado = () => {
+     this.listado = () => {
       fetch("../controllers/listadouser.php")
         .then((res) => res.json())
         .then((data) => {
@@ -320,6 +321,7 @@ if(this.usuario.value != ""){
 
    
   })();
-  app.listado();
+  app.listado(); 
   
  
+

@@ -66,7 +66,7 @@ btn2.addEventListener('click', e =>{
 
 /* abrir modal tabla */
 
-const openmodal = document.querySelector('.btnbuscar');
+/* const openmodal = document.querySelector('.btnbuscar');
 const openmodaldos = document.querySelector('.botoninferiormodal');
 const modal = document.querySelector('.modal');
 const closemodal = document.querySelector('.modalclose');
@@ -87,7 +87,7 @@ closemodal.addEventListener('click', (e)=>{
     e.preventDefault();
     modal.classList.remove('modalshow');
 
-});
+}); */
 
 /* fin */
 
@@ -97,30 +97,41 @@ const botonborrar = document.getElementById("botonborrar");
 
 
 
-botonborrar.addEventListener('click', (e)=>{
-    document.getElementById("usuario").value="";
-   document.getElementById("nombre").value="";
-   document.getElementById("apellido").value="";
-   document.getElementById("fecha").value="";
-   document.getElementById("email").value="";
-   document.getElementById("rol").value="";
-   document.getElementById("contraseña").value="";
-   document.getElementById("confi").value="";
-});
+if(botonborrar){
+    botonborrar.addEventListener('click', (e)=>{
+        document.getElementById("usuario").value="";
+        document.getElementById("nombre").value="";
+        document.getElementById("apellido").value="";
+        document.getElementById("fecha").value="";
+        document.getElementById("email").value="";
+        document.getElementById("rol").value="";
+       /*  document.getElementById("contraseña").value=""; */
+       /*  document.getElementById("confi").value=""; */
+       document.getElementById("pass").value="";
+       document.getElementById("password2").value="";
+     
+     });
+    
+}
 
 const botonborrarinferior = document.getElementById("botonborrarinferior");
-botonborrarinferior.addEventListener('click', (e)=>{
-    document.getElementById("usuario").value="";
-    document.getElementById("nombre").value="";
-    document.getElementById("apellido").value="";
-    document.getElementById("fecha").value="";
-    document.getElementById("email").value="";
-    document.getElementById("rol").value="";
-    document.getElementById("contraseña").value="";
-    document.getElementById("confi").value="";
- 
- });
 
+if(botonborrarinferior){
+    botonborrarinferior.addEventListener('click', (e)=>{
+        document.getElementById("usuario").value="";
+        document.getElementById("nombre").value="";
+        document.getElementById("apellido").value="";
+        document.getElementById("fecha").value="";
+        document.getElementById("email").value="";
+        document.getElementById("rol").value="";
+       /*  document.getElementById("contraseña").value=""; */
+       /*  document.getElementById("confi").value=""; */
+       document.getElementById("pass").value="";
+       document.getElementById("password2").value="";
+     
+     });
+    
+}
 /* limpiar fin */
 
 

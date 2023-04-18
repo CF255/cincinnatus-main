@@ -16,11 +16,14 @@
     <nav>
         <img src="../../img/logo.jpeg" alt="" class="logoimg">
     </nav>
-    <ul>
-        <% if(typeof errors != 'undefined'){ %> <% errors.forEach(error=>{ %>
-                <li><%= error.message %></li>
-             <% }) %> <% } %>
-    </ul>
+   
+    <div class="mensajes">
+        <ul>
+            <% if(typeof errors != 'undefined'){ %> <% errors.forEach(error=>{ %>
+                    <li><%= error.message %></li>
+                 <% }) %> <% } %>
+        </ul>
+    </div>
    
 
    <div class="login-box">
@@ -37,24 +40,30 @@
 
 
     <form class="form" action="/users/registro" method="POST" autocomplete="off">
-
+        
    <div>
     <input type="file" class="form-control-file" name="foto" id="" placeholder="foto" aria-describedby="fileHelpId">
 
+    <label class="lblfecha" for="">Usuario</label>
     <input name="usuario" type="text" class="inputtext" id="usuario" placeholder="Usuario">
 
+    <label class="lblfecha" for="">Nombre</label>
     <input name="nombre" type="text" class="inputtext" id="nombre" placeholder="Nombre">
 
+    <label class="lblfecha" for="">Apellido</label>
     <input name="apellido" type="text" class="inputtext" id="apellido" placeholder="Apellido">
     
     <label class="lblfecha" for="">Fecha de nacimiento</label>
     <input name="fecha" type="date" class="inputtext ipfecha" id="fecha" placeholder="Nombre de Usuario">
 
+    <label class="lblfecha" for="">Correo electronico</label>
     <input name="email" type="email" class="inputtext" id="email" placeholder="Correo Electronico">
 
+    <label class="lblfecha" for="">Contraseña</label>
     <input name="pass" type="password" class="inputtext" id="pass" placeholder="Contraseña">
 
-    <input name="password2" type="password" class="inputtext" id="password2 placeholder="confirmar la Contraseña">
+    <label class="lblfecha" for="">Confirmar contraseña</label>
+    <input name="password2" type="password" class="inputtext" id="password2" placeholder="confirmar la Contraseña">
 
     <select autocomplete="off" name="rol" class="ocultar" tabindex="9" id="rol">
         <option value="Cliente">Cliente</option>
@@ -77,10 +86,10 @@
     <label for="">Copyright © 2023</label>
     
     
-    <a href="loginadmi.php"><img class="icon" src="../../img/admin.png" alt=""></a>
+    <a id="btnloginadmin"><img class="icon" src="../../img/admin.png" alt=""></a>
    </footer>
     
 
-   <script src=""></script>
+   <script src="../js/ruta.js"></script>
 </body>
 </html>

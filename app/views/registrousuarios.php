@@ -47,7 +47,7 @@
                 <li><a href="vistaproductos.php"><img src="../../public/img/almacen.png" alt="">almacen</a></li>
 
                 
-                <li><a href="loginadmi.php"><img src="../../public/img/cerrar.png" alt="">Cerrar sesion</a></li>
+                <li><a id="btnloginnav"><img src="../../public/img/cerrar.png" alt="">Cerrar sesion</a></li>
 
         </ul>
     </nav>
@@ -110,7 +110,7 @@
 
             
             <div class="item itemcerrar">
-                <a href="loginadmi.php">
+                <a id="btnlogin">
                     <div class="icon"><img src="../../public/img/cerrar.png" alt=""></div>
                     <div class="title"><span>Cerrar sesion</span></div>
                 </a>
@@ -181,5 +181,6 @@
 
     <script src="../assets/codeuser.js"></script>
     <script src="../../public/js/registrousuarios.js"></script>
+    <script src="../../public/js/ruta.js"></script>
 </body>
 </html>

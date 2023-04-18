@@ -3,7 +3,9 @@
     
     body{
         font-family: 'Paytone One', sans-serif;
+        overflow-y:auto ;
         overflow-x:hidden;
+        
     }
     
     nav{
@@ -30,7 +32,7 @@
         height: 720px;
         width: 450px;
         border-radius: 20px;
-    
+        margin-bottom: 300px;
         
     }
     
@@ -116,6 +118,7 @@
         border: 1px solid rgb(57, 90, 92) ;
         margin-top: 25px;
         border-radius: 10px;
+        margin-bottom: 100px;
     }
     
     .btncontinuar:hover{
@@ -148,11 +151,11 @@
     }
     
     .a{
-        top: 765px;
+        top: 900px;
     }
 
     .lbl{
-        top: 765px;
+        top: 900px;
     }
     
     .a:hover{
@@ -165,7 +168,7 @@
     
     footer{
         background-color: #efefefef;
-        position: absolute;
+        /* position: absolute; */
         bottom: 0;
         width: 100%;
         padding: 15px;
@@ -203,6 +206,45 @@
         left: calc(50% - 100px); 
         top: 170px;
 
+    }
+
+
+    .mensajes{
+        position: absolute;
+        background-color: rgb(236, 185, 47);
+   
+    border-radius: 15px;
+    margin:10px;
+    width: 15%;
+    }
+
+    .mensajes ul li {
+        text-decoration: none;
+        padding: 15px;
+        
+    }
+
+    .mensajes ul{
+        list-style: inside;
+        
+    }
+
+    @media(max-width: 600px){
+        .mensajes{
+            position: absolute;
+            background-color: rgb(236, 185, 47);
+       
+        border-radius: 15px;
+        margin:10px;
+        width: 50%;
+        top: 0;
+        left: 30%;
+        }
+    
+        .mensajes ul li {
+            padding: 10px;
+            
+        }
     }
     
     /* fin login */
