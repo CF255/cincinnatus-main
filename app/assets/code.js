@@ -13,6 +13,7 @@ const app = new (function () {
     this.containermodalcorrec = document.getElementById("containermodalcorrec");
     this.cerrarmodalcorrecto = document.getElementById("cerrarmodalcorrecto");
     this.cerrarmodal = document.getElementById("modalclose");
+    this.btncancelar = document.getElementById("btncancelar");
     this.modal = document.getElementById("modal");
     this.modal3 = document.getElementById("modalwarning");
     this.containermodalwarning = document.getElementById("containermodalwarning");
@@ -23,6 +24,7 @@ const app = new (function () {
     this.cerrarmodalerror = document.getElementById("cerrarmodalerror");
     this.btnactualizar = document.getElementById("btnactu");
     this.botonborrar = document.getElementById("botonborrar");
+    this.modal5 = document.getElementById("contenedorinput");
     /* boton actualizar */
     this.btnactualizar = () =>{
 
@@ -193,6 +195,15 @@ const app = new (function () {
     this.cerrarmodal =()=>{
       this.modal.classList.remove('modalshow');
     }
+
+  /*   this.btncancelar =()=>{
+      this.contenedorinput.classList.add('mostrar')
+    }
+ */
+    this.abrireditor =()=>{
+      this.modal5.classList.remove('ocultar');
+    }
+
 
 
   
@@ -386,6 +397,7 @@ const app = new (function () {
       })
       .then((res)=>res.json())
       .then((data)=>{
+        this.abrireditor();
         this.id.value = data.id;
         this.nombre.value =data.nombre;
         this.descripcion.value =data.descripcion;
@@ -393,7 +405,7 @@ const app = new (function () {
         this.unidades.value =data.unidades;
         this.proveedor.value =data.proveedor;
         this.categoria.value =data.categoria;
-        this.cerrarmodal();
+        
       })
       .catch((error)=> console.log(error));
     };

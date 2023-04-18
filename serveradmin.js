@@ -1,4 +1,4 @@
-const express = require("express");
+/* const express = require("express");
 const app = express();
 const {pool} = require("./dbconfig");
 const bcrypt = require("bcrypt");
@@ -42,9 +42,18 @@ app.get("/users/login",(req,res)=>{
     res.render("login");
     });
 
+    app.post(
+        "/users/login", 
+    passport.authenticate("local", {
+        successRedirect: "/users/registroadmin",
+        failureRedirect: "/users/login",
+        failureFlash: true
+    })
+    );
+    
    
     
-app.get("/users/registroadmin",(req,res)=>{
+app.get("/users/dashboard",(req,res)=>{
         res.render("dashboard" , {usuario: req.user.nombre}); 
         });
 
@@ -64,7 +73,7 @@ app.post("/users/registroadmin", async(req,res)=>{
     let errors = [];
 
     if(!usuario || !nombre || !apellido || !fecha || !email || !rol || !pass ||!password2){
-       /*  errors.push({message: "Completar todos los campos"}); */
+        errors.push({message: "Completar todos los campos"}); 
     }
 
     if(pass.length < 6){
@@ -80,7 +89,7 @@ app.post("/users/registroadmin", async(req,res)=>{
         res.render("registroadmin", {errors});
         
     }else{
-        //validasion formulario
+        validasion formulario
         let hashedpassword = await bcrypt.hash(pass,10);
         console.log(hashedpassword);
 
@@ -107,8 +116,8 @@ app.post("/users/registroadmin", async(req,res)=>{
                                 throw err
                             }
                             console.log(results.rows);
-                            /* req.flash("success_msg","Registro completado");*/
-                            res.redirect("/users/registroadmin"); 
+                               req.flash("success_msg","Registro completado");
+                             res.redirect("/users/registroadmin");  
                         }
 
                     )
@@ -118,14 +127,6 @@ app.post("/users/registroadmin", async(req,res)=>{
     }
 });
 
-app.post(
-    "/users/login", 
-passport.authenticate("local", {
-    successRedirect: "/users/tienda",
-    failureRedirect: "/users/login",
-    failureFlash: true
-})
-);
 
 
 
@@ -140,7 +141,7 @@ app.use(express.static('public'));
 app.use(express.static('app'));
 
 
-/* direcciones  */
+
 app.get("/users/registroadmin",(req,res)=>{
     res.render("registroadmin");
     
@@ -155,5 +156,4 @@ app.get("/users/tienda",(req,res)=>{
         res.render("loginadmi");
         
         });
-
-/*  */
+ */

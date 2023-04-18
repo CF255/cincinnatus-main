@@ -131,11 +131,19 @@
     <h1>Creacion de Usuarios</h1>
     <a href="#" id="warning" class="warning"></a>
 
-    <div class="mensajes">
+    <div class="mensajes colormin">
         <ul>
             <% if(typeof errors != 'undefined'){ %> <% errors.forEach(error=>{ %>
                     <li><%= error.message %></li>
                  <% }) %> <% } %>
+        </ul>
+    </div>
+
+    <div class=" mensajes colormc">
+        <ul>
+            <% if(messages.success_msg) { %>
+                <li><%= messages.success_msg %></li>
+            <%}%>
         </ul>
     </div>
 
