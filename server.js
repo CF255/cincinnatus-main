@@ -43,9 +43,10 @@ app.get("/users/login",(req,res)=>{
 
    
     
-app.get("/users/dashboard",(req,res)=>{
-        res.render("dashboard" , {usuario: req.user.nombre});
+app.get("/users/registroadmin",(req,res)=>{
+        res.render("registroadmin" , {usuario: req.user.nombre});
         });
+        
 
 app.post("/users/registro", async(req,res)=>{
     let{usuario,nombre,apellido,email,fecha,pass,rol,password2} = req.body;
@@ -121,7 +122,7 @@ app.post("/users/registro", async(req,res)=>{
 app.post(
     "/users/login", 
 passport.authenticate("local", {
-    successRedirect: "/users/tienda",
+    successRedirect: "/users/registroadmin",
     failureRedirect: "/users/login",
     failureFlash: true
 })
@@ -130,19 +131,6 @@ passport.authenticate("local", {
 /* 
  */
 
-/* prueba incisio secion administratio */
-
-app.post(
-    "/users/loginadmi", 
-       passport.authenticate("local", {
-           successRedirect: "/users/registroadmin",
-           failureRedirect: "/users/loginadmi",
-           failureFlash: true
-       })
-   );
-
-
-/* fin */
 
 
 
@@ -266,7 +254,6 @@ app.get("/users/registroadmin",(req,res)=>{
     
     });
 
-
     
 /* post registro passrecovery */
 app.post("/users/passrecovery", async(req,res)=>{
@@ -311,40 +298,26 @@ app.post("/users/passrecovery", async(req,res)=>{
             }
 
         )
-        
-
-         /*  pool.query(
-            `SELECT * FROM usuarios
-            WHERE usuario = $1`,
-            [usuario],
-            (err, results)=>{
-                if(err){
-                    throw err;
-                }
-                 
-                console.log(results.rows);
-
-                if(results.rows.length>0){
-                    errors.push({message: "El nombre de usuario ya se encuentra registrado"});
-                    res.render("registro",{errors});
-                }else{
-                    pool.query(
-                        `INSERT INTO usuarios (usuario, nombre, apellido, email, fecha, pass, rol)
-                        VALUES($1, $2, $3, $4, $5, $6, $7)
-                        RETURNING id, pass`,[usuario, nombre, apellido, email, fecha, hashedpassword,rol],(err,results)=>{
-                            if(err){
-                                throw err
-                            }
-                            console.log(results.rows);
-                             req.flash("success_msg","Registro completado");
-                            res.redirect("/users/registroadmin"); 
-                        }
-
-                    )
-                }
-            }
-        ); */
+    
     }
+
 });
+/* prueba inicio administrador */
+
+/* prueba incisio secion administratio */
+
+/*   app.post(
+        "/users/loginadmi", 
+        passport.authenticate("local", {
+            successRedirect: "/users/registroadmin",
+            failureRedirect: "/users/loginadmi",
+            failureFlash: true
+        })
+       ); */
+ 
+
+/* fin */
+
+
 
 /* fin */

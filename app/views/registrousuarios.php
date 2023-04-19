@@ -64,9 +64,8 @@
         <!-- profile -->
         <div id="profile">
             <div id="photo"><img src="../../public/img/logo.jpeg" alt="">
-               <div id="name"><span id="spannombre"></span> <?php session_start(); $user=$_SESSION['nombre_usuario']; echo "<h3> $user </h3>"; ?></div>
-                <div id="name"><span class="spanrol" id="spanrol"> </span><?php  $rol=$_SESSION['nombre_rol']; echo "<h3> $rol </h3>"; ?></div>
-             </div>
+            <div id="name">Cuenta Administrativa </div>
+        </div>
         </div>
 
         <!-- items -->
