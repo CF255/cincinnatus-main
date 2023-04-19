@@ -156,7 +156,6 @@
   </main>
 
 
-
   <div class="contenedorinput" id="continput">
   
   <form action="javascript:void(0);"  onsubmit="app.guardar()" enctype="multipart/form-data" autocomplete="off">
