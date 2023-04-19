@@ -163,6 +163,10 @@ app.get("/users/tienda",(req,res)=>{
         app.get("/users/registroadmin",(req,res)=>{
             res.render("registroadmin");
             });
+
+            app.get("/users/passrecovery",(req,res)=>{
+                res.render("passrecovery");
+                });
         
 
 /*  */
@@ -244,3 +248,86 @@ app.get("/users/registroadmin",(req,res)=>{
     res.render("registroadmin");
     
     });
+
+
+    
+/* post registro passrecovery */
+app.post("/users/passrecovery", async(req,res)=>{
+    let{usuario,pass,password2} = req.body;
+    console.log({
+        usuario,
+        pass,
+        password2,
+    });
+
+    let errors = [];
+
+    if(!usuario || !pass ||!password2){
+        errors.push({message: "Completar todos los campos"});
+    }
+
+    if(pass.length < 6){
+        errors.push({message: "La contraseña debe de tener al menos 6 caracteres"});
+    }
+    
+
+    if(pass != password2){
+        errors.push({message: "Las contraseñas no coinciden"});
+    }
+
+    if(errors.length > 0){
+        res.render("passrecovery", {errors});
+        
+    }else{
+        //validasion formulario
+        let hashedpassword = await bcrypt.hash(pass,10);
+        console.log(hashedpassword);
+
+        pool.query(
+            `UPDATE usuarios SET pass = $2 WHERE usuario = $1`,[usuario, hashedpassword],(err,results)=>{
+                if(err){
+                    throw err
+                }
+                console.log(results.rows);
+                 req.flash("success_msg","Actualizacion completada");
+                res.redirect("/users/passrecovery"); 
+            }
+
+        )
+        
+
+         /*  pool.query(
+            `SELECT * FROM usuarios
+            WHERE usuario = $1`,
+            [usuario],
+            (err, results)=>{
+                if(err){
+                    throw err;
+                }
+                 
+                console.log(results.rows);
+
+                if(results.rows.length>0){
+                    errors.push({message: "El nombre de usuario ya se encuentra registrado"});
+                    res.render("registro",{errors});
+                }else{
+                    pool.query(
+                        `INSERT INTO usuarios (usuario, nombre, apellido, email, fecha, pass, rol)
+                        VALUES($1, $2, $3, $4, $5, $6, $7)
+                        RETURNING id, pass`,[usuario, nombre, apellido, email, fecha, hashedpassword,rol],(err,results)=>{
+                            if(err){
+                                throw err
+                            }
+                            console.log(results.rows);
+                             req.flash("success_msg","Registro completado");
+                            res.redirect("/users/registroadmin"); 
+                        }
+
+                    )
+                }
+            }
+        ); */
+    }
+});
+
+/* fin */

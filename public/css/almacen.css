@@ -735,7 +735,9 @@ nav ul li a img{
     background-color: #fff;
 }
 
-
+.btnbuscar:hover{
+    background: rgb(64, 109, 110);
+}
 
 /* fun modañ */
 

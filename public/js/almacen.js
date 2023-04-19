@@ -12,6 +12,7 @@ check.addEventListener('click', e =>{
 
 });
 
+
 /* FIN */
 
 /* menu inferior */
@@ -125,4 +126,9 @@ botonborrarinferior.addEventListener('click', (e)=>{
 /* fin modal tabla */
 
 
+const spanrol = document.getElementById("spanrol");
 
+
+if(spanrol == "Administrador"){
+    console.log("si")
+}

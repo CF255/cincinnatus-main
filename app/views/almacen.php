@@ -10,7 +10,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../../public/css/almacen.css?v=<?php echo(rand()); ?>" />
-<script src="/js/mi_script.js?v=<?php echo(rand()); ?>"></script>
   <!--   <link rel="stylesheet" href="../../public/css/almacen.css">
     --> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
@@ -65,7 +64,7 @@
         <div id="profile">
             <div id="photo"><img src="../../public/img/logo.jpeg" alt="">
                 <div id="name"><span id="spannombre"></span> <?php session_start(); $user=$_SESSION['nombre_usuario']; echo "<h3> $user </h3>"; ?></div>
-                <div id="name"><span class="spanrol" id="spanrol"></span> <?php  $rol=$_SESSION['nombre_rol']; echo "<h3> $rol </h3>"; ?></div>
+                <div id="name"><span class="spanrol" id="spanrol"> </span><?php  $rol=$_SESSION['nombre_rol']; echo "<h3> $rol </h3>"; ?></div>
             </div>
         </div>
 
@@ -199,7 +198,7 @@
                 </a></li>
 
            
-                <li><a href="#" id="btnbuscar"  class="btnbuscar">
+                <li><a href="#"  class="btnbuscar">
                     <span class="icons"><i class="icon fa-solid fa-magnifying-glass"></i></span>
                     <span class="item">Buscar</span>
                 </a></li>
@@ -346,9 +345,12 @@
 
     <!-- FIN -->
 
-    <script src="../assets/code.js"></script>
+    
+    <script src="../../public/js/almacen.js?v=<?php echo(rand()); ?>"></script>
+    <script src="../assets/code.js?v=<?php echo(rand()); ?>"></script>
+   <!--  <script src="../assets/code.js"></script>
     <script src="../../public/js/almacen.js"></script>
-    <script src="../../public/js/ruta.js"></script>
+    <script src="../../public/js/ruta.js"></script> -->
     <script src="../../public/js/ruta.js?v=<?php echo(rand()); ?>"></script>
 </body>
 </html>
