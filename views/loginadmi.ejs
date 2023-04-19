@@ -13,6 +13,38 @@
 </head>
 <body>
 
+    
+    <div class="mensajes">
+        <ul>
+            <% if(messages.success_msg) { %>
+                <li><%= messages.success_msg %></li>
+            <%}%>
+        </ul>
+    
+        <ul>
+            <% if(messages.error){ %>
+                <li> <%= messages.error %></li>
+            <%}%>
+        </ul>
+    
+    </div>
+
+    <div class="mensajes colormin">
+        <ul>
+            <% if(typeof errors != 'undefined'){ %> <% errors.forEach(error=>{ %>
+                    <li><%= error.message %></li>
+                 <% }) %> <% } %>
+        </ul>
+    </div>
+
+    <div class=" mensajes colormc">
+        <ul>
+            <% if(messages.success_msg) { %>
+                <li><%= messages.success_msg %></li>
+            <%}%>
+        </ul>
+    </div>
+
     <nav>
         <img src="../../img/logo.jpeg" alt="" class="logoimg">
     </nav>
@@ -23,14 +55,14 @@
     <h2>Inicio de sesion administrativo</h2>
    
 
-    <form class="form" action="sesionadministrador.php" method="POST">
-
-        <input name="user" type="text" class="inputtext" id="inputnombre" placeholder="Nombre de Usuario">
-
+    <form class="form" method="POST">
+        <label for="" class="lblvali">Campo vacio</label>
+        <input name="usuario" type="text" class="inputtext" id="usuario" placeholder="Nombre de Usuario">
     
-        <input name="pass" type="password" class="inputtext" id="inputcontra" placeholder="Contraseña">
-        
-        <select autocomplete="off" name="rol" class="inputtext" tabindex="9" id="slStatus">
+    <input name="pass" type="password" class="inputtext" id="pass" placeholder="Contraseña">
+    
+
+        <select autocomplete="off" name="rol" class="inputtext" tabindex="9" id="rol">
             <option value=""></option>
             <option value="Administrador">Administrador</option>
             <option value="Editor">Editor</option>

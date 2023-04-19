@@ -127,6 +127,23 @@ passport.authenticate("local", {
 })
 );
 
+/* 
+ */
+
+/* prueba incisio secion administratio */
+
+app.post(
+    "/users/loginadmi", 
+       passport.authenticate("local", {
+           successRedirect: "/users/registroadmin",
+           failureRedirect: "/users/loginadmi",
+           failureFlash: true
+       })
+   );
+
+
+/* fin */
+
 
 
 app.listen(PORT,()=>{
