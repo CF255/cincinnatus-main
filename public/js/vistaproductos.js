@@ -2,7 +2,7 @@
 /* ocultar menu imputs y sidemenu rigth */
 const check = document.querySelector('#check');
 const tablaproductos = document.getElementById('tablaproductos');
-const continput = document.getElementById('continput');
+
 
 
 
@@ -17,24 +17,7 @@ if(check){
 /* FIN */
 /* pequeño modal editor */
 
-const btncancelar = document.getElementById("btncancelar");
 
-if(btncancelar){
-    btncancelar.addEventListener('click', e =>{
-        
-        continput.classList.toggle("ocultar");
-    
-    });
-}
-
-const btneditar = document.getElementById("btneditar");
-if(btneditar){
-    btneditar.addEventListener('click', e =>{
-        alert("hola");
-        continput.classList.toggle("ocultar");
-    
-    });
-}
 
 /*  */
 
@@ -54,6 +37,18 @@ btn.addEventListener('click', e =>{
 });
 /* end side menu */
 
+const continput = document.getElementById('continput');
+
+
+const btncancelar = document.getElementById("btncancelar");
+
+if(btncancelar){
+    btncancelar.addEventListener('click', e =>{
+        
+        continput.classList.remove("mostrar");
+    
+    });
+}
 
 
 

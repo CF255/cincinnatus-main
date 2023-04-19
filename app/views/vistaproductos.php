@@ -63,7 +63,8 @@
         <!-- profile -->
         <div id="profile">
             <div id="photo"><img src="../../public/img/logo.jpeg" alt="">
-                <div id="name"><span id="spannombre"></span> <?php session_start(); $user=$_SESSION['nombre_usuario']; echo "<h3> $user </h3>"; ?></div>
+            <div id="name"><span id="spannombre"></span> <?php session_start(); $user=$_SESSION['nombre_usuario']; echo "<h3> $user </h3>"; ?></div>
+                <div id="name"><span class="spanrol" id="spanrol"> </span><?php  $rol=$_SESSION['nombre_rol']; echo "<h3> $rol </h3>"; ?></div>
             </div>
         </div>
 
@@ -150,13 +151,13 @@
             </table>
     </section>
 
-
+<!-- 
     <button class="btnside btncancelar "  id="btnabrir" type="button"><span class=""><i class="fa-solid fa-xmark"></i></span>
-                    <span class="">abrir</span></button> 
+                    <span class="">abrir</span></button>  -->
   </main>
 
 
-  <div class="contenedorinput" id="continput">
+  <section class="contenedorinput" id="continput">
   
   <form action="javascript:void(0);"  onsubmit="app.guardar()" enctype="multipart/form-data" autocomplete="off">
    
@@ -201,7 +202,7 @@
   
    </form>
    </div>
-   </div>
+   </section>
 
 
  
@@ -233,7 +234,7 @@
 
     <!-- FIN -->
     <script src="../../public/js/vistaproductos.js?v=<?php echo(rand()); ?>"></script>
-    <script src="../assets/code.js?v=<?php echo(rand()); ?>"></script>
+    <script src="../assets/codepro.js?v=<?php echo(rand()); ?>"></script>
     <script src="../../public/js/ruta.js?v=<?php echo(rand()); ?>"></script>
     <!-- <script src="../assets/code.js"></script>
     <script src="../../public/js/vistaproductos.js"></script>

@@ -204,7 +204,7 @@ const app = new (function () {
   
     this.btnabrir =()=>{
       this.continput.classList.add("mostrar");
-      /* this.unidades.focus(); */
+       this.unidades.focus();
     }
 
     
@@ -402,7 +402,7 @@ const app = new (function () {
       .then((res)=>res.json())
       .then((data)=>{
         
-        
+        this.btnabrir();
         this.id.value = data.id;
         this.nombre.value =data.nombre;
         this.descripcion.value =data.descripcion;

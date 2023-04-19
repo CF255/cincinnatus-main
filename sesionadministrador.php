@@ -9,11 +9,9 @@ $contraseña=$_POST['pass'];
 $rol=$_POST['rol'];
 
 
- 
-
 
 $query=("SELECT * FROM usuarios 
-WHERE usuario='$usuario' AND pass='$contraseña' AND rol='$rol'");
+WHERE usuario='$usuario' /* AND pass='$contraseña' */ AND rol='$rol'");
 
 $consulta=pg_query($conexion,$query);
 $cantidad=pg_num_rows($consulta);
@@ -30,7 +28,7 @@ if($conexion >0){
 
 
 if($usuario != ""){
-    if($contraseña != ""){
+   /*  if($contraseña != ""){ */
         if($rol != ""){
 
            
@@ -46,7 +44,7 @@ if($usuario != ""){
                         $_SESSION['nombre_rol']=$rol;
                     header('Location: app/views/almacen.php');
                 
-                    }else if($rol == "Administrador_Inventario"){
+                    }else if($rol == "Administrador_de_inventario"){
                         $_SESSION['nombre_usuario']=$usuario;
                         $_SESSION['nombre_rol']=$rol;
                     header('Location: app/views/almacen.php');
@@ -72,13 +70,13 @@ if($usuario != ""){
             </script>';
         }
 
-    }else{
+  /*   }else{
         echo'<script type="text/javascript">
     alert("Debe de introducir una Contraseña");
     window.location.href="app/views/loginadmi.php";
     </script>';
     
-    }
+    } */
 }else{
    
     echo'<script type="text/javascript">

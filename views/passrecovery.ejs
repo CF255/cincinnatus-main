@@ -16,9 +16,16 @@
     <nav>
         <img src="../../img/logo.jpeg" alt="" class="logoimg">
     </nav>
+    <div class="mensajes colormin">
+        <ul>
+            <% if(typeof errors != 'undefined'){ %> <% errors.forEach(error=>{ %>
+                    <li><%= error.message %></li>
+                 <% }) %> <% } %>
+        </ul>
+    </div>
 
 
-    <div class="mensajes">
+    <div class="mensajes colorcor">
         <ul>
             <% if(messages.success_msg) { %>
                 <li><%= messages.success_msg %></li>
@@ -49,17 +56,19 @@
 
    <div class="login-box">
     <img class="logoimg" src="../../img/logo.jpeg" alt="">
-    <h1>Hola</h1>
-    <h2>Iniciar sesion</h2>
+    <h1>¿Olvidaste la Contraseña?</h1>
+    <br>
+   
 
-    <form class="form"  method="POST" >
-        
-        <label for="" class="lblvali">Campo vacio</label>
+    <form class="form" action="/users/passrecovery" method="POST" autocomplete="off" >
+    
     <input name="usuario" type="text" class="inputtext" id="usuario" placeholder="Nombre de Usuario">
 
-<input name="pass" type="password" class="inputtext" id="pass" placeholder="Contraseña">
+    <input name="pass" type="password" class="inputtext" id="pass" placeholder="Contraseña nueva">
 
-        <input type="submit" name="submit" value="Continuar" id="btncontinuar" class="btncontinuar">
+     <input name="password2" type="password" class="inputtext" id="password2" placeholder="Confirmar contraseña">
+
+        <input type="submit" name="submit" value="Continuar" id="Registrar" class="btncontinuar">
     
         <select autocomplete="off" name="rol" class="ocultar" tabindex="9" id="slStatus">
             <option value="Cliente">Cliente</option>
@@ -68,10 +77,10 @@
 
         <div class="box"></div>
 
-        <a href="/users/registro" class="a" >Crear Cuenta</a>
         
-        <a href="/users/passrecovery" class="lblolvidadocontra" >¿Has olvidado la contraseña?</a>
+        <a href="/users/login" class="lbllogin" >Iniciar sesion</a>
     
+        <a href="/users/registro" class="lblcrearcuenta" >Crear Cuenta</a>
     </form>
    </div>
 
