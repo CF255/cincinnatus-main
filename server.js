@@ -122,7 +122,7 @@ app.get("/users/login",(req,res)=>{
         /* perfil */
 
 app.post("/users/registro", async(req,res)=>{
-    let{usuario,nombre,apellido,email,fecha,pass,rol,password2} = req.body;
+    let{usuario,nombre,apellido,email,fecha,pass,rol,password2, pres, ress} = req.body;
     console.log({
         usuario,
         nombre,
@@ -132,11 +132,13 @@ app.post("/users/registro", async(req,res)=>{
         pass,
         rol,
         password2,
+        pres,
+        ress,
     });
 
     let errors = [];
 
-    if(!usuario || !nombre || !apellido || !fecha || !email || !rol || !pass ||!password2){
+    if(!usuario || !nombre || !apellido || !fecha || !email || !rol || !pass ||!password2 ||!pres ||!ress){
         errors.push({message: "Completar todos los campos"});
     }
 
@@ -174,9 +176,9 @@ app.post("/users/registro", async(req,res)=>{
                     res.render("registro",{errors});
                 }else{
                     pool.query(
-                        `INSERT INTO usuarios (usuario, nombre, apellido, email, fecha, pass, rol)
-                        VALUES($1, $2, $3, $4, $5, $6, $7)
-                        RETURNING id, pass`,[usuario, nombre, apellido, email, fecha, hashedpassword,rol],(err,results)=>{
+                        `INSERT INTO usuarios (usuario, nombre, apellido, email, fecha, pass, rol, pres, ress)
+                        VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9)
+                        RETURNING id, pass`,[usuario, nombre, apellido, email, fecha, hashedpassword,rol, pres, ress],(err,results)=>{
                             if(err){
                                 throw err
                             }
@@ -254,7 +256,7 @@ app.get("/users/tienda",(req,res)=>{
 
 /* post registro admin */
 app.post("/users/registroadmin", async(req,res)=>{
-    let{usuario,nombre,apellido,email,fecha,pass,rol,password2} = req.body;
+    let{usuario,nombre,apellido,email,fecha,pass,rol,password2, pres, ress} = req.body;
     console.log({
         usuario,
         nombre,
@@ -264,11 +266,13 @@ app.post("/users/registroadmin", async(req,res)=>{
         pass,
         rol,
         password2,
+        pres,
+        ress,
     });
 
     let errors = [];
 
-    if(!usuario || !nombre || !apellido || !fecha || !email || !rol || !pass ||!password2){
+    if(!usuario || !nombre || !apellido || !fecha || !email || !rol || !pass ||!password2||!pres||!ress){
         errors.push({message: "Completar todos los campos"});
     }
 
@@ -305,9 +309,9 @@ app.post("/users/registroadmin", async(req,res)=>{
                     res.render("registro",{errors});
                 }else{
                     pool.query(
-                        `INSERT INTO usuarios (usuario, nombre, apellido, email, fecha, pass, rol)
-                        VALUES($1, $2, $3, $4, $5, $6, $7)
-                        RETURNING id, pass`,[usuario, nombre, apellido, email, fecha, hashedpassword,rol],(err,results)=>{
+                        `INSERT INTO usuarios (usuario, nombre, apellido, email, fecha, pass, rol,pres,ress)
+                        VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9)
+                        RETURNING id, pass`,[usuario, nombre, apellido, email, fecha, hashedpassword,rol,pres,ress],(err,results)=>{
                             if(err){
                                 throw err
                             }
@@ -333,16 +337,17 @@ app.get("/users/registroadmin",(req,res)=>{
     
 /* post registro passrecovery */
 app.post("/users/passrecovery", async(req,res)=>{
-    let{usuario,pass,password2} = req.body;
+    let{usuario,pass, ress,password2} = req.body;
     console.log({
         usuario,
         pass,
+        ress,
         password2,
     });
 
     let errors = [];
 
-    if(!usuario || !pass ||!password2){
+    if(!usuario || !pass || !ress ||!password2){
         errors.push({message: "Completar todos los campos"});
     }
 
@@ -364,7 +369,7 @@ app.post("/users/passrecovery", async(req,res)=>{
         console.log(hashedpassword);
 
         pool.query(
-            `UPDATE usuarios SET pass = $2 WHERE usuario = $1`,[usuario, hashedpassword],(err,results)=>{
+            `UPDATE usuarios SET pass = $2 WHERE usuario = $1 AND ress = $3`,[usuario, hashedpassword, ress],(err,results)=>{
                 if(err){
                     throw err
                 }
@@ -374,6 +379,7 @@ app.post("/users/passrecovery", async(req,res)=>{
             }
 
         )
+        
     
     }
 

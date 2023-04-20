@@ -22,14 +22,13 @@
     
     /* tama;o y centrado del contenedor */
     .login-box{
-        width: 450px;
-        height: 400px;
+        
         color: black;
         margin: 0 auto;
         box-sizing: border-box;    
         padding: 10px 10px;
         border: 2px solid rgb(57, 90, 92);
-        height: 720px;
+        height: 860px;
         width: 450px;
         border-radius: 20px;
         margin-bottom: 300px;
@@ -143,7 +142,7 @@
     .lbl{
         text-decoration: none;
         color: black;
-        margin-top: -10px;
+        margin-top: 140px;
         display: flex;
         border-radius: 50%;
         position: absolute;
@@ -151,7 +150,7 @@
     }
     
     .a{
-        top: 900px;
+        top: 1050px;
     }
 
     .lbl{

@@ -139,7 +139,7 @@ nav{
     padding: 15PX;
     border-radius: 5PX;
     position: absolute;
-    top: 460px;
+    top: 510px;
     left: calc(50% - 150px); 
 }
 
@@ -160,7 +160,7 @@ nav{
     display: flex;
     padding: 15px;
     position: absolute;
-    top: 460px;
+    top: 510px;
     left: calc(50%); 
 }
 
