@@ -62,7 +62,7 @@
         </div>
         <!-- profile -->
         <div id="profile">
-            <div id="photo"><img src="../../public/img/logo.jpeg" alt="">
+        <a href="#" id="btnperfil" > <div id="photo"><img src="../../public/img/logo.jpeg" alt=""></a>
             <div id="name">Cuenta Administrativa </div>
              </div>
         </div>

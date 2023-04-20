@@ -63,7 +63,8 @@
         </div>
         <!-- profile -->
         <div id="profile">
-            <div id="photo"><img src="../../public/img/logo.jpeg" alt="">
+        <a href="#" id="btnperfil" > <div id="photo"><img src="../../public/img/logo.jpeg" alt=""></a>
+
             <div id="name">Cuenta Administrativa </div>
         </div>
         </div>
@@ -180,9 +181,8 @@
 
     <!-- FIN -->
     <script src="../assets/codeuser.js?v=<?php echo(rand()); ?>"></script>
-    <script src="../assets/codeuser.js"></script>
+   
     <script src="../../public/js/registrousuarios.js"></script>
-    <script src="../../public/js/ruta.js"></script>
     <script src="../../public/js/ruta.js?v=<?php echo(rand()); ?>"></script>
 </body>
 </html>

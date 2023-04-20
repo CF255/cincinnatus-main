@@ -16,6 +16,8 @@ body{
     background-color: #efefefef; 
 }
 
+
+
 /* navegador  */
 
 .nav2{
@@ -347,39 +349,124 @@ body{
 /* fin container */
 .perfil{
     width: 100%;
-    background-color: #fcfcfc;
+    background-color: #cecece;
+    display: flex;
+}
+
+.btnconfi{
+    position: absolute;
+    font-size: 35px;
+    margin-left: 5px;
+    top: 215px;
+    color: black;
+}
+
+.btnconfi:hover{
+    color: rgb(58, 95, 97);
+}
+
+.lblperfil{
+margin-top: 80px;
+
+}
+
+.lblnombre{
+    font-size: 55px;
+}
+.lblnombre{
+    font-size: 55px;
+}
+.lblrol{
+    font-size: 30px;
 }
 
 .login-box{
-    background-color: #CB8B07;
+    
     
 }
+
 
 
 .imgperfil{
     width: 200px;
     margin: 10px;
+    border-radius: 50%;
 }
 
 
 
 /* contenedor inputs */
 
+.lblid{
+    font-size:20px;
+    color: #666666;
+}
 
 .contenedorinput{
 
     width: 60%;
     max-width: 750px;
-
-    height:830px;
+    margin: 20px;
+    height:650px;
     /* position: absolute; */
     border: 2Px solid rgb(57, 90, 92) ;
     border-radius: 10px;
     background-color: white;
     padding: 10px;
     overflow:hidden;
+ 
+    opacity: 0;
+    pointer-events: none; 
   
 }
+
+.ocultar{
+    opacity: 0;
+    pointer-events: none;
+    transition: .2s ease;
+}
+
+.mostrar{
+    opacity: 1;
+    pointer-events: unset;
+    transition: .2s ease;
+}
+
+.btnside{
+    padding: 15px;
+    margin: 5px;
+    font-size: 20px;
+    border-radius: 5px;
+    
+    cursor: pointer;
+}
+
+.btnguardar{
+    border: 3px solid rgb(6, 91, 21) ;
+    background-color:rgb(44, 183, 70) ;
+    color: white;   
+}
+
+.btnguardar:hover{
+    border: 4px solid rgb(44, 183, 70) ;
+    background-color:white;
+    color:  rgb(6, 91, 21) ;   
+    font-weight: bold;
+}
+
+.btncancelar{
+    border: 3px solid rgb(91, 6, 6) ;
+    background-color:rgb(183, 65, 44) ;
+    color: white;   
+}
+
+.btncancelar:hover{
+    border: 4px solid rgb(183, 65, 44);
+    background-color:white;
+    color:  rgb(91, 6, 6) ;   
+    font-weight: bold;
+}
+
 
 
 .contenedorinput h1{
@@ -427,7 +514,7 @@ select:focus{
     top: 100px;
    /*  left: calc(50% - 210px);   */
     margin-bottom: 20px;
-    margin-left: -140px;
+    margin-left: -110px;
     
     }
     
@@ -462,17 +549,7 @@ select:focus{
 /* fin contenedores inputs */
 
 
-.ocultar{
-    opacity: 0;
-    pointer-events: none;
-    transition: .2s ease;
-}
 
-.mostrar{
-    opacity: 1;
-    pointer-events: none;
-    transition: .2s ease;
-}
 
 
 
@@ -745,6 +822,8 @@ display: flex;
     transition: 0.5s;
  }
 
+ 
+
  .indicadornav::before{
     content: '';
     position: absolute;
@@ -819,6 +898,14 @@ display: flex;
 }
 
 /*  */
+
+/* perfil */
+
+
+
+
+
+/* fin */
 
 
 /* modo tablet / pc*/

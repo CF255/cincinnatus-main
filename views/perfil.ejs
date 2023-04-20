@@ -36,7 +36,7 @@
                 <li><a href="registrousuarios.php"><img src="../../img/usuarios.png" alt="">Usuarios</a></li>
 
            
-                <li><a class="active" href="creacionUadmin.html"><img src="../../img/usuario.png" alt="">Creacion de usuarios</a></li>
+                <li><a id="btncreacionusuarionodenav"><img src="../../img/usuario.png" alt="">Creacion de usuarios</a></li>
 
            
                 <li><a  href="almacen.php"><img src="../../img/producto.png" alt="">Crear producto</a></li>
@@ -77,7 +77,7 @@
             </div>
 
             <div class="item">
-                <a class="active" href="#">
+                <a id="btncreacionusuarionode" href="#">
                     <div class="icon"><img src="../../img/usuario.png" alt=""></div>
                     <div class="title"><span>Creacion de usuarios</span></div>
                 </a>
@@ -125,14 +125,20 @@
    <div class="login-box">
 
     <div class="perfil" >
+        <a href="#"id="btnmostrar"  class="btnconfi"><i class="fa-solid fa-gear"></i></a>
         <a href="#"><img class="imgperfil" src="../../img/logo.jpeg" alt=""></a>
         
-        <h1> <%= usuario %> </h1>
+        <div class="lblperfil">
+            
+        <h1 id="lblnombre" class=" lblnombre"><%= nombre %></h1>
+        <h1 class=" lblrol"> <%= rol %> </h1>
+        <h1 class=" lblid"> ID #<%= id %> </h1>
  
+        </div>
     </div>
 
 
-    <form class="form" action="/users/registroadmin" method="POST" autocomplete="off">
+    <form class="form" action="/users/perfil" method="POST" autocomplete="off">
         
    <div class="contenedorinput" id="continput">
 
@@ -160,36 +166,29 @@
         <a href="#"><img class="agregarimg" src="../../img/agregarfoto.png" alt=""></a>
     <input type="file" class="form-control-file " name="foto" id="foto" placeholder="foto" aria-describedby="fileHelpId">
 
-    <label class="lblfecha" for="">Nombre de usuario</label>
-    <input name="usuario" type="text" class="inputtext" id="usuario" placeholder="Usuario">
-
     <label class="lblfecha" for="">Nombre</label>
     <input name="nombre" type="text" class="inputtext" id="nombre" placeholder="Nombre">
 
     <label class="lblfecha" for="">Apellido</label>
     <input name="apellido" type="text" class="inputtext" id="apellido" placeholder="Apellido">
     
-    <label class="lblfecha" for="">Fecha de nacimiento</label>
-    <input name="fecha" type="date" class="inputtext ipfecha" id="fecha" placeholder="Nombre de Usuario">
-
     <label class="lblfecha" for="">Correo electronico</label>
     <input name="email" type="email" class="inputtext" id="email" placeholder="Correo Electronico">
-
-    <label class="lblfecha" for="">Rol a desempeñar </label>
-    <select autocomplete="off" name="rol" class="inputtext" tabindex="9" id="rol">
-        <option value=""></option>
-            <option value="Administrador">Administrador</option>
-            <option value="Editor">Editor</option>
-            <option value="Administrador_de_inventario">Administrador de inventario</option>
-            <option value="Supervisor">Supervisor</option>
-            <option value="Cliente">Cliente</option>
-    </select>
 
     <label class="lblfecha" for="">Contraseña</label>
     <input name="pass" type="password" class="inputtext" id="pass" placeholder="Contraseña">
 
     <label class="lblfecha" for="">Confirmar contraseña</label>
     <input name="password2" type="password" class="inputtext" id="password2" placeholder= "confirmar la Contraseña">
+
+    <input type="submit" name="submit" value="Guardar" id="Registrar" class="btnside btnguardar">
+
+    <button class="btnside btncancelar "  id="btncancelar" type="button"><span class=""></span>
+        <span class="">Cancelar</span></button> 
+
+    <input name="id" type="text" class="inputtext ocultar" id="id" value="<%= id %>" placeholder= "Respuesta de Seguridad">
+
+    
 
    </div>
 
@@ -198,38 +197,8 @@
    <section class="modal" id="modal">
     <div class="modalcontainer">
         
-<main class="table" id="tablaproductos">
-<section class="tableheader" >
-          
-<h1 class="modaltitle">Tabla Usuarios</h1>
-        <h2 class="">Usuarios Registrados</h2>
-</section>
-<section class="tablebody">
-        <table class="containertable">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Usuario</th>
-                        <th>Nombre</th>
-                        <th>Apellido</th>
-                        <th>Fecha</th>
-                        <th>Email</th>
-                        <th>Contraseña</th>
-                        <th>Rol</th>
-                        <th>Foto</th>
-                        <th></th>
-                        
-                    </tr>
-                </thead>
-                    <tbody id="tbodyuser">
-                        
-                </tbody>
-        </table>
-</section>
-</main>
-           
 
-        <a href="#" id="cerrarmodal" class="modalclose">Cerrar</a>
+        
     </div>
 </section>
 
@@ -247,60 +216,9 @@
 
 <!-- modal container fin -->
 
-<!-- BUTTON MENU -->
-
-            
-<div class="navegador" id="containernavegador">
-    <ul>
-        <li class="list activenav">
-           <!--  <a href="#">
-                <span class="iconnav"><i class="icon fa-solid fa-magnifying-glass"></i></span>
-                <span class="textnav">Buscar</span>
-            </a> -->
-
-            <a href="#" id="btnbuscarnav"  class="botoninferiormodal">
-                <span class="iconnav"><i class="icon fa-solid fa-magnifying-glass"></i></span>
-                <span class="textnav">Buscar</span>
-            </a>
-        </li>
-
-        <li class="list">
-            <form class="form" action="/users/registro" method="POST"> 
-                <button class="" type="submit"><span class="iconnav"><i class="fa-solid fa-rotate"></i></span>
-                <span class="textnav">Actualizar</span></button> 
-                </form>
-        </li>
-
-      
-        <li class="list">
-         
-            <button id="botonborrarinferior" type="submit" ><span class="iconnav"><i class="fa-solid fa-eraser"></i></span>
-                <span class="textnav">Borrar</span>
-            </button> 
-
-       
-        </li>
-
-        
-        
-        <li class="list">
-        <form class="form" action="/users/registroadmin" method="POST"> 
-                <button class="" type="submit"><span class="iconnav"><i class="fa-solid fa-floppy-disk"></i></span>
-                <span class="textnav">Guardar</span></button> 
-                </form>
-        </li>
-        
-
-        <div class="indicadornav">
-
-        </div>
-    </ul>
-</div>
-
-<!-- FIN -->
 <!-- 
 <script src="../assets/codeuser.js"></script> -->
-<script src="../js/creacionUadmin.js"></script>
+<script src="../js/perfil.js"></script>
 <script src="../js/ruta.js"></script>
 </body>
 </html>
