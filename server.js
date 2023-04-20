@@ -46,79 +46,15 @@ app.get("/users/login",(req,res)=>{
             app.get("/users/perfil",(req,res)=>{
 
                 res.render("perfil", 
-                {usuario: req.user.id}
+                {id: req.user.id,
+                nombre: req.user.nombre,
+                 rol:req.user.rol}
              
                 );
             });
             
         
-        app.post("/users/perfil", async(req,res)=>{
-            let{usuario,nombre,rol} = req.body;
-            console.log({
-                usuario,
-                nombre,
-                rol,
-               
-            });
-        
-            let errors = [];
-        
-            if(!usuario || !nombre || !apellido || !fecha || !email || !rol || !pass ||!password2){
-                errors.push({message: "Completar todos los campos"});
-            }
-        
-           /*  if(pass.length < 6){
-                errors.push({message: "La contraseña debe de tener al menos 6 caracteres"});
-            } */
-            
-        
-        
-            if(pass != password2){
-                errors.push({message: "Las contraseñas no coinciden"});
-            }
-        
-            if(errors.length > 0){
-                res.render("registro", {errors});
-                
-            }else{
-                //validasion formulario
-                let hashedpassword = await bcrypt.hash(pass,10);
-                console.log(hashedpassword);
-        
-                 pool.query(
-                    `SELECT * FROM usuarios
-                    WHERE usuario = $1`,
-                    [usuario],
-                    (err, results)=>{
-                        if(err){
-                            throw err;
-                        }
-                        
-                        console.log(results.rows);
-        
-                        if(results.rows.length>0){
-                            errors.push({message: "El nombre de usuario ya se encuentra registrado"});
-                            res.render("registro",{errors});
-                        }else{
-                            pool.query(
-                                `INSERT INTO usuarios (usuario, nombre, apellido, email, fecha, pass, rol)
-                                VALUES($1, $2, $3, $4, $5, $6, $7)
-                                RETURNING id, pass`,[usuario, nombre, apellido, email, fecha, hashedpassword,rol],(err,results)=>{
-                                    if(err){
-                                        throw err
-                                    }
-                                    console.log(results.rows);
-                                    req.flash("success_msg","Registro completado");
-                                    res.redirect("/users/login");
-                                }
-        
-                            )
-                        }
-                    }
-                );
-            }
-        });
-        
+     
         /* perfil */
 
 app.post("/users/registro", async(req,res)=>{
@@ -386,20 +322,68 @@ app.post("/users/passrecovery", async(req,res)=>{
 });
 /* prueba inicio administrador */
 
-/* prueba incisio secion administratio */
+/* actualizacion perfil */
+app.get("/users/registroadmin",(req,res)=>{
+    res.render("registroadmin");
+    
+    });
 
-/*   app.post(
-        "/users/loginadmi", 
-        passport.authenticate("local", {
-            successRedirect: "/users/registroadmin",
-            failureRedirect: "/users/loginadmi",
-            failureFlash: true
-        })
-       ); */
- 
+    
+/* post registro passrecovery */
+app.post("/users/perfil", async(req,res)=>{
+    let{id, nombre, apellido, email, pass,password2} = req.body;
+    console.log({
+        id,
+        nombre,
+        apellido,
+        email,
+        pass,
+        password2,
+        
+    });
 
-/* fin */
+    let errors = [];
+
+    if(!id || !nombre|| !apellido|| !email || !pass ||!password2){
+        errors.push({message: "Completar todos los campos"});
+    }
 
 
+    if(pass.length < 6){
+        errors.push({message: "La contraseña debe de tener al menos 6 caracteres"});
+    }
+    
 
-/* fin */
+    if(pass != password2){
+        errors.push({message: "Las contraseñas no coinciden"});
+    }
+
+    if(errors.length > 0){
+        res.render("perfil", {errors});
+        
+    }else{
+        //validasion formulario
+        let hashedpassword = await bcrypt.hash(pass,10);
+        console.log(hashedpassword);
+
+        pool.query(
+            `UPDATE usuarios SET nombre = $2, apellido = $3, email = $4, pass = $5 WHERE id = $1`,[id, nombre, apellido, email, hashedpassword],(err,results)=>{
+                if(err){
+                    throw err
+                }
+
+
+                console.log(results.rows);
+                 req.flash("success_msg","Actualizacion completada Iniciar sesion Nuevamente");
+                res.redirect("/users/login"); 
+            }
+
+        )
+        
+    
+    }
+
+});
+
+
+/* fin*/
