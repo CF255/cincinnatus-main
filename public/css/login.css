@@ -70,6 +70,15 @@ nav{
     font-size: 15px;
 }
 
+.inputtext2{
+    width: 92%;
+    margin-bottom: 10px;
+    height: 40px;
+    border-radius: 10px;
+    border: 2px solid rgb(57, 90, 92);
+    font-size: 15px;
+}
+
 .btncontinuar{
     width: 100%;
     height: 40px;
@@ -273,10 +282,6 @@ background-color: #fff;
     background-color: #fff;
 }
 
-.modalshow{
-opacity: 1;
-pointer-events: unset;
-}
 
 
 .lblvali{
@@ -340,3 +345,87 @@ width: 15%;
 
 
 /* fin login */
+
+
+/* btn pres */
+
+.btnpres{
+    
+    padding: 5px;
+    color: #fff;
+    background-color: cadetblue;
+    border-radius: 100px;
+    border: 2px solid rgb(42, 70, 71);
+    font-size: 10px;
+float: right;
+margin-top: 8px;
+}
+
+
+
+.btnpres:hover{
+
+    color:rgb(42, 70, 71) ;
+    background-color:  #fff;
+    border: 2px solid  cadetblue;
+
+}
+
+
+.modalpass{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #111111bd;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+
+}
+
+
+.modalcontainerpass{
+    width: 90%;
+    background-color: #fff;
+    margin: auto;
+    max-width: 600px;
+    max-height: 90%;
+    border-radius: 10px;
+    padding: 3em 2.5em;
+    display: grid;
+    gap: 1em;
+    place-items: center;
+    grid-auto-columns:100% ;
+}
+
+.modaltitlepass{
+    font-size: 2em;
+
+}
+
+.cerrarmodalpass{
+    text-decoration: none;
+    color: #fff;
+    background-color: cadetblue;
+    padding: 1em 3em;
+    border: 2px solid rgb(44, 72, 73);
+    border-radius: 10px;
+    display: inline-block;
+    font-weight: 300;
+    transition: background-color .3s;
+}
+
+.cerrarmodalpass:hover{
+    color:rgb(44, 72, 73) ;
+    background-color:#fff ;
+    border: 2px solid cadetblue;
+}
+
+.modalshow{
+    opacity: 1;
+    pointer-events: unset;
+    }
+    
+/* fin */

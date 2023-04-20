@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 </head>
 <body>
@@ -68,9 +68,11 @@
 
      <input name="password2" type="password" class="inputtext" id="password2" placeholder="Confirmar contraseña">
 
-     <input name="ress" type="text" class="inputtext" id="ress" placeholder="Respuesta de Seguridad">
+     <input name="ress" type="text" class="inputtext2" id="ress" placeholder="Respuesta de Seguridad">
 
-        <input type="submit" name="submit" value="Continuar" id="Registrar" class="btncontinuar">
+     <a href="#" class="btnpres" id="btnpres"><i class="fa-solid fa-question"></i></a>
+
+        <input type="submit" name="submit" value="Actualizar" id="Registrar" class="btncontinuar">
     
         <select autocomplete="off" name="rol" class="ocultar" tabindex="9" id="slStatus">
             <option value="Cliente">Cliente</option>
@@ -87,17 +89,25 @@
    </div>
 
 
+   <section class="modalpass" id="modalpass">
+    <div class="modalcontainerpass">
+        <h1 class="modaltitlepass">Preguntas de seguridad</h1>
+        <label for="">¿Primera mascota?</label>
+        <label for="">¿Lugar de nacimiento?</label>
+        <label for="">¿Mejor amigo de la infancia?</label>
+      
+        <a href="" class="cerrarmodalpass">Cerrar</a>
+    </div>
+   </section>
+
 <footer>
     <label for="">Copyright © 2023</label>
-    
-    
-    <a id="btnloginadmi"><img class="icon" src="/img/admin.png" alt=""></a>
    </footer>
 
     
    <script src="/js/logincliente.js"></script>
 
 
-   <script src="../../js/almacen.js"></script>
+   <script src="../../js/passrecovery.js"></script>
 </body>
 </html>

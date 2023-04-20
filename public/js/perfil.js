@@ -46,10 +46,13 @@ const continput = document.getElementById('continput');
 
 const btnmostrar = document.getElementById("btnmostrar");
 
+const nombre = document.getElementById("nombre");
+
 if(btnmostrar){
     btnmostrar.addEventListener('click', e =>{
         
         continput.classList.add("mostrar");
+        nombre.focus();
     
     });
 }

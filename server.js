@@ -304,6 +304,7 @@ app.post("/users/passrecovery", async(req,res)=>{
         let hashedpassword = await bcrypt.hash(pass,10);
         console.log(hashedpassword);
 
+    
         pool.query(
             `UPDATE usuarios SET pass = $2 WHERE usuario = $1 AND ress = $3`,[usuario, hashedpassword, ress],(err,results)=>{
                 if(err){
