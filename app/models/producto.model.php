@@ -34,7 +34,7 @@ class Producto extends Connection
     {
         try{
             $sql = "INSERT INTO productos (nombre, descripcion, precio, unidades, proveedor, categoria) 
-            VALUES (:nombre, :descripcion, :precio, :unidades, :proveedor, :categoria )";
+            VALUES (:nombre, :descripcion, :precio, :unidades, :proveedor, :categoria)";
             $stmt = Connection::getConnection()->prepare($sql);
             $stmt->bindParam(':nombre', $data['nombre']);
             $stmt->bindParam(':descripcion', $data['descripcion']);
@@ -42,7 +42,6 @@ class Producto extends Connection
             $stmt->bindParam(':unidades', $data['unidades']);
             $stmt->bindParam(':proveedor', $data['proveedor']);
             $stmt->bindParam(':categoria', $data['categoria']);
-            /* $stmt->bindParam(':fotos', $data['fotos']); */
             $stmt->execute();
             return true;
         }catch(PDOException $th){

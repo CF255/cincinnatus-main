@@ -226,7 +226,7 @@ const app = new (function () {
                 <td>${item.proveedor}</td>
                 <td>${item.categoria}</td>
                 <td>${item.descripcion}</td>
-                <td>foto</td>
+                <td>${item.foto}</td>
                 <td>
                   <a href="javascript:;" id="btneditar" class="btn btn-warning btn-sm" onclick="app.editar(${item.id})">Editar</a>
                   <a href="javascript:;" class="btn btn-danger btn-sm" onclick="app.eliminar(${item.id})">Eliminar</a>
@@ -284,7 +284,6 @@ const app = new (function () {
       form.append("proveedor", this.proveedor.value);
       form.append("categoria", this.categoria.value);
       form.append("id", this.id.value);
-      /* form.append("fotos", this.fotos.value); */
 
       
       if(this.nombre.value != ""){

@@ -123,20 +123,25 @@
   
 
     <!-- contenedor de inputs -->
-
-    <form action="javascript:void(0);"  onsubmit="app.guardar()" enctype="multipart/form-data" autocomplete="off">
-   
     <input type="hidden" id="id" />
     <div class="contenedorinput" id="continput">
         <h1>Creacion de productos</h1>
         <a href="#" id="warning" class="warning"></a>
 
-       <div class="formgroup">
+    <form action="#" method="POST" enctype="multipart/form-data" >
+    <div class="formgroup">
        <label for="foto" class="lblfoto">Foto del producto</label>
         <img class="imglogo" src="../../public/img/logo.jpeg" alt="">
-        <!-- <a href="#"><img class="agregarimg" src="../../public/img/agregarfoto.png" alt=""></a> -->
-    <input type="file" class="form-control-file " name="fotos" id="fotos" accept="image/*" >
+      <input type="text" name="nombrefoto" >
+    <input type="file" class="form-control-file " name="foto" id="foto" accept="image/*" >
        </div>
+        
+       <input type="submit" value="prueba">
+       
+    </form>
+
+    <form action="javascript:void(0);" method="POST"  onsubmit="app.guardar()" enctype="multipart/form-data" autocomplete="off">
+   
      
     <label class="lblnombres" for="">Nombre</label>
     <input type="text" class="inputtext" id="nombre" placeholder="Nombre del producto">
