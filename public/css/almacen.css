@@ -355,7 +355,7 @@ body{
     width: 60%;
     max-width: 750px;
     margin: 20px;
-    height:830px;
+    height:950px;
     position: absolute;
     border: 2Px solid rgb(57, 90, 92) ;
     border-radius: 10px;
@@ -738,6 +738,8 @@ nav ul li a img{
 .btnbuscar:hover{
     background: rgb(64, 109, 110);
 }
+
+
 
 /* fun modañ */
 
