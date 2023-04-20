@@ -303,19 +303,23 @@ pointer-events: unset;
 border-radius: 15px;
 margin:10px;
 width: 15%;
+border-radius: 10px;
 }
 
 .colorcor{
     background-color: rgb(57, 177, 69);
+    border-radius: 10px;
 }
 
 .colormin{
-    background-color: rgb(232, 162, 59);
+    background-color: rgb(232, 192, 59);
+    border-radius: 10px;
 }
 
 .mensajes ul li {
     text-decoration: none;
     padding: 15px;
+    border-radius: 10px;
     
 }
 
@@ -331,10 +335,10 @@ width: 15%;
         
    
     border-radius: 15px;
-    margin:10px;
-    width: 50%;
-    bottom: 10%;
-    left: 22%;
+    margin:5px;
+    width: 30%;
+    top: 0;
+    right: 10px;
     }
 
     .mensajes ul li {
@@ -427,5 +431,6 @@ margin-top: 8px;
     opacity: 1;
     pointer-events: unset;
     }
+    
     
 /* fin */

@@ -8,6 +8,7 @@ const bcrypt = require("bcrypt");
 function initialize(passport){
     const authenticateUser = (usuario, pass, done)=>{
 
+        
    
     
                     pool.query(

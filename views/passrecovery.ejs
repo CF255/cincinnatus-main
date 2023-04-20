@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contraseña perdida</title>
     <link rel="stylesheet" href="/css/login.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,16 +25,16 @@
     </div>
 
 
-    <div class="mensajes colorcor">
+    <div class="mensajes" >
         <ul>
             <% if(messages.success_msg) { %>
-                <li><%= messages.success_msg %></li>
+                <li class="colorcor"><%= messages.success_msg %></li>
             <%}%>
         </ul>
     
         <ul>
             <% if(messages.error){ %>
-                <li> <%= messages.error %></li>
+                <li class="colormin"> <%= messages.error %></li>
             <%}%>
         </ul>
     
