@@ -117,5 +117,13 @@ if(btncreacionusuarionodenav){
      });
 }
 
+const btnperfil = document.getElementById("photo");
 
 
+if(btnperfil){
+    btnperfil.addEventListener('click', e =>{
+     
+        window.location.href = 'http://localhost:4000/users/perfil'
+     
+     });
+}
