@@ -78,9 +78,9 @@ app.post("/users/registro", async(req,res)=>{
         errors.push({message: "Completar todos los campos"});
     }
 
-   /*  if(pass.length < 6){
+    if(pass.length < 6){
         errors.push({message: "La contraseña debe de tener al menos 6 caracteres"});
-    } */
+    } 
     
 
 
@@ -104,6 +104,7 @@ app.post("/users/registro", async(req,res)=>{
                 if(err){
                     throw err;
                 }
+                
                 
                 console.log(results.rows);
 
@@ -263,6 +264,7 @@ app.post("/users/registroadmin", async(req,res)=>{
     }
 });
 
+
 /* fin */
 
 app.get("/users/registroadmin",(req,res)=>{
@@ -304,6 +306,7 @@ app.post("/users/passrecovery", async(req,res)=>{
         let hashedpassword = await bcrypt.hash(pass,10);
         console.log(hashedpassword);
 
+    
         pool.query(
             `UPDATE usuarios SET pass = $2 WHERE usuario = $1 AND ress = $3`,[usuario, hashedpassword, ress],(err,results)=>{
                 if(err){
@@ -311,7 +314,7 @@ app.post("/users/passrecovery", async(req,res)=>{
                 }
                 console.log(results.rows);
                  req.flash("success_msg","Actualizacion completada");
-                res.redirect("/users/passrecovery"); 
+                res.redirect("/users/login"); 
             }
 
         )
@@ -320,6 +323,8 @@ app.post("/users/passrecovery", async(req,res)=>{
     }
 
 });
+
+
 /* prueba inicio administrador */
 
 /* actualizacion perfil */

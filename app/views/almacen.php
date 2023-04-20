@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Creacion Productos</title>
     <link rel="stylesheet" href="../../public/css/almacen.css?v=<?php echo(rand()); ?>" />
   <!--   <link rel="stylesheet" href="../../public/css/almacen.css">
     --> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -128,19 +128,16 @@
         <h1>Creacion de productos</h1>
         <a href="#" id="warning" class="warning"></a>
 
-    <form action="#" method="POST" enctype="multipart/form-data" >
+        <form action="javascript:void(0);" method="POST"  onsubmit="app.guardar()" enctype="multipart/form-data" autocomplete="off">
+   
     <div class="formgroup">
        <label for="foto" class="lblfoto">Foto del producto</label>
         <img class="imglogo" src="../../public/img/logo.jpeg" alt="">
-      <input type="text" name="nombrefoto" >
     <input type="file" class="form-control-file " name="foto" id="foto" accept="image/*" >
        </div>
-        
-       <input type="submit" value="prueba">
-       
-    </form>
+    
+    
 
-    <form action="javascript:void(0);" method="POST"  onsubmit="app.guardar()" enctype="multipart/form-data" autocomplete="off">
    
      
     <label class="lblnombres" for="">Nombre</label>
