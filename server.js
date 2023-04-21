@@ -41,6 +41,9 @@ app.get("/users/login",(req,res)=>{
     res.render("login");
     });
 
+    app.get("/users/acceso",(req,res)=>{
+        res.render("acceso");
+        });
 
     /* perfil */
             app.get("/users/perfil",(req,res)=>{
@@ -131,6 +134,7 @@ app.post("/users/registro", async(req,res)=>{
     }
 });
 
+
 app.post(
     "/users/login", 
 passport.authenticate("local", {
@@ -142,7 +146,6 @@ passport.authenticate("local", {
 
 /* 
  */
-
 
 
 
@@ -263,7 +266,6 @@ app.post("/users/registroadmin", async(req,res)=>{
         );
     }
 });
-
 
 /* fin */
     

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creacion usuarios</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="../../css/almacen.css?v=<?php echo(rand()); ?>" />
+    <link rel="stylesheet" href="../../css/registroadmin.css?v=<?php echo(rand()); ?>" />
 <!-- <script src="/js/mi_script.js?v=<?php echo(rand()); ?>"></script> -->
   <!--   <link rel="stylesheet" href="../../public/css/almacen.css">
     --> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -30,19 +30,19 @@
         <ul class="navlist">
            
 
-                <li><a href="index.html"><img src="../../img/tienda.png" alt="">tienda</a></li>
+                <li><a id="btnindexnav"><img src="../../img/tienda.png" alt="">tienda</a></li>
 
             
-                <li><a href="registrousuarios.php"><img src="../../img/usuarios.png" alt="">Usuarios</a></li>
+                <li><a id="btnbuscarnav"><img src="../../img/usuarios.png" alt="">Usuarios</a></li>
 
            
                 <li><a class="active" href="creacionUadmin.html"><img src="../../img/usuario.png" alt="">Creacion de usuarios</a></li>
 
            
-                <li><a  href="almacen.php"><img src="../../img/producto.png" alt="">Crear producto</a></li>
+                <li><a  id="btnalmacennav"><img src="../../img/producto.png" alt="">Crear producto</a></li>
 
     
-                <li><a href="registrousuarios.php"><img src="../../img/almacen.png" alt="">almacen</a></li>
+                <li><a id="btnvistaproductosnav"><img src="../../img/almacen.png" alt="">almacen</a></li>
 
                 
                 <li><a id="btnloginnav"><img src="../../img/cerrar.png" alt="">Cerrar sesion</a></li>
@@ -214,6 +214,11 @@
            
 
         <ul>
+            <button  type="button"  class="toggle-collapse" id="toggle-button" >
+                <img src="../../img/fondo.jpg" alt=""><span class="toggle-icon"></span>
+                </button>
+            
+     
             <li><a href="#"  class="linea">
                 <span class="icons"></span>
                 <span class="item"></span>
@@ -230,13 +235,9 @@
                     <span class="">Guardar</span></button> 
                  
                  </li>
-                </form>
+              <!--   </form> -->
         
-                <button  type="button"  class="toggle-collapse" id="toggle-button" >
-                <img src="../../img/fondo.jpg" alt=""><span class="toggle-icon"></span>
-                </button>
-            
-     
+             
        
             <li><a href="#" id="btnbuscar"  class="btnbuscar">
                 <span class="icons"><i class="icon fa-solid fa-magnifying-glass"></i></span>
@@ -266,68 +267,9 @@
    
 <!-- modal container -->
   
-<section class="modal" id="modal">
-    <div class="modalcontainer">
-        
-<main class="table" id="tablaproductos">
-<section class="tableheader" >
-          
-<h1 class="modaltitle">Tabla Usuarios</h1>
-        <h2 class="">Usuarios Registrados</h2>
-</section>
-<section class="tablebody">
-        <table class="containertable">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Usuario</th>
-                        <th>Nombre</th>
-                        <th>Apellido</th>
-                        <th>Fecha</th>
-                        <th>Email</th>
-                        <th>Contraseña</th>
-                        <th>Rol</th>
-                        <th>Foto</th>
-                        <th></th>
-                        
-                    </tr>
-                </thead>
-                    <tbody id="tbodyuser">
-                        
-                </tbody>
-        </table>
-</section>
-</main>
-           
-
-        <a href="#" id="cerrarmodal" class="modalclose">Cerrar</a>
-    </div>
-</section>
 
 
 
-<section class="modalcorrecto" id="modalcorrecto">
-    <div class="containermodalcorrec" id="containermodalcorrec">
-        <p><i class="fa-solid fa-circle-check"></i> Accion realizada con exito</p>
-        
-           </div>
-</section>
-
-<section class="modalerror" id="modalerror">
-    <div class="containermodalerror" id="containermodalerror">
-        <p><i class="fa-solid fa-circle-xmark"></i> Ha ocurrido un error fatal</p>
-        <a href="#" id="cerrarmodalerror" class="cerrarmodalerror"></a>       
-    </div>
-</section>
-
-<section class="modalwarning" id="modalwarning">
-    <div class="containermodalwarning" id="containermodalwarning">
-        <p><i class="fa-solid fa-triangle-exclamation"></i> Todos los Campos deben de ser Completados</p>
-           <a href="#" id="cerrarmodalwarning" class="cerrarmodalwarning"></a>
-    </div>
-</section>
-
-<!-- modal container fin -->
 
 <!-- BUTTON MENU -->
 
@@ -340,23 +282,18 @@
                 <span class="textnav">Buscar</span>
             </a> -->
 
-            <a href="#" id="btnbuscarnav"  class="botoninferiormodal">
+            <a href="#" id="btnbuscarbottom"  class="botoninferiormodal">
                 <span class="iconnav"><i class="icon fa-solid fa-magnifying-glass"></i></span>
                 <span class="textnav">Buscar</span>
             </a>
         </li>
 
-        <li class="list">
-            <form class="form" action="/users/registro" method="POST"> 
-                <button class="" type="submit"><span class="iconnav"><i class="fa-solid fa-rotate"></i></span>
-                <span class="textnav">Actualizar</span></button> 
-                </form>
-        </li>
+   
 
       
         <li class="list">
          
-            <button id="botonborrarinferior" type="submit" ><span class="iconnav"><i class="fa-solid fa-eraser"></i></span>
+            <button id="botonborrarinferior" type="button" ><span class="iconnav"><i class="fa-solid fa-eraser"></i></span>
                 <span class="textnav">Borrar</span>
             </button> 
 
@@ -366,10 +303,9 @@
         
         
         <li class="list">
-        <form class="form" action="/users/registroadmin" method="POST"> 
                 <button class="" type="submit"><span class="iconnav"><i class="fa-solid fa-floppy-disk"></i></span>
                 <span class="textnav">Guardar</span></button> 
-                </form>
+               </form>
         </li>
         
 
