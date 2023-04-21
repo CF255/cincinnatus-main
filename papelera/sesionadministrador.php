@@ -10,28 +10,17 @@ $rol=$_POST['rol'];
 
 
 
-$query=("SELECT * FROM usuarios 
-WHERE usuario='$usuario' /* AND pass='$contraseña' */ AND rol='$rol'");
-
+$query=("SELECT * FROM usuarios WHERE   AND rol='$rol'");
 $consulta=pg_query($conexion,$query);
 $cantidad=pg_num_rows($consulta);
 
 
-if($conexion >0){
-    echo"si";
-}else{
-    echo"no";
-}
 
 
 /* inicio */
 
 
-if($usuario != ""){
-   /*  if($contraseña != ""){ */
-        if($rol != ""){
 
-           
             if($cantidad>0){
                 if($rol == "Administrador"){
                         $_SESSION['nombre_usuario']=$usuario;
@@ -63,11 +52,7 @@ if($usuario != ""){
                 }
 
 
-        }else{
-            echo'<script type="text/javascript">
-            alert("Debe de seleccionar un Rol");
-            window.location.href="app/views/loginadmi.php";
-            </script>';
+        }</script>';
         }
 
   /*   }else{
@@ -77,13 +62,6 @@ if($usuario != ""){
     </script>';
     
     } */
-}else{
-   
-    echo'<script type="text/javascript">
-    alert("Debe de introducir un usuario");
-    window.location.href=" app/views/loginadmi.php";
-    </script>';
-}
 
 /* fin */
 
