@@ -264,7 +264,6 @@ app.post("/users/registroadmin", async(req,res)=>{
     }
 });
 
-
 /* fin */
 
 app.get("/users/registroadmin",(req,res)=>{
