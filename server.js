@@ -131,6 +131,7 @@ app.post("/users/registro", async(req,res)=>{
     }
 });
 
+
 app.post(
     "/users/login", 
 passport.authenticate("local", {
@@ -142,7 +143,6 @@ passport.authenticate("local", {
 
 /* 
  */
-
 
 
 
