@@ -181,7 +181,7 @@ app.get("/users/tienda",(req,res)=>{
         })
 
         app.get("/users/registroadmin",(req,res)=>{
-            res.render("registroadmin");
+            res.render("registroadmin",{rol:req.user.rol});
             });
 
             app.get("/users/passrecovery",(req,res)=>{
@@ -266,12 +266,6 @@ app.post("/users/registroadmin", async(req,res)=>{
 
 
 /* fin */
-
-app.get("/users/registroadmin",(req,res)=>{
-    res.render("registroadmin");
-    
-    });
-
     
 /* post registro passrecovery */
 app.post("/users/passrecovery", async(req,res)=>{
@@ -328,10 +322,7 @@ app.post("/users/passrecovery", async(req,res)=>{
 /* prueba inicio administrador */
 
 /* actualizacion perfil */
-app.get("/users/registroadmin",(req,res)=>{
-    res.render("registroadmin");
-    
-    });
+
 
     
 /* post registro passrecovery */

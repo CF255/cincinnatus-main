@@ -62,36 +62,6 @@ btn2.addEventListener('click', e =>{
        
     }
 });
-/* fin */
-
-/* abrir modal tabla */
-
-/* const openmodal = document.querySelector('.btnbuscar');
-const openmodaldos = document.querySelector('.botoninferiormodal');
-const modal = document.querySelector('.modal');
-const closemodal = document.querySelector('.modalclose');
-
-openmodal.addEventListener('click', (e)=>{
-    e.preventDefault();
-    modal.classList.add('modalshow');
-
-});
-
-openmodaldos.addEventListener('click', (e)=>{
-    e.preventDefault();
-    modal.classList.add('modalshow');
-
-});
-
-closemodal.addEventListener('click', (e)=>{
-    e.preventDefault();
-    modal.classList.remove('modalshow');
-
-}); */
-
-/* fin */
-
-/* boton limpiar */
 
 const botonborrar = document.getElementById("botonborrar");
 
@@ -105,8 +75,8 @@ if(botonborrar){
         document.getElementById("fecha").value="";
         document.getElementById("email").value="";
         document.getElementById("rol").value="";
-       /*  document.getElementById("contraseña").value=""; */
-       /*  document.getElementById("confi").value=""; */
+         document.getElementById("pres").value=""; 
+        document.getElementById("ress").value=""; 
        document.getElementById("pass").value="";
        document.getElementById("password2").value="";
      
@@ -124,8 +94,8 @@ if(botonborrarinferior){
         document.getElementById("fecha").value="";
         document.getElementById("email").value="";
         document.getElementById("rol").value="";
-       /*  document.getElementById("contraseña").value=""; */
-       /*  document.getElementById("confi").value=""; */
+       document.getElementById("pres").value=""; 
+         document.getElementById("ress").value=""; 
        document.getElementById("pass").value="";
        document.getElementById("password2").value="";
      
@@ -133,7 +103,6 @@ if(botonborrarinferior){
     
 }
 /* limpiar fin */
-
 
 
 /* fin modal tabla */
