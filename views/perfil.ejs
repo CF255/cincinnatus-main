@@ -39,10 +39,10 @@
                 <li><a id="btncreacionusuarionodenav"><img src="../../img/usuario.png" alt="">Creacion de usuarios</a></li>
 
            
-                <li><a  href="almacen.php"><img src="../../img/producto.png" alt="">Crear producto</a></li>
+                <li><a id="btnalmacennav" href="almacen.php"><img src="../../img/producto.png" alt="">Crear producto</a></li>
 
     
-                <li><a href="registrousuarios.php"><img src="../../img/almacen.png" alt="">almacen</a></li>
+                <li><a id="btnregistropronav" href="registrousuarios.php"><img src="../../img/almacen.png" alt="">almacen</a></li>
 
                 
                 <li><a id="btnloginnav"><img src="../../img/cerrar.png" alt="">Cerrar sesion</a></li>
@@ -187,24 +187,11 @@
         <span class="">Cancelar</span></button> 
 
     <input name="id" type="text" class="inputtext ocultar" id="id" value="<%= id %>" placeholder= "Respuesta de Seguridad">
-
-    
-
    </div>
-
    </form>
 
-   <section class="modal" id="modal">
-    <div class="modalcontainer">
-        
 
-        
-    </div>
-</section>
-
-
-
-   </div>
+   <input class="ocultar" id="rutarol" type="text" value="<%= rol %>">
 
    
 
@@ -219,6 +206,6 @@
 <!-- 
 <script src="../assets/codeuser.js"></script> -->
 <script src="../js/perfil.js"></script>
-<script src="../js/ruta.js"></script>
+<!-- <script src="../js/ruta.js"></script> -->
 </body>
 </html>

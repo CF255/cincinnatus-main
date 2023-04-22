@@ -8,9 +8,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../../public/css/almacen.css?v=<?php echo(rand()); ?>" />
-<!-- <script src="/js/mi_script.js?v=<?php echo(rand()); ?>"></script> -->
+    <title>Creacion Productos</title>
+    <link rel="stylesheet" href="../../public/css/editor.css?v=<?php echo(rand()); ?>" />
   <!--   <link rel="stylesheet" href="../../public/css/almacen.css">
     --> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
@@ -36,16 +35,16 @@
                 <li><a href="index.html"><img src="../../public/img/tienda.png" alt="">tienda</a></li>
 
             
-                <li><a href="registrousuarios.php"><img src="../../public/img/usuarios.png" alt="">Usuarios</a></li>
+                <li><a class="bloqueo" href="registrousuarios.php"><img src="../../public/img/usuarios.png" alt="">Usuarios</a></li>
 
            
-                <li><a class="active" href="creacionUadmin.html"><img src="../../public/img/usuario.png" alt="">Creacion de usuarios</a></li>
+                <li><a class="bloqueo" href="#" id="btncreacionusuarionodenav"><img src="../../public/img/usuario.png" alt="">Creacion de usuarios</a></li>
 
            
-                <li><a  href="almacen.php"><img src="../../public/img/producto.png" alt="">Crear producto</a></li>
+                <li><a class="active" href="#"><img src="../../public/img/producto.png" alt="">Crear producto</a></li>
 
     
-                <li><a href="registrousuarios.php"><img src="../../public/img/almacen.png" alt="">almacen</a></li>
+                <li><a class="bloqueo" href="vistaproductos.php"><img src="../../public/img/almacen.png" alt="">almacen</a></li>
 
                 
                 <li><a id="btnloginnav"><img src="../../public/img/cerrar.png" alt="">Cerrar sesion</a></li>
@@ -63,8 +62,8 @@
         </div>
         <!-- profile -->
         <div id="profile">
-            <div id="photo"><img src="../../public/img/logo.jpeg" alt="">
-                <div id="name"><span id="spannombre"></span> <?php session_start(); $user=$_SESSION['nombre_usuario']; echo "<h3> $user </h3>"; ?></div>
+        <a href="#" id="btnperfil" > <div id="photo"><img src="../../public/img/logo.jpeg" alt=""></a>
+                <div id="name">Cuenta Administrativa </div>
             </div>
         </div>
 
@@ -77,14 +76,15 @@
                 </a>
             </div>
 
-            <div class="item">
-                <a class="active" href="#">
+            
+            <div class="item bloqueo">
+                <a href="#" id="btncreacionusuarionode">
                     <div class="icon"><img src="../../public/img/usuario.png" alt=""></div>
                     <div class="title"><span>Creacion de usuarios</span></div>
                 </a>
             </div>
 
-            <div class="item">
+            <div class="item bloqueo">
                 <a href="registrousuarios.php">
                     <div class="icon"><img src="../../public/img/usuarios.png" alt=""></div>
                     <div class="title"><span>Usuarios</span></div>
@@ -92,13 +92,13 @@
             </div>
 
             <div class="item">
-                <a href="almacen.php" >
+                <a href="#" class="active">
                     <div class="icon"><img src="../../public/img/productos.png" alt=""></div>
                     <div class="title"><span>Crear producto</span></div>
                 </a>
             </div>
 
-            <div class="item">
+            <div class="item bloqueo">
                 <a href="vistaproductos.php">
                     <div class="icon"><img src="../../public/img/almacen.png" alt=""></div>
                     
@@ -123,64 +123,63 @@
   
 
     <!-- contenedor de inputs -->
-
-    <form action="javascript:void(0);"  onsubmit="app.guardar()">
-   
     <input type="hidden" id="id" />
     <div class="contenedorinput" id="continput">
-        <h1>Creacion de Usuarios</h1>
+        <h1>Creacion de productos</h1>
         <a href="#" id="warning" class="warning"></a>
 
-        <label for="" class="lblfoto">Foto de Perfil</label>
+        <form action="javascript:void(0);" method="POST"  onsubmit="app.guardar()" enctype="multipart/form-data" autocomplete="off">
+   
+    <div class="formgroup">
+       <label for="foto" class="lblfoto">Foto del producto</label>
         <img class="imglogo" src="../../public/img/logo.jpeg" alt="">
-        <a href="#"><img class="agregarimg" src="../../public/img/agregarfoto.png" alt=""></a>
-    <input type="file" class="form-control-file " name="foto" id="foto" placeholder="foto" aria-describedby="fileHelpId">
-     
-    <label class="lblnombres" for="">Usuario</label>
-    <input type="text" class="inputtext" id="usuario" placeholder="Nombre de Usuario">
-
-    <label class="lblnombres" for="">Nombre</label>
-    <input type="text" class="inputtext" id="nombre" placeholder="Nombre">
-
-    <label class="lblnombres" for="">Apellido</label>
-    <input type="text" class="inputtext" id="apellido" placeholder="Apellido">
-
-
-    <label class="lblnombres" for="">fecha</label>
-    <input type="date" class="inputtext" id="fecha" placeholder="Nombre del proveedor">
-
-
-    <label class="lblnombres" for="">Email</label>
-    <input type="text" class="inputtext" id="email" placeholder="Correo Electronico">
-
-
-    <label class="lblnombres"  for="">Rol</label>
-    <select autocomplete="off" name="rol" class="inputtext" tabindex="9" id="rol">
-            <option value=""></option>
-            <option value="Administrador">Administrador</option>
-            <option value="Editor">Editor</option>
-            <option value="Administrador_de_inventario">Administrador de inventario</option>
-            <option value="Supervisor">Supervisor</option>
-        </select> 
+    <input type="file" class="form-control-file " name="foto" id="foto" accept="image/*" >
+       </div>
     
-        <label class="lblnombres" for="">Contraseña</label>
-    <input type="password" class="inputtext" id="pass" placeholder="Contraseña">
+    
 
-    <label class="lblnombres" for="">Confirmar la contraseña</label>
-    <input type="password" class="inputtext" id="confi" placeholder="Confirma la Contraseña">
+   
+     
+    <label class="lblnombres" for="">Nombre</label>
+    <input type="text" class="inputtext" id="nombre" placeholder="Nombre del producto">
+
+    <label class="lblnombres" for="">Precio</label>
+    <input type="number" class="inputtext" id="precio" placeholder="precio del producto">
+
+    <label class="lblnombres" for="">Unidades</label>
+    <input type="number" class="inputtext" id="unidades" placeholder="Cantidad de unidades">
 
 
+    <label class="lblnombres" for="">Proveedor</label>
+    <input type="text" class="inputtext" id="proveedor" placeholder="Nombre del proveedor">
+
+
+    <label class="lblnombres" for="">Categoria</label>
+    <select autocomplete="off" name="categoria" class="inputtext" tabindex="9" id="categoria">
+            <option value=""></option>
+            <option value="Electronico">Electronico</option>
+            <option value="Libros">Libros</option>
+            <option value="Ropa">Ropa Inventario</option>
+            <option value="Accesorios">Accesorios</option>
+            <option value="Deportes">Deportes</option>
+            <option value="Juegos/Video juegos">Juegos/VideoJuegos</option>
+            <option value="Mascotas">Administrador Inventario</option>
+            <option value="Hogar">Hogar</option>
+        </select> 
+
+    <label class="lblnombres"  for="">Descripcion</label>
+    <textarea class="inputtext textarea" name="" id="descripcion" ></textarea>
+
+
+   
     </div>
     </form>
 
-    <!-- conatiner izquierdo -->
+    <!-- menu derecho -->
     <div class="containerright">
 
 
         <nav class="navbar" id="navid">
-           <!--  <div id="menu-btn2" class="toggle-collapse" id="toggle-button">
-                <i class="fa-solid fa-bars" ></i>
-                </div> -->
 
             <button  type="button"  class="toggle-collapse" id="toggle-button" >
             <img src="../../public/img/fondo.jpg" alt=""><span class="toggle-icon"></span>
@@ -199,46 +198,35 @@
                     <span class="item"></span>
                 </a></li>
 
-                
-         
            
-                <li><a href="#" id="btnbuscar"  class="btnbuscar">
+                <li><a href="#"  class="btnbuscar">
                     <span class="icons"><i class="icon fa-solid fa-magnifying-glass"></i></span>
                     <span class="item">Buscar</span>
                 </a></li>
                 
-              <!--   <li> <button onclick="app.editar()" class="btnside" ><span class=""><i class="fa-solid fa-pen-to-square"></i></span>
-                    <span class="">Editar</span>
-                </button> </li>
- -->
-               
+          
 
-                <li> <!-- <a href="#" id="btnactualizar" class="btnactualizar">
-                    <span class="icons"><i class="fa-solid fa-rotate"></i></span>
-                    <span class="item">Actualizar</span> 
-                </a> 
-             -->
+                <li> 
+                <form action="javascript:void(0);"  onsubmit="app.guardar()"> 
              <button  id="btnactu" class="btnside btnactu" ><span class=""><i class="fa-solid fa-rotate"></i></span>
-                    <span class="">actualizar</span>
+                    <span class="">Actualizar</span>
                 </button> 
+</form>
             </li>
 
                 
-                <li> <button  id="botonborrar" class="btnside btneliminar" ><span class=""><i class="fa-solid fa-eraser"></i></span>
+                <li> <button  id="botonborrar" class="btnside botonborrar" ><span class=""><i class="fa-solid fa-eraser"></i></span>
                     <span class="">Borrar</span>
                 </button> 
                 </li>
 
 
-             
                 <li>
                     <form action="javascript:void(0);"  onsubmit="app.guardar()">
                     <button class="btnside" type="submit"><span class=""><i class="fa-solid fa-floppy-disk"></i></span>
                     <span class="">Guardar</span></button> 
                     </form>
                  </li>
-                  
-                
 
                  
             </ul>
@@ -246,38 +234,34 @@
   
         </nav>
     </div>
-
-    <!-- fin -->
    
-<!-- modal container -->
-  
+
     <section class="modal" id="modal">
         <div class="modalcontainer">
             
   <main class="table" id="tablaproductos">
     <section class="tableheader" >
               
-    <h1 class="modaltitle">Tabla Usuarios</h1>
-            <h2 class="">Usuarios Registrados</h2>
+    <h1 class="modaltitle">Tabla Productos</h1>
+            <h2 class="">Productos Registrados</h2>
     </section>
     <section class="tablebody">
             <table class="containertable">
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Usuario</th>
                             <th>Nombre</th>
-                            <th>Apellido</th>
-                            <th>Fecha</th>
-                            <th>Email</th>
-                            <th>Contraseña</th>
-                            <th>Rol</th>
+                            <th>Precio</th>
+                            <th>Unidades</th>
+                            <th>Proveedor</th>
+                            <th>Categoria</th>
+                            <th>Descripcion</th>
                             <th>Foto</th>
                             <th></th>
                             
                         </tr>
                     </thead>
-                        <tbody id="tbodyuser">
+                        <tbody id="tbody">
                             
                     </tbody>
             </table>
@@ -288,8 +272,6 @@
             <a href="#" id="cerrarmodal" class="modalclose">Cerrar</a>
         </div>
     </section>
-
-   
 
     <section class="modalcorrecto" id="modalcorrecto">
         <div class="containermodalcorrec" id="containermodalcorrec">
@@ -311,8 +293,6 @@
                <a href="#" id="cerrarmodalwarning" class="cerrarmodalwarning"></a>
         </div>
     </section>
-
-    <!-- modal container fin -->
     
     <!-- BUTTON MENU -->
 
@@ -366,8 +346,12 @@
 
     <!-- FIN -->
 
-    <script src="../assets/codeuser.js"></script>
-    <script src="../../public/js/creacionUadmin.js"></script>
-    <script src="../../public/js/ruta.js"></script>
+    
+    <script src="../../public/js/almacen.js?v=<?php echo(rand()); ?>"></script>
+    <script src="../assets/code.js?v=<?php echo(rand()); ?>"></script>
+   <!--  <script src="../assets/code.js"></script>
+    <script src="../../public/js/almacen.js"></script>
+    <script src="../../public/js/ruta.js"></script> -->
+    <script src="../../public/js/ruta.js?v=<?php echo(rand()); ?>"></script>
 </body>
 </html>

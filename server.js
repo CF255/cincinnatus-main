@@ -24,6 +24,7 @@ app.use(session({
 })
 );
 
+
 app.use(flash())
 
 app.get("/",(req, res)=>{
@@ -42,7 +43,7 @@ app.get("/users/login",(req,res)=>{
     });
 
     app.get("/users/acceso",(req,res)=>{
-        res.render("acceso");
+        res.render("acceso",{rol:req.user.rol});
         });
 
     /* perfil */
@@ -138,7 +139,7 @@ app.post("/users/registro", async(req,res)=>{
 app.post(
     "/users/login", 
 passport.authenticate("local", {
-    successRedirect: "/users/registroadmin",
+    successRedirect: "/users/acceso",
     failureRedirect: "/users/login",
     failureFlash: true
 })
