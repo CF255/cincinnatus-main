@@ -69,5 +69,88 @@ if(btncancelar){
 }
 
 
+/* rutas */
+const rutarol = document.getElementById("rutarol");
+
+/* editor */
+const btnalmacen = document.getElementById('btnalmacen');
+if(btnalmacen){
+    btnalmacen.addEventListener('click', e =>{
+        if(rutarol.value == "Administrador"){
+            window.location.href = 'http://localhost/cincinnatus-main/app/views/almacen.php'
+        }else{
+            window.location.href = 'http://localhost/cincinnatus-main/app/views/editor.php'
+        }
+    
+    });
+}
+
+const btnalmacennav = document.getElementById("btnalmacennav");
+if(btnalmacennav){
+    btnalmacennav.addEventListener('click', e =>{
+        if(rutarol.value == "Administrador"){
+            window.location.href = 'http://localhost/cincinnatus-main/app/views/almacen.php'
+        }else{
+            window.location.href = 'http://localhost/cincinnatus-main/app/views/editor.php'
+        }
+    
+    });
+}
+
+/* fin */
+
+/* login exit */
+
+const btnloginnav = document.getElementById("btnloginnav"); 
+
+
+if(btnloginnav){
+    btnloginnav.addEventListener('click', e =>{
+     
+       window.location.href = 'http://localhost:4000/users/login'
+    
+    });
+    
+}
+
+
+const btnlogin= document.getElementById("btnlogin");
+
+if(btnlogin){
+    btnlogin.addEventListener('click', e =>{
+     
+        window.location.href = 'http://localhost:4000/users/login'
+     
+     });
+}
+/* fin */
+
+/* adminin */
+const btnvistaproductos = document.getElementById('btnvistaproductos');
+if(btnvistaproductos){
+    btnvistaproductos.addEventListener('click', e =>{
+        if(rutarol.value == "Administrador"){
+            window.location.href = 'http://localhost/cincinnatus-main/app/views/vistaproductos.php'
+        }else{
+            window.location.href = 'http://localhost/cincinnatus-main/app/views/adminin.php'
+        }
+    
+    });
+}
+
+const btnregistropronav = document.getElementById("btnregistropronav");
+if(btnregistropronav){
+    btnregistropronav.addEventListener('click', e =>{
+        if(rutarol.value == "Administrador"){
+            window.location.href = 'http://localhost/cincinnatus-main/app/views/vistaproductos.php'
+        }else{
+            window.location.href = 'http://localhost/cincinnatus-main/app/views/adminin.php'
+        }
+    
+    });
+}
+/* fin */
+/* fin */
+
 
 

@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 
 require 'app/config/conexion.php';
 
@@ -55,13 +55,13 @@ $cantidad=pg_num_rows($consulta);
         }</script>';
         }
 
-  /*   }else{
+    }else{
         echo'<script type="text/javascript">
     alert("Debe de introducir una Contraseña");
     window.location.href="app/views/loginadmi.php";
     </script>';
     
-    } */
+    
 
 /* fin */
 
@@ -91,11 +91,11 @@ if($rol == "Administrador"){
 }else{
     echo "No posees una Cuenta Administrativa como: $rol";
 }
-}  */
+}  
 
 ?>
 
 <!-- 
 
 
- -->
+ --> -->

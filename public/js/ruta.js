@@ -89,6 +89,7 @@ if(btnalmacen){
      });
 }
 
+
 const btnvistaproductos = document.getElementById("btnvistaproductos");
 
 if(btnvistaproductos){
