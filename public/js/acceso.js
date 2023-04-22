@@ -1,5 +1,16 @@
 const acceso = document.getElementById("acceso");
+const modal = document.querySelector('.modal');
+const modalclose = document.getElementById("modalclose");
 
+if(modalclose){
+    modalclose.addEventListener('click',(e)=>{
+        window.location.href = 'http://localhost:4000/users/loginadmi' 
+        
+    }); 
+}
+
+     
+      
 if(acceso.value == "Administrador"){
     window.location.href = 'http://localhost/cincinnatus-main/app/views/almacen.php'
 
@@ -11,5 +22,7 @@ if(acceso.value == "Administrador"){
 
     window.location.href = 'http://localhost/cincinnatus-main/app/views/adminin.php'
 }else if(acceso.value == "Cliente"){
-alert("esta no es una cuenta administrativa")
+  
+    modal.classList.add('modalshow');
+
 }

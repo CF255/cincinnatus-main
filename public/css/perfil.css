@@ -5,6 +5,12 @@
     text-decoration: none;
 }
 
+.bloqueo{
+    background-color: #a7a7a7;
+    pointer-events: none;
+    border-radius: 5px;
+}
+
 .active{
     background-color:rgb(57, 90, 92) ;
     color: #fff;

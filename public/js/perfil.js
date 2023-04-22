@@ -4,6 +4,16 @@ const check = document.querySelector('#check');
 const menu3 = document.querySelector('#continput');
 const menu4 = document.querySelector('#containernavegador');
 const menu2 = document.querySelector('#navid');
+const rutarol = document.getElementById("rutarol");
+const btncreacionusuarionode = document.getElementById("btncreacionusuarionode");
+const btncreacionusuarionodenav = document.getElementById("btncreacionusuarionodenav");
+const registrousuarionav = document.getElementById("registrousuarionav");
+const btnregistrousuarios = document.getElementById("btnregistrousuarios");
+const btnregistropronav = document.getElementById("btnregistropronav");
+const btnvistaproductos = document.getElementById('btnvistaproductos');
+const btnalmacennav = document.getElementById("btnalmacennav");
+const btnalmacen = document.getElementById('btnalmacen');
+
 
 check.addEventListener('click', e =>{
     menu3.classList.toggle("ocultar");
@@ -11,6 +21,34 @@ check.addEventListener('click', e =>{
     menu4.classList.toggle("ocultar");
 
 });
+
+
+/* bloqueos */
+/* editor */
+
+if(rutarol.value == "Editor"){
+
+    btncreacionusuarionode.classList.add("bloqueo");
+    btncreacionusuarionodenav.classList.add("bloqueo");
+    registrousuarionav.classList.add("bloqueo");
+    btnregistrousuarios.classList.add("bloqueo");
+    btnregistropronav.classList.add("bloqueo");
+    btnvistaproductos.classList.add("bloqueo");
+}
+
+if(rutarol.value == "Administrador_de_inventario"){
+
+    btncreacionusuarionode.classList.add("bloqueo");
+    btncreacionusuarionodenav.classList.add("bloqueo");
+    registrousuarionav.classList.add("bloqueo");
+    btnregistrousuarios.classList.add("bloqueo");
+    btnalmacennav.classList.add("bloqueo");
+    btnalmacen.classList.add("bloqueo");
+}
+
+
+
+/* fin */
 
 /* FIN */
 
@@ -70,10 +108,10 @@ if(btncancelar){
 
 
 /* rutas */
-const rutarol = document.getElementById("rutarol");
+
 
 /* editor */
-const btnalmacen = document.getElementById('btnalmacen');
+
 if(btnalmacen){
     btnalmacen.addEventListener('click', e =>{
         if(rutarol.value == "Administrador"){
@@ -85,7 +123,7 @@ if(btnalmacen){
     });
 }
 
-const btnalmacennav = document.getElementById("btnalmacennav");
+
 if(btnalmacennav){
     btnalmacennav.addEventListener('click', e =>{
         if(rutarol.value == "Administrador"){
@@ -126,7 +164,7 @@ if(btnlogin){
 /* fin */
 
 /* adminin */
-const btnvistaproductos = document.getElementById('btnvistaproductos');
+
 if(btnvistaproductos){
     btnvistaproductos.addEventListener('click', e =>{
         if(rutarol.value == "Administrador"){
@@ -138,7 +176,7 @@ if(btnvistaproductos){
     });
 }
 
-const btnregistropronav = document.getElementById("btnregistropronav");
+
 if(btnregistropronav){
     btnregistropronav.addEventListener('click', e =>{
         if(rutarol.value == "Administrador"){
@@ -149,6 +187,53 @@ if(btnregistropronav){
     
     });
 }
+
+
+/* fin */
+/* registro uduarios */
+
+
+
+if(btnregistrousuarios){
+    btnregistrousuarios.addEventListener('click', e =>{
+     
+        window.location.href = 'http://localhost/cincinnatus-main/app/views/registrousuarios.php'
+     
+     });
+}
+
+
+
+if(registrousuarionav){
+    registrousuarionav.addEventListener('click', e =>{
+     
+        window.location.href = 'http://localhost/cincinnatus-main/app/views/registrousuarios.php'
+     
+     });
+} 
+
+/* fin */
+/* crecion de uruarios */
+ 
+
+if(btncreacionusuarionode){
+    btncreacionusuarionode.addEventListener('click', e =>{
+     
+        window.location.href = 'http://localhost:4000/users/registroadmin'
+     
+     });
+}
+
+
+if(btncreacionusuarionodenav){
+    btncreacionusuarionodenav.addEventListener('click', e =>{
+     
+        window.location.href = 'http://localhost:4000/users/registroadmin'
+     
+     });
+}
+ 
+
 /* fin */
 /* fin */
 

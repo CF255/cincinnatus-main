@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 </head>
 <body>
@@ -42,8 +42,8 @@
 
    <div class="login-box">
     <img class="logoimg" src="../../img/logo.jpeg" alt="">
-    <h1>Hola</h1>
-    <h2>Inicio de sesion</h2>
+    <h1>Bienvenido</h1>
+    <h2>Inicio de sesion administrativo</h2>
 
     <form class="form"  method="POST" >
         
@@ -61,25 +61,34 @@
 
         <div class="box"></div>
 
-        <a href="/users/registro" class="a" >Crear Cuenta</a>
-        
         <a href="/users/passrecovery" class="lblolvidadocontra" >¿Has olvidado la contraseña?</a>
     
+
     </form>
    </div>
+
+    <section class="modal">
+        <div class="modalcontainer">
+            <h2 class="modaltitle">¡Acceso denegado!</h2>
+        
+            <p class="modalp"><i class="fa-solid fa-triangle-exclamation"></i> Lo sentimos, la cuenta introducida no tiene acceso a esta pagina.</p>
+       <a href="#" class="modalclose">Cerrar</a>
+        </div>
+    </section>
+
 
 
 <footer>
     <label for="">Copyright © 2023</label>
     
-    
-    <a href="/users/loginadmi"><img class="icon" src="/img/admin.png" alt=""></a> 
+
+    <a href="/users/login"><img class="icon" src="/img/admin.png" alt=""></a> 
    </footer>
 
     
    <script src="/js/logincliente.js"></script>
 
 
-   <script src="../../js/almacen.js"></script>
+   <script src="../../js/acceso.js"></script>
 </body>
 </html>

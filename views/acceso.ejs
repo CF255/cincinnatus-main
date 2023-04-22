@@ -4,11 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <title>Document</title>
 </head>
 <body>
+    <section class="modal">
+        <div class="modalcontainer">
+            <h2 class="modaltitle">¡Acceso denegado!</h2>
+        
+            <p class="modalp"><i class="fa-solid fa-triangle-exclamation"></i> Lo sentimos, la cuenta introducida no tiene acceso a esta pagina.</p>
+       <a href="#" id="modalclose" class="modalclose">Cerrar</a>
+        </div>
+    </section>
 
-    <input id="acceso" type="text" value="<%= rol %>">
+
+    <input class="ocultar" id="acceso" type="text" value="<%= rol %>">
     
     <script src="../js/acceso.js"></script>
 </body>

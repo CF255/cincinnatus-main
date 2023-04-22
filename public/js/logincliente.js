@@ -1,6 +1,6 @@
 
 const btncontinuar = document.querySelector('.btncontinuar');
-const modal = document.querySelector('.modal');
+
 const modalclose = document.querySelector('.modalclose');
 const btnloginadmi = document.getElementById("btnloginadmi"); 
 const btnlogin = document.getElementById("btnlogin"); 
@@ -57,3 +57,14 @@ modalclose.addEventListener('click',(e)=>{
     e.preventDefault();
     modal.classList.remove('modalshow');
 }); 
+
+const modal = document.querySelector('.modal');
+const prueba = document.getElementById("prueba");
+
+if(prueba){
+    prueba.addEventListener('click',(e)=>{
+
+        e.preventDefault();
+        modal.classList.add('modalshow');
+    }); 
+}

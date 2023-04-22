@@ -4,7 +4,7 @@ const btnlogin = document.getElementById("btnlogin");
 if(btnlogin){
     btnlogin.addEventListener('click', e =>{
      
-       window.location.href = 'http://localhost:4000/users/login'
+       window.location.href = 'http://localhost:4000/users/loginadmi'
     
     });
     
@@ -17,11 +17,12 @@ const btnloginnav = document.getElementById("btnloginnav");
 if(btnloginnav){
     btnloginnav.addEventListener('click', e =>{
      
-       window.location.href = 'http://localhost:4000/users/login'
+       window.location.href = 'http://localhost:4000/users/loginadmi'
     
     });
     
 }
+
 
 
 const btnloginadmin= document.getElementById("btnloginadmin");

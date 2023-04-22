@@ -25,6 +25,7 @@ app.use(session({
 );
 
 
+
 app.use(flash())
 
 app.get("/",(req, res)=>{
@@ -139,11 +140,21 @@ app.post("/users/registro", async(req,res)=>{
 app.post(
     "/users/login", 
 passport.authenticate("local", {
-    successRedirect: "/users/acceso",
+    successRedirect: "/users/tienda",
     failureRedirect: "/users/login",
     failureFlash: true
 })
 );
+
+app.post(
+    "/users/loginadmi", 
+passport.authenticate("local", {
+    successRedirect: "/users/acceso",
+    failureRedirect: "/users/loginadmi",
+    failureFlash: true
+})
+);
+
 
 /* 
  */
