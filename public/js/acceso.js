@@ -23,6 +23,6 @@ if(acceso.value == "Administrador"){
     window.location.href = 'http://localhost/cincinnatus-main/app/views/adminin.php'
 }else if(acceso.value == "Cliente"){
   
-    modal.classList.add('modalshow');
+    modal.classList.add('modalshow'); 
 
 }

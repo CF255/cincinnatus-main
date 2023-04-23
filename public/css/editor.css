@@ -6,9 +6,9 @@
 }
 
 .bloqueo{
+    background-color: #a7a7a7;
     pointer-events: none;
-    color: black;
-    background-color: #575757;
+    border-radius: 5px;
 
 }
 
