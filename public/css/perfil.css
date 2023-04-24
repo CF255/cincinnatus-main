@@ -11,6 +11,8 @@
     border-radius: 5px;
 }
 
+
+
 .active{
     background-color:rgb(57, 90, 92) ;
     color: #fff;
@@ -360,11 +362,12 @@ body{
 }
 
 .btnconfi{
-    position: absolute;
+     /* position: absolute;  */
     font-size: 35px;
     margin-left: 5px;
     top: 215px;
     color: black;
+   
 }
 
 .btnconfi:hover{

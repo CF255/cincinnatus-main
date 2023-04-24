@@ -47,6 +47,7 @@ app.get("/users/login",(req,res)=>{
         res.render("acceso",{rol:req.user.rol});
         });
 
+        
     /* perfil */
             app.get("/users/perfil",(req,res)=>{
 
@@ -258,7 +259,7 @@ app.post("/users/registroadmin", async(req,res)=>{
 
                 if(results.rows.length>0){
                     errors.push({message: "El nombre de usuario ya se encuentra registrado"});
-                    res.render("registro",{errors});
+                    res.render("registroadmin",{errors});
                 }else{
                     pool.query(
                         `INSERT INTO usuarios (usuario, nombre, apellido, email, fecha, pass, rol,pres,ress)

@@ -25,12 +25,13 @@ if(btnloginnav){
 
 
 
+
 const btnloginadmin= document.getElementById("btnloginadmin");
 
 if(btnloginadmin){
     btnloginadmin.addEventListener('click', e =>{
      
-        window.location.href = 'http://localhost/cincinnatus-main/app/views/loginadmi.php'
+        window.location.href = 'http://localhost:4000/users/loginadmi'
      
      });
 }

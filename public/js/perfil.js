@@ -4,6 +4,7 @@ const check = document.querySelector('#check');
 const menu3 = document.querySelector('#continput');
 const menu4 = document.querySelector('#containernavegador');
 const menu2 = document.querySelector('#navid');
+const btnconfi = document.querySelector('#btnconfi');
 const rutarol = document.getElementById("rutarol");
 const btncreacionusuarionode = document.getElementById("btncreacionusuarionode");
 const btncreacionusuarionodenav = document.getElementById("btncreacionusuarionodenav");
@@ -13,14 +14,21 @@ const btnregistropronav = document.getElementById("btnregistropronav");
 const btnvistaproductos = document.getElementById('btnvistaproductos');
 const btnalmacennav = document.getElementById("btnalmacennav");
 const btnalmacen = document.getElementById('btnalmacen');
+const btnmostrar = document.getElementById("btnmostrar");
+const perfil = document.getElementById("perfil");
 
 
-check.addEventListener('click', e =>{
-    menu3.classList.toggle("ocultar");
-    menu2.classList.toggle("ocultar");
-    menu4.classList.toggle("ocultar");
+const btnloginadmin= document.getElementById("btnloginadmin");
 
-});
+if(btnloginadmin){
+    btnloginadmin.addEventListener('click', e =>{
+     
+        window.location.href = 'http://localhost:4000/users/loginadmi'
+     
+     });
+}
+
+
 
 
 /* bloqueos */
@@ -81,8 +89,6 @@ btn.addEventListener('click', e =>{
 /* end side menu */
 
 const continput = document.getElementById('continput');
-
-const btnmostrar = document.getElementById("btnmostrar");
 
 const nombre = document.getElementById("nombre");
 
@@ -233,6 +239,14 @@ if(btncreacionusuarionodenav){
      });
 }
  
+check.addEventListener('click', e =>{
+    menu3.classList.toggle("ocultar");
+    menu2.classList.toggle("ocultar");
+    menu4.classList.toggle("ocultar");
+    btnconfi.classList.toggle("ocultar");
+
+});
+
 
 /* fin */
 /* fin */
