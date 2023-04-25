@@ -117,193 +117,6 @@ select:focus{
 .btnbuscar:hover{
     background: rgb(64, 109, 110);
 }
-
-
-
-
-
-/* menu button */
-
-:root{
-    --crl: #fff:
-}
-
-.navegador{
-    width: 500px;
-    height: 70px;
-    background-color: #fff;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    border: 2px solid rgb(50, 82, 83);
-
-    top: auto;
-    bottom: 10px;
-    margin-left: 3%;
-}
-
-.navegador ul{
-display: flex;
-/* width: 350px; */
-}
-
-.navegador ul li{
-    position: relative;
-    list-style: none;
-    width: 120px;
-    height: 70px;
-    z-index: 1;
-    margin: 15px;
-}
-
-.navegador ul li a{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    font-weight: 500; 
-}
-
-.navegador ul li button{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    font-weight: 900;
-    background: transparent;
-    border: none;
-    font-size: 1em;
-    cursor: pointer;
-   
-}
-
-.navegador ul li a .iconnav{
-    position: relative;
-   display: block;
-   line-height: 75px;
-   font-size: 1.5em;
-   text-align: center;
-   transition: 0.5s;
-   color: black;
-   
-}
-
-.navegador ul li button .iconnav{
-    position: relative;
-   display: block;
-   line-height: 75px;
-   font-size: 1.5em;
-   text-align: center;
-   transition: 0.5s;
-   color: black;
-   
-}
-
-.navegador ul li.activenav a .iconnav{
-   transform: translateY(-35px);
-}
-
-.navegador ul li.activenav button .iconnav{
-    transform: translateY(-35px);
- }
- 
-
-.navegador ul li a .textnav{
-    position: absolute;
-    color: black;
-    font-weight: 400;
-    font-size: 0.85em;
-    letter-spacing: 0.05em;
-    transition: 0.5s;
-    opacity: 0;
-    transform: translateY(20px);
- }
-
- .navegador ul li button .textnav{
-    position: absolute;
-    color: black;
-    font-weight: 400;
-    font-size: 0.85em;
-    letter-spacing: 0.05em;
-    transition: 0.5s;
-    opacity: 0;
-    transform: translateY(20px);
- }
-
-
- .navegador ul li.activenav a .textnav{
-    opacity: 1;
-    transform: translateY(10px);
- }
-
- .navegador ul li.activenav button .textnav{
-    opacity: 1;
-    transform: translateY(10px);
- }
-
- .indicadornav{
-    position: absolute;
-    top: -40%;
-    left: 14%;
-    width: 50px;
-    height: 50px;
-    background: cadetblue;
-    border-radius: 50%;
-    border: 6px solid #efefef;
-    transition: 0.5s;
- }
-
- .indicadornav::before{
-    content: '';
-    position: absolute;
-    top: 40%;
-    left: -24px;
-    height: 20px;
-    width: 20px;
-    background-color: #ffffff;
-    border-top-right-radius: 20px;
-    box-shadow: 1px -10px 0 0 #efefef;
-    
- }
-
- .indicadornav::after{
-    content: '';
-    position: absolute;
-    top: 40%;
-    right: -24px;
-    height: 20px;
-    width: 20px;
-    background-color: #ffffff;
-    border-top-left-radius: 20px;
-    box-shadow: -1px -10px 0 0 #efefef;
-    
- }
-
- .navegador ul li:nth-child(1).activenav ~ .indicadornav{
-    transform: translateX(calc(70px * 0));
- }
- .navegador ul li:nth-child(2).activenav ~ .indicadornav{
-    transform: translateX(calc(70px * 2.1));
- }
- .navegador ul li:nth-child(3).activenav ~ .indicadornav{
-    transform: translateX(calc(70px * 4.25));
- }
- .navegador ul li:nth-child(4).activenav ~ .indicadornav{
-    transform: translateX(calc(70px * 4.25));
- }
-
-
-
-
-
 /* fin */
 
 /* mensajes */
@@ -334,173 +147,44 @@ display: flex;
 /*  */
 
 
-/* modo tablet / pc*/
-@media(max-width: 3000px){
-    .nav2 ul{
-        display: none;
-    }
-
-    .navegador{
-        opacity: 0;
-        pointer-events: none;
-    } 
- 
+.navegador ul li{
+    position: relative;
+    list-style: none;
+    width: 120px;
+    height: 70px;
+    z-index: 1;
+    margin: 15px;
 }
-/*  */
 
-/* modo celular */
+/* menu buttom */
+.navegador ul li:nth-child(1).activenav ~ .indicadornav{
+    transform: translateX(calc(70px * 0));
+ }
+ .navegador ul li:nth-child(2).activenav ~ .indicadornav{
+    transform: translateX(calc(70px * 2.1));
+ }
+ .navegador ul li:nth-child(3).activenav ~ .indicadornav{
+    transform: translateX(calc(70px * 4.25));
+ }
+ .navegador ul li:nth-child(4).activenav ~ .indicadornav{
+    transform: translateX(calc(70px * 4.25));
+ }
+
+
+
+/* fin */
 
 @media (max-width: 600px){
-    
-    .mensajes{
-        
-        position: absolute;
-         top: 25PX;
-        right: 5px;
-        width: 140PX; 
-      /*  width: 25%; */
-    
+
+    .contenedorinput{
+
+        width: 90%;
+        height: 1070px;
+        border: 2Px solid rgb(57, 90, 92) ;
         border-radius: 10px;
-       /*  border: 2px solid #503602; */
+        background-color: white;
+        padding: 10px;
+        overflow: hidden;
     }
-    
-    .navegador{
-        opacity: 1;
-        pointer-events: unset;
-    } 
- 
-    .textarea{
-        width: 100%;
-        min-width: 50%;
-        min-height: 150px;
-        max-height: 200px;
-    }
-
-    .inputtext{
-        width: 100%;
-    }
-
- .contenedorinput{
-
-    width: 90%;
-    height: 1070px;
-    border: 2Px solid rgb(57, 90, 92) ;
-    border-radius: 10px;
-    background-color: white;
-    padding: 10px;
-    overflow: hidden;
-}
- 
-
-
-.ocultar{
-    opacity: 0;
-    pointer-events: none;
-    transition: .2s ease;
-}
-
-   .containerright{
-        opacity: 0;
-        pointer-events: none;
-    } 
-
-    .containermodalcorrec{
-        font-size: 20px;
-      }
-    
-
-    .nav2{
-        overflow: visible;
-    
-    }
-
-    
-
-    body{
-        margin: 0;
-      
-        overflow-x: hidden;
-    }
-
-
-
-    .menucolapse{
-        opacity: 0;
-        pointer-events: none;
-    }
-
-
-
-    .checkbtn{
-        display: block;
-    }
-
-    .nav2 ul{
-        display: block;
-    }
-
-    .containerlef{
-       opacity: 0;
-       pointer-events: none;
-    }
-
-    .nav2 ul{
-        position: fixed;
-        width: 99%;
-        height: 100vh;
-        background:rgb(57, 90, 92);
-        top: 36px;
-        left: -100%;
-        text-align: center;
-        transition: all .5s;
-        margin-top: 8px;
-        border: 3px solid cadetblue;
-    }
-
-    .nav2 ul li{
-        display: flex;
-        margin: 10px 0;
-        line-height: 30px;
-        background: cadetblue;
-        width: 95%;
-        margin-left: 2.5%;
-        border-radius: 15px;
-        /* padding: 10px 0; */
-    }
-
-    .nav2 ul li a {
-        font-size: 16px;
-         padding: 20px 41%;
-        /* justify-content: space-between; */
-        margin: 0 auto;
- 
-    }
-
-   
-
-    .nav2 li a:hover, .nav2 li a.active{
-        background-color: none;
-        color: rgb(0, 0, 0);
-        
-    } 
-
-    .nav2 ul li a:active{
-        background-color: rgb(255, 255, 255);
-        color: cadetblue;
-    }
-
-    #check:checked ~ ul{
-        left: 0;
-    }   
-
-    .modalcontainer{
-        padding: 2em 1.5em;
-    }
-
-    .modaltitle{
-        font-size: 2rem;
-    }
-}
-
-
-/* fin modo celular */
+     
+ }

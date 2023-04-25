@@ -310,158 +310,11 @@ transition: background-color .3s;
 
 /* fin */
 
-/* modal notificaciones */
-
-/* modal error */
-.modalerror{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin-top: 20px;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity .8s;
-    --transformc: translateY(-100vh) ;
-    --transitionc: transform .8s;
-  }
 
 
 
-
-  .containermodalerror{
-    margin: auto;
-    width: 50%;
-    max-width: 450px;
-    min-width: 300px;
-    place-items: center;
-    max-height: 300px;
-    background-color: rgb(221, 3, 3);
-    border-radius: 10px;
-    padding: 3em 2.5em;
-    color: #fff;
-    font-size: 25px;
-    border: 2px solid rgb(97, 1, 1);
-    transform: var(--transformc);
-    transition: var(--transitionc);
-  
-
-  }
-/* fin */
-
-/* modal warning */
-.modalwarning{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin-top: 20px;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity .8s;
-    --transformc: translateY(-100vh) ;
-    --transitionc: transform .8s;
-  }
-
-.containermodalwarning{
-    margin: auto;
-    width: 50%;
-    max-width: 450px;
-    min-width: 300px;
-    place-items: center;
-    max-height: 300px;
-    background-color: rgb(168, 124, 2);
-    border-radius: 10px;
-    padding: 3em 2.5em;
-    color: #fff;
-    font-size: 25px;
-    border: 2px solid rgb(97, 59, 1);
-    transform: var(--transformc);
-    transition: var(--transitionc);
-  }
-  
-
-
-/* fin */
-
-  .modalcorrecto{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin-top: 20px;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity .8s;
-    --transformc: translateY(-100vh) ;
-    --transitionc: transform .8s;
-  }
-
-
-
-
-  .containermodalcorrec{
-    margin: auto;
-    width: 50%;
-    max-width: 450px;
-    min-width: 300px;
-    place-items: center;
-    max-height: 300px;
-    background-color: rgb(2, 168, 113);
-    border-radius: 10px;
-    padding: 3em 2.5em;
-    color: #fff;
-    font-size: 25px;
-    border: 2px solid rgb(1, 97, 65);
-    transform: var(--transformc);
-    transition: var(--transitionc);
-  
-
-  }
-
-
-  /* mostrar modales */
-  .modalcorrectoshow{
-    opacity: 1;
-    pointer-events: unset;
-    transition: opacity .7s;
-    --transformc: translateY(0) ;
-  }
-
-  /* fin */
-
-/* fin *
-
-/* menu button */
-
-:root{
-    --crl: #fff:
-}
-
-.navegador{
-    width: 500px;
-    height: 70px;
-    background-color: #fff;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    border: 2px solid rgb(50, 82, 83);
-
-    top: auto;
-    bottom: 10px;
-    margin-left: 3%;
-}
-
-.navegador ul{
-display: flex;
-/* width: 350px; */
-}
-
+ 
+/* se queda */
 .navegador ul li{
     position: relative;
     list-style: none;
@@ -471,134 +324,9 @@ display: flex;
     margin: 15px;
 }
 
-.navegador ul li a{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    font-weight: 500; 
-}
 
-.navegador ul li button{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    font-weight: 900;
-    background: transparent;
-    border: none;
-    font-size: 1em;
-    cursor: pointer;
-   
-}
 
-.navegador ul li a .iconnav{
-    position: relative;
-   display: block;
-   line-height: 75px;
-   font-size: 1.5em;
-   text-align: center;
-   transition: 0.5s;
-   color: black;
-   
-}
-
-.navegador ul li button .iconnav{
-    position: relative;
-   display: block;
-   line-height: 75px;
-   font-size: 1.5em;
-   text-align: center;
-   transition: 0.5s;
-   color: black;
-   
-}
-
-.navegador ul li.activenav a .iconnav{
-   transform: translateY(-35px);
-}
-
-.navegador ul li.activenav button .iconnav{
-    transform: translateY(-35px);
- }
  
-
-.navegador ul li a .textnav{
-    position: absolute;
-    color: black;
-    font-weight: 400;
-    font-size: 0.85em;
-    letter-spacing: 0.05em;
-    transition: 0.5s;
-    opacity: 0;
-    transform: translateY(20px);
- }
-
- .navegador ul li button .textnav{
-    position: absolute;
-    color: black;
-    font-weight: 400;
-    font-size: 0.85em;
-    letter-spacing: 0.05em;
-    transition: 0.5s;
-    opacity: 0;
-    transform: translateY(20px);
- }
-
-
- .navegador ul li.activenav a .textnav{
-    opacity: 1;
-    transform: translateY(10px);
- }
-
- .navegador ul li.activenav button .textnav{
-    opacity: 1;
-    transform: translateY(10px);
- }
-
- .indicadornav{
-    position: absolute;
-    top: -40%;
-    left: 14%;
-    width: 50px;
-    height: 50px;
-    background: cadetblue;
-    border-radius: 50%;
-    border: 6px solid #efefef;
-    transition: 0.5s;
- }
-
- .indicadornav::before{
-    content: '';
-    position: absolute;
-    top: 40%;
-    left: -24px;
-    height: 20px;
-    width: 20px;
-    background-color: #ffffff;
-    border-top-right-radius: 20px;
-    box-shadow: 1px -10px 0 0 #efefef;
-    
- }
-
- .indicadornav::after{
-    content: '';
-    position: absolute;
-    top: 40%;
-    right: -24px;
-    height: 20px;
-    width: 20px;
-    background-color: #ffffff;
-    border-top-left-radius: 20px;
-    box-shadow: -1px -10px 0 0 #efefef;
-    
- }
 
  .navegador ul li:nth-child(1).activenav ~ .indicadornav{
     transform: translateX(calc(70px * 0));
@@ -617,40 +345,22 @@ display: flex;
  }
 
 
+/* fin */
 
+@media (max-width: 600px){
 
+     .contenedorinput{
+
+    width: 90%;
+    height: 900px;
+    border: 2Px solid rgb(57, 90, 92) ;
+    border-radius: 10px;
+    background-color: white;
+    padding: 10px;
+    overflow: hidden;
+}
+ 
+ }
 
 /* fin */
 
-/* mensajes */
-.mensajes{
-    position: absolute;
-     top: 60PX;
-    right: 10px;
-    width: 200PX;
-    border-radius: 10px;
-   /*  border: 2px solid #503602; */
-}
-
-.mensajes li{
-    padding: 10px;
-}
-
-
-.colormc{
-    background-color: #3fa238;
-    color: #fff;
-}
-
-.colormin{
-    background-color:#CB8B07 ;
-    color: #fff;
-}
-
-/*  */
-
-
-
-
-
-/* fin modo celular */
