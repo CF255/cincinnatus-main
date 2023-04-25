@@ -2,7 +2,8 @@
 /* ocultar menu imputs y sidemenu rigth */
 const check = document.querySelector('#check');
 const tablaproductos = document.getElementById('tablaproductos');
-
+const btn = document.querySelector('#menu-btn');
+const menu = document.querySelector('#sidemenu');
 
 check.addEventListener('click', e =>{
     tablaproductos.classList.toggle("ocultar");
@@ -14,8 +15,7 @@ check.addEventListener('click', e =>{
 
 /* side menu left */
 
-const btn = document.querySelector('#menu-btn');
-const menu = document.querySelector('#sidemenu');
+
 
 btn.addEventListener('click', e =>{
     menu.classList.toggle("menuexpanded");
