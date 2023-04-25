@@ -2,6 +2,10 @@
 /* ocultar menu imputs y sidemenu rigth */
 const check = document.querySelector('#check');
 const tablaproductos = document.getElementById('tablaproductos');
+const btn = document.querySelector('#menu-btn');
+const menu = document.querySelector('#sidemenu');
+const continput = document.getElementById('continput');
+const btncancelar = document.getElementById("btncancelar");
 
 
 
@@ -23,10 +27,6 @@ if(check){
 
 /* side menu left */
 
-
-const btn = document.querySelector('#menu-btn');
-const menu = document.querySelector('#sidemenu');
-
 btn.addEventListener('click', e =>{
     menu.classList.toggle("menuexpanded");
     menu.classList.toggle("menucolapse");
@@ -36,11 +36,6 @@ btn.addEventListener('click', e =>{
 
 });
 /* end side menu */
-
-const continput = document.getElementById('continput');
-
-
-const btncancelar = document.getElementById("btncancelar");
 
 if(btncancelar){
     btncancelar.addEventListener('click', e =>{
