@@ -20,7 +20,7 @@
 </head>
 <body>
     <nav class="nav2">
-    <a href="#" class="fotoperfilnav" id="btnperfil" > <div id="photonav"><img src="../../public/img/logo.jpeg" alt=""></a>
+ 
         <input type="checkbox" name="" id="check">
         <label for="check" class="checkbtn">
             <i class="fa-solid fa-bars"></i>
@@ -31,12 +31,13 @@
         </a>
 
         <ul class="navlist">
-           
 
-                <li><a href="index.html"><img src="../../public/img/tienda.png" alt="">tienda</a></li>
+       <ol> <a  class="fotoperfilnav"> <div id="photonav"><img src="../../public/img/logo.jpeg" alt=""></a></ol>
+
+         <li><a href="index.html"><img src="../../public/img/tienda.png" alt="">tienda</a></li>
 
                 
-                <li><a href="#" id="btncreacionusuarionodenav"><img src="../../public/img/usuario.png" alt="">Creacion de usuarios</a></li>
+                <li><a  id="btncreacionusuarionodenav"><img src="../../public/img/usuario.png" alt="">Creacion de usuarios</a></li>
             
                 <li><a href="registrousuarios.php"><img src="../../public/img/usuarios.png" alt="">Usuarios</a></li>
 

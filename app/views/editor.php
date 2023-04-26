@@ -21,7 +21,7 @@
 </head>
 <body>
     <nav class="nav2">
-    <a href="#" class="fotoperfilnav" id="btnperfil" > <div id="photonav"><img src="../../public/img/logo.jpeg" alt=""></a>
+   
         <input type="checkbox" name="" id="check">
         <label for="check" class="checkbtn">
             <i class="fa-solid fa-bars"></i>
@@ -32,7 +32,7 @@
         </a>
 
         <ul class="navlist">
-           
+        <a href="#" class="fotoperfilnav" id="btnperfil" > <div id="photonav"><img src="../../public/img/logo.jpeg" alt=""></a>
 
                 <li><a href="index.html"><img src="../../public/img/tienda.png" alt="">tienda</a></li>
 

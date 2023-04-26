@@ -29,6 +29,25 @@ if(btnloginadmin){
 }
 
 
+const btnindex = document.getElementById("btnindex");
+
+if(btnindex){
+    btnindex.addEventListener('click', e =>{
+     
+        window.location.href = 'http://localhost/cincinnatus-main/app/views/index.html'
+     
+     });
+}
+
+const btnindexnav = document.getElementById("btnindexnav");
+
+if(btnindexnav){
+    btnindexnav.addEventListener('click', e =>{
+     
+        window.location.href = 'http://localhost/cincinnatus-main/app/views/index.html'
+     
+     });
+}
 
 
 /* bloqueos */
