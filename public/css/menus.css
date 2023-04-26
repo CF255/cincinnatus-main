@@ -40,13 +40,12 @@ body{
 
 .linkphoto{
     position: absolute;
-    padding: 20px 50px;
+    padding: 1px 40px;
 }
 
 .logoimg{
-    height: 30px;
+    height: 40px;
     border-radius: 50px;
-   margin-top: -15px;
    margin-left: -30px;
 }
  
@@ -739,6 +738,17 @@ nav ul li a img{
 
   /* fin */
 
+  /* foto perfil nav*/
+.fotoperfilnav img{
+    width: 40px;
+    border-radius: 50px;
+    float: right;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+/* fin */
+
 
 /* modo tablet / pc*/
 @media(max-width: 3000px){
@@ -757,7 +767,11 @@ nav ul li a img{
 /* modo celular */
 
 @media (max-width: 600px){
-
+    .fotoperfilnav img{
+        display: block;
+        margin-right: 10px;
+        margin-top: 3px;
+    }
     
     .containerduo{
         /*   background-color: #CB8B07; */
@@ -1135,4 +1149,5 @@ display: flex;
  }
 
 /* fin */
+
 

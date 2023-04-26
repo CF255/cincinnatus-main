@@ -89,7 +89,6 @@ app.post("/users/registro", async(req,res)=>{
     } 
     
 
-
     if(pass != password2){
         errors.push({message: "Las contraseñas no coinciden"});
     }
@@ -110,8 +109,7 @@ app.post("/users/registro", async(req,res)=>{
                 if(err){
                     throw err;
                 }
-                
-                
+        
                 console.log(results.rows);
 
                 if(results.rows.length>0){
@@ -136,7 +134,6 @@ app.post("/users/registro", async(req,res)=>{
         );
     }
 });
-
 
 app.post(
     "/users/login", 

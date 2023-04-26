@@ -20,25 +20,32 @@
 
 </head>
 <body>
+    
     <nav class="nav2">
+    
         <input type="checkbox" name="" id="check">
+
         <label for="check" class="checkbtn">
             <i class="fa-solid fa-bars"></i>
         </label>
-        <a href="#" class="linkphoto">
-            <img src="../../public/img/logo.jpeg" alt="" class="logoimg">
-            
-        </a>
 
+        <a href="#" class="linkphoto">
+            <img src="../../public/img/logo.jpeg" alt="" class="logoimg">   
+        </a>
+      
+
+      
         <ul class="navlist">
+        <a href="#" class="fotoperfilnav" id="btnperfil" > <div id="photonav"><img src="../../public/img/logo.jpeg" alt=""></a>
+    
            
                 <li><a href="index.html"><img src="../../public/img/tienda.png" alt="">tienda</a></li>
 
+                
+                <li><a class="bloqueo" href="#" id="btncreacionusuarionodenav"><img src="../../public/img/usuario.png" alt="">Creacion de usuarios</a></li>
+
             
                 <li><a class="bloqueo" href="registrousuarios.php"><img src="../../public/img/usuarios.png" alt="">Usuarios</a></li>
-
-           
-                <li><a class="bloqueo" href="#" id="btncreacionusuarionodenav"><img src="../../public/img/usuario.png" alt="">Creacion de usuarios</a></li>
 
            
                 <li><a class="bloqueo"  href="almacen.php"><img src="../../public/img/producto.png" alt="">Crear producto</a></li>

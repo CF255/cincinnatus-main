@@ -172,3 +172,13 @@ if(btnperfil){
      
      });
 }
+
+
+const btnperfilnav = document.getElementById("photonav");
+if(btnperfilnav){
+    btnperfilnav.addEventListener('click', e =>{
+     
+        window.location.href = 'http://localhost:4000/users/perfil'
+     
+     });
+}
