@@ -23,6 +23,7 @@ nav{
     margin-top: 0.5%;
     border: 2px solid rgb(57, 90, 92);
     align-items: center;
+    margin-bottom: 0;
 }
 
 .linkphoto{
@@ -141,23 +142,23 @@ li a.active, li a:hover{
 
 .carrousel{
     width: 100%;
-    max-width: 120em;
+    max-width: 100em;
+    max-height: 650px;
     padding: 2em;
     background-color: blue;
-    margin-top: 10px;
-    padding: 2em;
+    padding: 0 1em 1em;
     overflow-x: hidden;
+    margin: 0 auto;
 }
 .carrousel .father{
     width: 200%;
-
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
     background-color: red;
-    padding: 1em;
-
+    padding: 0 1em;
+    max-height: 550PX;
     transition: all .5s ease;
     transform: translateX(0%);
 }
@@ -170,7 +171,8 @@ li a.active, li a:hover{
 .carrousel .img{
     width: calc(100%/2 - 2em);
     background-color: rgb(30, 255, 0);
-    min-height: 10vh;
+  /*   min-height: 8vh; */
+  max-height: 450px;
 }
 .carrousel .points{
     width: 100%;
