@@ -3,62 +3,6 @@ const point = document.querySelectorAll('.point')
 
 
 
-// recorriendo cada punto
-point.forEach ((allpoint, i)=>{
-
-    
-    //asignar un click a cada punto
-    point[i].addEventListener('click',()=>{
-        
-        //guardando la posicion del punto
-        let position = i
-        //calculando el espacio de desplazamiento
-        let operation = position * - 20
-
-        //moviendo el container father
-        father.style.transform = `translateX(${operation}%)`
-
-        //recorriendo todos los puntos
-        point.forEach((allpoint, i)=>{
-            //quitando el ativo
-            point[i].classList.remove('activo')
-        })
-        //add nuevo activo
-        point[i].classList.add('activo')
-    })
-  
-
-})
-setInterval(function(){ 
-
-    point.forEach ((allpoint, i)=>{
-
-    
-        
-        
-            //guardando la posicion del punto
-            let position = i
-           
-            //calculando el espacio de desplazamiento
-            let operation = position - 24
-        
-            //moviendo el container father
-            father.style.transform = `translateX(${operation}%)`
-        
-            //recorriendo todos los puntos
-            point.forEach((allpoint, i)=>{
-                //quitando el ativo
-                point[i].classList.remove('activo')
-            })
-            //add nuevo activo
-            point[i].classList.add('activo')
-        
-      
-    
-    })
-}, 2000);
-
-
 const check = document.getElementById('check')
 
 check.addEventListener('click',(e)=>{
@@ -70,3 +14,60 @@ check.addEventListener('click',(e)=>{
 
 
 
+/* carrusel dos */
+
+const slider = document.querySelector('#slider');
+let slidersection = document.querySelectorAll('.slidersection');
+let slidersectionlast = slidersection[slidersection.length -1]
+
+const btnleft = document.querySelector('#btnleft');
+const btnright = document.querySelector('#btnright');
+
+slider.insertAdjacentElement('afterbegin', slidersectionlast);
+
+/* btn right */
+function siguiente(){
+    let slidersectionfirst = document.querySelectorAll(".slidersection")[0];
+
+    slider.style.marginLeft = "-200%";
+    slider.style.transition = "all 0.5s";
+    setTimeout(function(){
+        slider.style.transition = "none";
+        slider.insertAdjacentElement('beforeend', slidersectionfirst);
+        slider.style.marginLeft = "-100%";
+    }, 500);
+}
+btnright.addEventListener('click',function(){
+    siguiente();
+});
+/* fin */
+
+/* boton left */
+
+function anterior(){
+    
+let slidersection = document.querySelectorAll('.slidersection');
+let slidersectionlast = slidersection[slidersection.length -1]
+
+
+    slider.style.marginLeft = "0%";
+    slider.style.transition = "all 0.5s";
+    setTimeout(function(){
+        slider.style.transition = "none";
+        slider.insertAdjacentElement('afterbegin', slidersectionlast);
+        slider.style.marginLeft = "-100%";
+    }, 500);
+}
+btnleft.addEventListener('click',function(){
+    anterior();
+});
+
+/* end */
+
+
+/* automatico */
+    setInterval(function() {
+        siguiente();
+    }, 5000);
+/* fin */
+/* fin */
