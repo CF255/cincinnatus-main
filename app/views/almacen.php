@@ -26,7 +26,7 @@
             <i class="fa-solid fa-bars"></i>
         </label>
         <a href="#" class="linkphoto">
-            <img src="../../public/img/logo.jpeg" alt="" class="logoimg">
+            <img src="../../public/img/birdlogo.png" alt="" class="logoimg">
             
         </a>
 

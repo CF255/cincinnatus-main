@@ -30,7 +30,7 @@
         </label>
 
         <a href="#" class="linkphoto">
-            <img src="../../public/img/logo.jpeg" alt="" class="logoimg">   
+            <img src="../../public/img/birdlogo.pngg" alt="" class="logoimg">   
         </a>
       
 
