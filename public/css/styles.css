@@ -23,7 +23,7 @@ nav{
     margin-top: 0.5%;
     border: 2px solid rgb(57, 90, 92);
     align-items: center;
-    margin-bottom: 0;
+    margin-bottom: 10px;
 }
 
 .linkphoto{
@@ -145,18 +145,18 @@ li a.active, li a:hover{
     max-width: 100em;
     max-height: 650px;
     padding: 2em;
-    background-color: blue;
+    background-color: efefefef;
     padding: 0 1em 1em;
     overflow-x: hidden;
     margin: 0 auto;
 }
 .carrousel .father{
-    width: 200%;
+    width: 500%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    background-color: red;
+    background-color: efefefef;
     padding: 0 1em;
     max-height: 550PX;
     transition: all .5s ease;
@@ -169,10 +169,11 @@ li a.active, li a:hover{
 }
 
 .carrousel .img{
-    width: calc(100%/2 - 2em);
+    width: calc(100%/5 - 2em);
     background-color: rgb(30, 255, 0);
-  /*   min-height: 8vh; */
+/*      min-height: 8vh;  */
   max-height: 450px;
+  border-radius: 5px;
 }
 .carrousel .points{
     width: 100%;
@@ -181,19 +182,21 @@ li a.active, li a:hover{
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-    background-color: green;
+    background-color: rgb(255, 255, 255);
     margin: 1em 0 0;
+    border-radius: 5px;
+    border: 2px solid rgb(59, 99, 101);
 }
 .carrousel .point{
-    width: 2em;
-    height: 2em;
+    width: 1em;
+    height: 1em;
     margin: 1em 0.5em 0;
     border-radius: 50%;
-    background-color: yellow;
+    background-color: rgb(185, 185, 185);
 }
 
 .carrousel .point.activo{
-    background-color: aqua;
+    background-color: rgb(60, 60, 60);
 }
 
 /* carrousel end*/
