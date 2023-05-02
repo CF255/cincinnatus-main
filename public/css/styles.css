@@ -154,9 +154,28 @@ object-fit: cover;
     nav ul li a{
         font-size: 14px;
     }
+
+    .slider{
+        display: flex;
+        width: 500%;
+        height: 500px;
+        margin-left: -100%;
+    
+    }
+    
 }
 
 @media (max-width: 500px){
+
+    .slider{
+        display: flex;
+        width: 500%;
+        height: 400px;
+        margin-left: -100%;
+    
+    }
+    
+
     .checkbtn{
         display: block;
     }
