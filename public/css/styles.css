@@ -9,8 +9,8 @@
 }
 
 body{
-    background-color: #efefefef;
-    font-family: 'Paytone One', sans-serif;
+    background-color: #cdcdcda2;
+    font-family: 'Kanit', sans-serif;
   /*   display: flex; */
   
 }
@@ -270,14 +270,16 @@ object-fit: cover;
 }
 
 .containerimg .img2{
-    background-color: #c4c000;
+    background-color: #fff;
 }
 
 .containerimg .img3{
-    background-color: #cc0000c0;
+    background-color: #fff;
 }
 
 /*fin del container imagenes */
+
+
 
 .horizontal{
     width: 100%;
@@ -378,8 +380,9 @@ max-height: 700px;
     width: 100%;
     height: auto;
     overflow: hidden;
-    max-height: 400px;
+    max-height: 500px;
    /*  border-radius: 5px; */
+   padding: 2em 1px;
 }
 
 .img2 ul{
@@ -387,6 +390,7 @@ display: flex;
    padding: 0;
    width: 400%;
    animation: slide2 13s infinite alternate ease-in-out;
+   text-align: center;
 }
 
 .img2 li{
@@ -395,11 +399,18 @@ display: flex;
 }
 
 .img2 img{
-width: 200%;
-height: 200%;
+width: 90%;
+height: 100%;
 max-width: 600px;
-max-height: 400px;
+max-height: 350px;
 
+}
+
+.img2 label{
+    font-size: 25px;
+    font-weight: 300;
+    color: black;
+    margin-left: 20px;
 }
 
 @keyframes slide2{
@@ -423,7 +434,7 @@ max-height: 400px;
     width: 100%;
     height: auto;
     overflow: hidden;
-    max-height: 400px;
+    max-height: 500px;
     /* border-radius: 5px; */
     padding: 2em 1px;
 
@@ -448,17 +459,16 @@ display: flex;
 width: 90%;
 height: 100%;
 max-width: 600px;
-max-height: 400px;
+max-height: 350px;
 
 
 }
 
 .img3 label{
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 300;
     color: black;
-    margin: 10px;
-    
+    margin-left: 20px;
 }
 
 @keyframes slide3{
