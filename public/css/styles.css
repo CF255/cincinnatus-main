@@ -231,12 +231,13 @@ object-fit: cover;
 .containerimg{
  /*    box-shadow: 1px 1px 100px rgba(0, 0, 0, 0.5); */
 
-    width: 90%;
+   width: 90%;
    margin: 0 auto;
-   max-height: 700px;
-   max-width: 100em;
+   max-width: 95em;
    margin-top: 20px;
-
+   margin-bottom: 20px;
+   height: 800px;
+   
 }
 
 
@@ -260,13 +261,13 @@ object-fit: cover;
 
 
 .containerimg .vertical{
-    background-color: #ff8000;
+    background-color: #fff;
     grid-area: vertical;
 }
 
 .containerimg .horizontal{
     grid-area: horizontal;
-    background-color: #0078af;
+    background-color: #fff;
 }
 
 .containerimg .img2{
@@ -285,8 +286,8 @@ object-fit: cover;
     width: 100%;
     height: auto;
     overflow: hidden;
-    max-height: 400px;
     /* border-radius: 5px; */
+    padding: 1.5em 1px;
     
 }
 
@@ -295,18 +296,23 @@ display: flex;
    padding: 0;
    width: 400%;
    animation: slide 16s infinite alternate ease-in-out;
+   text-align: center;
 }
 
 .horizontal li{
     list-style: none;
     width: 100%;
+    height: 280px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+ 
 }
 
 .horizontal img{
-width: 200%;
-height: 200%;
-max-width: 800px;
-max-height: 400px;
+width: 95%;
+height: 100%;
+max-height: 350px;
+cursor: pointer;
 
 }
 
@@ -335,6 +341,7 @@ max-height: 400px;
     height: auto;
     overflow: hidden;
   /*   border-radius: 5px; */
+  padding: 2em 1px;
 }
 
 .vertical ul{
@@ -342,18 +349,21 @@ display: flex;
    padding: 0;
    width: 400%;
    animation: slidev 18s infinite alternate ease-in-out;
+   text-align: center;
 }
 
 .vertical li{
     list-style: none;
     width: 100%;
+    height: 670px;
 }
 
 .vertical img{
-width: 200%;
-height: 200%;
+width: 90%;
+height: 100%;
 max-width: 500px;
-max-height: 700px;
+
+
 
 }
 
@@ -383,6 +393,7 @@ max-height: 700px;
     max-height: 500px;
    /*  border-radius: 5px; */
    padding: 2em 1px;
+ /*   max-width: 400px; */
 }
 
 .img2 ul{
@@ -396,6 +407,9 @@ display: flex;
 .img2 li{
     list-style: none;
     width: 100%;
+    height: 290px;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
 
 .img2 img{
@@ -403,13 +417,16 @@ width: 90%;
 height: 100%;
 max-width: 600px;
 max-height: 350px;
+cursor: pointer;
 }
 
-.img2 label{
-    font-size: 25px;
-    font-weight: 300;
-    color: black;
-    margin-left: 20px;
+
+.lblver{
+color: cadetblue;
+margin-right: 15px;
+font-size: 16px;
+cursor: pointer;
+float: right;
 }
 
 @keyframes slide2{
@@ -430,6 +447,7 @@ max-height: 350px;
 /* img 3*/
 
 .img3{
+   
     width: 100%;
     height: auto;
     overflow: hidden;
@@ -451,7 +469,9 @@ display: flex;
 .img3 li{
     list-style: none;
     width: 100%;
-    
+    height: 290px;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
 
 .img3 img{
@@ -459,11 +479,10 @@ width: 90%;
 height: 100%;
 max-width: 600px;
 max-height: 350px;
-
-
+cursor: pointer;
 }
 
-.img3 label{
+.lbltitulo{
     font-size: 25px;
     font-weight: 300;
     color: black;
@@ -485,4 +504,48 @@ max-height: 350px;
     100%{margin-left: -300%;}
 }
 
+/* fin */
+
+/* slider auto infinito */
+
+.sliderauto{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 95em;
+    height: auto;
+    overflow: hidden;
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.sliderauto .slider-track{
+    display: flex;
+    animation: scroll 40s linear infinite;
+    -webkit-animation:scroll 40s linear infinite ;
+    width: calc(200px * 10);
+}
+
+.sliderauto .slideimg{
+    width: 200px;
+  
+}
+
+.sliderauto .slideimg img{
+    width: 100%;
+}
+
+
+@keyframes scroll{
+    0%{
+        -webkit-transform: translate(0);
+        transform: translate(0);
+    }
+
+    100%{
+        -webkit-transform: translate(calc(-200px * 10));
+        transform: translate(calc(-200px * 10));
+    }
+
+}
 /* fin */
