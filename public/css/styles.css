@@ -650,4 +650,9 @@ height: 100%;
 .carrusel-next{
     right: 0;
 }
+
+.marco{
+    background-color: #fff;
+    border: 1px solid cadetblue;
+}
 /* fin */
