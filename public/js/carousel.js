@@ -71,3 +71,39 @@ btnleft.addEventListener('click',function(){
     }, 5000);
 /* fin */
 /* fin */
+
+/* slider infinito */
+const carrousel = document.querySelector(".carrouselitems");
+
+let maxScrollLeft = carrousel.scrollWidth - carrousel.clientWidth;
+let interalo = null;
+let step = 1;
+
+const start = ()=>{
+interalo = setInterval(function(){
+    carrousel.scrollLeft = carrousel.scrollLeft  + step;
+    if(carrousel.scrollLeft == maxScrollLeft){
+        step = step * -1;
+    }else if(carrousel.scrollLeft === 0){
+        step = step * -1;
+
+    }
+}, 10);
+}
+
+const stop = () =>{
+    clearInterval(interalo);
+};
+
+carrousel.addEventListener('mouseover', ()=>{
+    stop();
+});
+
+carrousel.addEventListener('mouseout', ()=>{
+    start();
+});
+
+
+start();
+
+/* fin */
