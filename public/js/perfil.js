@@ -18,10 +18,21 @@ const btnmostrar = document.getElementById("btnmostrar");
 const perfil = document.getElementById("perfil");
 
 
+
 const btnloginadmin= document.getElementById("btnloginadmin");
 
 if(btnloginadmin){
     btnloginadmin.addEventListener('click', e =>{
+     
+        window.location.href = 'http://localhost:4000/users/loginadmi'
+     
+     });
+}
+
+const btnloginadminnav= document.getElementById("btnloginadmin");
+
+if(btnloginadminnav){
+    btnloginadminnav.addEventListener('click', e =>{
      
         window.location.href = 'http://localhost:4000/users/loginadmi'
      
@@ -34,7 +45,7 @@ const btnindex = document.getElementById("btnindex");
 if(btnindex){
     btnindex.addEventListener('click', e =>{
      
-        window.location.href = 'http://localhost/cincinnatus-main/app/views/index.html'
+        window.location.href = 'http://localhost:4000/users/tienda'
      
      });
 }
@@ -44,7 +55,7 @@ const btnindexnav = document.getElementById("btnindexnav");
 if(btnindexnav){
     btnindexnav.addEventListener('click', e =>{
      
-        window.location.href = 'http://localhost/cincinnatus-main/app/views/index.html'
+        window.location.href = 'http://localhost:4000/users/tienda'
      
      });
 }
