@@ -44,7 +44,7 @@ const btnindex = document.getElementById("btnindex");
 if(btnindex){
     btnindex.addEventListener('click', e =>{
      
-        window.location.href = 'http://localhost/cincinnatus-main/app/views/index.html'
+        window.location.href = 'http://localhost:4000/users/tienda'
      
      });
 }
@@ -54,7 +54,25 @@ const btnindexnav = document.getElementById("btnindexnav");
 if(btnindexnav){
     btnindexnav.addEventListener('click', e =>{
      
-        window.location.href = 'http://localhost/cincinnatus-main/app/views/index.html'
+        window.location.href = 'http://localhost:4000/users/tienda'
+     
+     });
+}
+
+const btntienda = document.getElementById("btntienda");
+if(btntienda){
+    btntienda.addEventListener('click', e =>{
+     
+        window.location.href = 'http://localhost:4000/users/tienda'
+     
+     });
+}
+
+const btntiendanav = document.getElementById("btntienda");
+if(btntiendanav){
+    btntienda.addEventListener('click', e =>{
+     
+        window.location.href = 'http://localhost:4000/users/tienda'
      
      });
 }

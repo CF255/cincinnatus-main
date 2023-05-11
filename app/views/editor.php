@@ -34,7 +34,7 @@
         <ul class="navlist">
         <a href="#" class="fotoperfilnav" id="btnperfil" > <div id="photonav"><img src="../../public/img/logo.jpeg" alt=""></a>
 
-                <li><a href="index.html"><img src="../../public/img/tienda.png" alt="">tienda</a></li>
+                <li><a href="#" id="btnindex"><img src="../../public/img/tienda.png" alt="">tienda</a></li>
 
                 
                 <li><a class="bloqueo" href="#" id="btncreacionusuarionodenav"><img src="../../public/img/usuario.png" alt="">Creacion de usuarios</a></li>
@@ -73,7 +73,7 @@
         <!-- items -->
         <div id="menuitem">
             <div class="item">
-                <a href="index.html">
+                <a href="#" id="btnindex">
                     <div class="icon"><img src="../../public/img/tienda.png" alt=""></div>
                     <div class="title"><span>Tienda</span></div>
                 </a>
