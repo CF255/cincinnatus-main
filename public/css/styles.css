@@ -21,12 +21,62 @@ nav{
     width: 95%;
     height: 80px;
     margin: 0 auto;
-    border-radius: 50px;
+    border-radius: 10px;
     margin-top: 0.5%;
     border: 2px solid rgb(57, 90, 92);
     align-items: center;
     margin-bottom: 10px;
 }
+
+.continerbarra{
+    width: 60%;
+    max-width: 500px;
+    display: inline-block;
+    margin-left: 12%;
+    margin-top: 10px;
+
+  /*   background-image: linear-gradient(rgba(0,8,51,0.9), rgba(0,8,51,0.9)), url(/bac);  */
+  
+} 
+ 
+.barranav{
+    display: flex;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    align-items: center;
+    border-radius: 60px;
+    padding: 5px 10px;
+    backdrop-filter: blur(4px) saturate(180%);
+}
+
+.barranav input{
+    width: 100%;
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    color: #fff;
+}
+
+::placeholder{
+    color: rgba(60, 99, 100, 0.689);
+}
+
+.barranav button img{
+    width: 25px;
+}
+
+.barranav button{
+    border: 0;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background: rgba(60, 99, 100, 0.689);
+    cursor: pointer;
+}
+
 
 .linkphoto{
     position: absolute;
