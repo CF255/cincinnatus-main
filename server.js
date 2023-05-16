@@ -174,7 +174,7 @@ app.use(express.static('app'));
 /* direcciones  */
 
 app.get("/users/tienda",(req,res)=>{
-    res.render("tienda");
+    res.render("tienda",{nombre: req.user.nombre});
     
     });
 

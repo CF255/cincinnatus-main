@@ -778,7 +778,35 @@ nav ul li a img{
         margin-right: 10px;
         margin-top: 3px;
     }
+
     
+    a{
+        cursor: pointer;
+    }
+
+    body{
+        overflow-y: hidden;
+    }
+    
+    .navlist{
+        overflow-y: auto;
+    }
+
+    .navlist::-webkit-scrollbar{
+        width: 0.5rem;
+        height: 0.5rem;
+    }
+    
+    .navlist::-webkit-scrollbar-thumb{
+        border-radius: .5rem;
+        background-color: rgba(180, 180, 180, 0.747);
+        visibility: hidden;
+    }
+    
+    .navlist:hover::-webkit-scrollbar-thumb{
+        visibility: visible;
+    }
+
     .containerduo{
         /*   background-color: #CB8B07; */
           width: 100%;
