@@ -38,13 +38,13 @@
     transition: .2s ease;
 }
 
-.btnside{
+.btnsides{
     padding: 15px;
     margin: 5px;
     font-size: 20px;
     border-radius: 5px;
-    
     cursor: pointer;
+    
 }
 
 .btnguardar{
@@ -64,7 +64,10 @@
     border: 3px solid rgb(91, 6, 6) ;
     background-color:rgb(183, 65, 44) ;
     color: white;   
+
 }
+
+
 
 .btncancelar:hover{
     border: 4px solid rgb(183, 65, 44);
@@ -362,6 +365,8 @@ display: flex;
    color: black;
    
 }
+
+
 
 .navegador ul li button .iconnav{
     position: relative;
@@ -737,4 +742,10 @@ display: flex;
 }
 
 
+
 /* fin modo celular */
+
+.ocultarinput{
+    opacity: 0;
+    pointer-events: none;
+}
