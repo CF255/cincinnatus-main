@@ -756,6 +756,42 @@ nav ul li a img{
 /* fin */
 
 
+/* botones guardar y editar tabla */
+
+.btn{
+    color:#fff;
+    display: block;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 3px;
+    text-align: center;
+    transition: background-color .3s;
+    
+    }
+    
+    .btn-danger{
+       background-color: rgb(236, 47, 47);
+       border: 2px solid rgb(128, 13, 13);
+    }
+    
+    .btn-danger:hover{
+        background-color: #fff;
+        color:rgb(236, 47, 47) ;
+     }
+    
+     .btn-warning{
+        background-color: rgb(236, 185, 47);
+        border: 2px solid rgb(100, 82, 10);
+     }
+     
+     .btn-warning:hover{
+         background-color: #fff;
+         color:rgb(236, 185, 47) ;
+      }
+     
+    /* fin */
+    
+
 /* modo tablet / pc*/
 @media(max-width: 3000px){
     .nav2 ul{
@@ -778,7 +814,35 @@ nav ul li a img{
         margin-right: 10px;
         margin-top: 3px;
     }
+
+
+    a{
+        cursor: pointer;
+    }
+
+  /*   body{
+        overflow-y: hidden;
+    } */
     
+    .navlist{
+        overflow-y: auto;
+    }
+
+    .navlist::-webkit-scrollbar{
+        width: 0.5rem;
+        height: 0.5rem;
+    }
+    
+    .navlist::-webkit-scrollbar-thumb{
+        border-radius: .5rem;
+        background-color: rgba(180, 180, 180, 0.747);
+        visibility: hidden;
+    }
+    
+    .navlist:hover::-webkit-scrollbar-thumb{
+        visibility: visible;
+    }
+
     .containerduo{
         /*   background-color: #CB8B07; */
           width: 100%;

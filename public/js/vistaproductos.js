@@ -19,7 +19,13 @@ if(check){
     
 }
 /* FIN */
-/* pequeño modal editor */
+/* btn guardar */
+const btnguardar = document.getElementById("btnguardar");
+btnguardar.addEventListener('click', e =>{
+    window.scrollTo(0,0);
+    continput.classList.remove("mostrar");
+
+});
 
 
 

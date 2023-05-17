@@ -27,12 +27,25 @@ nav{
     align-items: center;
     margin-bottom: 10px;
 }
+.navsegundo{
+    opacity: 0;
+    background-color: rgba(0, 8, 51, 0.9);
+    padding: 30px;
+    /* margin-top: 8px; */
+    width: 98%;
+    margin: 8px auto;
+    border-radius: 0 0 10PX 10PX;
+    border: 2px solid rgb(57, 90, 92);
+}
+
+
+
 
 .continerbarra{
     width: 60%;
     max-width: 500px;
     display: inline-block;
-    margin-left: 12%;
+    margin-left: 100px;
     margin-top: 10px;
 
   /*   background-image: linear-gradient(rgba(0,8,51,0.9), rgba(0,8,51,0.9)), url(/bac);  */
@@ -75,13 +88,50 @@ nav{
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    background: rgba(60, 99, 100, 0.689);
+    background: rgba(50, 82, 83, 0.473);
     cursor: pointer;
 }
 
+.barranav button:hover{
+
+    background: rgba(57, 96, 97, 0.336) ;
+    
+}
+
+@media (max-width: 1120px){
+    .navsegundo{
+     opacity: 1;
+     margin: 6px auto;
+    }
+ 
+    nav ul li a{
+    
+     margin-right: 20px;
+ }
+
+ nav{
+    border: 2px solid rgba(0, 8, 51, 0.9);
+ }
+ 
+ .barranav button{
+     background: rgba(0, 8, 51, 0.678);
+    
+ }
+
+ .barranav button:hover{
+    background: rgba(0, 8, 51, 0.459);
+   
+}
+ 
+li a.active, li a:hover{
+    background-color: rgba(6, 210, 221, 0.432);
+} 
+
+    
+ }
 
 .linkphoto{
-    position: absolute;
+     position: absolute; 
     padding: 20px 50px;
 }
 
@@ -94,7 +144,7 @@ nav{
 
 nav ul{
     float: right;
-    margin-right: 20px;
+    margin-right: 5px;
 }
 
 nav ul li{
@@ -106,9 +156,10 @@ nav ul li{
 nav ul li a{
     color: white;
     font-size: 18px;
-    padding: 7px 13px;
+    padding: 7px 5px;
     text-transform: uppercase;
 }
+
 
 
 li a.active, li a:hover{
@@ -227,7 +278,11 @@ object-fit: cover;
         margin-left: -100%;
     
     }
-    
+
+    .navsegundo{
+        opacity: 0;
+       }
+        
 
     .checkbtn{
         display: block;

@@ -101,6 +101,7 @@ table{
     vertical-align: middle;
    }
 
+   
 
    table, th, td{
     padding: 1rem;
@@ -124,38 +125,3 @@ table{
    }
 
 /* tabla fin */
-
-/* botones guardar y editar tabla */
-
-.btn{
-color:#fff;
-display: block;
-border-radius: 5px;
-padding: 5px;
-margin: 3px;
-text-align: center;
-transition: background-color .3s;
-
-}
-
-.btn-danger{
-   background-color: rgb(236, 47, 47);
-   border: 2px solid rgb(128, 13, 13);
-}
-
-.btn-danger:hover{
-    background-color: #fff;
-    color:rgb(236, 47, 47) ;
- }
-
- .btn-warning{
-    background-color: rgb(236, 185, 47);
-    border: 2px solid rgb(100, 82, 10);
- }
- 
- .btn-warning:hover{
-     background-color: #fff;
-     color:rgb(236, 185, 47) ;
-  }
- 
-/* fin */
