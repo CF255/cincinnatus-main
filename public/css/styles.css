@@ -271,6 +271,7 @@ object-fit: cover;
 
 @media (max-width: 500px){
 
+
     .slider{
         display: flex;
         width: 500%;

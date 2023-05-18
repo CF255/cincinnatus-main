@@ -175,10 +175,10 @@
    <label class="lblnombres" for="">Unidades</label>
    <input type="number" class="inputtext" id="unidades" placeholder="Cantidad de unidades">
 
-   <button id="btnguardar" class="btnside btnguardar" type="submit"><span class=""><i class="fa-solid fa-floppy-disk"></i></span>
+   <button id="btnguardar" class="btnsides btnguardar" type="submit"><span class=""><i class="fa-solid fa-floppy-disk"></i></span>
                     <span class="">Guardar</span></button> 
 
-                    <button class="btnside btncancelar " onclick="window.scrollTo(0,0)" id="btncancelar" type="button"><span class=""><i class="fa-solid fa-xmark"></i></span>
+                    <button class="btnsides btncancelar " onclick="window.scrollTo(0,0)" id="btncancelar" type="button"><span class=""><i class="fa-solid fa-xmark"></i></span>
                     <span class="">Cancelar</span></button> 
 
 
