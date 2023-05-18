@@ -246,4 +246,29 @@
         }
     }
     
+
+/* mostrar contraseña */
+
+.wrapp-input{
+    width: 100%;
+    position: relative;
+}
+
+.iconeye{
+    position: absolute;
+    right: 5px;
+    top: 30%;
+    transform: translateY(-30%);
+    cursor: pointer;
+    /* background-color: #ffffff;
+    padding: 2px 4px 2px 0px; */
+    transition: .2s ease all;
+}
+
+.iconeye:hover{
+    color: cadetblue;
+}
+
+/* fin */
+
     /* fin login */

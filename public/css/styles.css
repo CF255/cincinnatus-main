@@ -51,6 +51,8 @@ nav{
   /*   background-image: linear-gradient(rgba(0,8,51,0.9), rgba(0,8,51,0.9)), url(/bac);  */
   
 } 
+
+
  
 .barranav{
     display: flex;
@@ -268,6 +270,7 @@ object-fit: cover;
 }
 
 @media (max-width: 500px){
+
 
     .slider{
         display: flex;

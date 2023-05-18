@@ -17,7 +17,37 @@ const btnalmacen = document.getElementById('btnalmacen');
 const btnmostrar = document.getElementById("btnmostrar");
 const perfil = document.getElementById("perfil");
 
+/* mostrar contrasena */
 
+
+
+const btneye = document.querySelector('.btneye');
+const inputpass = document.getElementById('pass');
+const inputpass2 = document.getElementById('password2');
+const icon = document.getElementById("i");
+
+console.log(btneye);
+
+btneye.addEventListener('click', function(){
+
+    if(inputpass.type === "password"){
+        inputpass.type = "text";
+        inputpass2.type = "text";
+        icon.classList.remove('fa-eye');
+        icon.classList.add('fa-eye-slash');
+    }else{
+        inputpass.type = "password"
+        inputpass2.type = "password"
+        icon.classList.remove('fa-eye-slash');
+        icon.classList.add('fa-eye');
+        
+    }
+
+
+});
+
+
+/* fin */
 
 const btnloginadmin= document.getElementById("btnloginadmin");
 
@@ -29,7 +59,7 @@ if(btnloginadmin){
      });
 }
 
-const btnloginadminnav= document.getElementById("btnloginadmin");
+const btnloginadminnav= document.getElementById("btnloginadminnav");
 
 if(btnloginadminnav){
     btnloginadminnav.addEventListener('click', e =>{

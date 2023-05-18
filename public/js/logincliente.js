@@ -51,13 +51,13 @@ btncontinuar.addEventListener('click',(e)=>{
 }
 
 });
-
+/* 
 modalclose.addEventListener('click',(e)=>{
 
     e.preventDefault();
     modal.classList.remove('modalshow');
 }); 
-
+ */
 const modal = document.querySelector('.modal');
 const prueba = document.getElementById("prueba");
 
@@ -68,3 +68,34 @@ if(prueba){
         modal.classList.add('modalshow');
     }); 
 }
+
+
+/* mostrar contrasena */
+
+    const btneye = document.querySelector('.btneye');
+    const inputpass = document.getElementById('pass');
+    const inputpass2 = document.getElementById('password2');
+    const icon = document.querySelector("i");
+
+    console.log(btneye);
+
+    btneye.addEventListener('click', function(){
+
+        if(inputpass.type === "password"){
+            inputpass.type = "text";
+            inputpass2.type = "text";
+            icon.classList.remove('fa-eye');
+            icon.classList.add('fa-eye-slash');
+        }else{
+            inputpass.type = "password"
+            inputpass2.type = "password"
+            icon.classList.remove('fa-eye-slash');
+            icon.classList.add('fa-eye');
+            
+        }
+
+
+    });
+
+
+/* fin */
