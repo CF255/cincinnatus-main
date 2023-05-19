@@ -20,7 +20,6 @@ const perfil = document.getElementById("perfil");
 /* mostrar contrasena */
 
 
-
 const btneye = document.querySelector('.btneye');
 const inputpass = document.getElementById('pass');
 const inputpass2 = document.getElementById('password2');
