@@ -135,7 +135,7 @@
    
     <div class="formgroup">
        <label for="foto" class="lblfoto">Foto del producto</label>
-        <img class="imglogo" src="../../public/img/logo.jpeg" alt="">
+        <img class="imglogo" src="../../public/img/logopro.png" alt="">
     <input type="file" class="form-control-file " name="foto" id="foto" accept="image/*" >
        </div>
     
