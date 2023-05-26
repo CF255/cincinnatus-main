@@ -134,14 +134,12 @@
         <form action="javascript:void(0);" method="POST"  onsubmit="app.guardar()" enctype="multipart/form-data" autocomplete="off">
    
     <div class="formgroup">
-       <label for="foto" class="lblfoto">Foto del producto</label>
+       <label for="foto" class="ocultar lblfoto">Foto del producto</label>
         <img class="imglogo" src="../../public/img/pro.png" alt="">
-    <input type="file" class="form-control-file " name="foto" id="foto" accept="image/*" >
+  <!--   <input type="file" class="form-control-file " name="foto" id="foto" accept="image/*" > -->
        </div>
-    
-    
 
-   
+    
      
     <label class="lblnombres" for="">Nombre</label>
     <input type="text" class="inputtext" id="nombre" placeholder="Nombre del producto">
@@ -259,7 +257,7 @@
                             <th>Proveedor</th>
                             <th>Categoria</th>
                             <th>Descripcion</th>
-                            <th>Foto</th>
+                           <!--  <th>Foto</th> -->
                             <th></th>
                             
                         </tr>

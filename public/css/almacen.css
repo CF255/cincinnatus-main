@@ -7,7 +7,7 @@
     width: 60%;
     max-width: 750px;
     margin: 20px;
-    height:950px;
+    height:800px;
     position: absolute;
     border: 2Px solid rgb(57, 90, 92) ;
     border-radius: 10px;
@@ -40,7 +40,7 @@ select:focus{
 
 .inputtext{
     max-width: 700px;
-    width: 90%;
+    width: 95%;
     height: 40px;
     border-radius: 10px;
     border: 2px solid rgb(57, 90, 92);
@@ -314,7 +314,7 @@ table{
      .contenedorinput{
 
     width: 90%;
-    height: 900px;
+    height: 750px;
     border: 2Px solid rgb(57, 90, 92) ;
     border-radius: 10px;
     background-color: white;

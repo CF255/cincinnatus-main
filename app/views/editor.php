@@ -134,9 +134,9 @@
         <form action="javascript:void(0);" method="POST"  onsubmit="app.guardar()" enctype="multipart/form-data" autocomplete="off">
    
     <div class="formgroup">
-       <label for="foto" class="lblfoto">Foto del producto</label>
-        <img class="imglogo" src="../../public/img/logo.png" alt="">
-    <input type="file" class="form-control-file " name="foto" id="foto" accept="image/*" >
+       <label for="foto" class=" lblfoto">Foto del producto</label>
+        <img class="imglogo" src="../../public/img/pro.png" alt="">
+    <input type="file" class=" form-control-file " name="foto" id="foto" accept="image/*" >
        </div>
     
     

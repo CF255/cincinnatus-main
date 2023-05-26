@@ -199,12 +199,17 @@ select:focus{
 
 /* fin */
 
+/* reyeno */
+
+
+/* fin */
 @media (max-width: 600px){
 
     .contenedorinput{
 
         width: 90%;
-        height: 1070px;
+        /* height: 1070px; */
+        height: 1060px;
         border: 2Px solid rgb(57, 90, 92) ;
         border-radius: 10px;
         background-color: white;
