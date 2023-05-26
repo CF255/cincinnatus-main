@@ -133,7 +133,7 @@ const app = new (function () {
                 <td>${item.email}</td>
                 <td>${item.pass}</td>
                 <td>${item.rol}</td>
-                <td>foto</td>
+              
                 <td>
                   
                   <a href="javascript:;" class="btn btn-danger btn-sm" onclick="app.eliminar(${item.id})">Eliminar</a>

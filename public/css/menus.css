@@ -29,11 +29,11 @@ body{
 /* navegador  */
 
 .nav2{
-    background-color: cadetblue;
+    background-color: rgba(95, 158, 160, 0.938);
     width: 100%;
     height: 45px;
     margin: 0 auto;
-    display: flex;
+    
     border: 2px solid rgb(57, 90, 92);
     align-items: center;
 }
@@ -115,7 +115,7 @@ fin nav */
 :root{
     --width: 300px;
     --padding:10px;
-    --bgcolor: cadetblue;
+    --bgcolor: rgba(95, 158, 160, 0.938);
     --hovercolor: rgb(57, 90, 92);
     --width-collapsed: 60px;
     --width-normal: 0px;
@@ -172,6 +172,7 @@ body{
     overflow: hidden;
 
 }
+
 
 #sidemenu #header #title, #sidemenu #header #menu-btn{
     vertical-align: middle;
@@ -409,7 +410,7 @@ margin-top: 80px;
     right: 0px;
     width: 30%;
     height: 500px;
-    background-color: cadetblue;
+    background-color: rgba(95, 158, 160, 0.938);
     text-align: center;
     transition: 0.800s ease;
     position: absolute;
@@ -473,7 +474,7 @@ cursor: pointer;
     position: relative;
     height: 4px;
     position: fixed;
-    background-color: cadetblue;
+    background-color: rgba(95, 158, 160, 0.938);
     border-radius: 2em;
     border: 1px solid rgb(57, 90, 92)  ;
     cursor: pointer;
@@ -594,7 +595,7 @@ nav ul li a img{
     display: inline-block;
     font-family: 'Paytone One', sans-serif;
     border: none;
-    background-color: cadetblue;
+    background-color: rgba(95, 158, 160, 0.938);
     border-bottom: 1.5px solid rgb(72, 119, 120);
 }
 

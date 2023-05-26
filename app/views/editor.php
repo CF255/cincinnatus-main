@@ -32,7 +32,7 @@
         </a>
 
         <ul class="navlist">
-        <a href="#" class="fotoperfilnav" id="btnperfil" > <div id="photonav"><img src="../../public/img/logo.jpeg" alt=""></a>
+        <a href="#" class="fotoperfilnav" id="btnperfil" > <div id="photonav"><img src="../../public/img/logo.png" alt=""></a>
 
                 <li><a href="#" id="btnindex"><img src="../../public/img/tienda.png" alt="">tienda</a></li>
 
@@ -65,7 +65,7 @@
         </div>
         <!-- profile -->
         <div id="profile">
-        <a href="#" id="btnperfil" > <div id="photo"><img src="../../public/img/logo.jpeg" alt=""></a>
+        <a href="#" id="btnperfil" > <div id="photo"><img src="../../public/img/logo.png" alt=""></a>
                 <div id="name">Cuenta Administrativa </div>
             </div>
         </div>
@@ -135,7 +135,7 @@
    
     <div class="formgroup">
        <label for="foto" class="lblfoto">Foto del producto</label>
-        <img class="imglogo" src="../../public/img/logo.jpeg" alt="">
+        <img class="imglogo" src="../../public/img/logo.png" alt="">
     <input type="file" class="form-control-file " name="foto" id="foto" accept="image/*" >
        </div>
     

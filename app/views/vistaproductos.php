@@ -33,7 +33,7 @@
         </a>
 
         <ul class="navlist">
-       <ol> <a href="#" class="fotoperfilnav" id="btnperfil" > <div id="photonav"><img src="../../public/img/logo.jpeg" alt=""></a></ol>
+       <ol> <a href="#" class="fotoperfilnav" id="btnperfil" > <div id="photonav"><img src="../../public/img/logo.png" alt=""></a></ol>
                 <li><a id="btnindexnav"><img src="../../public/img/tienda.png" alt="">tienda</a></li>
 
                 
@@ -65,7 +65,7 @@
         </div>
         <!-- profile -->
         <div id="profile">
-        <a href="#" id="btnperfil" > <div id="photo"><img src="../../public/img/logo.jpeg" alt=""></a>
+        <a href="#" id="btnperfil" > <div id="photo"><img src="../../public/img/logo.png" alt=""></a>
             <div id="name">Cuenta Administrativa </div>
              </div>
         </div>
